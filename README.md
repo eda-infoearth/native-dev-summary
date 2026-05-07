@@ -10,7 +10,8 @@ Test implementation an app like a `samari.news`.
 ├── scripts/
 │   └── fetch_and_summarize.py  # get RSS, samarize, diff
 ├── data/
-│   └── articles.json       # store article history
+│   ├── seen_ids.json       # store article ids
+│   └── YYYY-MM-DD.json     # store articles
 ├── docs/                   # root of GitHub Pages
 │   └── index.html
 └── README.md
@@ -41,7 +42,7 @@ This repositry
 
 #### Slack Webhook URL
 1. https://api.slack.com/apps → Create New App
-2. Incoming Webhooks を有効化
+2. enable Incoming Webhooks
 3. select channel, and copy Webhook URL
 
 ### 2. enable GitHub Pages
@@ -82,4 +83,6 @@ source .venv/bin/activate
 pip freeze > requirements.txt
 
 pip install -r requirements.txt
+
+deactivate
 ```
