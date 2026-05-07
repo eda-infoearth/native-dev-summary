@@ -1,6 +1,8 @@
 # native-dev-summary
 Test implementation an app like a `samari.news`.
 
+https://eda-infoearth.github.io/native-dev-summary/
+
 ## dir structure
 ```sh
 /
