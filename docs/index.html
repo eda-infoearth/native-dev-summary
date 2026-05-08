@@ -5,202 +5,490 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Framework Releases Summary</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--surface:#111118;--border:#1e1e2e;--text:#e8e8f0;--muted:#6b6b88;--accent:#c8f250;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;min-height:100vh;}
-header{border-bottom:1px solid var(--border);padding:24px 40px;position:sticky;top:0;background:rgba(10,10,15,.93);backdrop-filter:blur(12px);z-index:100;display:flex;align-items:baseline;gap:20px;}
-.logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--accent);}
-.updated{font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-left:auto;}
-main{padding:32px 40px;max-width:1300px;margin:0 auto;}
-.day-section{margin-bottom:52px;}
-.day-header{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--border);}
-.day-label{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--text);letter-spacing:-.01em;}
-.day-count{font-size:.62rem;color:var(--muted);letter-spacing:.08em;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;}
-.card{background:var(--surface);border:1px solid var(--border);padding:18px;position:relative;transition:border-color .2s,transform .2s;}
-.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--fw-color,var(--muted));opacity:.7;}
-.card:hover{border-color:color-mix(in srgb,var(--fw-color,#888) 40%,var(--border));transform:translateY(-1px);}
-.card-top{margin-bottom:10px;}
-.fw-badge{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;}
-h3{font-family:'Fraunces',serif;font-size:.9rem;font-weight:700;line-height:1.35;margin-bottom:10px;}
-h3 a{color:var(--text);text-decoration:none;}
-h3 a:hover{color:var(--fw-color,var(--accent));}
-.summary{font-size:.76rem;line-height:1.7;color:#a0a0c0;}
-.no-summary{font-size:.7rem;color:var(--muted);font-style:italic;}
-.empty{color:var(--muted);font-size:.8rem;padding:40px;text-align:center;border:1px dashed var(--border);}
-footer{border-top:1px solid var(--border);padding:20px 40px;font-size:.6rem;color:var(--muted);text-align:center;letter-spacing:.08em;text-transform:uppercase;}
-@media(max-width:600px){header,main{padding-left:16px;padding-right:16px;}.grid{grid-template-columns:1fr;}header{flex-wrap:wrap;}.updated{margin-left:0;}}
+
+body{
+  background:#111214;
+  background-image:
+    radial-gradient(ellipse at 20% 50%,rgba(30,40,60,.8) 0%,transparent 60%),
+    radial-gradient(ellipse at 80% 20%,rgba(50,30,20,.4) 0%,transparent 50%);
+  min-height:100vh;
+  font-family:'Rajdhani',sans-serif;
+  color:#ccc;
+  overflow-x:hidden;
+}
+
+/* ── HEADER ── */
+header{
+  position:sticky;top:0;z-index:100;
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.9) 0%,rgba(220,225,235,.6) 8%,
+      rgba(160,168,178,.4) 18%,rgba(120,128,138,.3) 30%,
+      rgba(140,148,158,.4) 52%,rgba(200,208,218,.6) 62%,
+      rgba(255,255,255,.85) 70%,rgba(100,108,118,.3) 90%,
+      rgba(60,68,78,.4) 100%),
+    linear-gradient(90deg,rgba(255,255,255,.1) 0%,transparent 50%,rgba(255,255,255,.05) 100%);
+  background-color:#b8bec8;
+  border-bottom:3px solid #505860;
+  box-shadow:0 4px 20px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.4) inset;
+  overflow:hidden;
+}
+header::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(168deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 35%,transparent 60%);
+  pointer-events:none;z-index:1;
+}
+header::after{
+  content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,.03) 2px,rgba(255,255,255,.03) 3px);
+  pointer-events:none;z-index:2;
+}
+.header-inner{
+  position:relative;z-index:3;
+  max-width:1300px;margin:0 auto;
+  padding:20px 40px;
+  display:flex;align-items:center;gap:20px;
+}
+.logo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(32px,6vw,52px);
+  letter-spacing:.12em;
+  background:linear-gradient(160deg,
+    #1a2030 0%,#283848 20%,#101820 40%,
+    #2a3848 60%,#182030 80%,#0e1820 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));
+  line-height:1;
+}
+.header-meta{margin-left:auto;text-align:right;}
+.header-tagline{
+  font-size:10px;letter-spacing:.35em;text-transform:uppercase;
+  color:#404858;font-weight:700;
+}
+.header-updated{
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:#606878;margin-top:3px;
+}
+
+/* ── MAIN ── */
+main{max-width:1300px;margin:0 auto;padding:0 40px 60px;}
+
+/* ── DIVIDER ── */
+.steel-divider-wrap{margin:40px 0 0;}
+.steel-divider{
+  height:18px;
+  background:linear-gradient(180deg,#2a2e38 0%,#3a3e48 40%,#252830 100%);
+  border-top:1px solid rgba(255,255,255,.1);
+  border-bottom:1px solid rgba(0,0,0,.6);
+  display:flex;align-items:center;gap:12px;padding:0 16px;
+  box-shadow:0 2px 8px rgba(0,0,0,.5) inset;
+}
+.rivet{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+  background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8) 0%,rgba(180,190,200,.5) 40%,rgba(60,70,80,.6) 100%);
+  background-color:#909aa8;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -1px 0 rgba(0,0,0,.4) inset,0 2px 4px rgba(0,0,0,.6);
+}
+.steel-divider-bottom{
+  height:2px;
+  background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(255,255,255,.06) 100%);
+}
+
+/* ── DAY HEADER ── */
+.day-header{
+  display:flex;align-items:baseline;gap:16px;
+  padding:20px 0 14px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  margin-bottom:20px;
+}
+.day-label{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(28px,5vw,44px);
+  letter-spacing:.15em;
+  background:linear-gradient(160deg,#fff 0%,#e0e8f0 15%,#a8b8c8 30%,#687888 45%,#c8d8e8 60%,#fff 72%,#90a0b0 85%,#d0d8e0 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));
+  line-height:1;
+}
+.day-count{
+  font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  color:#506070;font-weight:700;
+}
+
+/* ── CARD GRID ── */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:0;
+}
+
+/* ── STEEL CARD ── */
+.steel-card{
+  padding:22px 20px;
+  position:relative;overflow:hidden;
+  border:1px solid rgba(0,0,0,.5);
+  border-right-width:0;
+  outline:1px solid rgba(255,255,255,.07);
+  outline-offset:-2px;
+  background:linear-gradient(160deg,#1e2028 0%,#161820 40%,#12141c 70%,#1a1c24 100%);
+  background-color:#161820;
+  transition:filter .18s;
+}
+.steel-card:last-child{border-right-width:1px;}
+.steel-card:hover{filter:brightness(1.12);}
+
+/* brushed texture */
+.steel-card::after{
+  content:'';position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 6px,rgba(255,255,255,.008) 6px,rgba(255,255,255,.008) 7px),
+    repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(255,255,255,.005) 3px,rgba(255,255,255,.005) 4px);
+  pointer-events:none;z-index:0;
+}
+
+/* fw-color left accent */
+.steel-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--fw-color,#909aa8);
+  opacity:.8;z-index:1;
+}
+
+/* corner marks */
+.corner-mark{position:absolute;width:10px;height:10px;border-color:rgba(255,255,255,.15);border-style:solid;z-index:2;}
+.corner-mark.tl{top:6px;left:6px;border-width:1px 0 0 1px;}
+.corner-mark.tr{top:6px;right:6px;border-width:1px 1px 0 0;}
+.corner-mark.bl{bottom:6px;left:6px;border-width:0 0 1px 1px;}
+.corner-mark.br{bottom:6px;right:6px;border-width:0 1px 1px 0;}
+
+.fw-badge-wrap{position:relative;z-index:3;margin-bottom:10px;}
+.fw-badge{
+  display:inline-block;
+  font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;
+  padding:2px 8px;border-radius:0;
+  border-left:3px solid var(--fw-color,#909aa8);
+  background:rgba(255,255,255,.04);
+}
+
+.steel-card h3{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:17px;letter-spacing:.1em;line-height:1.3;
+  margin-bottom:10px;
+  position:relative;z-index:3;
+}
+.steel-card h3 a{
+  color:#c8d4e0;text-decoration:none;
+  transition:color .15s;
+}
+.steel-card h3 a:hover{color:var(--fw-color,#c8d4e0);}
+
+.card-summary{
+  font-size:12px;line-height:1.7;letter-spacing:.04em;
+  color:#708090;position:relative;z-index:3;
+}
+.card-no-summary{
+  font-size:11px;letter-spacing:.25em;
+  color:#303840;font-style:normal;
+  position:relative;z-index:3;
+}
+
+/* ── EMPTY STATE ── */
+.empty-state{
+  margin:60px 0;border:1px solid rgba(255,255,255,.06);
+  outline:1px solid rgba(0,0,0,.6);outline-offset:3px;
+  overflow:hidden;
+}
+.hazard-stripe-bar{
+  height:8px;
+  background:repeating-linear-gradient(-45deg,#c09010 0px,#c09010 8px,#181410 8px,#181410 16px);
+}
+.empty-state p{
+  padding:32px;font-size:12px;letter-spacing:.3em;
+  text-transform:uppercase;color:#404850;text-align:center;
+}
+
+/* ── FOOTER ── */
+footer{
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:20px 40px;
+  font-size:10px;letter-spacing:.25em;text-transform:uppercase;
+  color:#303840;text-align:center;
+}
+
+@media(max-width:600px){
+  .header-inner,main,footer{padding-left:16px;padding-right:16px;}
+  .card-grid{grid-template-columns:1fr;}
+  .steel-card{border-right-width:1px !important;}
+  .header-meta{display:none;}
+}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">Framework Releases Summary</div>
-  <div class="updated">最終更新: 2026-05-08 08:16 JST</div>
+  <div class="header-inner">
+    <div class="logo">Framework Releases Summary</div>
+    <div class="header-meta">
+      <div class="header-tagline">Flutter · React Native · Expo · Electron · Tauri · Dioxus</div>
+      <div class="header-updated">Last updated: 2026-05-08 09:16 JST</div>
+    </div>
+  </div>
 </header>
 <main>
         <section class="day-section">
-          <div class="day-header">
-            <span class="day-label">2026年5月8日</span>
-            <span class="day-count">1 件</span>
+          <div class="steel-divider-wrap">
+            <div class="steel-divider"><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div></div>
+            <div class="steel-divider-bottom"></div>
           </div>
-          <div class="grid">
-            <div class="card" style="--fw-color:#9FEAF9">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#9FEAF922;color:#9FEAF9">⚡ Electron</span>
+          <div class="day-header">
+            <h2 class="day-label">2026.05.08</h2>
+            <span class="day-count">1 ARTICLES</span>
+          </div>
+          <div class="card-grid">
+            <div class="steel-card" style="--fw-color:#9FEAF9">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/electron-42-0" target="_blank" rel="noopener">Electron 42</a></h3>
-              <p class="summary">Electron 42がリリースされました。Chromium 148.0.7778.96、V8 14.8、Node v24.15.0へのアップグレードが含まれており、これらの更新により最新のWebプラットフォーム機能とJavaScript実行性能が向上します。既存のアプリケーションは互換性を確認した上でアップグレードすることをお勧めします。</p>
+              <p class="card-summary">Electron 42がリリースされました。Chromium 148.0.7778.96、V8 14.8、Node v24.15.0へのアップグレードが含まれており、これらの更新により最新のWebプラットフォーム機能とJavaScript実行性能が向上します。既存のアプリケーションは互換性を確認した上でアップグレードすることをお勧めします。</p>
             </div></div>
         </section>
         <section class="day-section">
-          <div class="day-header">
-            <span class="day-label">2026年5月7日</span>
-            <span class="day-count">20 件</span>
+          <div class="steel-divider-wrap">
+            <div class="steel-divider"><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div><div class="rivet"></div></div>
+            <div class="steel-divider-bottom"></div>
           </div>
-          <div class="grid">
-            <div class="card" style="--fw-color:#54C5F8">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#54C5F822;color:#54C5F8">🐦 Flutter</span>
+          <div class="day-header">
+            <h2 class="day-label">2026.05.07</h2>
+            <span class="day-count">20 ARTICLES</span>
+          </div>
+          <div class="card-grid">
+            <div class="steel-card" style="--fw-color:#54C5F8">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Introducing Skills for Dart and Flutter</a></h3>
-              <p class="summary">FlutterとDart開発向けのAI Agent Skillsが新たに導入され、ローカライゼーション、最新のDart言語機能、統合テストなどの専門知識を備えたAIアシスタントが利用可能になりました。LLMの学習データの更新遅延による「知識ギャップ」を解決し、最新のFlutter機能に対応したドメイン固有の専門性を実現する取り組みです。これにより、プロダクション品質のアプリ開発において、より精度の高いAIサポートを受けられるようになります。</p>
+              <p class="card-summary">FlutterとDart開発向けのAI Agent Skillsが新たに導入され、ローカライゼーション、最新のDart言語機能、統合テストなどの専門知識を備えたAIアシスタントが利用可能になりました。LLMの学習データの更新遅延による「知識ギャップ」を解決し、最新のFlutter機能に対応したドメイン固有の専門性を実現する取り組みです。これにより、プロダクション品質のアプリ開発において、より精度の高いAIサポートを受けられるようになります。</p>
             </div>
-            <div class="card" style="--fw-color:#54C5F8">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#54C5F822;color:#54C5F8">🐦 Flutter</span>
+            <div class="steel-card" style="--fw-color:#54C5F8">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Saying goodbye to CocoaPods: Swift Package Manager is soon the default in Flutter!</a></h3>
-              <p class="summary">Flutter 3.44以降、iOSおよびmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)へ移行され、Ruby環境の構築が不要になります。CocoaPodsレジストリは2026年12月2日に読み取り専用化されるため、アプリの依存関係更新を継続するには移行が必須です。既存ビルドは動作し続けますが、新しいバージョンのポッドはその日付以降追加されなくなるため、早めの対応をお勧めします。</p>
+              <p class="card-summary">Flutter 3.44以降、iOSおよびmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)へ移行され、Ruby環境の構築が不要になります。CocoaPodsレジストリは2026年12月2日に読み取り専用化されるため、アプリの依存関係更新を継続するには移行が必須です。既存ビルドは動作し続けますが、新しいバージョンのポッドはその日付以降追加されなくなるため、早めの対応をお勧めします。</p>
             </div>
-            <div class="card" style="--fw-color:#54C5F8">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#54C5F822;color:#54C5F8">🐦 Flutter</span>
+            <div class="steel-card" style="--fw-color:#54C5F8">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">That’s a wrap: Everything Flutter at Google Cloud Next</a></h3>
-              <p class="summary">Firebase FunctionsがDartに対応し、フロントエンドとバックエンド両方をDartで開発できるようになりました。Dart Admin SDKの統合により、コンテキストスイッチングが減少し開発生産性が向上します。Google Cloud Next 2026ではこの機能に関する詳細なセッションが予定されており、Google I/Oでさらに詳しい説明が行われる予定です。</p>
+              <p class="card-summary">Firebase FunctionsがDartに対応し、フロントエンドとバックエンド両方をDartで開発できるようになりました。Dart Admin SDKの統合により、コンテキストスイッチングが減少し開発生産性が向上します。Google Cloud Next 2026ではこの機能に関する詳細なセッションが予定されており、Google I/Oでさらに詳しい説明が行われる予定です。</p>
             </div>
-            <div class="card" style="--fw-color:#54C5F8">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#54C5F822;color:#54C5F8">🐦 Flutter</span>
+            <div class="steel-card" style="--fw-color:#54C5F8">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">We rebuilt Flutter’s websites with Dart and Jaspr</a></h3>
-              <p class="summary">FlutterチームがDart製のWebフレームワークJasprを使用して、dart.dev、flutter.dev、docs.flutter.devの3つの公式Webサイトを再構築しました。これまで非Dart製ツールの断片的な組み合わせで運用されていたサイトが、統一されたDartスタックに統合され、開発者はDartのみで貢献できるようになりました。FlutterアプリだけでなくWebサイト構築においても、Dartベースの開発体験を実現する道が広がりました。</p>
+              <p class="card-summary">FlutterチームがDart製のWebフレームワークJasprを使用して、dart.dev、flutter.dev、docs.flutter.devの3つの公式Webサイトを再構築しました。これまで非Dart製ツールの断片的な組み合わせで運用されていたサイトが、統一されたDartスタックに統合され、開発者はDartのみで貢献できるようになりました。FlutterアプリだけでなくWebサイト構築においても、Dartベースの開発体験を実現する道が広がりました。</p>
             </div>
-            <div class="card" style="--fw-color:#54C5F8">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#54C5F822;color:#54C5F8">🐦 Flutter</span>
+            <div class="steel-card" style="--fw-color:#54C5F8">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/come-meet-the-flutter-core-team-on-tour-in-2026-51c3d7190e44?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Come meet the Flutter core team on tour in 2026</a></h3>
-              <p class="summary">Flutter チームが 2026 年に世界中でツアーイベントを開催し、開発者と直接交流する機会を提供します。Dart 3.12 と Flutter 3.44 のリリースに合わせて、Google Cloud Next と Google I/O などの主要イベントで team メンバーと会える予定です。コミュニティ主導のイベントを通じて、グローバルな開発者コミュニティの構築と連携強化を目指しています。</p>
+              <p class="card-summary">Flutter チームが 2026 年に世界中でツアーイベントを開催し、開発者と直接交流する機会を提供します。Dart 3.12 と Flutter 3.44 のリリースに合わせて、Google Cloud Next と Google I/O などの主要イベントで team メンバーと会える予定です。コミュニティ主導のイベントを通じて、グローバルな開発者コミュニティの構築と連携強化を目指しています。</p>
             </div>
-            <div class="card" style="--fw-color:#61DAFB">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#61DAFB22;color:#61DAFB">⚛️ React Native</span>
+            <div class="steel-card" style="--fw-color:#61DAFB">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2026/04/07/react-native-0.85" target="_blank" rel="noopener">React Native 0.85 - New Animation Backend, New Jest Preset Package</a></h3>
-              <p class="summary">React Native 0.85がリリースされました。新しいアニメーションバックエンド、新しいJestプリセットパッケージが導入されています。詳細な機能・変更点・注意点については、リリースノートで確認してください。</p>
+              <p class="card-summary">React Native 0.85がリリースされました。新しいアニメーションバックエンド、新しいJestプリセットパッケージが導入されています。詳細な機能・変更点・注意点については、リリースノートで確認してください。</p>
             </div>
-            <div class="card" style="--fw-color:#61DAFB">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#61DAFB22;color:#61DAFB">⚛️ React Native</span>
+            <div class="steel-card" style="--fw-color:#61DAFB">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest" target="_blank" rel="noopener">React Native Comes to Meta Quest</a></h3>
-              <p class="summary">React Nativeが Meta Quest（VR/MRデバイス）に対応し、Android・iOS・Apple TV・Windows・macOSなどに続く新たなプラットフォームサポートが実現されました。開発者は同一のReact Nativeコードベースで複数のデバイスやフォームファクターに対応でき、プラットフォーム間の知識の再利用がさらに強化されています。この拡張により、エコシステムの分断を避けながら、VRデバイス向けアプリケーション開発が可能になります。</p>
+              <p class="card-summary">React Nativeが Meta Quest（VR/MRデバイス）に対応し、Android・iOS・Apple TV・Windows・macOSなどに続く新たなプラットフォームサポートが実現されました。開発者は同一のReact Nativeコードベースで複数のデバイスやフォームファクターに対応でき、プラットフォーム間の知識の再利用がさらに強化されています。この拡張により、エコシステムの分断を避けながら、VRデバイス向けアプリケーション開発が可能になります。</p>
             </div>
-            <div class="card" style="--fw-color:#61DAFB">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#61DAFB22;color:#61DAFB">⚛️ React Native</span>
+            <div class="steel-card" style="--fw-color:#61DAFB">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2026/02/11/react-native-0.84" target="_blank" rel="noopener">React Native 0.84 - Hermes V1 by Default</a></h3>
-              <p class="summary">React Native 0.84では、高性能JavaScriptエンジンのHermes V1がデフォルトになり、アプリのパフォーマンスと起動速度が向上します。これまでオプションだったHermesが標準搭載されることで、開発者は追加の設定なしに最適化されたエンジンの恩恵を受けられます。既存プロジェクトではHermesの有効化が自動的に適用されるため、互換性の確認が必要な場合があります。</p>
+              <p class="card-summary">React Native 0.84では、高性能JavaScriptエンジンのHermes V1がデフォルトになり、アプリのパフォーマンスと起動速度が向上します。これまでオプションだったHermesが標準搭載されることで、開発者は追加の設定なしに最適化されたエンジンの恩恵を受けられます。既存プロジェクトではHermesの有効化が自動的に適用されるため、互換性の確認が必要な場合があります。</p>
             </div>
-            <div class="card" style="--fw-color:#61DAFB">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#61DAFB22;color:#61DAFB">⚛️ React Native</span>
+            <div class="steel-card" style="--fw-color:#61DAFB">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2025/12/10/react-native-0.83" target="_blank" rel="noopener">React Native 0.83 - React 19.2, New DevTools features, no breaking changes</a></h3>
-              <p class="summary">React Native 0.83がリリースされ、React 19.2へのアップグレードが含まれています。DevToolsに新機能が追加され、破壊的な変更がないため既存プロジェクトへの導入が容易です。React 19.2の最新機能とDevToolsの拡張機能を活用できるようになりました。</p>
+              <p class="card-summary">React Native 0.83がリリースされ、React 19.2へのアップグレードが含まれています。DevToolsに新機能が追加され、破壊的な変更がないため既存プロジェクトへの導入が容易です。React 19.2の最新機能とDevToolsの拡張機能を活用できるようになりました。</p>
             </div>
-            <div class="card" style="--fw-color:#61DAFB">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#61DAFB22;color:#61DAFB">⚛️ React Native</span>
+            <div class="steel-card" style="--fw-color:#61DAFB">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2025/10/08/react-native-0.82" target="_blank" rel="noopener">React Native 0.82 - A New Era</a></h3>
-              <p class="summary">React Native 0.82はNew Architectureを完全採用した初めてのバージョンで、パフォーマンス向上とネイティブ統合の改善が実現されました。主な変更点として、JSIベースの新しいブリッジシステムの導入により、JavaScriptとネイティブコード間の通信速度が大幅に向上しています。既存プロジェクトのアップグレードには互換性の確認が必要であり、レガシーアーキテクチャ対応のコンポーネントの検証が重要です。</p>
+              <p class="card-summary">React Native 0.82はNew Architectureを完全採用した初めてのバージョンで、パフォーマンス向上とネイティブ統合の改善が実現されました。主な変更点として、JSIベースの新しいブリッジシステムの導入により、JavaScriptとネイティブコード間の通信速度が大幅に向上しています。既存プロジェクトのアップグレードには互換性の確認が必要であり、レガシーアーキテクチャ対応のコンポーネントの検証が重要です。</p>
             </div>
-            <div class="card" style="--fw-color:#9FEAF9">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#9FEAF922;color:#9FEAF9">⚡ Electron</span>
+            <div class="steel-card" style="--fw-color:#9FEAF9">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/tech-talk-wayland" target="_blank" rel="noopener">Tech Talk: How Electron went Wayland-native, and what it means for your apps</a></h3>
-              <p class="summary">Electronが Linux でデフォルトで Wayland に切り替わり、VS Code や Discord などの人気デスクトップアプリが対応しました。この変更により、モダンディスプレイサーバーの採用で描画パフォーマンスの向上とセキュリティ強化が期待できます。開発者は既存アプリの互換性を確認し、必要に応じて Wayland 固有の API 呼び出しやスクリーンキャプチャ機能の動作を検証する必要があります。</p>
+              <p class="card-summary">Electronが Linux でデフォルトで Wayland に切り替わり、VS Code や Discord などの人気デスクトップアプリが対応しました。この変更により、モダンディスプレイサーバーの採用で描画パフォーマンスの向上とセキュリティ強化が期待できます。開発者は既存アプリの互換性を確認し、必要に応じて Wayland 固有の API 呼び出しやスクリーンキャプチャ機能の動作を検証する必要があります。</p>
             </div>
-            <div class="card" style="--fw-color:#9FEAF9">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#9FEAF922;color:#9FEAF9">⚡ Electron</span>
+            <div class="steel-card" style="--fw-color:#9FEAF9">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/electron-41-0" target="_blank" rel="noopener">Electron 41</a></h3>
-              <p class="summary">Electron 41がリリースされました。Chromium 146.0.7680.65、V8 14.6、Node v24.14.0へのアップグレードが含まれています。これらの依存関係の更新により、パフォーマンス向上とセキュリティ改善が期待できます。</p>
+              <p class="card-summary">Electron 41がリリースされました。Chromium 146.0.7680.65、V8 14.6、Node v24.14.0へのアップグレードが含まれています。これらの依存関係の更新により、パフォーマンス向上とセキュリティ改善が期待できます。</p>
             </div>
-            <div class="card" style="--fw-color:#9FEAF9">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#9FEAF922;color:#9FEAF9">⚡ Electron</span>
+            <div class="steel-card" style="--fw-color:#9FEAF9">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/electron-40-0" target="_blank" rel="noopener">Electron 40.0.0</a></h3>
-              <p class="summary">Electron 40.0.0がリリースされ、Chromium 144.0.7559.60、V8 14.4、Node 24.11.1へのアップグレードが含まれています。これらのアップグレードにより、最新のJavaScript実行環境とブラウザ機能が利用可能になります。アップデート前に互換性の確認とテストを推奨します。</p>
+              <p class="card-summary">Electron 40.0.0がリリースされ、Chromium 144.0.7559.60、V8 14.4、Node 24.11.1へのアップグレードが含まれています。これらのアップグレードにより、最新のJavaScript実行環境とブラウザ機能が利用可能になります。アップデート前に互換性の確認とテストを推奨します。</p>
             </div>
-            <div class="card" style="--fw-color:#9FEAF9">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#9FEAF922;color:#9FEAF9">⚡ Electron</span>
+            <div class="steel-card" style="--fw-color:#9FEAF9">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/tech-talk-window-resize-behavior" target="_blank" rel="noopener">Tech Talk: Improving Window Resize Behavior</a></h3>
-              <p class="summary">Electronの開発チームがウィンドウリサイズ動作の改善に関する技術ブログ記事を新シリーズで発表しました。具体的な新機能や変更点、注意点については記事本文で詳述されているため、このエクスポートのみからは判断できませんが、ウィンドウサイズ変更時のパフォーマンスやユーザー体験の向上が見込まれます。プロジェクトへの貢献に関心がある開発者の参加を呼びかけています。</p>
+              <p class="card-summary">Electronの開発チームがウィンドウリサイズ動作の改善に関する技術ブログ記事を新シリーズで発表しました。具体的な新機能や変更点、注意点については記事本文で詳述されているため、このエクスポートのみからは判断できませんが、ウィンドウサイズ変更時のパフォーマンスやユーザー体験の向上が見込まれます。プロジェクトへの貢献に関心がある開発者の参加を呼びかけています。</p>
             </div>
-            <div class="card" style="--fw-color:#9FEAF9">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#9FEAF922;color:#9FEAF9">⚡ Electron</span>
+            <div class="steel-card" style="--fw-color:#9FEAF9">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/dec-quiet-period-25" target="_blank" rel="noopener">December Quiet Month (Dec'25)</a></h3>
-              <p class="summary">Electronプロジェクトは2025年12月1日から1月2026年までの間、開発活動を縮小する静寂期間に入ります。この期間中は通常の開発ペースが低下し、緊急対応以外のプルリクエストやリリースは制限されます。詳細はPoliciesセクションを確認してください。</p>
+              <p class="card-summary">Electronプロジェクトは2025年12月1日から1月2026年までの間、開発活動を縮小する静寂期間に入ります。この期間中は通常の開発ペースが低下し、緊急対応以外のプルリクエストやリリースは制限されます。詳細はPoliciesセクションを確認してください。</p>
             </div>
-            <div class="card" style="--fw-color:#FFC131">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#FFC13122;color:#FFC131">🦀 Tauri</span>
+            <div class="steel-card" style="--fw-color:#FFC131">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131">🦀 Tauri</span>
               </div>
               <h3><a href="https://v2.tauri.app/blog/tauri-board-elections-2025/" target="_blank" rel="noopener">Tauri Board Elections 2025</a></h3>
-              <p class="summary">Tauri v2で多くのアプリケーションが開発されている中、The Commons Conservancy傘下のプログラムとなってから4年を経たTauriが、新任期に向けたボード・ディレクター選挙を実施します。これはTauriプロジェクトの統治体制における定期的な更新プロセスであり、コミュニティの意思決定に参加する機会を提供するものです。</p>
+              <p class="card-summary">Tauri v2で多くのアプリケーションが開発されている中、The Commons Conservancy傘下のプログラムとなってから4年を経たTauriが、新任期に向けたボード・ディレクター選挙を実施します。これはTauriプロジェクトの統治体制における定期的な更新プロセスであり、コミュニティの意思決定に参加する機会を提供するものです。</p>
             </div>
-            <div class="card" style="--fw-color:#FFC131">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#FFC13122;color:#FFC131">🦀 Tauri</span>
+            <div class="steel-card" style="--fw-color:#FFC131">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131">🦀 Tauri</span>
               </div>
               <h3><a href="https://v2.tauri.app/blog/tauri-verso-integration/" target="_blank" rel="noopener">Experimental Tauri Verso Integration</a></h3>
-              <p class="summary">Tauri がServoベースのブラウザエンジン「Verso」との統合を実験的に開始しました。これにより、従来のWebViewに代わってVersoを使用することで、より軽量でモダンなレンダリングエンジンでデスクトップアプリケーションを構築できるようになります。現在は初期段階であるため、本番環境での使用は推奨されず、フィードバックと動作検証が必要です。</p>
+              <p class="card-summary">Tauri がServoベースのブラウザエンジン「Verso」との統合を実験的に開始しました。これにより、従来のWebViewに代わってVersoを使用することで、より軽量でモダンなレンダリングエンジンでデスクトップアプリケーションを構築できるようになります。現在は初期段階であるため、本番環境での使用は推奨されず、フィードバックと動作検証が必要です。</p>
             </div>
-            <div class="card" style="--fw-color:#FFC131">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#FFC13122;color:#FFC131">🦀 Tauri</span>
+            <div class="steel-card" style="--fw-color:#FFC131">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131">🦀 Tauri</span>
               </div>
               <h3><a href="https://v2.tauri.app/blog/tauri-20/" target="_blank" rel="noopener">Tauri 2.0 Stable Release</a></h3>
-              <p class="summary">Tauri 2.0の安定版がリリースされました。このバージョンでは、パフォーマンス向上、新しいプラグインシステム、改善されたセキュリティ機能が実装されています。既存プロジェクトの移行時は、APIの変更とプラグインの互換性に注意が必要です。</p>
+              <p class="card-summary">Tauri 2.0の安定版がリリースされました。このバージョンでは、パフォーマンス向上、新しいプラグインシステム、改善されたセキュリティ機能が実装されています。既存プロジェクトの移行時は、APIの変更とプラグインの互換性に注意が必要です。</p>
             </div>
-            <div class="card" style="--fw-color:#FFC131">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#FFC13122;color:#FFC131">🦀 Tauri</span>
+            <div class="steel-card" style="--fw-color:#FFC131">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131">🦀 Tauri</span>
               </div>
               <h3><a href="https://v2.tauri.app/blog/tauri-2-0-0-release-candidate/" target="_blank" rel="noopener">Tauri 2.0 Release Candidate</a></h3>
-              <p class="summary">Tauri 2.0がリリース候補段階に入り、安定版リリースへ向けて進行中です。このバージョンではいくつかの破壊的変更が含まれており、既存プロジェクトのマイグレーションが必要になる場合があります。詳細はリリースノートで確認し、安定版リリース前に対応を進めることが推奨されます。</p>
+              <p class="card-summary">Tauri 2.0がリリース候補段階に入り、安定版リリースへ向けて進行中です。このバージョンではいくつかの破壊的変更が含まれており、既存プロジェクトのマイグレーションが必要になる場合があります。詳細はリリースノートで確認し、安定版リリース前に対応を進めることが推奨されます。</p>
             </div>
-            <div class="card" style="--fw-color:#FFC131">
-              <div class="card-top">
-                <span class="fw-badge" style="background:#FFC13122;color:#FFC131">🦀 Tauri</span>
+            <div class="steel-card" style="--fw-color:#FFC131">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131">🦀 Tauri</span>
               </div>
               <h3><a href="https://v2.tauri.app/blog/tauri-1-7/" target="_blank" rel="noopener">Announcing Tauri 1.7.0</a></h3>
-              <p class="summary">Tauri 1.7.0がリリースされました。このバージョンでは、パフォーマンス改善、新しいAPIの追加、セキュリティ脆弱性の修正が含まれています。詳細な変更内容については公式リリースノートを確認することをお勧めします。</p>
+              <p class="card-summary">Tauri 1.7.0がリリースされました。このバージョンでは、パフォーマンス改善、新しいAPIの追加、セキュリティ脆弱性の修正が含まれています。詳細な変更内容については公式リリースノートを確認することをお勧めします。</p>
             </div></div>
         </section></main>
-<footer>Framework Releases Summary — Powered by GitHub Actions &amp; Anthropic Claude - まじサンキューソーマッチ</footer>
+<footer>Framework Releases Summary — Powered by GitHub Actions &amp; Anthropic Claude</footer>
 </body>
 </html>

@@ -169,7 +169,7 @@ def summarize(client: anthropic.Anthropic, article: dict) -> str:
         print(f"    要約失敗: {e}", file=sys.stderr)
         return ""
 
-# ── HTML 生成 ─────────────────────────────────────────────────────────────────
+# ── HTML 生成（Shiny Metal Industrial デザイン） ──────────────────────────────
 
 def generate_html(by_date: dict, updated_at: str) -> str:
     sections_html = ""
@@ -180,24 +180,31 @@ def generate_html(by_date: dict, updated_at: str) -> str:
 
         try:
             dt    = datetime.strptime(date, "%Y-%m-%d")
-            label = f"{dt.year}年{dt.month}月{dt.day}日"
+            label = f"{dt.year}.{dt.month:02d}.{dt.day:02d}"
         except Exception:
             label = date
 
+        # リベット（divider用）
+        rivets = '<div class="rivet"></div>' * 10
+
         cards_html = ""
         for a in articles:
-            color      = a.get("fw_color", "#888")
+            color      = a.get("fw_color", "#909aa8")
             safe_title = a["title"].replace("<", "&lt;").replace(">", "&gt;")
             safe_link  = a["link"].replace('"', "&quot;")
             summary_block = (
-                f'<p class="summary">{a["summary_ja"]}</p>'
+                f'<p class="card-summary">{a["summary_ja"]}</p>'
                 if a.get("summary_ja")
-                else '<p class="no-summary">要約なし</p>'
+                else '<p class="card-no-summary">— NO SUMMARY —</p>'
             )
             cards_html += f"""
-            <div class="card" style="--fw-color:{color}">
-              <div class="card-top">
-                <span class="fw-badge" style="background:{color}22;color:{color}">{a['fw_icon']} {a['fw_name']}</span>
+            <div class="steel-card" style="--fw-color:{color}">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:{color};color:{color}">{a['fw_icon']} {a['fw_name']}</span>
               </div>
               <h3><a href="{safe_link}" target="_blank" rel="noopener">{safe_title}</a></h3>
               {summary_block}
@@ -205,15 +212,23 @@ def generate_html(by_date: dict, updated_at: str) -> str:
 
         sections_html += f"""
         <section class="day-section">
-          <div class="day-header">
-            <span class="day-label">{label}</span>
-            <span class="day-count">{len(articles)} 件</span>
+          <div class="steel-divider-wrap">
+            <div class="steel-divider">{rivets}</div>
+            <div class="steel-divider-bottom"></div>
           </div>
-          <div class="grid">{cards_html}</div>
+          <div class="day-header">
+            <h2 class="day-label">{label}</h2>
+            <span class="day-count">{len(articles)} ARTICLES</span>
+          </div>
+          <div class="card-grid">{cards_html}</div>
         </section>"""
 
     if not sections_html:
-        sections_html = '<p class="empty">まだ記事がありません。GitHub Actionsを実行してください。</p>'
+        sections_html = """
+        <div class="empty-state">
+          <div class="hazard-stripe-bar"></div>
+          <p>NO DATA — Run GitHub Actions to fetch articles.</p>
+        </div>"""
 
     return f"""<!DOCTYPE html>
 <html lang="ja">
@@ -222,39 +237,235 @@ def generate_html(by_date: dict, updated_at: str) -> str:
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Framework Releases Summary</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{{--bg:#0a0a0f;--surface:#111118;--border:#1e1e2e;--text:#e8e8f0;--muted:#6b6b88;--accent:#c8f250;}}
 *{{margin:0;padding:0;box-sizing:border-box;}}
-body{{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;min-height:100vh;}}
-header{{border-bottom:1px solid var(--border);padding:24px 40px;position:sticky;top:0;background:rgba(10,10,15,.93);backdrop-filter:blur(12px);z-index:100;display:flex;align-items:baseline;gap:20px;}}
-.logo{{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--accent);}}
-.updated{{font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-left:auto;}}
-main{{padding:32px 40px;max-width:1300px;margin:0 auto;}}
-.day-section{{margin-bottom:52px;}}
-.day-header{{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--border);}}
-.day-label{{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--text);letter-spacing:-.01em;}}
-.day-count{{font-size:.62rem;color:var(--muted);letter-spacing:.08em;}}
-.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;}}
-.card{{background:var(--surface);border:1px solid var(--border);padding:18px;position:relative;transition:border-color .2s,transform .2s;}}
-.card::before{{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--fw-color,var(--muted));opacity:.7;}}
-.card:hover{{border-color:color-mix(in srgb,var(--fw-color,#888) 40%,var(--border));transform:translateY(-1px);}}
-.card-top{{margin-bottom:10px;}}
-.fw-badge{{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;}}
-h3{{font-family:'Fraunces',serif;font-size:.9rem;font-weight:700;line-height:1.35;margin-bottom:10px;}}
-h3 a{{color:var(--text);text-decoration:none;}}
-h3 a:hover{{color:var(--fw-color,var(--accent));}}
-.summary{{font-size:.76rem;line-height:1.7;color:#a0a0c0;}}
-.no-summary{{font-size:.7rem;color:var(--muted);font-style:italic;}}
-.empty{{color:var(--muted);font-size:.8rem;padding:40px;text-align:center;border:1px dashed var(--border);}}
-footer{{border-top:1px solid var(--border);padding:20px 40px;font-size:.6rem;color:var(--muted);text-align:center;letter-spacing:.08em;text-transform:uppercase;}}
-@media(max-width:600px){{header,main{{padding-left:16px;padding-right:16px;}}.grid{{grid-template-columns:1fr;}}header{{flex-wrap:wrap;}}.updated{{margin-left:0;}}}}
+
+body{{
+  background:#111214;
+  background-image:
+    radial-gradient(ellipse at 20% 50%,rgba(30,40,60,.8) 0%,transparent 60%),
+    radial-gradient(ellipse at 80% 20%,rgba(50,30,20,.4) 0%,transparent 50%);
+  min-height:100vh;
+  font-family:'Rajdhani',sans-serif;
+  color:#ccc;
+  overflow-x:hidden;
+}}
+
+/* ── HEADER ── */
+header{{
+  position:sticky;top:0;z-index:100;
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.9) 0%,rgba(220,225,235,.6) 8%,
+      rgba(160,168,178,.4) 18%,rgba(120,128,138,.3) 30%,
+      rgba(140,148,158,.4) 52%,rgba(200,208,218,.6) 62%,
+      rgba(255,255,255,.85) 70%,rgba(100,108,118,.3) 90%,
+      rgba(60,68,78,.4) 100%),
+    linear-gradient(90deg,rgba(255,255,255,.1) 0%,transparent 50%,rgba(255,255,255,.05) 100%);
+  background-color:#b8bec8;
+  border-bottom:3px solid #505860;
+  box-shadow:0 4px 20px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.4) inset;
+  overflow:hidden;
+}}
+header::before{{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(168deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 35%,transparent 60%);
+  pointer-events:none;z-index:1;
+}}
+header::after{{
+  content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,.03) 2px,rgba(255,255,255,.03) 3px);
+  pointer-events:none;z-index:2;
+}}
+.header-inner{{
+  position:relative;z-index:3;
+  max-width:1300px;margin:0 auto;
+  padding:20px 40px;
+  display:flex;align-items:center;gap:20px;
+}}
+.logo{{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(32px,6vw,52px);
+  letter-spacing:.12em;
+  background:linear-gradient(160deg,
+    #1a2030 0%,#283848 20%,#101820 40%,
+    #2a3848 60%,#182030 80%,#0e1820 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));
+  line-height:1;
+}}
+.header-meta{{margin-left:auto;text-align:right;}}
+.header-tagline{{
+  font-size:10px;letter-spacing:.35em;text-transform:uppercase;
+  color:#404858;font-weight:700;
+}}
+.header-updated{{
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:#606878;margin-top:3px;
+}}
+
+/* ── MAIN ── */
+main{{max-width:1300px;margin:0 auto;padding:0 40px 60px;}}
+
+/* ── DIVIDER ── */
+.steel-divider-wrap{{margin:40px 0 0;}}
+.steel-divider{{
+  height:18px;
+  background:linear-gradient(180deg,#2a2e38 0%,#3a3e48 40%,#252830 100%);
+  border-top:1px solid rgba(255,255,255,.1);
+  border-bottom:1px solid rgba(0,0,0,.6);
+  display:flex;align-items:center;gap:12px;padding:0 16px;
+  box-shadow:0 2px 8px rgba(0,0,0,.5) inset;
+}}
+.rivet{{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+  background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8) 0%,rgba(180,190,200,.5) 40%,rgba(60,70,80,.6) 100%);
+  background-color:#909aa8;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -1px 0 rgba(0,0,0,.4) inset,0 2px 4px rgba(0,0,0,.6);
+}}
+.steel-divider-bottom{{
+  height:2px;
+  background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(255,255,255,.06) 100%);
+}}
+
+/* ── DAY HEADER ── */
+.day-header{{
+  display:flex;align-items:baseline;gap:16px;
+  padding:20px 0 14px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  margin-bottom:20px;
+}}
+.day-label{{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(28px,5vw,44px);
+  letter-spacing:.15em;
+  background:linear-gradient(160deg,#fff 0%,#e0e8f0 15%,#a8b8c8 30%,#687888 45%,#c8d8e8 60%,#fff 72%,#90a0b0 85%,#d0d8e0 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));
+  line-height:1;
+}}
+.day-count{{
+  font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  color:#506070;font-weight:700;
+}}
+
+/* ── CARD GRID ── */
+.card-grid{{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:0;
+}}
+
+/* ── STEEL CARD ── */
+.steel-card{{
+  padding:22px 20px;
+  position:relative;overflow:hidden;
+  border:1px solid rgba(0,0,0,.5);
+  border-right-width:0;
+  outline:1px solid rgba(255,255,255,.07);
+  outline-offset:-2px;
+  background:linear-gradient(160deg,#1e2028 0%,#161820 40%,#12141c 70%,#1a1c24 100%);
+  background-color:#161820;
+  transition:filter .18s;
+}}
+.steel-card:last-child{{border-right-width:1px;}}
+.steel-card:hover{{filter:brightness(1.12);}}
+
+/* brushed texture */
+.steel-card::after{{
+  content:'';position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 6px,rgba(255,255,255,.008) 6px,rgba(255,255,255,.008) 7px),
+    repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(255,255,255,.005) 3px,rgba(255,255,255,.005) 4px);
+  pointer-events:none;z-index:0;
+}}
+
+/* fw-color left accent */
+.steel-card::before{{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--fw-color,#909aa8);
+  opacity:.8;z-index:1;
+}}
+
+/* corner marks */
+.corner-mark{{position:absolute;width:10px;height:10px;border-color:rgba(255,255,255,.15);border-style:solid;z-index:2;}}
+.corner-mark.tl{{top:6px;left:6px;border-width:1px 0 0 1px;}}
+.corner-mark.tr{{top:6px;right:6px;border-width:1px 1px 0 0;}}
+.corner-mark.bl{{bottom:6px;left:6px;border-width:0 0 1px 1px;}}
+.corner-mark.br{{bottom:6px;right:6px;border-width:0 1px 1px 0;}}
+
+.fw-badge-wrap{{position:relative;z-index:3;margin-bottom:10px;}}
+.fw-badge{{
+  display:inline-block;
+  font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;
+  padding:2px 8px;border-radius:0;
+  border-left:3px solid var(--fw-color,#909aa8);
+  background:rgba(255,255,255,.04);
+}}
+
+.steel-card h3{{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:17px;letter-spacing:.1em;line-height:1.3;
+  margin-bottom:10px;
+  position:relative;z-index:3;
+}}
+.steel-card h3 a{{
+  color:#c8d4e0;text-decoration:none;
+  transition:color .15s;
+}}
+.steel-card h3 a:hover{{color:var(--fw-color,#c8d4e0);}}
+
+.card-summary{{
+  font-size:12px;line-height:1.7;letter-spacing:.04em;
+  color:#708090;position:relative;z-index:3;
+}}
+.card-no-summary{{
+  font-size:11px;letter-spacing:.25em;
+  color:#303840;font-style:normal;
+  position:relative;z-index:3;
+}}
+
+/* ── EMPTY STATE ── */
+.empty-state{{
+  margin:60px 0;border:1px solid rgba(255,255,255,.06);
+  outline:1px solid rgba(0,0,0,.6);outline-offset:3px;
+  overflow:hidden;
+}}
+.hazard-stripe-bar{{
+  height:8px;
+  background:repeating-linear-gradient(-45deg,#c09010 0px,#c09010 8px,#181410 8px,#181410 16px);
+}}
+.empty-state p{{
+  padding:32px;font-size:12px;letter-spacing:.3em;
+  text-transform:uppercase;color:#404850;text-align:center;
+}}
+
+/* ── FOOTER ── */
+footer{{
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:20px 40px;
+  font-size:10px;letter-spacing:.25em;text-transform:uppercase;
+  color:#303840;text-align:center;
+}}
+
+@media(max-width:600px){{
+  .header-inner,main,footer{{padding-left:16px;padding-right:16px;}}
+  .card-grid{{grid-template-columns:1fr;}}
+  .steel-card{{border-right-width:1px !important;}}
+  .header-meta{{display:none;}}
+}}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">Framework Releases Summary</div>
-  <div class="updated">最終更新: {updated_at} JST</div>
+  <div class="header-inner">
+    <div class="logo">Framework Releases Summary</div>
+    <div class="header-meta">
+      <div class="header-tagline">Flutter · React Native · Expo · Electron · Tauri · Dioxus</div>
+      <div class="header-updated">Last updated: {updated_at} JST</div>
+    </div>
+  </div>
 </header>
 <main>{sections_html}</main>
 <footer>Framework Releases Summary — Powered by GitHub Actions &amp; Anthropic Claude - まじサンキューソーマッチ</footer>
