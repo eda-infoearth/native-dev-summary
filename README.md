@@ -16,8 +16,8 @@ https://eda-infoearth.github.io/native-dev-summary/
 │   ├── seen_ids.json       # store article ids
 │   └── YYYY-MM-DD.json     # store articles
 ├── docs/ 
-│   ├── index.html          # root of GitHub Pages
-│   └── index.html
+│   ├── feed.xml            # RSS feed file
+│   └── index.html          # root of GitHub Pages
 └── README.md
 ```
 
@@ -42,7 +42,8 @@ This repositry
 | SECRET NAME | VALUE |
 |---|---|
 | `ANTHROPIC_API_KEY` | Anthropic Console API key |
-| `SLACK_WEBHOOK_URL` | Slack Incoming WebhookのURL |
+| `SLACK_WEBHOOK_URL` | Slack Incoming Webhook URL |
+| `SITE_URL` | GitHub Pages URL |
 
 #### Slack Webhook URL
 1. https://api.slack.com/apps → Create New App
