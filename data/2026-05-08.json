@@ -9,7 +9,7 @@
     "link": "https://electronjs.org/blog/electron-42-0",
     "pub_date": "Thu, 07 May 2026 00:00:00 GMT",
     "description": "Electron 42 has been released! It includes upgrades to Chromium 148.0.7778.96, V8 14.8, and Node v24.15.0.",
-    "summary_ja": "Electron 42がリリースされました。Chromium 148.0.7778.96、V8 14.8、Node v24.15.0へのアップグレードが含まれており、これらの更新により最新のWebプラットフォーム機能とJavaScript実行性能が向上します。既存のアプリケーションは互換性を確認した上でアップグレードすることをお勧めします。",
-    "fetched_at": "2026-05-07T23:16:47.868872+00:00"
+    "summary_ja": "Electron 42がリリースされました。Chromium 148.0.7778.96、V8 14.8、Node v24.15.0へのアップグレードが含まれており、これらの依存関係の更新により、パフォーマンス向上とセキュリティ改善が期待できます。詳細な新機能や破壊的変更については、公式リリースノートの確認をお勧めします。",
+    "fetched_at": "2026-05-08T06:10:18.570481+00:00"
   }
 ]

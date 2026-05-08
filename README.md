@@ -67,12 +67,14 @@ Launch app manually, after that it will fetch every 8:00AM(JST).
 
 ```bash
 # in root dir
-pip install anthropic feedparser requests
+pip install anthropic feedparser requests beautifulsoup4
 
 export ANTHROPIC_API_KEY=sk-ant-...
 export SLACK_WEBHOOK_URL=https://hooks.slack.com/...
 
 python3 scripts/fetch_and_summarize.py
+
+python scripts/backfill.py YYYY-MM-DD
 ```
 
 see `docs/index.html` on browser.

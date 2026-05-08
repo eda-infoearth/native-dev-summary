@@ -1,0 +1,28 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/gradle-cache",
+    "title": "Gradle cache for Android builds",
+    "link": "https://expo.dev/changelog/gradle-cache",
+    "pub_date": "2026-04-30T16:00:58.664Z",
+    "description": "",
+    "summary_ja": "ExpoでAndroidビルド時のGradleキャッシュが有効になり、ビルド時間が大幅に短縮されます。キャッシュは自動的に管理され、依存関係の変更時に無効化されるため、開発効率が向上します。既存のプロジェクトで即座に効果が期待できます。",
+    "fetched_at": "2026-05-08T06:32:08.881219+00:00"
+  },
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4",
+    "title": "Saying goodbye to CocoaPods: Swift Package Manager is soon the default in Flutter!",
+    "link": "https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4",
+    "pub_date": "Thu, 30 Apr 2026 15:57:00 GMT",
+    "description": "Dash migration! Starting with the next stable Flutter release, 3.44, Swift Package Manager (SwiftPM) replaces CocoaPods as the default dependency manager for iOS and macOS apps. This means no more messing around with Ruby or CocoaPods installations just to get your app running! CocoaPods is officially in maintenance mode, and its registry will permanently become read-only on December 2, 2026 . While existing builds will still work, no new versions or pods will be added to the trunk after this date. To ensure that your apps continue receiving dependency updates and to provide access to the Swift package ecosystem, Flutter is transitioning to Apple’s supported dependency management solution: Swift Package Manager. If you’ve already migrated your plugin(s) to use SwiftPM, read the “Plugin dev",
+    "summary_ja": "Flutter 3.44以降、iOSおよびmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になるため、今後の依存関係更新とSwiftパッケージエコシステムへのアクセスを確保するにはSwiftPMへの移行が必要です。既存アプリは引き続き動作しますが、新機能やセキュリティアップデートを受け取るには、プラグインやプロジェクトをSwiftPMに対応させる必要があります。",
+    "fetched_at": "2026-05-08T05:45:38.618281+00:00"
+  }
+]

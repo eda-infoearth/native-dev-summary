@@ -46,24 +46,28 @@ from pathlib import Path
 import anthropic
 import feedparser
 import requests
+from bs4 import BeautifulSoup
 
 # ── 定数 ──────────────────────────────────────────────────────────────────────
 
 FEEDS = [
     {"id": "flutter",      "name": "Flutter",      "icon": "🐦", "color": "#54C5F8", "url": "https://medium.com/feed/flutter"},
     {"id": "react-native", "name": "React Native", "icon": "⚛️", "color": "#61DAFB", "url": "https://reactnative.dev/blog/rss.xml"},
-    {"id": "expo",         "name": "Expo",         "icon": "🚀", "color": "#aaaaff", "url": "https://expo.dev/blog/rss"},
+    {"id": "expo",         "name": "Expo",         "icon": "🚀", "color": "#aaaaff", "url": None},  # スクレイピング
     {"id": "electron",     "name": "Electron",     "icon": "⚡", "color": "#9FEAF9", "url": "https://www.electronjs.org/blog/rss.xml"},
     {"id": "tauri",        "name": "Tauri",        "icon": "🦀", "color": "#FFC131", "url": "https://v2.tauri.app/blog/rss.xml"},
     {"id": "dioxus",       "name": "Dioxus",       "icon": "🧩", "color": "#EB4E3D", "url": "https://dioxuslabs.com/blog/rss.xml"},
 ]
 
+EXPO_CHANGELOG_URL = "https://expo.dev/changelog"
+
 DATA_DIR      = Path("data")
 SEEN_IDS_PATH = DATA_DIR / "seen_ids.json"
 HTML_PATH     = Path("docs/index.html")
-JST           = timezone(timedelta(hours=9))
-MAX_PER_FEED  = 5      # フレームワークあたり取得件数
-MAX_HTML_DAYS = 365    # HTMLに含める最大日数
+JST               = timezone(timedelta(hours=9))
+MAX_PER_FEED      = 5      # フレームワークあたり取得件数
+MAX_HTML_DAYS     = 365    # HTMLに含める最大日数
+WINDOW_START_HOUR = 8      # 取得ウィンドウ開始時刻 (JST) ── 前日08:00〜当日07:59
 
 # ── ユーティリティ ──────────────────────────────────────────────────────────────
 
@@ -74,6 +78,52 @@ def strip_html(text: str) -> str:
 
 def today_jst() -> str:
     return datetime.now(JST).strftime("%Y-%m-%d")
+
+def get_window() -> tuple[datetime, datetime]:
+    """
+    アクション実行日を「当日」として、
+    前日 WINDOW_START_HOUR:00 JST 〜 当日 WINDOW_START_HOUR:00 JST 未満 を返す。
+    例: 2026-05-01 に実行 → 2026-04-30 08:00 JST 〜 2026-05-01 07:59:59 JST
+    """
+    now   = datetime.now(JST)
+    end   = now.replace(hour=WINDOW_START_HOUR, minute=0, second=0, microsecond=0)
+    start = end - timedelta(days=1)
+    return start, end
+
+def parse_pub_date(raw: str) -> datetime | None:
+    """feedparser / scraping が返す日付文字列を aware datetime に変換する。失敗時は None。"""
+    if not raw:
+        return None
+    import email.utils
+    try:
+        # RFC 2822 形式 (例: "Tue, 30 Apr 2026 12:00:00 +0000")
+        parsed = email.utils.parsedate_to_datetime(raw)
+        return parsed.astimezone(JST)
+    except Exception:
+        pass
+    # ISO 8601: ミリ秒あり・なし・Z suffix を統一処理
+    # 例: "2026-05-06T20:00:00.000Z" / "2026-05-06T20:00:00Z" / "2026-05-06T20:00:00+09:00"
+    normalized = raw.strip()
+    # ミリ秒部分（.XXX）を除去
+    normalized = re.sub(r'\.\d+', '', normalized)
+    # 末尾 Z を +00:00 に置換（Python 3.6以下との互換）
+    normalized = re.sub(r'Z$', '+00:00', normalized)
+    for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M%z", "%Y-%m-%d"):
+        try:
+            dt = datetime.strptime(normalized, fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(JST)
+        except ValueError:
+            continue
+    return None
+
+def in_window(pub_date_raw: str, start: datetime, end: datetime) -> bool:
+    """pub_date が [start, end) の範囲内かどうかを返す。パース失敗時は False。"""
+    dt = parse_pub_date(pub_date_raw)
+    if dt is None:
+        return False
+    return start <= dt < end
 
 def load_seen_ids() -> set:
     if SEEN_IDS_PATH.exists():
@@ -109,9 +159,114 @@ def load_all_date_files() -> dict:
         by_date[date] = json.loads(p.read_text(encoding="utf-8"))
     return by_date
 
+# ── Expo Changelog スクレイピング ─────────────────────────────────────────────
+
+EXPO_DATE_RE = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
+
+def parse_expo_date(text: str) -> str:
+    """'May 6, 2026' → ISO 8601。失敗時は空文字。"""
+    text = text.strip()
+    # %-d はmacOSで使えないので %d で統一（ゼロパディングでも動く）
+    try:
+        dt = datetime.strptime(text, "%B %d, %Y")
+        return dt.replace(hour=12, tzinfo=timezone.utc).isoformat()
+    except ValueError:
+        pass
+    # 1桁の日付（"May 6, 2026"）は %B %-d, %Y で来るが、
+    # strptime は " 6" のゼロパディングなし数値を "%d" では受け付けない環境もある。
+    # 正規化してリトライ。
+    try:
+        m = re.match(r"([A-Z][a-z]+) (\d{1,2}), (\d{4})", text)
+        if m:
+            normalized = f"{m.group(1)} {int(m.group(2)):02d}, {m.group(3)}"
+            dt = datetime.strptime(normalized, "%B %d, %Y")
+            return dt.replace(hour=12, tzinfo=timezone.utc).isoformat()
+    except ValueError:
+        pass
+    return ""
+
+def fetch_expo_changelog(feed: dict) -> list[dict]:
+    """
+    expo.dev/changelog をスクレイピングして記事リストを返す。
+
+    実際のHTML構造（BeautifulSoupで見える形）:
+      <ブロック要素>  "May 6, 2026"  <a href="/changelog/sdk-56-beta">/ Read more →</a>  </ブロック要素>
+      <h2><a href="/changelog/sdk-56-beta">Expo SDK 56 Beta is now available</a></h2>
+      <p>本文（あれば）</p>
+      ... 次エントリ ...
+
+    h2 を起点に、直前の兄弟要素のテキストから日付を正規表現で抽出する。
+    """
+    try:
+        headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
+        resp = requests.get(EXPO_CHANGELOG_URL, headers=headers, timeout=15)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        articles = []
+        for h2 in soup.find_all("h2"):
+            title = h2.get_text(strip=True)
+            # h2 の親が <a href="..."> なのでそこからリンクを取得
+            a_tag = h2.parent if h2.parent.name == "a" else h2.find("a", href=True)
+            if not a_tag:
+                continue
+            href = a_tag.get("href", "")
+            link = href if href.startswith("http") else f"https://expo.dev{href}"
+
+            # 日付: h2.parent.parent 内の <time datetime="..."> を取得
+            pub_date = ""
+            try:
+                container = h2.parent.parent
+                time_tag  = container.find("time", attrs={"datetime": True})
+                if time_tag:
+                    # datetime="2026-05-06T20:00:00.000Z" → そのままISO形式で使える
+                    pub_date = time_tag["datetime"]
+            except Exception:
+                pass
+
+            # 本文: h2 直後の兄弟要素で "Read more" を含まないテキスト
+            desc = ""
+            for sib in h2.find_next_siblings():
+                if sib.name in ("h2", "h1", "h3"):
+                    break
+                text = sib.get_text(" ", strip=True)
+                if text and "Read more" not in text:
+                    desc = text[:800]
+                    break
+
+            if not title or not link:
+                continue
+
+            articles.append({
+                "fw_id":       feed["id"],
+                "fw_name":     feed["name"],
+                "fw_icon":     feed["icon"],
+                "fw_color":    feed["color"],
+                "id":          link,
+                "title":       title,
+                "link":        link,
+                "pub_date":    pub_date,
+                "description": desc,
+                "summary_ja":  None,
+                "fetched_at":  datetime.now(timezone.utc).isoformat(),
+            })
+
+            if len(articles) >= MAX_PER_FEED:
+                break
+
+        print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (scraping)")
+        return articles
+    except Exception as e:
+        print(f"  ⚠ {feed['name']} スクレイピング失敗: {e}", file=sys.stderr)
+        return []
+
 # ── RSS 取得 ──────────────────────────────────────────────────────────────────
 
 def fetch_feed(feed: dict) -> list[dict]:
+    # Expo だけスクレイピング、他は RSS
+    if feed["id"] == "expo":
+        return fetch_expo_changelog(feed)
+
     try:
         headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
         resp = requests.get(feed["url"], headers=headers, timeout=15)
@@ -468,7 +623,7 @@ footer{{
   </div>
 </header>
 <main>{sections_html}</main>
-<footer>Framework Releases Summary — Powered by GitHub Actions &amp; Anthropic Claude - まじサンキューソーマッチ</footer>
+<footer>Framework Releases Summary — Powered by GitHub Actions &amp; Anthropic Claude</footer>
 </body>
 </html>"""
 
@@ -516,20 +671,31 @@ def main():
     client   = anthropic.Anthropic(api_key=api_key)
     seen_ids = load_seen_ids()
     today    = today_jst()
+    win_start, win_end = get_window()
+    print(f"\n📅 取得ウィンドウ: {win_start.strftime('%Y-%m-%d %H:%M')} 〜 {win_end.strftime('%Y-%m-%d %H:%M')} JST")
     all_new: list[dict] = []
 
     for feed in FEEDS:
         print(f"\n{feed['icon']} {feed['name']} 処理中...")
         fetched  = fetch_feed(feed)
-        new_arts = [a for a in fetched if a["id"] not in seen_ids]
-        print(f"    新着: {len(new_arts)} 件")
 
-        for art in new_arts:
+        for art in fetched:
+            if art["id"] in seen_ids:
+                continue  # 既出 → スキップ（seen_ids登録済み）
+
+            seen_ids.add(art["id"])  # 範囲外でも seen_ids には登録
+
+            if not in_window(art["pub_date"], win_start, win_end):
+                print(f"    範囲外スキップ: {art['title'][:50]}")
+                continue  # 範囲外 → 要約・保存しない
+
             print(f"    要約中: {art['title'][:50]}...")
             art["summary_ja"] = summarize(client, art)
-            seen_ids.add(art["id"])
             all_new.append(art)
             time.sleep(0.5)
+
+        in_window_count = sum(1 for a in all_new if a["fw_id"] == feed["id"])
+        print(f"    範囲内新着: {in_window_count} 件")
 
     # 当日のJSONファイルに追記（既存分があれば先頭にマージ）
     if all_new:
