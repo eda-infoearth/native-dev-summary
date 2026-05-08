@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4",
+    "title": "We rebuilt Flutter’s websites with Dart and Jaspr",
+    "link": "https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4",
+    "pub_date": "Wed, 15 Apr 2026 18:31:01 GMT",
+    "description": "Rebuilding three websites using Jaspr, a Dart-based, open-source web framework. Despite Dart starting out as a web language and being used every day to build apps across platforms, including the web, our own websites ( dart.dev , flutter.dev , docs.flutter.dev ) relied on a fragmented mix of non-Dart tools. That’s finally changed. We’ve migrated all three websites to use Jaspr , an open-source framework for building websites with Dart. The result is a unified stack with a consistent developer experience where contributing only requires Dart. If you’re curious about building web experiences with Dart beyond standard Flutter web apps, this post explores what motivated our migration and how Dart and Jaspr made it all possible. A fragmented and unfamiliar technical stack While the previous set",
+    "summary_ja": "FlutterとDartの公式ウェブサイト3つ（dart.dev、flutter.dev、docs.flutter.dev）をJaspr（Dart製のオープンソースウェブフレームワーク）で統一し、これまでのバラバラなツール構成から脱却しました。Dartのみでの開発が可能になり、開発者体験が一貫性を持つようになったため、貢献がより容易になります。Flutter Webアプリ以外のDartでのウェブ構築に興味のある開発者にとって、参考になるマイグレーション事例です。",
+    "fetched_at": "2026-05-08T08:33:14.019509+00:00"
+  }
+]

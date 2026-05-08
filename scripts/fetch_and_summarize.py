@@ -316,6 +316,7 @@ def summarize(client: anthropic.Anthropic, article: dict) -> str:
                     f"Excerpt: {article['description'] or '(なし)'}\n\n"
                     "この記事を開発者向けに2〜3文の日本語で要約してください。"
                     "新機能・変更点・注意点を具体的に。前置きなしで要約のみ出力。"
+                    "記事の内容を読み込めなかった場合は、「要約失敗」のみ出力。"
                 ),
             }],
         )
@@ -572,8 +573,8 @@ main{{max-width:1300px;margin:0 auto;padding:0 40px 60px;}}
 .steel-card h3 a:hover{{color:var(--fw-color,#c8d4e0);}}
 
 .card-summary{{
-  font-size:12px;line-height:1.7;letter-spacing:.04em;
-  color:#708090;position:relative;z-index:3;
+  font-size:16px;line-height:1.7;letter-spacing:.04em;
+  color:#C1C8CF;position:relative;z-index:3;
 }}
 .card-no-summary{{
   font-size:11px;letter-spacing:.25em;
@@ -601,7 +602,7 @@ footer{{
   border-top:1px solid rgba(255,255,255,.06);
   padding:20px 40px;
   font-size:10px;letter-spacing:.25em;text-transform:uppercase;
-  color:#303840;text-align:center;
+  color:#C1C8CF;text-align:center;
 }}
 
 @media(max-width:600px){{
@@ -623,7 +624,7 @@ footer{{
   </div>
 </header>
 <main>{sections_html}</main>
-<footer>Framework Releases Summary — Powered by GitHub Actions &amp; Anthropic Claude</footer>
+<footer>Framework Releases Summary — Powered by GitHub Actions &amp; Anthropic Claude <br /> まじサンキューソーマッチ</footer>
 </body>
 </html>"""
 
