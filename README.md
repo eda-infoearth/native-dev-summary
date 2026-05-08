@@ -10,11 +10,13 @@ https://eda-infoearth.github.io/native-dev-summary/
 │   └── workflows/
 │       └── update.yml      # GitHub Actions cron
 ├── scripts/
+│   ├── backfill.py             # get RSS, samarize, diff (for past date)
 │   └── fetch_and_summarize.py  # get RSS, samarize, diff
 ├── data/
 │   ├── seen_ids.json       # store article ids
 │   └── YYYY-MM-DD.json     # store articles
-├── docs/                   # root of GitHub Pages
+├── docs/ 
+│   ├── index.html          # root of GitHub Pages
 │   └── index.html
 └── README.md
 ```

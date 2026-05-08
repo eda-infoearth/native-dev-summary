@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+   <title>Framework Releases Summary</title>
+   <link>https://eda-infoearth.github.io/native-dev-summary</link>
+   <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（Claude日本語要約付き）</description>
+   <language>ja</language>
+   <lastBuildDate>Fri, 08 May 2026 18:25:25 +0900</lastBuildDate>
+   <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
+
+   <item>
+     <title>⚡ Electron — Electron 42</title>
+     <link>https://electronjs.org/blog/electron-42-0</link>
+     <guid isPermaLink="true">https://electronjs.org/blog/electron-42-0</guid>
+     <pubDate>Thu, 07 May 2026 09:00:00 +0900</pubDate>
+     <description>Electron 42がリリースされました。Chromium 148.0.7778.96、V8 14.8、Node v24.15.0へのアップグレードが含まれており、これらの依存関係の更新により、パフォーマンス向上とセキュリティ改善が期待できます。詳細な新機能や破壊的変更については、公式リリースノートの確認をお勧めします。</description>
+   </item>
+   <item>
+     <title>🚀 Expo — Expo SDK 56 Beta is now available</title>
+     <link>https://expo.dev/changelog/sdk-56-beta</link>
+     <guid isPermaLink="true">https://expo.dev/changelog/sdk-56-beta</guid>
+     <pubDate>Thu, 07 May 2026 05:00:00 +0900</pubDate>
+     <description>Expo SDK 56のベータ版がリリースされました。React Native 0.85への対応、新しい開発ツールの強化、およびパフォーマンス改善が主な変更点です。既存プロジェクトのアップグレード時には、ネイティブコードの互換性確認が必要となる可能性があります。</description>
+   </item>
+   <item>
+     <title>🐦 Flutter — Introducing Skills for Dart and Flutter</title>
+     <link>https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4</link>
+     <guid isPermaLink="true">https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4</guid>
+     <pubDate>Thu, 07 May 2026 03:19:09 +0900</pubDate>
+     <description>FlutterとDartの開発に特化したAI Agent Skillsが導入され、ローカライゼーション、最新の言語機能、統合テストなどのドメイン固有の知識をAIアシスタントに提供できるようになりました。LLMの訓練データの更新遅延に対応し、急速に進化するFlutter/Dartの最新機能をAIが即座に反映できる仕組みです。これにより、本番環境レベルの高品質なアプリ開発をAIアシスタントでサポート可能になります。</description>
+   </item>
+   <item>
+     <title>🚀 Expo — Expo Go and the App Store in May 2026</title>
+     <link>https://expo.dev/changelog/expo-go-and-app-store-may-2026</link>
+     <guid isPermaLink="true">https://expo.dev/changelog/expo-go-and-app-store-may-2026</guid>
+     <pubDate>Tue, 05 May 2026 04:15:00 +0900</pubDate>
+     <description>要約失敗</description>
+   </item>
+   <item>
+     <title>🚀 Expo — Gradle cache for Android builds</title>
+     <link>https://expo.dev/changelog/gradle-cache</link>
+     <guid isPermaLink="true">https://expo.dev/changelog/gradle-cache</guid>
+     <pubDate>Fri, 01 May 2026 01:00:58 +0900</pubDate>
+     <description>ExpoでAndroidビルド時のGradleキャッシュが有効になり、ビルド時間が大幅に短縮されます。キャッシュは自動的に管理され、依存関係の変更時に無効化されるため、開発効率が向上します。既存のプロジェクトで即座に効果が期待できます。</description>
+   </item>
+   <item>
+     <title>🐦 Flutter — Saying goodbye to CocoaPods: Swift Package Manager is soon the default in Flutter!</title>
+     <link>https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4</link>
+     <guid isPermaLink="true">https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4</guid>
+     <pubDate>Fri, 01 May 2026 00:57:00 +0900</pubDate>
+     <description>Flutter 3.44以降、iOSおよびmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になるため、今後の依存関係更新とSwiftパッケージエコシステムへのアクセスを確保するにはSwiftPMへの移行が必要です。既存アプリは引き続き動作しますが、新機能やセキュリティアップデートを受け取るには、プラグインやプロジェクトをSwiftPMに対応させる必要があります。</description>
+   </item>
+   <item>
+     <title>🐦 Flutter — That’s a wrap: Everything Flutter at Google Cloud Next</title>
+     <link>https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4</link>
+     <guid isPermaLink="true">https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4</guid>
+     <pubDate>Tue, 28 Apr 2026 04:19:56 +0900</pubDate>
+     <description>Google Cloud Next 2026でFlutterチームが発表した主な内容は、Dartを使用してFirebase Functionsのバックエンド開発ができるようになったことで、フロントエンドとバックエンド両方でDartを使用できるフルスタック開発が可能になります。さらにDart Admin SDKとFirebaseの統合が強化され、コンテキストスイッチングの削減と開発効率の向上が実現されます。詳細はブログとドキュメント、Google I/Oでの完全なセッションで確認できます。</description>
+   </item>
+   <item>
+     <title>🚀 Expo — Sign in with GitHub</title>
+     <link>https://expo.dev/changelog/sign-in-with-github</link>
+     <guid isPermaLink="true">https://expo.dev/changelog/sign-in-with-github</guid>
+     <pubDate>Fri, 24 Apr 2026 05:30:11 +0900</pubDate>
+     <description>Expoを使用したアプリケーションでGitHubアカウントによるサインイン機能の実装方法について解説した記事です。OAuth認証フローを通じてGitHubの認証情報を安全に取得し、ユーザー認証を実現する具体的な手順とコード例が提供されています。`expo-auth-session`ライブラリを活用してクライアント側の実装を簡素化し、セキュアなリダイレクトハンドリングが可能になります。</description>
+   </item>
+   <item>
+     <title>🐦 Flutter — We rebuilt Flutter’s websites with Dart and Jaspr</title>
+     <link>https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4</link>
+     <guid isPermaLink="true">https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4</guid>
+     <pubDate>Thu, 16 Apr 2026 03:31:01 +0900</pubDate>
+     <description>FlutterとDartの公式ウェブサイト3つ（dart.dev、flutter.dev、docs.flutter.dev）をJaspr（Dart製のオープンソースウェブフレームワーク）で統一し、これまでのバラバラなツール構成から脱却しました。Dartのみでの開発が可能になり、開発者体験が一貫性を持つようになったため、貢献がより容易になります。Flutter Webアプリ以外のDartでのウェブ構築に興味のある開発者にとって、参考になるマイグレーション事例です。</description>
+   </item>
+   <item>
+     <title>🐦 Flutter — Come meet the Flutter core team on tour in 2026</title>
+     <link>https://blog.flutter.dev/come-meet-the-flutter-core-team-on-tour-in-2026-51c3d7190e44?source=rss----4da7dfd21a33---4</link>
+     <guid isPermaLink="true">https://blog.flutter.dev/come-meet-the-flutter-core-team-on-tour-in-2026-51c3d7190e44?source=rss----4da7dfd21a33---4</guid>
+     <pubDate>Tue, 14 Apr 2026 10:18:57 +0900</pubDate>
+     <description>Flutterチームが2026年にグローバルツアーを実施し、Google Cloud NextやGoogle I/Oなどのイベントで開発者と直接会う予定です。Dart 3.12とFlutter 3.44のリリースに合わせて、世界中でコミュニティイベントが開催される予定です。</description>
+   </item>
+   <item>
+     <title>⚛️ React Native — React Native 0.85 - New Animation Backend, New Jest Preset Package</title>
+     <link>https://reactnative.dev/blog/2026/04/07/react-native-0.85</link>
+     <guid isPermaLink="true">https://reactnative.dev/blog/2026/04/07/react-native-0.85</guid>
+     <pubDate>Tue, 07 Apr 2026 09:00:00 +0900</pubDate>
+     <description>React Native 0.85がリリースされました。新しいアニメーション実行エンジンの採用とJestプリセットの独立パッケージ化が主な変更点です。開発者はアニメーション性能の向上と、より柔軟なテスト設定が期待できますが、既存のプロジェクトではJest設定の更新が必要になる可能性があります。</description>
+   </item>
+ </channel>
+</rss>

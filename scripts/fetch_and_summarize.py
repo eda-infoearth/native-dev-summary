@@ -64,6 +64,7 @@ EXPO_CHANGELOG_URL = "https://expo.dev/changelog"
 DATA_DIR      = Path("data")
 SEEN_IDS_PATH = DATA_DIR / "seen_ids.json"
 HTML_PATH     = Path("docs/index.html")
+RSS_PATH      = Path("docs/feed.xml")
 JST               = timezone(timedelta(hours=9))
 MAX_PER_FEED      = 5      # フレームワークあたり取得件数
 MAX_HTML_DAYS     = 365    # HTMLに含める最大日数
@@ -628,6 +629,68 @@ footer{{
 </body>
 </html>"""
 
+# ── RSS フィード生成 ──────────────────────────────────────────────────────────
+
+def generate_rss(by_date: dict, site_url: str = "") -> str:
+   """
+   1年以内の全記事から RSS 2.0 フィードを生成する。
+   site_url: GitHub Pages の URL（例: https://yourname.github.io/framework-pulse）
+             未設定でも動作するが、<link> が相対パスになる。
+   """
+   import xml.etree.ElementTree as ET
+   from email.utils import format_datetime
+
+   def to_rfc2822(pub_date_raw: str) -> str:
+       dt = parse_pub_date(pub_date_raw)
+       if dt:
+           return format_datetime(dt)
+       return format_datetime(datetime.now(JST))
+
+   def escape_xml(text: str) -> str:
+       return (text or "")                 \
+           .replace("&", "&amp;")          \
+           .replace("<", "&lt;")           \
+           .replace(">", "&gt;")           \
+           .replace('"', "&quot;")         \
+           .replace("'", "&apos;")
+
+   # 全記事を日付の新しい順にフラット化
+   all_articles: list[dict] = []
+   for date in sorted(by_date.keys(), reverse=True):
+       all_articles.extend(by_date[date])
+
+   items_xml = ""
+   for a in all_articles[:50]:  # RSSは最新50件まで
+       title   = escape_xml(f"{a['fw_icon']} {a['fw_name']} — {a['title']}")
+       link    = escape_xml(a["link"])
+       desc    = escape_xml(a.get("summary_ja") or a.get("description") or "")
+       pub     = to_rfc2822(a.get("pub_date", ""))
+       guid    = escape_xml(a["id"])
+       items_xml += f"""
+   <item>
+     <title>{title}</title>
+     <link>{link}</link>
+     <guid isPermaLink="true">{guid}</guid>
+     <pubDate>{pub}</pubDate>
+     <description>{desc}</description>
+   </item>"""
+
+   now_rfc = format_datetime(datetime.now(JST))
+   feed_link = site_url or "https://example.github.io/framework-pulse"
+
+   return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+   <title>Framework Releases Summary</title>
+   <link>{feed_link}</link>
+   <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（Claude日本語要約付き）</description>
+   <language>ja</language>
+   <lastBuildDate>{now_rfc}</lastBuildDate>
+   <atom:link href="{feed_link}/feed.xml" rel="self" type="application/rss+xml"/>
+{items_xml}
+ </channel>
+</rss>"""
+
 # ── Slack 通知 ────────────────────────────────────────────────────────────────
 
 def notify_slack(webhook_url: str, new_articles: list[dict]):
@@ -715,6 +778,9 @@ def main():
     HTML_PATH.parent.mkdir(parents=True, exist_ok=True)
     HTML_PATH.write_text(generate_html(by_date, updated_at), encoding="utf-8")
     print("✅ docs/index.html 生成完了")
+    site_url = os.environ.get("SITE_URL", "")
+    RSS_PATH.write_text(generate_rss(by_date, site_url), encoding="utf-8")
+    print(f"✅ docs/feed.xml 生成完了{f' ({site_url})' if site_url else ' (SITE_URL未設定)'}")
 
     # Slack通知
     if slack_url and all_new:

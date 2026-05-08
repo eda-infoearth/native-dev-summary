@@ -108,12 +108,15 @@ def main():
     else:
         print(f"\n該当記事なし — data/{target_str}.json は更新しません")
 
-    # ── HTML 再生成 ───────────────────────────────────────────────────────
+    # ── HTML・RSS 再生成 ───────────────────────────────────────────────────
     by_date    = fs.load_all_date_files()
     updated_at = datetime.now(JST).strftime("%Y-%m-%d %H:%M")
     fs.HTML_PATH.parent.mkdir(parents=True, exist_ok=True)
     fs.HTML_PATH.write_text(fs.generate_html(by_date, updated_at), encoding="utf-8")
     print("✅ docs/index.html 再生成完了")
+    site_url = os.environ.get("SITE_URL", "")
+    fs.RSS_PATH.write_text(fs.generate_rss(by_date, site_url), encoding="utf-8")
+    print("✅ docs/feed.xml 再生成完了")
 
 
 if __name__ == "__main__":
