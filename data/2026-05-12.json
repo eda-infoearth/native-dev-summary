@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/flet-v-0-85-release-announcement",
+    "title": "Flet 0.85.0: Declarative apps grow up — Router, dialogs, and more",
+    "link": "https://flet.dev/blog/flet-v-0-85-release-announcement",
+    "pub_date": "Mon, 11 May 2026 00:00:00 GMT",
+    "description": "Flet 0.85.0 brings first-class declarative navigation and dialog management, richer media controls, and a long list of bug fixes.",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-05-12T21:53:08.917145+00:00"
+  }
+]

@@ -57,6 +57,7 @@ FEEDS = [
     {"id": "electron",     "name": "Electron",     "icon": "⚡", "color": "#9FEAF9", "url": "https://www.electronjs.org/blog/rss.xml"},
     {"id": "tauri",        "name": "Tauri",        "icon": "🦀", "color": "#FFC131", "url": "https://v2.tauri.app/blog/rss.xml"},
     {"id": "dioxus",       "name": "Dioxus",       "icon": "🧩", "color": "#EB4E3D", "url": "https://dioxuslabs.com/blog/rss.xml"},
+    {"id": "flet",         "name": "Flet",         "icon": "🐟", "color": "#00D4AA", "url": "https://flet.dev/blog/rss.xml"},
 ]
 
 EXPO_CHANGELOG_URL = "https://expo.dev/changelog"
@@ -264,7 +265,6 @@ def fetch_expo_changelog(feed: dict) -> list[dict]:
 # ── RSS 取得 ──────────────────────────────────────────────────────────────────
 
 def fetch_feed(feed: dict) -> list[dict]:
-    # Expo だけスクレイピング、他は RSS
     if feed["id"] == "expo":
         return fetch_expo_changelog(feed)
 
