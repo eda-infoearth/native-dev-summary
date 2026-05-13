@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/expo-go-loading-changes-may-2026",
+    "title": "Changes to project loading behavior in Expo Go",
+    "link": "https://expo.dev/changelog/expo-go-loading-changes-may-2026",
+    "pub_date": "2026-05-13T20:00:00.000Z",
+    "description": "",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-05-13T23:21:49.062244+00:00"
+  }
+]
