@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/new-updates-to-a2ui-and-flutters-genui-package-e5ddff07737b?source=rss----4da7dfd21a33---4",
+    "title": "New updates to A2UI and Flutter’s GenUI package",
+    "link": "https://blog.flutter.dev/new-updates-to-a2ui-and-flutters-genui-package-e5ddff07737b?source=rss----4da7dfd21a33---4",
+    "pub_date": "Thu, 14 May 2026 14:18:22 GMT",
+    "description": "Generative UI, or GenUI for short, is a user experience pattern in which an agent not only generates content, but also makes decisions about how that content should be displayed and made interactive for the user. For Flutter developers, implementing GenUI means using A2UI, an open protocol that defines a way for agents and clients (or “renderers”) to collaborate on the composition and state of a user interface. To capitalize on this, the Flutter team built genui, a package that uses A2UI to connect with an agent and provide it with a catalog of widgets to use, and then presents those widgets to the user. Both the genui package and the A2UI protocol recently got an update! The latest release of genui introduces several architectural changes to the framework. Driven by adoption of v0.9 of th",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-05-14T23:16:19.620134+00:00"
+  }
+]
