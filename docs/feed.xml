@@ -5,15 +5,22 @@
    <link>https://eda-infoearth.github.io/native-dev-summary</link>
    <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（Claude日本語要約付き）</description>
    <language>ja</language>
-   <lastBuildDate>Wed, 13 May 2026 06:59:13 +0900</lastBuildDate>
+   <lastBuildDate>Thu, 14 May 2026 23:34:37 +0900</lastBuildDate>
    <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+   <item>
+     <title>🚀 Expo — Changes to project loading behavior in Expo Go</title>
+     <link>https://expo.dev/changelog/expo-go-loading-changes-may-2026</link>
+     <guid isPermaLink="true">https://expo.dev/changelog/expo-go-loading-changes-may-2026</guid>
+     <pubDate>Thu, 14 May 2026 05:00:00 +0900</pubDate>
+     <description>要約失敗</description>
+   </item>
    <item>
      <title>🐟 Flet — Flet 0.85.0: Declarative apps grow up — Router, dialogs, and more</title>
      <link>https://flet.dev/blog/flet-v-0-85-release-announcement</link>
      <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-85-release-announcement</guid>
      <pubDate>Mon, 11 May 2026 09:00:00 +0900</pubDate>
-     <description>要約失敗</description>
+     <description>Flet 0.85.0では、@ft.componentアプリ向けに宣言型ルーター(ネストされたルート、レイアウト、動的セグメント対応)とft.use_dialog()フック(ダイアログが反応型ステート化)が追加され、命令型のページ操作から脱却しました。動画・音声機能も強化され、flet-videoではスクリーンショット撮影やイベント追加、AudioRecorderではPCM16ストリーミング対応となりました。pipでのアップグレード方法は記事に記載されています。</description>
    </item>
    <item>
      <title>⚡ Electron — Electron 42</title>

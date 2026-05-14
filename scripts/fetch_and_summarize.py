@@ -49,19 +49,6 @@ import requests
 from bs4 import BeautifulSoup
 
 # ── 定数 ──────────────────────────────────────────────────────────────────────
-
-FEEDS = [
-    {"id": "flutter",      "name": "Flutter",      "icon": "🐦", "color": "#54C5F8", "url": "https://medium.com/feed/flutter"},
-    {"id": "react-native", "name": "React Native", "icon": "⚛️", "color": "#61DAFB", "url": "https://reactnative.dev/blog/rss.xml"},
-    {"id": "expo",         "name": "Expo",         "icon": "🚀", "color": "#aaaaff", "url": None},  # スクレイピング
-    {"id": "electron",     "name": "Electron",     "icon": "⚡", "color": "#9FEAF9", "url": "https://www.electronjs.org/blog/rss.xml"},
-    {"id": "tauri",        "name": "Tauri",        "icon": "🦀", "color": "#FFC131", "url": "https://v2.tauri.app/blog/rss.xml"},
-    {"id": "dioxus",       "name": "Dioxus",       "icon": "🧩", "color": "#EB4E3D", "url": "https://dioxuslabs.com/blog/rss.xml"},
-    {"id": "flet",         "name": "Flet",         "icon": "🐟", "color": "#00D4AA", "url": "https://flet.dev/blog/rss.xml"},
-]
-
-EXPO_CHANGELOG_URL = "https://expo.dev/changelog"
-
 DATA_DIR      = Path("data")
 SEEN_IDS_PATH = DATA_DIR / "seen_ids.json"
 HTML_PATH     = Path("docs/index.html")
@@ -70,6 +57,21 @@ JST               = timezone(timedelta(hours=9))
 MAX_PER_FEED      = 5      # フレームワークあたり取得件数
 MAX_HTML_DAYS     = 365    # HTMLに含める最大日数
 WINDOW_START_HOUR = 8      # 取得ウィンドウ開始時刻 (JST) ── 前日08:00〜当日07:59
+
+FEEDS = [
+    {"id": "flutter",      "name": "Flutter",      "icon": "🐦", "color": "#54C5F8", "url": "https://medium.com/feed/flutter"},
+    {"id": "react-native", "name": "React Native", "icon": "⚛️", "color": "#61DAFB", "url": "https://reactnative.dev/blog/rss.xml"},
+    {"id": "expo",         "name": "Expo",         "icon": "🚀", "color": "#aaaaff", "url": None},  # スクレイピング
+    {"id": "electron",     "name": "Electron",     "icon": "⚡", "color": "#9FEAF9", "url": "https://www.electronjs.org/blog/rss.xml"},
+    {"id": "tauri",        "name": "Tauri",        "icon": "🦀", "color": "#FFC131", "url": None},  # スクレイピング
+    {"id": "dioxus",       "name": "Dioxus",       "icon": "🧩", "color": "#EB4E3D", "url": "https://dioxuslabs.com/blog/rss.xml"},
+    {"id": "flet",         "name": "Flet",         "icon": "🐟", "color": "#00D4AA", "url": "https://flet.dev/blog/rss.xml"},
+]
+
+EXPO_CHANGELOG_URL = "https://expo.dev/changelog"
+TAURI_RELEASE_URL     = "https://v2.tauri.app/release/"
+TAURI_VERSIONS_PATH   = DATA_DIR / "tauri_versions.json"
+
 
 # ── ユーティリティ ──────────────────────────────────────────────────────────────
 
@@ -262,11 +264,120 @@ def fetch_expo_changelog(feed: dict) -> list[dict]:
         print(f"  ⚠ {feed['name']} スクレイピング失敗: {e}", file=sys.stderr)
         return []
 
+# ── 記事ページから本文スクレイピング ─────────────────────────────────────────
+
+def fetch_page_description(url: str, selector_id: str) -> str:
+    """
+    記事ページを取得して指定IDの要素テキストを返す。失敗時は空文字。
+    """
+    try:
+        headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
+        resp = requests.get(url, headers=headers, timeout=15)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        el = soup.find(id=selector_id)
+        if el:
+            return strip_html(el.get_text(" ", strip=True))
+        return ""
+    except Exception as e:
+        print(f"    ⚠ ページ本文取得失敗 ({url}): {e}", file=sys.stderr)
+        return ""
+
+# ── Tauri リリースページ スクレイピング ──────────────────────────────────────
+
+def load_tauri_versions() -> set:
+    if TAURI_VERSIONS_PATH.exists():
+        return set(json.loads(TAURI_VERSIONS_PATH.read_text(encoding="utf-8")))
+    return set()
+
+def save_tauri_versions(versions: set):
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    TAURI_VERSIONS_PATH.write_text(
+        json.dumps(sorted(versions), ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+def fetch_tauri_releases(feed: dict) -> list[dict]:
+    """
+    v2.tauri.app/release/ からtauri本体の新バージョンを検出し、
+    各バージョンの詳細ページ本文を取得して返す。
+    既知バージョンは data/tauri_versions.json で管理。
+    """
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
+    try:
+        # バージョン一覧を取得
+        resp = requests.get(TAURI_RELEASE_URL, headers=headers, timeout=15)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # サイドバーからtauri本体のリンクを抽出
+        all_links = soup.find_all("a", href=True)
+        tauri_links = [
+            a for a in all_links
+            if re.match(r"^/release/tauri/v[\d.]+/$", a["href"])
+        ]
+
+        known_versions = load_tauri_versions()
+        articles = []
+
+        for a in tauri_links[:MAX_PER_FEED * 3]:  # 多めに見て新着を探す
+            version = a.get_text(strip=True)  # "2.11.1"
+            page_url = f"https://v2.tauri.app{a['href']}"
+
+            if version in known_versions:
+                continue  # 既知バージョンはスキップ
+
+            print(f"    新バージョン検出: tauri v{version}")
+
+            # 詳細ページから本文取得
+            try:
+                r2 = requests.get(page_url, headers=headers, timeout=15)
+                r2.raise_for_status()
+                soup2 = BeautifulSoup(r2.text, "html.parser")
+                main = soup2.find("main")
+                desc = strip_html(main.get_text(" ", strip=True)) if main else ""
+            except Exception as e:
+                print(f"    ⚠ 詳細ページ取得失敗 ({page_url}): {e}", file=sys.stderr)
+                desc = ""
+
+            # pub_date: GitHub Actionsの実行日時をUTCで設定
+            articles.append({
+                "fw_id":       feed["id"],
+                "fw_name":     feed["name"],
+                "fw_icon":     feed["icon"],
+                "fw_color":    feed["color"],
+                "id":          page_url,
+                "title":       f"tauri v{version}",
+                "link":        page_url,
+                "pub_date":    datetime.now(timezone.utc).isoformat(),
+                "description": desc,
+                "summary_ja":  None,
+                "fetched_at":  datetime.now(timezone.utc).isoformat(),
+            })
+
+            known_versions.add(version)
+
+            if len(articles) >= MAX_PER_FEED:
+                break
+
+        # 既知バージョンリストを更新（新着なしでも全バージョンを記録）
+        all_versions = {a.get_text(strip=True) for a in tauri_links}
+        save_tauri_versions(known_versions | all_versions)
+
+        print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (scraping)")
+        return articles
+
+    except Exception as e:
+        print(f"  ⚠ {feed['name']} スクレイピング失敗: {e}", file=sys.stderr)
+        return []
+
 # ── RSS 取得 ──────────────────────────────────────────────────────────────────
 
 def fetch_feed(feed: dict) -> list[dict]:
     if feed["id"] == "expo":
         return fetch_expo_changelog(feed)
+    if feed["id"] == "tauri":
+        return fetch_tauri_releases(feed)
 
     try:
         headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
@@ -278,11 +389,17 @@ def fetch_feed(feed: dict) -> list[dict]:
             link  = entry.get("link", "")
             title = entry.get("title", "").strip()
             if not link or not title:
-                continue
-            desc = strip_html(
-                entry.get("summary", "")
-                or (entry.get("content") or [{}])[0].get("value", "")
-            )
+              continue
+
+            # Flet は RSS の summary が短すぎるので記事ページから本文を取得
+            if feed["id"] == "flet":
+                desc = fetch_page_description(link, "__blog-post-container")
+            else:
+                desc = strip_html(
+                    entry.get("summary", "")
+                    or (entry.get("content") or [{}])[0].get("value", "")
+                )
+
             articles.append({
                 "fw_id":       feed["id"],
                 "fw_name":     feed["name"],
