@@ -1,16 +1,16 @@
 [
   {
-    "fw_id": "expo",
-    "fw_name": "Expo",
-    "fw_icon": "🚀",
-    "fw_color": "#aaaaff",
-    "id": "https://expo.dev/changelog/sdk-56-beta",
-    "title": "Expo SDK 56 Beta is now available",
-    "link": "https://expo.dev/changelog/sdk-56-beta",
-    "pub_date": "2026-05-06T20:00:00.000Z",
-    "description": "",
-    "summary_ja": "Expo SDK 56のベータ版がリリースされました。React Native 0.85への対応、新しい開発ツールの強化、およびパフォーマンス改善が主な変更点です。既存プロジェクトのアップグレード時には、ネイティブコードの互換性確認が必要となる可能性があります。",
-    "fetched_at": "2026-05-08T06:44:51.385437+00:00"
+    "fw_id": "tauri",
+    "fw_name": "Tauri",
+    "fw_icon": "🦀",
+    "fw_color": "#FFC131",
+    "id": "https://v2.tauri.app/release/tauri/v2.11.1/",
+    "title": "tauri v2.11.1",
+    "link": "https://v2.tauri.app/release/tauri/v2.11.1/",
+    "pub_date": "2026-05-06T10:17:49Z",
+    "description": "tauri@2.11.1 Return View on GitHub Enhancements Section titled “Enhancements” 5e3126ff7 ( #15338 ) Expose the monitor (display) APIs on mobile. Bug Fixes Section titled “Bug Fixes” 5f479c0c3 ( #15336 ) Fix crash when using the requestPermission API on Android. Security fixes Section titled “Security fixes” 1b26769f9 ( #15266 ) Enforce ACL checks for IPC requests from remote origins even when no AppManifest is configured. Previously, custom (non-plugin) commands bypassed ACL entirely without an AppManifest , allowing any origin to invoke them. Now, remote origins are always subject to ACL resolution, and can only reach custom commands if an explicit remote capability has been granted. ba025588f Correctly handle .localhost suffix in local origins on Windows and Android to fix a security issu",
+    "summary_ja": "Tauri v2.11.1では、モバイルでモニター（ディスプレイ）APIが利用可能になり、AndroidのrequestPermission APIのクラッシュが修正されました。重要なセキュリティ修正として、AppManifestがない場合でもIPC要求に対するACLチェックが適用され、リモートオリジンからのカスタムコマンド実行が制限されるようになりました。",
+    "fetched_at": "2026-05-15T15:01:22.443616+00:00"
   },
   {
     "fw_id": "flutter",
@@ -22,7 +22,20 @@
     "link": "https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4",
     "pub_date": "Wed, 06 May 2026 18:19:09 GMT",
     "description": "Introducing prepackaged Dart and Flutter Skills! Improving AI with domain expertise AI agents are generalists, but when it comes to professional Flutter development, “general” isn’t enough. To build production-grade apps, you need an assistant that understands the nuance of localization, the latest Dart language features, and how to add integration tests. Today, we’re introducing Agent Skills for Flutter and Dart — a new way to give your AI tools domain-specific expertise. Beyond the knowledge gap One of the primary challenges in AI development is the “knowledge gap.” Flutter and Dart can launch new features more quickly than LLMs can update their fixed training data. As a part of how we are thinking about AI , we are looking for ways to not only address the knowledge gap but also ensure t",
-    "summary_ja": "FlutterとDartの開発に特化したAI Agent Skillsが導入され、ローカライゼーション、最新の言語機能、統合テストなどのドメイン固有の知識をAIアシスタントに提供できるようになりました。LLMの訓練データの更新遅延に対応し、急速に進化するFlutter/Dartの最新機能をAIが即座に反映できる仕組みです。これにより、本番環境レベルの高品質なアプリ開発をAIアシスタントでサポート可能になります。",
-    "fetched_at": "2026-05-08T06:10:06.069675+00:00"
+    "summary_ja": "FlutterとDart向けのAI Agent Skillsが新たに導入され、開発者はローカライゼーション、最新のDart言語機能、統合テストなど、本番環境レベルのアプリ開発に必要なドメイン固有の専門知識をAIアシスタントに備えさせることができるようになります。これにより、FlutterやDartが急速に新機能を追加しても、LLMの固定学習データとの知識ギャップを解決し、より正確で実用的なAI支援が可能になります。",
+    "fetched_at": "2026-05-15T14:59:47.703762+00:00"
+  },
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/sdk-56-beta",
+    "title": "Expo SDK 56 Beta is now available",
+    "link": "https://expo.dev/changelog/sdk-56-beta",
+    "pub_date": "2026-05-06T20:00:00.000Z",
+    "description": "",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-05-15T14:59:51.594269+00:00"
   }
 ]

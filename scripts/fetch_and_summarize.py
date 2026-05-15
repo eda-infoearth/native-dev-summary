@@ -49,6 +49,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # ── 定数 ──────────────────────────────────────────────────────────────────────
+
 DATA_DIR      = Path("data")
 SEEN_IDS_PATH = DATA_DIR / "seen_ids.json"
 HTML_PATH     = Path("docs/index.html")
@@ -68,10 +69,9 @@ FEEDS = [
     {"id": "flet",         "name": "Flet",         "icon": "🐟", "color": "#00D4AA", "url": "https://flet.dev/blog/rss.xml"},
 ]
 
-EXPO_CHANGELOG_URL = "https://expo.dev/changelog"
+EXPO_CHANGELOG_URL    = "https://expo.dev/changelog"
 TAURI_RELEASE_URL     = "https://v2.tauri.app/release/"
 TAURI_VERSIONS_PATH   = DATA_DIR / "tauri_versions.json"
-
 
 # ── ユーティリティ ──────────────────────────────────────────────────────────────
 
@@ -297,11 +297,34 @@ def save_tauri_versions(versions: set):
         encoding="utf-8"
     )
 
+def fetch_tauri_release_dates() -> dict[str, str]:
+    """
+    GitHub Releases atom フィードからバージョン→リリース日付のマップを返す。
+    例: {"2.11.1": "2026-05-06T10:17:49Z", ...}
+    """
+    url = "https://github.com/tauri-apps/tauri/releases.atom"
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
+    version_dates: dict[str, str] = {}
+    try:
+        resp = requests.get(url, headers=headers, timeout=15)
+        resp.raise_for_status()
+        parsed = feedparser.parse(resp.text)
+        for entry in parsed.entries:
+            tag = entry.get("title", "")  # 例: "tauri v2.11.1"
+            m = re.search(r"tauri v([\d.]+)$", tag)
+            if m:
+                version_dates[m.group(1)] = entry.get("published", entry.get("updated", ""))
+    except Exception as e:
+        print(f"  ⚠ Tauri GitHub atom 取得失敗（日付取得用）: {e}", file=sys.stderr)
+    return version_dates
+
 def fetch_tauri_releases(feed: dict) -> list[dict]:
     """
-    v2.tauri.app/release/ からtauri本体の新バージョンを検出し、
-    各バージョンの詳細ページ本文を取得して返す。
-    既知バージョンは data/tauri_versions.json で管理。
+    1. v2.tauri.app/release/ のサイドバーから tauri 本体バージョン一覧を取得
+    2. data/tauri_versions.json と比較して未取得バージョンを検出
+    3. GitHub atom フィードでリリース日付を取得（pub_date に使用）
+    4. v2.tauri.app の詳細ページから本文を取得して要約
+    5. 実際に取得できた分だけ tauri_versions.json に追記
     """
     headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
     try:
@@ -310,37 +333,40 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
-        # サイドバーからtauri本体のリンクを抽出
         all_links = soup.find_all("a", href=True)
         tauri_links = [
             a for a in all_links
             if re.match(r"^/release/tauri/v[\d.]+/$", a["href"])
         ]
 
-        known_versions = load_tauri_versions()
-        articles = []
+        known_versions  = load_tauri_versions()
+        release_dates   = fetch_tauri_release_dates()
+        articles        = []
+        fetched_versions: set[str] = set()
 
-        for a in tauri_links[:MAX_PER_FEED * 3]:  # 多めに見て新着を探す
-            version = a.get_text(strip=True)  # "2.11.1"
+        for a in tauri_links:
+            version  = a.get_text(strip=True)   # "2.11.1"
             page_url = f"https://v2.tauri.app{a['href']}"
 
             if version in known_versions:
-                continue  # 既知バージョンはスキップ
+                continue  # 既取得済み → スキップ
 
             print(f"    新バージョン検出: tauri v{version}")
+
+            # リリース日付（GitHub atom から）
+            pub_date = release_dates.get(version, datetime.now(timezone.utc).isoformat())
 
             # 詳細ページから本文取得
             try:
                 r2 = requests.get(page_url, headers=headers, timeout=15)
                 r2.raise_for_status()
                 soup2 = BeautifulSoup(r2.text, "html.parser")
-                main = soup2.find("main")
-                desc = strip_html(main.get_text(" ", strip=True)) if main else ""
+                main  = soup2.find("main")
+                desc  = strip_html(main.get_text(" ", strip=True)) if main else ""
             except Exception as e:
                 print(f"    ⚠ 詳細ページ取得失敗 ({page_url}): {e}", file=sys.stderr)
                 desc = ""
 
-            # pub_date: GitHub Actionsの実行日時をUTCで設定
             articles.append({
                 "fw_id":       feed["id"],
                 "fw_name":     feed["name"],
@@ -349,20 +375,19 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
                 "id":          page_url,
                 "title":       f"tauri v{version}",
                 "link":        page_url,
-                "pub_date":    datetime.now(timezone.utc).isoformat(),
+                "pub_date":    pub_date,
                 "description": desc,
                 "summary_ja":  None,
                 "fetched_at":  datetime.now(timezone.utc).isoformat(),
             })
-
-            known_versions.add(version)
+            fetched_versions.add(version)
 
             if len(articles) >= MAX_PER_FEED:
                 break
 
-        # 既知バージョンリストを更新（新着なしでも全バージョンを記録）
-        all_versions = {a.get_text(strip=True) for a in tauri_links}
-        save_tauri_versions(known_versions | all_versions)
+        # 実際に取得できた分だけ known_versions に追記して保存
+        if fetched_versions:
+            save_tauri_versions(known_versions | fetched_versions)
 
         print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (scraping)")
         return articles
@@ -389,7 +414,7 @@ def fetch_feed(feed: dict) -> list[dict]:
             link  = entry.get("link", "")
             title = entry.get("title", "").strip()
             if not link or not title:
-              continue
+                continue
 
             # Flet は RSS の summary が短すぎるので記事ページから本文を取得
             if feed["id"] == "flet":
@@ -736,7 +761,7 @@ footer{{
   <div class="header-inner">
     <div class="logo">Framework Releases Summary</div>
     <div class="header-meta">
-      <div class="header-tagline">Flutter · React Native · Expo · Electron · Tauri · Dioxus</div>
+      <div class="header-tagline">React Native · Expo · Flutter · Flet · Electron · Tauri · Dioxus</div>
       <div class="header-updated">Last updated: {updated_at} JST</div>
     </div>
   </div>
@@ -749,63 +774,63 @@ footer{{
 # ── RSS フィード生成 ──────────────────────────────────────────────────────────
 
 def generate_rss(by_date: dict, site_url: str = "") -> str:
-   """
-   1年以内の全記事から RSS 2.0 フィードを生成する。
-   site_url: GitHub Pages の URL（例: https://yourname.github.io/framework-pulse）
-             未設定でも動作するが、<link> が相対パスになる。
-   """
-   import xml.etree.ElementTree as ET
-   from email.utils import format_datetime
+    """
+    1年以内の全記事から RSS 2.0 フィードを生成する。
+    site_url: GitHub Pages の URL（例: https://yourname.github.io/framework-pulse）
+              未設定でも動作するが、<link> が相対パスになる。
+    """
+    import xml.etree.ElementTree as ET
+    from email.utils import format_datetime
 
-   def to_rfc2822(pub_date_raw: str) -> str:
-       dt = parse_pub_date(pub_date_raw)
-       if dt:
-           return format_datetime(dt)
-       return format_datetime(datetime.now(JST))
+    def to_rfc2822(pub_date_raw: str) -> str:
+        dt = parse_pub_date(pub_date_raw)
+        if dt:
+            return format_datetime(dt)
+        return format_datetime(datetime.now(JST))
 
-   def escape_xml(text: str) -> str:
-       return (text or "")                 \
-           .replace("&", "&amp;")          \
-           .replace("<", "&lt;")           \
-           .replace(">", "&gt;")           \
-           .replace('"', "&quot;")         \
-           .replace("'", "&apos;")
+    def escape_xml(text: str) -> str:
+        return (text or "")                 \
+            .replace("&", "&amp;")          \
+            .replace("<", "&lt;")           \
+            .replace(">", "&gt;")           \
+            .replace('"', "&quot;")         \
+            .replace("'", "&apos;")
 
-   # 全記事を日付の新しい順にフラット化
-   all_articles: list[dict] = []
-   for date in sorted(by_date.keys(), reverse=True):
-       all_articles.extend(by_date[date])
+    # 全記事を日付の新しい順にフラット化
+    all_articles: list[dict] = []
+    for date in sorted(by_date.keys(), reverse=True):
+        all_articles.extend(by_date[date])
 
-   items_xml = ""
-   for a in all_articles[:50]:  # RSSは最新50件まで
-       title   = escape_xml(f"{a['fw_icon']} {a['fw_name']} — {a['title']}")
-       link    = escape_xml(a["link"])
-       desc    = escape_xml(a.get("summary_ja") or a.get("description") or "")
-       pub     = to_rfc2822(a.get("pub_date", ""))
-       guid    = escape_xml(a["id"])
-       items_xml += f"""
-   <item>
-     <title>{title}</title>
-     <link>{link}</link>
-     <guid isPermaLink="true">{guid}</guid>
-     <pubDate>{pub}</pubDate>
-     <description>{desc}</description>
-   </item>"""
+    items_xml = ""
+    for a in all_articles[:50]:  # RSSは最新50件まで
+        title   = escape_xml(f"{a['fw_icon']} {a['fw_name']} — {a['title']}")
+        link    = escape_xml(a["link"])
+        desc    = escape_xml(a.get("summary_ja") or a.get("description") or "")
+        pub     = to_rfc2822(a.get("pub_date", ""))
+        guid    = escape_xml(a["id"])
+        items_xml += f"""
+    <item>
+      <title>{title}</title>
+      <link>{link}</link>
+      <guid isPermaLink="true">{guid}</guid>
+      <pubDate>{pub}</pubDate>
+      <description>{desc}</description>
+    </item>"""
 
-   now_rfc = format_datetime(datetime.now(JST))
-   feed_link = site_url or "https://example.github.io/framework-pulse"
+    now_rfc = format_datetime(datetime.now(JST))
+    feed_link = site_url or "https://example.github.io/framework-pulse"
 
-   return f"""<?xml version="1.0" encoding="UTF-8"?>
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
- <channel>
-   <title>Framework Releases Summary</title>
-   <link>{feed_link}</link>
-   <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（Claude日本語要約付き）</description>
-   <language>ja</language>
-   <lastBuildDate>{now_rfc}</lastBuildDate>
-   <atom:link href="{feed_link}/feed.xml" rel="self" type="application/rss+xml"/>
+  <channel>
+    <title>Framework Pulse</title>
+    <link>{feed_link}</link>
+    <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（AI日本語要約付き）</description>
+    <language>ja</language>
+    <lastBuildDate>{now_rfc}</lastBuildDate>
+    <atom:link href="{feed_link}/feed.xml" rel="self" type="application/rss+xml"/>
 {items_xml}
- </channel>
+  </channel>
 </rss>"""
 
 # ── Slack 通知 ────────────────────────────────────────────────────────────────
@@ -819,7 +844,7 @@ def notify_slack(webhook_url: str, new_articles: list[dict]):
     for a in new_articles:
         by_fw.setdefault(a["fw_id"], []).append(a)
 
-    lines = [f"*📡 Framework Releases Summary — {today_jst()} の新着 {total} 件*\n"]
+    lines = [f"*📡 Framework Pulse — {today_jst()} の新着 {total} 件*\n"]
     for fw in FEEDS:
         arts = by_fw.get(fw["id"], [])
         if not arts:
@@ -889,7 +914,7 @@ def main():
     save_seen_ids(seen_ids)
     print(f"✅ data/seen_ids.json 更新完了 (合計 {len(seen_ids)} 件既知)")
 
-    # 1年以内の全JSONを読んでHTML生成
+    # 1年以内の全JSONを読んでHTML・RSS生成
     by_date    = load_all_date_files()
     updated_at = datetime.now(JST).strftime("%Y-%m-%d %H:%M")
     HTML_PATH.parent.mkdir(parents=True, exist_ok=True)

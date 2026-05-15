@@ -9,7 +9,7 @@
     "link": "https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4",
     "pub_date": "Mon, 27 Apr 2026 19:19:56 GMT",
     "description": "Google Cloud Next Recap 2026 Our team has been hard at work this Spring, preparing to meet over 30,000 of you in Las Vegas for Google Cloud Next. For those who couldn’t make it in-person, here is a breakdown of the major highlights, announcements, and experiences from the Flutter and Dart team. Dash team at Google Cloud Next 2026 Big announcements Full-stack Dart: The team announced a preview of Dart support for Firebase Functions . Yep, that’s right: experience using Dart for both your frontend and backend. We also introduced deeper integrations with Firebase using the Dart Admin SDK to reduce context switching and improve development velocity. Check out the announcement blog, and documentation, and stay tuned for a full breakout session all about this feature at Google I/O. Onsite experi",
-    "summary_ja": "Google Cloud Next 2026でFlutterチームが発表した主な内容は、Dartを使用してFirebase Functionsのバックエンド開発ができるようになったことで、フロントエンドとバックエンド両方でDartを使用できるフルスタック開発が可能になります。さらにDart Admin SDKとFirebaseの統合が強化され、コンテキストスイッチングの削減と開発効率の向上が実現されます。詳細はブログとドキュメント、Google I/Oでの完全なセッションで確認できます。",
-    "fetched_at": "2026-05-08T07:05:30.538297+00:00"
+    "summary_ja": "Google Cloud Next 2026でFlutterチームが発表した主な内容は、Firebase FunctionsでのDart対応のプレビューで、フロントエンドからバックエンドまでDartで統一開発が可能になります。Dart Admin SDKとの深い統合により、コンテキストスイッチングが減少し開発効率が向上します。詳細はGoogle I/Oの専門セッションで公開予定です。",
+    "fetched_at": "2026-05-15T15:07:14.613335+00:00"
   }
 ]

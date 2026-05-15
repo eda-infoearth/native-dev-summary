@@ -9,7 +9,7 @@
     "link": "https://flet.dev/blog/flet-v-0-85-release-announcement",
     "pub_date": "Mon, 11 May 2026 00:00:00 GMT",
     "description": "Flet 0.85.0 brings first-class declarative navigation and dialog management, richer media controls, and a long list of bug fixes. Highlights in this release: Declarative ft.Router for @ft.component apps — nested routes, layouts with outlets, dynamic segments, data loaders, and manage_views=True for native view-stack navigation. New ft.use_dialog() hook — dialogs are now reactive state in declarative apps, not imperative page.show_dialog() calls. flet-video : configurable controls, Video.take_screenshot() , and on_position_change / on_duration_change events. AudioRecorder PCM16 streaming via on_stream chunks and direct upload through AudioRecorderUploadSettings . Tons of bug fixes — charts, web assets, packaging, mobile orientation, and more. How to upgrade ​ If you use pip: pip install 'fl",
-    "summary_ja": "Flet 0.85.0では、@ft.componentアプリ向けに宣言型ルーター(ネストされたルート、レイアウト、動的セグメント対応)とft.use_dialog()フック(ダイアログが反応型ステート化)が追加され、命令型のページ操作から脱却しました。動画・音声機能も強化され、flet-videoではスクリーンショット撮影やイベント追加、AudioRecorderではPCM16ストリーミング対応となりました。pipでのアップグレード方法は記事に記載されています。",
-    "fetched_at": "2026-05-13T22:21:57.758079+00:00"
+    "summary_ja": "Flet 0.85.0では、@ft.componentアプリ向けに宣言型ルーターが実装され、ネストされたルート・動的セグメント・データローダーなどが利用可能になりました。また、ft.use_dialog()フックにより、ダイアログが従来の命令型のpage.show_dialog()から反応型の状態管理に変更され、動画再生の設定可能なコントロール・スクリーンショット機能、オーディオレコーダーのPCM16ストリーミング機能が追加されています。",
+    "fetched_at": "2026-05-15T14:56:27.260465+00:00"
   }
 ]

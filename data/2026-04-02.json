@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/flet-v-0-84-release-announcement",
+    "title": "Flet 0.84.0: Goodbye MkDocs, hello CrocoDocs!",
+    "link": "https://flet.dev/blog/flet-v-0-84-release-announcement",
+    "pub_date": "Wed, 01 Apr 2026 00:00:00 GMT",
+    "description": "Flet 0.84.0 is a developer-experience release: new documentation website and re-worked examples. Highlights in this release: Flet docs are back on Docusaurus - fast dev server, working hot reload, unified website. Meet CrocoDocs, our new tool that bridges Python docstrings and Docusaurus. All 466 Flet examples migrated to standalone projects with rich metadata for Gallery and AI discovery. How to upgrade ​ If you use pip: pip install 'flet[all]' --upgrade If you use uv with pyproject.toml and want to upgrade everything: uv sync --upgrade If you want to upgrade only Flet packages: uv sync --upgrade-package flet \\ --upgrade-package flet-cli \\ --upgrade-package flet-desktop \\ --upgrade-package flet-web Goodbye, MkDocs! Hello, CrocoDocs! ​ The Flet website has always been built on Docusaurus -",
+    "summary_ja": "Flet 0.84.0はDocusaurusベースの新しいドキュメンテーションサイトとCrocoDocs（Pythonドキュメント文字列とDocusaurusを連携するツール）を導入し、開発者体験を大幅に改善しました。466個のFletサンプルがメタデータ付きの独立プロジェクトに移行され、ギャラリーとAI検出に対応しています。アップグレードはpipまたはuvコマンドで実施できます。",
+    "fetched_at": "2026-05-15T15:31:24.284188+00:00"
+  }
+]
