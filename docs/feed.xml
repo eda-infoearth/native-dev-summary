@@ -5,7 +5,7 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 16 May 2026 00:31:41 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 17:25:03 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
@@ -104,7 +104,7 @@
       <link>https://reactnative.dev/blog/2026/04/07/react-native-0.85</link>
       <guid isPermaLink="true">https://reactnative.dev/blog/2026/04/07/react-native-0.85</guid>
       <pubDate>Tue, 07 Apr 2026 09:00:00 +0900</pubDate>
-      <description>要約失敗</description>
+      <description>React Native 0.85がリリースされ、Software Mansionと協力して開発された新しいShared Animation Backendが導入され、AnimatedとReanimatedの両方のアニメーション処理がコア部分で統一されました。Jestプリセットが専用パッケージに移行し、EOL Node.jsバージョンのサポートが廃止されたほか、StyleSheet.absoluteFillObjectが削除されるなどの破壊的変更が含まれています。DevToolsの改善とMetroのTLSサポートも追加されています。</description>
     </item>
     <item>
       <title>🐟 Flet — Flet 0.84.0: Goodbye MkDocs, hello CrocoDocs!</title>

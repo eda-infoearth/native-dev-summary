@@ -421,8 +421,8 @@ def fetch_feed(feed: dict) -> list[dict]:
                 desc = fetch_page_description(link, "__blog-post-container")
             else:
                 desc = strip_html(
-                    entry.get("summary", "")
-                    or (entry.get("content") or [{}])[0].get("value", "")
+                    (entry.get("content") or [{}])[0].get("value", "")
+                    or entry.get("summary", "")
                 )
 
             articles.append({

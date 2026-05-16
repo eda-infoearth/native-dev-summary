@@ -8,8 +8,8 @@
     "title": "React Native 0.85 - New Animation Backend, New Jest Preset Package",
     "link": "https://reactnative.dev/blog/2026/04/07/react-native-0.85",
     "pub_date": "Tue, 07 Apr 2026 00:00:00 GMT",
-    "description": "Today we are excited to release React Native 0.85!",
-    "summary_ja": "要約失敗",
-    "fetched_at": "2026-05-15T15:26:51.693470+00:00"
+    "description": "Today we are excited to release React Native 0.85! This release includes the New Animation Backend, moves the Jest preset to a dedicated package, and includes many other improvements and fixes. Highlights ​ New Animation Backend React Native DevTools Improvements Metro TLS Support Breaking Changes ​ Jest Preset Moved to New Package Dropped Support for EOL Node.js Versions StyleSheet.absoluteFillObject Removed Other Breaking Changes Highlights ​ New Animation Backend ​ React Native 0.85 introduces the new Shared Animation Backend, built in collaboration with Software Mansion . This is a new internal engine that powers how animations are applied under the hood for both Animated and Reanimated. By moving the main animation update logic to React Native core, Reanimated is able to land performa",
+    "summary_ja": "React Native 0.85がリリースされ、Software Mansionと協力して開発された新しいShared Animation Backendが導入され、AnimatedとReanimatedの両方のアニメーション処理がコア部分で統一されました。Jestプリセットが専用パッケージに移行し、EOL Node.jsバージョンのサポートが廃止されたほか、StyleSheet.absoluteFillObjectが削除されるなどの破壊的変更が含まれています。DevToolsの改善とMetroのTLSサポートも追加されています。",
+    "fetched_at": "2026-05-16T08:23:52.021329+00:00"
   }
 ]
