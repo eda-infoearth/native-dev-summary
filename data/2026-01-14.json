@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "electron",
+    "fw_name": "Electron",
+    "fw_icon": "⚡",
+    "fw_color": "#9FEAF9",
+    "id": "https://electronjs.org/blog/electron-40-0",
+    "title": "Electron 40.0.0",
+    "link": "https://electronjs.org/blog/electron-40-0",
+    "pub_date": "Tue, 13 Jan 2026 00:00:00 GMT",
+    "description": "Electron 40.0.0 has been released! It includes upgrades to Chromium 144.0.7559.60, V8 14.4, and Node 24.11.1. The Electron team is excited to announce the release of Electron 40.0.0! You can install it with npm via npm install electron@latest or download it from our releases website . Continue reading for details about this release. If you have any feedback, please share it with us on Bluesky or Mastodon , or join our community Discord ! Bugs and feature requests can be reported in Electron's issue tracker . Stack Changes ​ Chromium 144.0.7559.60 New in 144 New in 143 Node v24.11.1 Node 24.11.1 blog post V8 14.4 V8 roll increment Electron 40 upgrades Chromium from 142.0.7444.52 to 144.0.7559.60 , Node.js from v22.20.0 to v24.11.1 , and V8 from 14.2 to 14.4 . New Features and Improvements ​",
+    "summary_ja": "Electron 40.0.0がリリースされ、Chromium 144.0.7559.60、V8 14.4、Node 24.11.1へのアップグレードが含まれています。主な変更点はChromium 142からの更新、Node.jsのv22.20.0からv24.11.1への昇格、V8の14.2から14.4への更新です。詳細な新機能や改善点については記事に記載されていますが、要約には明示されていません。",
+    "fetched_at": "2026-05-16T15:24:15.020156+00:00"
+  }
+]

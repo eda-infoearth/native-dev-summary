@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "react-native",
+    "fw_name": "React Native",
+    "fw_icon": "⚛️",
+    "fw_color": "#61DAFB",
+    "id": "https://reactnative.dev/blog/2026/02/11/react-native-0.84",
+    "title": "React Native 0.84 - Hermes V1 by Default",
+    "link": "https://reactnative.dev/blog/2026/02/11/react-native-0.84",
+    "pub_date": "Wed, 11 Feb 2026 00:00:00 GMT",
+    "description": "Today we're excited to release React Native 0.84! This release makes Hermes V1 the default JavaScript engine, bringing significant performance improvements to all React Native apps. We've also continued removing the Legacy Architecture on both iOS and Android, and are shipping precompiled iOS binaries by default. Highlights ​ Hermes V1 as Default Precompiled Binaries on iOS by Default Legacy Architecture Components Removed Node.js 22 Minimum Hermes V1 as Default ​ Hermes V1 is now the default JavaScript engine for React Native on both iOS and Android , following the initial experimental opt-in in React Native 0.82. Hermes V1 represents the next evolution of the Hermes engine, with significant improvements to both the compiler and VM that deliver measurably better JavaScript performance. Wh",
+    "summary_ja": "React Native 0.84では、Hermes V1がデフォルトのJavaScriptエンジンになり、全アプリのパフォーマンスが大幅に向上します。iOSのプリコンパイルバイナリがデフォルト化され、レガシーアーキテクチャが削除され、Node.js 22が最小要件になりました。",
+    "fetched_at": "2026-05-16T15:10:33.423516+00:00"
+  }
+]

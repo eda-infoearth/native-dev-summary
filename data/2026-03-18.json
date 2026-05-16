@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "electron",
+    "fw_name": "Electron",
+    "fw_icon": "⚡",
+    "fw_color": "#9FEAF9",
+    "id": "https://electronjs.org/blog/tech-talk-wayland",
+    "title": "Tech Talk: How Electron went Wayland-native, and what it means for your apps",
+    "link": "https://electronjs.org/blog/tech-talk-wayland",
+    "pub_date": "Tue, 17 Mar 2026 00:00:00 GMT",
+    "description": "info Tech talks are a new blog post series where we share glimpses into our work on Electron. If you find this work interesting, please consider contributing ! When Electron switched to Wayland on Linux last fall, most people didn't notice. Major Linux distributions adopted the modern display protocol years ago, and both the KDE Plasma and GNOME desktop environments are in the process of dropping X11 support completely . But a platform migration isn't complete without apps, and a large part of the Linux app ecosystem went through a second Wayland transition last August — well after most distros had changed their defaults. That's when Chromium turned on Wayland by default , bringing Electron and dozens of Linux desktop apps along with it. The third impact: Electron goes Wayland-native ​ Way",
+    "summary_ja": "ElectronがLinux上でWaylandネイティブ対応に移行し、Chromiumのデフォルト有効化に伴い、多くのLinuxデスクトップアプリが自動的にWaylandで動作するようになりました。開発者は既存アプリがWaylandで正常に動作するか確認し、必要に応じて互換性の問題に対応する必要があります。",
+    "fetched_at": "2026-05-16T14:57:12.785560+00:00"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "fw_id": "react-native",
+    "fw_name": "React Native",
+    "fw_icon": "⚛️",
+    "fw_color": "#61DAFB",
+    "id": "https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest",
+    "title": "React Native Comes to Meta Quest",
+    "link": "https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest",
+    "pub_date": "Tue, 24 Feb 2026 00:00:00 GMT",
+    "description": "React Native has always focused on helping developers reuse knowledge across platforms. What started with Android and iOS has steadily expanded to Apple TV, Windows, macOS, and even the web with react-strict-dom. In 2021, the Many Platform Vision post outlined a future where React Native could adapt to new devices and form factors without fragmenting the ecosystem. At React Conf 2025, we took another step toward that vision by announcing official React Native support for Meta Quest devices . This post focuses on how to get started with React Native on Meta Quest, what works today, and how developers can build and ship VR apps using familiar tools and patterns. Highlights ​ React Native on Meta Quest Getting started on Meta Quest Development builds and native features Platform-specific setu",
+    "summary_ja": "React Confiterative 2025でMeta Quest向けのReact Native公式サポートが発表され、開発者は既存の知識とツールを活用してVRアプリを構築・配信できるようになりました。React Nativeのクロスプラットフォーム対応がAndroid/iOSから拡大し、Meta Questデバイスでも同じパターンで開発可能です。開発ビルド、ネイティブ機能、プラットフォーム固有の設定など、Meta Quest向け開発を開始するための具体的なガイドが提供されています。",
+    "fetched_at": "2026-05-16T15:06:57.270148+00:00"
+  },
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/flet-v-0-81-release-announcement",
+    "title": "Flet 0.81.0: Camera, CodeEditor, color pickers and more",
+    "link": "https://flet.dev/blog/flet-v-0-81-release-announcement",
+    "pub_date": "Tue, 24 Feb 2026 00:00:00 GMT",
+    "description": "Flet 0.81.0 is now available with new controls, better platform integration, and build workflow improvements. Highlights in this release: New controls: Camera , CodeEditor , PageView , color pickers, RotatedBox . Advanced visual transitions with Hero animations and Matrix4 transforms. Better app packaging with flet build ios-simulator and flet build --artifact . Clipboard APIs for images and files. Web FilePicker support for direct file content ( with_data=True ). Platform locale info and locale change events. New LayoutControl.on_size_change event for size-aware UI. How to upgrade ​ If you use pip: pip install 'flet[all]' --upgrade If you use uv with pyproject.toml and want to upgrade everything: uv sync --upgrade If you want to upgrade only Flet packages: uv sync --upgrade-package flet \\",
+    "summary_ja": "Flet 0.81.0がリリースされ、Camera、CodeEditor、PageView、色選択ツール、RotatedBoxなどの新コントロールが追加されました。Hero animationやMatrix4トランスフォーム、クリップボードAPI（画像・ファイル対応）、Web FilePicker、プラットフォームロケール情報などが新たに実装されています。アップグレードはpip install 'flet[all]' --upgradeまたはuvコマンドで実行可能です。",
+    "fetched_at": "2026-05-16T15:07:10.290412+00:00"
+  }
+]

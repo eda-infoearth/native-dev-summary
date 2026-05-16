@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/flet-v-0-83-release-announcement",
+    "title": "Flet 0.83.0: Faster diffs, leaner packages, road to 1.0",
+    "link": "https://flet.dev/blog/flet-v-0-83-release-announcement",
+    "pub_date": "Thu, 26 Mar 2026 00:00:00 GMT",
+    "description": "Flet 0.83.0 is here with major performance gains, a reworked packaging pipeline, and better project transparency - all part of our push toward a rock-solid 1.0. Highlights in this release: Up to 6.7× faster control diffing for both imperative and declarative apps. Smarter .update() logic that eliminates redundant updates. Declarative field validation with Annotated types. Desktop binaries and build templates moved from PyPI to GitHub Releases - smaller installs, pinned versions. Better release traceability with milestones and pre-releases on GitHub. How to upgrade ​ If you use pip: pip install 'flet[all]' --upgrade If you use uv with pyproject.toml and want to upgrade everything: uv sync --upgrade If you want to upgrade only Flet packages: uv sync --upgrade-package flet \\ --upgrade-package",
+    "summary_ja": "Flet 0.83.0では、制御差分処理が最大6.7倍高速化され、.update()ロジックが改善されて冗長な更新が削除されました。デスクトップバイナリとビルドテンプレートがPyPIからGitHub Releasesに移動し、インストールサイズが削減されると同時に、バージョン管理がより明確になりました。Annotated型による宣言的なフィールド検証機能も新たに追加されています。",
+    "fetched_at": "2026-05-16T14:53:29.644645+00:00"
+  }
+]

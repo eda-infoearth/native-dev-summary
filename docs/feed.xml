@@ -5,7 +5,7 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 16 May 2026 18:50:21 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 00:27:45 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
@@ -119,6 +119,62 @@
       <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-84-release-announcement</guid>
       <pubDate>Wed, 01 Apr 2026 09:00:00 +0900</pubDate>
       <description>Flet 0.84.0はDocusaurusベースの新しいドキュメンテーションサイトとCrocoDocs（Pythonドキュメント文字列とDocusaurusを連携するツール）を導入し、開発者体験を大幅に改善しました。466個のFletサンプルがメタデータ付きの独立プロジェクトに移行され、ギャラリーとAI検出に対応しています。アップグレードはpipまたはuvコマンドで実施できます。</description>
+    </item>
+    <item>
+      <title>🐟 Flet — Flet 0.83.0: Faster diffs, leaner packages, road to 1.0</title>
+      <link>https://flet.dev/blog/flet-v-0-83-release-announcement</link>
+      <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-83-release-announcement</guid>
+      <pubDate>Thu, 26 Mar 2026 09:00:00 +0900</pubDate>
+      <description>Flet 0.83.0では、制御差分処理が最大6.7倍高速化され、.update()ロジックが改善されて冗長な更新が削除されました。デスクトップバイナリとビルドテンプレートがPyPIからGitHub Releasesに移動し、インストールサイズが削減されると同時に、バージョン管理がより明確になりました。Annotated型による宣言的なフィールド検証機能も新たに追加されています。</description>
+    </item>
+    <item>
+      <title>🦞 Crux — crux_time-v0.15.0 / crux_platform-v0.8.0</title>
+      <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.15.0</link>
+      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.15.0</guid>
+      <pubDate>Fri, 20 Mar 2026 19:12:52 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
+    <item>
+      <title>⚡ Electron — Tech Talk: How Electron went Wayland-native, and what it means for your apps</title>
+      <link>https://electronjs.org/blog/tech-talk-wayland</link>
+      <guid isPermaLink="true">https://electronjs.org/blog/tech-talk-wayland</guid>
+      <pubDate>Tue, 17 Mar 2026 09:00:00 +0900</pubDate>
+      <description>ElectronがLinux上でWaylandネイティブ対応に移行し、Chromiumのデフォルト有効化に伴い、多くのLinuxデスクトップアプリが自動的にWaylandで動作するようになりました。開発者は既存アプリがWaylandで正常に動作するか確認し、必要に応じて互換性の問題に対応する必要があります。</description>
+    </item>
+    <item>
+      <title>⚡ Electron — Electron 41</title>
+      <link>https://electronjs.org/blog/electron-41-0</link>
+      <guid isPermaLink="true">https://electronjs.org/blog/electron-41-0</guid>
+      <pubDate>Tue, 10 Mar 2026 09:00:00 +0900</pubDate>
+      <description>Electron 41がリリースされ、Chromium 146.0.7680.65、V8 14.6、Node v24.14.0にアップグレードされました。macOS向けにASAR Integrity digestによるセキュリティ強化が追加されました。アップグレード時は初期版の41.0.0ではなく、高優先度バグが修正された41.0.2以上のインストールが推奨されています。</description>
+    </item>
+    <item>
+      <title>⚛️ React Native — React Native Comes to Meta Quest</title>
+      <link>https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest</link>
+      <guid isPermaLink="true">https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest</guid>
+      <pubDate>Tue, 24 Feb 2026 09:00:00 +0900</pubDate>
+      <description>React Confiterative 2025でMeta Quest向けのReact Native公式サポートが発表され、開発者は既存の知識とツールを活用してVRアプリを構築・配信できるようになりました。React Nativeのクロスプラットフォーム対応がAndroid/iOSから拡大し、Meta Questデバイスでも同じパターンで開発可能です。開発ビルド、ネイティブ機能、プラットフォーム固有の設定など、Meta Quest向け開発を開始するための具体的なガイドが提供されています。</description>
+    </item>
+    <item>
+      <title>🐟 Flet — Flet 0.81.0: Camera, CodeEditor, color pickers and more</title>
+      <link>https://flet.dev/blog/flet-v-0-81-release-announcement</link>
+      <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-81-release-announcement</guid>
+      <pubDate>Tue, 24 Feb 2026 09:00:00 +0900</pubDate>
+      <description>Flet 0.81.0がリリースされ、Camera、CodeEditor、PageView、色選択ツール、RotatedBoxなどの新コントロールが追加されました。Hero animationやMatrix4トランスフォーム、クリップボードAPI（画像・ファイル対応）、Web FilePicker、プラットフォームロケール情報などが新たに実装されています。アップグレードはpip install &apos;flet[all]&apos; --upgradeまたはuvコマンドで実行可能です。</description>
+    </item>
+    <item>
+      <title>⚛️ React Native — React Native 0.84 - Hermes V1 by Default</title>
+      <link>https://reactnative.dev/blog/2026/02/11/react-native-0.84</link>
+      <guid isPermaLink="true">https://reactnative.dev/blog/2026/02/11/react-native-0.84</guid>
+      <pubDate>Wed, 11 Feb 2026 09:00:00 +0900</pubDate>
+      <description>React Native 0.84では、Hermes V1がデフォルトのJavaScriptエンジンになり、全アプリのパフォーマンスが大幅に向上します。iOSのプリコンパイルバイナリがデフォルト化され、レガシーアーキテクチャが削除され、Node.js 22が最小要件になりました。</description>
+    </item>
+    <item>
+      <title>⚡ Electron — Electron 40.0.0</title>
+      <link>https://electronjs.org/blog/electron-40-0</link>
+      <guid isPermaLink="true">https://electronjs.org/blog/electron-40-0</guid>
+      <pubDate>Tue, 13 Jan 2026 09:00:00 +0900</pubDate>
+      <description>Electron 40.0.0がリリースされ、Chromium 144.0.7559.60、V8 14.4、Node 24.11.1へのアップグレードが含まれています。主な変更点はChromium 142からの更新、Node.jsのv22.20.0からv24.11.1への昇格、V8の14.2から14.4への更新です。詳細な新機能や改善点については記事に記載されていますが、要約には明示されていません。</description>
     </item>
   </channel>
 </rss>

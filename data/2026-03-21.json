@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "crux",
+    "fw_name": "Crux",
+    "fw_icon": "🦞",
+    "fw_color": "#E05A4E",
+    "id": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.15.0",
+    "title": "crux_time-v0.15.0 / crux_platform-v0.8.0",
+    "link": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.15.0",
+    "pub_date": "2026-03-20T10:12:52Z",
+    "description": "[crux_time-v0.15.0]\nchore: changelog udpated for csharp\n\n[crux_platform-v0.8.0]\nchore: changelog udpated for csharp",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-05-16T14:55:30.982720+00:00"
+  }
+]
