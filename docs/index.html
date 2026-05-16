@@ -8,221 +8,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  background:#111214;
-  background-image:
-    radial-gradient(ellipse at 20% 50%,rgba(30,40,60,.8) 0%,transparent 60%),
-    radial-gradient(ellipse at 80% 20%,rgba(50,30,20,.4) 0%,transparent 50%);
-  min-height:100vh;
-  font-family:'Rajdhani',sans-serif;
-  color:#ccc;
-  overflow-x:hidden;
-}
-
-/* ── HEADER ── */
-header{
-  position:sticky;top:0;z-index:100;
-  background:
-    linear-gradient(135deg,
-      rgba(255,255,255,.9) 0%,rgba(220,225,235,.6) 8%,
-      rgba(160,168,178,.4) 18%,rgba(120,128,138,.3) 30%,
-      rgba(140,148,158,.4) 52%,rgba(200,208,218,.6) 62%,
-      rgba(255,255,255,.85) 70%,rgba(100,108,118,.3) 90%,
-      rgba(60,68,78,.4) 100%),
-    linear-gradient(90deg,rgba(255,255,255,.1) 0%,transparent 50%,rgba(255,255,255,.05) 100%);
-  background-color:#b8bec8;
-  border-bottom:3px solid #505860;
-  box-shadow:0 4px 20px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.4) inset;
-  overflow:hidden;
-}
-header::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(168deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 35%,transparent 60%);
-  pointer-events:none;z-index:1;
-}
-header::after{
-  content:'';position:absolute;inset:0;
-  background-image:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,.03) 2px,rgba(255,255,255,.03) 3px);
-  pointer-events:none;z-index:2;
-}
-.header-inner{
-  position:relative;z-index:3;
-  max-width:1300px;margin:0 auto;
-  padding:20px 40px;
-  display:flex;align-items:center;gap:20px;
-}
-.logo{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(32px,6vw,52px);
-  letter-spacing:.12em;
-  background:linear-gradient(160deg,
-    #1a2030 0%,#283848 20%,#101820 40%,
-    #2a3848 60%,#182030 80%,#0e1820 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));
-  line-height:1;
-}
+body{background:#111214;background-image:radial-gradient(ellipse at 20% 50%,rgba(30,40,60,.8) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(50,30,20,.4) 0%,transparent 50%);min-height:100vh;font-family:'Rajdhani',sans-serif;color:#ccc;overflow-x:hidden;}
+header{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,rgba(255,255,255,.9) 0%,rgba(220,225,235,.6) 8%,rgba(160,168,178,.4) 18%,rgba(120,128,138,.3) 30%,rgba(140,148,158,.4) 52%,rgba(200,208,218,.6) 62%,rgba(255,255,255,.85) 70%,rgba(100,108,118,.3) 90%,rgba(60,68,78,.4) 100%),linear-gradient(90deg,rgba(255,255,255,.1) 0%,transparent 50%,rgba(255,255,255,.05) 100%);background-color:#b8bec8;border-bottom:3px solid #505860;box-shadow:0 4px 20px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.4) inset;overflow:hidden;}
+header::before{content:'';position:absolute;inset:0;background:linear-gradient(168deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 35%,transparent 60%);pointer-events:none;z-index:1;}
+header::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,.03) 2px,rgba(255,255,255,.03) 3px);pointer-events:none;z-index:2;}
+.header-inner{position:relative;z-index:3;max-width:1300px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;gap:20px;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,6vw,52px);letter-spacing:.12em;background:linear-gradient(160deg,#1a2030 0%,#283848 20%,#101820 40%,#2a3848 60%,#182030 80%,#0e1820 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));line-height:1;}
 .header-meta{margin-left:auto;text-align:right;}
-.header-tagline{
-  font-size:10px;letter-spacing:.35em;text-transform:uppercase;
-  color:#404858;font-weight:700;
-}
-.header-updated{
-  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:#606878;margin-top:3px;
-}
-
-/* ── MAIN ── */
+.header-tagline{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#404858;font-weight:700;}
+.header-updated{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#606878;margin-top:3px;}
 main{max-width:1300px;margin:0 auto;padding:0 40px 60px;}
-
-/* ── DIVIDER ── */
 .steel-divider-wrap{margin:40px 0 0;}
-.steel-divider{
-  height:18px;
-  background:linear-gradient(180deg,#2a2e38 0%,#3a3e48 40%,#252830 100%);
-  border-top:1px solid rgba(255,255,255,.1);
-  border-bottom:1px solid rgba(0,0,0,.6);
-  display:flex;align-items:center;gap:12px;padding:0 16px;
-  box-shadow:0 2px 8px rgba(0,0,0,.5) inset;
-}
-.rivet{
-  width:8px;height:8px;border-radius:50%;flex-shrink:0;
-  background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8) 0%,rgba(180,190,200,.5) 40%,rgba(60,70,80,.6) 100%);
-  background-color:#909aa8;
-  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -1px 0 rgba(0,0,0,.4) inset,0 2px 4px rgba(0,0,0,.6);
-}
-.steel-divider-bottom{
-  height:2px;
-  background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(255,255,255,.06) 100%);
-}
-
-/* ── DAY HEADER ── */
-.day-header{
-  display:flex;align-items:baseline;gap:16px;
-  padding:20px 0 14px;
-  border-bottom:1px solid rgba(255,255,255,.06);
-  margin-bottom:20px;
-}
-.day-label{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(28px,5vw,44px);
-  letter-spacing:.15em;
-  background:linear-gradient(160deg,#fff 0%,#e0e8f0 15%,#a8b8c8 30%,#687888 45%,#c8d8e8 60%,#fff 72%,#90a0b0 85%,#d0d8e0 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));
-  line-height:1;
-}
-.day-count{
-  font-size:11px;letter-spacing:.3em;text-transform:uppercase;
-  color:#506070;font-weight:700;
-}
-
-/* ── CARD GRID ── */
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-  gap:0;
-}
-
-/* ── STEEL CARD ── */
-.steel-card{
-  padding:22px 20px;
-  position:relative;overflow:hidden;
-  border:1px solid rgba(0,0,0,.5);
-  border-right-width:0;
-  outline:1px solid rgba(255,255,255,.07);
-  outline-offset:-2px;
-  background:linear-gradient(160deg,#1e2028 0%,#161820 40%,#12141c 70%,#1a1c24 100%);
-  background-color:#161820;
-  transition:filter .18s;
-}
+.steel-divider{height:18px;background:linear-gradient(180deg,#2a2e38 0%,#3a3e48 40%,#252830 100%);border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(0,0,0,.6);display:flex;align-items:center;gap:12px;padding:0 16px;box-shadow:0 2px 8px rgba(0,0,0,.5) inset;}
+.rivet{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8) 0%,rgba(180,190,200,.5) 40%,rgba(60,70,80,.6) 100%);background-color:#909aa8;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -1px 0 rgba(0,0,0,.4) inset,0 2px 4px rgba(0,0,0,.6);}
+.steel-divider-bottom{height:2px;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(255,255,255,.06) 100%);}
+.day-header{display:flex;align-items:baseline;gap:16px;padding:20px 0 14px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:20px;}
+.day-label{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,44px);letter-spacing:.15em;background:linear-gradient(160deg,#fff 0%,#e0e8f0 15%,#a8b8c8 30%,#687888 45%,#c8d8e8 60%,#fff 72%,#90a0b0 85%,#d0d8e0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));line-height:1;}
+.day-count{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#506070;font-weight:700;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0;}
+.steel-card{padding:22px 20px;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.5);border-right-width:0;outline:1px solid rgba(255,255,255,.07);outline-offset:-2px;background:linear-gradient(160deg,#1e2028 0%,#161820 40%,#12141c 70%,#1a1c24 100%);background-color:#161820;transition:filter .18s;}
 .steel-card:last-child{border-right-width:1px;}
 .steel-card:hover{filter:brightness(1.12);}
-
-/* brushed texture */
-.steel-card::after{
-  content:'';position:absolute;inset:0;
-  background-image:
-    repeating-linear-gradient(0deg,transparent,transparent 6px,rgba(255,255,255,.008) 6px,rgba(255,255,255,.008) 7px),
-    repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(255,255,255,.005) 3px,rgba(255,255,255,.005) 4px);
-  pointer-events:none;z-index:0;
-}
-
-/* fw-color left accent */
-.steel-card::before{
-  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
-  background:var(--fw-color,#909aa8);
-  opacity:.8;z-index:1;
-}
-
-/* corner marks */
+.steel-card::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 6px,rgba(255,255,255,.008) 6px,rgba(255,255,255,.008) 7px),repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(255,255,255,.005) 3px,rgba(255,255,255,.005) 4px);pointer-events:none;z-index:0;}
+.steel-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--fw-color,#909aa8);opacity:.8;z-index:1;}
 .corner-mark{position:absolute;width:10px;height:10px;border-color:rgba(255,255,255,.15);border-style:solid;z-index:2;}
 .corner-mark.tl{top:6px;left:6px;border-width:1px 0 0 1px;}
 .corner-mark.tr{top:6px;right:6px;border-width:1px 1px 0 0;}
 .corner-mark.bl{bottom:6px;left:6px;border-width:0 0 1px 1px;}
 .corner-mark.br{bottom:6px;right:6px;border-width:0 1px 1px 0;}
-
 .fw-badge-wrap{position:relative;z-index:3;margin-bottom:10px;}
-.fw-badge{
-  display:inline-block;
-  font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;
-  padding:2px 8px;border-radius:0;
-  border-left:3px solid var(--fw-color,#909aa8);
-  background:rgba(255,255,255,.04);
-}
-
-.steel-card h3{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:17px;letter-spacing:.1em;line-height:1.3;
-  margin-bottom:10px;
-  position:relative;z-index:3;
-}
-.steel-card h3 a{
-  color:#c8d4e0;text-decoration:none;
-  transition:color .15s;
-}
+.fw-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;padding:2px 8px;border-radius:0;border-left:3px solid var(--fw-color,#909aa8);background:rgba(255,255,255,.04);}
+.steel-card h3{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.1em;line-height:1.3;margin-bottom:10px;position:relative;z-index:3;}
+.steel-card h3 a{color:#c8d4e0;text-decoration:none;transition:color .15s;}
 .steel-card h3 a:hover{color:var(--fw-color,#c8d4e0);}
-
-.card-summary{
-  font-size:16px;line-height:1.7;letter-spacing:.04em;
-  color:#C1C8CF;position:relative;z-index:3;
-}
-.card-no-summary{
-  font-size:11px;letter-spacing:.25em;
-  color:#303840;font-style:normal;
-  position:relative;z-index:3;
-}
-
-/* ── EMPTY STATE ── */
-.empty-state{
-  margin:60px 0;border:1px solid rgba(255,255,255,.06);
-  outline:1px solid rgba(0,0,0,.6);outline-offset:3px;
-  overflow:hidden;
-}
-.hazard-stripe-bar{
-  height:8px;
-  background:repeating-linear-gradient(-45deg,#c09010 0px,#c09010 8px,#181410 8px,#181410 16px);
-}
-.empty-state p{
-  padding:32px;font-size:12px;letter-spacing:.3em;
-  text-transform:uppercase;color:#404850;text-align:center;
-}
-
-/* ── FOOTER ── */
-footer{
-  border-top:1px solid rgba(255,255,255,.06);
-  padding:20px 40px;
-  font-size:10px;letter-spacing:.25em;text-transform:uppercase;
-  color:#C1C8CF;text-align:center;
-}
-
-@media(max-width:600px){
-  .header-inner,main,footer{padding-left:16px;padding-right:16px;}
-  .card-grid{grid-template-columns:1fr;}
-  .steel-card{border-right-width:1px !important;}
-  .header-meta{display:none;}
-}
+.card-summary{font-size:16px;line-height:1.7;letter-spacing:.04em;color:#C1C8CF;position:relative;z-index:3;}
+.card-no-summary{font-size:11px;letter-spacing:.25em;color:#303840;font-style:normal;position:relative;z-index:3;}
+.empty-state{margin:60px 0;border:1px solid rgba(255,255,255,.06);outline:1px solid rgba(0,0,0,.6);outline-offset:3px;overflow:hidden;}
+.hazard-stripe-bar{height:8px;background:repeating-linear-gradient(-45deg,#c09010 0px,#c09010 8px,#181410 8px,#181410 16px);}
+.empty-state p{padding:32px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#404850;text-align:center;}
+footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#C1C8CF;text-align:center;}
+@media(max-width:600px){.header-inner,main,footer{padding-left:16px;padding-right:16px;}.card-grid{grid-template-columns:1fr;}.steel-card{border-right-width:1px !important;}.header-meta{display:none;}}
 </style>
 </head>
 <body>
@@ -231,7 +56,7 @@ footer{
     <div class="logo">Framework Releases Summary</div>
     <div class="header-meta">
       <div class="header-tagline">React Native · Expo · Flutter · Flet · Electron · Tauri · Dioxus</div>
-      <div class="header-updated">Last updated: 2026-05-16 17:25 JST</div>
+      <div class="header-updated">Last updated: 2026-05-16 18:06 JST</div>
     </div>
   </div>
 </header>
@@ -277,7 +102,7 @@ footer{
                 <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/expo-go-loading-changes-may-2026" target="_blank" rel="noopener">Changes to project loading behavior in Expo Go</a></h3>
-              <p class="card-summary">要約失敗</p>
+              <p class="card-summary">Expo Goでプロジェクト読み込み動作が2つ変更されました。第1に、EAS Updateで公開されたプロジェクトは自分が所有するか属する組織が所有するもののみ読み込み可能になりました（2026年5月12日から全バージョン対象）。第2に、Hermes bytecodeバンドル（HBC）はEAS Update経由のみサポートされ、自ホスト更新ではプレーンJavaScriptバンドルが必須です（SDK 54〜56の最新Expo Go対象）。</p>
             </div></div>
         </section>
         <section class="day-section">
@@ -334,6 +159,17 @@ footer{
             <span class="day-count">3 ARTICLES</span>
           </div>
           <div class="card-grid">
+            <div class="steel-card" style="--fw-color:#aaaaff">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+              </div>
+              <h3><a href="https://expo.dev/changelog/sdk-56-beta" target="_blank" rel="noopener">Expo SDK 56 Beta is now available</a></h3>
+              <p class="card-summary">Expo SDK 56のベータ版がリリースされ、約2週間のベータ期間中に開発者はアプリの互換性を検証できます。React Native 0.85.2とReact 19.2.3が含まれており、ベータ期間中は破壊的変更を含む修正と改善が継続的にリリースされるため、定期的な確認が必要です。詳細なリリースノートは正式版リリース時に公開されますが、expo/expoリポジトリのチェンジログで変更内容を事前に確認できます。</p>
+            </div>
             <div class="steel-card" style="--fw-color:#FFC131">
               <div class="corner-mark tl"></div>
               <div class="corner-mark tr"></div>
@@ -355,17 +191,6 @@ footer{
               </div>
               <h3><a href="https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Introducing Skills for Dart and Flutter</a></h3>
               <p class="card-summary">FlutterとDart向けのAI Agent Skillsが新たに導入され、開発者はローカライゼーション、最新のDart言語機能、統合テストなど、本番環境レベルのアプリ開発に必要なドメイン固有の専門知識をAIアシスタントに備えさせることができるようになります。これにより、FlutterやDartが急速に新機能を追加しても、LLMの固定学習データとの知識ギャップを解決し、より正確で実用的なAI支援が可能になります。</p>
-            </div>
-            <div class="steel-card" style="--fw-color:#aaaaff">
-              <div class="corner-mark tl"></div>
-              <div class="corner-mark tr"></div>
-              <div class="corner-mark bl"></div>
-              <div class="corner-mark br"></div>
-              <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
-              </div>
-              <h3><a href="https://expo.dev/changelog/sdk-56-beta" target="_blank" rel="noopener">Expo SDK 56 Beta is now available</a></h3>
-              <p class="card-summary">要約失敗</p>
             </div></div>
         </section>
         <section class="day-section">
@@ -387,7 +212,7 @@ footer{
                 <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/expo-go-and-app-store-may-2026" target="_blank" rel="noopener">Expo Go and the App Store in May 2026</a></h3>
-              <p class="card-summary">要約失敗</p>
+              <p class="card-summary">Expo Go SDK 55はApple App Storeの承認待ち中であり、リリース時期は未定です。当面はSDK 54がApp StoreとPlay Storeで利用可能ですが、本番運用目的の場合は、より強力な開発ビルドへの移行を推奨しています。</p>
             </div></div>
         </section>
         <section class="day-section">
@@ -400,6 +225,17 @@ footer{
             <span class="day-count">2 ARTICLES</span>
           </div>
           <div class="card-grid">
+            <div class="steel-card" style="--fw-color:#aaaaff">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <div class="fw-badge-wrap">
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+              </div>
+              <h3><a href="https://expo.dev/changelog/gradle-cache" target="_blank" rel="noopener">Gradle cache for Android builds</a></h3>
+              <p class="card-summary">EAS上のAndroidビルドでGradle キャッシュが利用可能になり、タスク出力が再利用されることでビルド時間が約50%削減されます。EAS_GRADLE_CACHE環境変数を1に設定することで有効化でき、ビルドログのRun Gradleステップで「FROM CACHE」マークでキャッシュの動作を確認できます。特にネイティブモジュールが多いプロジェクトで効果的です。</p>
+            </div>
             <div class="steel-card" style="--fw-color:#54C5F8">
               <div class="corner-mark tl"></div>
               <div class="corner-mark tr"></div>
@@ -410,17 +246,6 @@ footer{
               </div>
               <h3><a href="https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Saying goodbye to CocoaPods: Swift Package Manager is soon the default in Flutter!</a></h3>
               <p class="card-summary">Flutter 3.44の次のリリース以降、iOSとmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になり新規追加が停止されるため、継続的なアップデートを受けるにはSwiftPMへの移行が必要です。既存ビルドは引き続き動作しますが、開発者はRubyやCocoaPodsのインストールが不要になりSwiftパッケージエコシステムへアクセスできるようになります。</p>
-            </div>
-            <div class="steel-card" style="--fw-color:#aaaaff">
-              <div class="corner-mark tl"></div>
-              <div class="corner-mark tr"></div>
-              <div class="corner-mark bl"></div>
-              <div class="corner-mark br"></div>
-              <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
-              </div>
-              <h3><a href="https://expo.dev/changelog/gradle-cache" target="_blank" rel="noopener">Gradle cache for Android builds</a></h3>
-              <p class="card-summary">要約失敗</p>
             </div></div>
         </section>
         <section class="day-section">
@@ -464,7 +289,7 @@ footer{
                 <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/sign-in-with-github" target="_blank" rel="noopener">Sign in with GitHub</a></h3>
-              <p class="card-summary">要約失敗</p>
+              <p class="card-summary">ExpoがGitHubアカウントでのサインイン機能を追加しました。この機能を利用するにはメールアドレス閲覧の権限許可が必要で、既存ユーザーには2026年4月23日にGitHubから権限リクエストメールが送信されています。既存のGitHub連携機能には影響なく、この権限リクエストは無視しても問題ありません。</p>
             </div></div>
         </section>
         <section class="day-section">

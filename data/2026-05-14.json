@@ -8,8 +8,8 @@
     "title": "Changes to project loading behavior in Expo Go",
     "link": "https://expo.dev/changelog/expo-go-loading-changes-may-2026",
     "pub_date": "2026-05-13T20:00:00.000Z",
-    "description": "",
-    "summary_ja": "要約失敗",
-    "fetched_at": "2026-05-16T08:24:55.001176+00:00"
+    "description": "We've made two changes to how Expo Go loads projects. First, when accessing updates published to EAS Update in Expo Go, you can now only load projects that you own or that are owned by an organization you are a member of. This change applies to all versions of Expo Go and took effect on May 12, 2026. Second, loading Hermes bytecode bundles (HBC) is only supported for EAS Update in Expo Go, and self-hosted updates must serve plain JavaScript bundles. This change applies to the latest versions of Expo Go for SDK 54, 55, and 56. When distributing your app for review by your team, we recommend using the official store testing tracks, such as Google Play internal testing and TestFlight; internal distribution with EAS Build or any similar service that provides ad-hoc or enterprise provisioning s",
+    "summary_ja": "Expo Goでプロジェクト読み込み動作が2つ変更されました。第1に、EAS Updateで公開されたプロジェクトは自分が所有するか属する組織が所有するもののみ読み込み可能になりました（2026年5月12日から全バージョン対象）。第2に、Hermes bytecodeバンドル（HBC）はEAS Update経由のみサポートされ、自ホスト更新ではプレーンJavaScriptバンドルが必須です（SDK 54〜56の最新Expo Go対象）。",
+    "fetched_at": "2026-05-16T09:01:59.105261+00:00"
   }
 ]

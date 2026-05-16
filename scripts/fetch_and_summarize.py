@@ -170,15 +170,11 @@ EXPO_DATE_RE = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
 def parse_expo_date(text: str) -> str:
     """'May 6, 2026' → ISO 8601。失敗時は空文字。"""
     text = text.strip()
-    # %-d はmacOSで使えないので %d で統一（ゼロパディングでも動く）
     try:
         dt = datetime.strptime(text, "%B %d, %Y")
         return dt.replace(hour=12, tzinfo=timezone.utc).isoformat()
     except ValueError:
         pass
-    # 1桁の日付（"May 6, 2026"）は %B %-d, %Y で来るが、
-    # strptime は " 6" のゼロパディングなし数値を "%d" では受け付けない環境もある。
-    # 正規化してリトライ。
     try:
         m = re.match(r"([A-Z][a-z]+) (\d{1,2}), (\d{4})", text)
         if m:
@@ -190,17 +186,6 @@ def parse_expo_date(text: str) -> str:
     return ""
 
 def fetch_expo_changelog(feed: dict) -> list[dict]:
-    """
-    expo.dev/changelog をスクレイピングして記事リストを返す。
-
-    実際のHTML構造（BeautifulSoupで見える形）:
-      <ブロック要素>  "May 6, 2026"  <a href="/changelog/sdk-56-beta">/ Read more →</a>  </ブロック要素>
-      <h2><a href="/changelog/sdk-56-beta">Expo SDK 56 Beta is now available</a></h2>
-      <p>本文（あれば）</p>
-      ... 次エントリ ...
-
-    h2 を起点に、直前の兄弟要素のテキストから日付を正規表現で抽出する。
-    """
     try:
         headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
         resp = requests.get(EXPO_CHANGELOG_URL, headers=headers, timeout=15)
@@ -210,33 +195,23 @@ def fetch_expo_changelog(feed: dict) -> list[dict]:
         articles = []
         for h2 in soup.find_all("h2"):
             title = h2.get_text(strip=True)
-            # h2 の親が <a href="..."> なのでそこからリンクを取得
             a_tag = h2.parent if h2.parent.name == "a" else h2.find("a", href=True)
             if not a_tag:
                 continue
             href = a_tag.get("href", "")
             link = href if href.startswith("http") else f"https://expo.dev{href}"
 
-            # 日付: h2.parent.parent 内の <time datetime="..."> を取得
             pub_date = ""
             try:
                 container = h2.parent.parent
                 time_tag  = container.find("time", attrs={"datetime": True})
                 if time_tag:
-                    # datetime="2026-05-06T20:00:00.000Z" → そのままISO形式で使える
                     pub_date = time_tag["datetime"]
             except Exception:
                 pass
 
-            # 本文: h2 直後の兄弟要素で "Read more" を含まないテキスト
-            desc = ""
-            for sib in h2.find_next_siblings():
-                if sib.name in ("h2", "h1", "h3"):
-                    break
-                text = sib.get_text(" ", strip=True)
-                if text and "Read more" not in text:
-                    desc = text[:800]
-                    break
+            # 本文: 詳細ページの main → article → section から取得
+            desc = fetch_page_description(link, None)
 
             if not title or not link:
                 continue
@@ -266,16 +241,22 @@ def fetch_expo_changelog(feed: dict) -> list[dict]:
 
 # ── 記事ページから本文スクレイピング ─────────────────────────────────────────
 
-def fetch_page_description(url: str, selector_id: str) -> str:
+def fetch_page_description(url: str, selector_id: str | None) -> str:
     """
-    記事ページを取得して指定IDの要素テキストを返す。失敗時は空文字。
+    記事ページを取得して本文テキストを返す。
+    selector_id が指定されていればその id の要素、
+    None なら main → article → section の順でフォールバック。
+    失敗時は空文字。
     """
     try:
         headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
         resp = requests.get(url, headers=headers, timeout=15)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
-        el = soup.find(id=selector_id)
+        if selector_id:
+            el = soup.find(id=selector_id)
+        else:
+            el = soup.find("main") or soup.find("article") or soup.find("section")
         if el:
             return strip_html(el.get_text(" ", strip=True))
         return ""
@@ -319,16 +300,8 @@ def fetch_tauri_release_dates() -> dict[str, str]:
     return version_dates
 
 def fetch_tauri_releases(feed: dict) -> list[dict]:
-    """
-    1. v2.tauri.app/release/ のサイドバーから tauri 本体バージョン一覧を取得
-    2. data/tauri_versions.json と比較して未取得バージョンを検出
-    3. GitHub atom フィードでリリース日付を取得（pub_date に使用）
-    4. v2.tauri.app の詳細ページから本文を取得して要約
-    5. 実際に取得できた分だけ tauri_versions.json に追記
-    """
     headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
     try:
-        # バージョン一覧を取得
         resp = requests.get(TAURI_RELEASE_URL, headers=headers, timeout=15)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
@@ -345,18 +318,16 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
         fetched_versions: set[str] = set()
 
         for a in tauri_links:
-            version  = a.get_text(strip=True)   # "2.11.1"
+            version  = a.get_text(strip=True)
             page_url = f"https://v2.tauri.app{a['href']}"
 
             if version in known_versions:
-                continue  # 既取得済み → スキップ
+                continue
 
             print(f"    新バージョン検出: tauri v{version}")
 
-            # リリース日付（GitHub atom から）
             pub_date = release_dates.get(version, datetime.now(timezone.utc).isoformat())
 
-            # 詳細ページから本文取得
             try:
                 r2 = requests.get(page_url, headers=headers, timeout=15)
                 r2.raise_for_status()
@@ -385,7 +356,6 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
             if len(articles) >= MAX_PER_FEED:
                 break
 
-        # 実際に取得できた分だけ known_versions に追記して保存
         if fetched_versions:
             save_tauri_versions(known_versions | fetched_versions)
 
@@ -416,7 +386,6 @@ def fetch_feed(feed: dict) -> list[dict]:
             if not link or not title:
                 continue
 
-            # Flet は RSS の summary が短すぎるので記事ページから本文を取得
             if feed["id"] == "flet":
                 desc = fetch_page_description(link, "__blog-post-container")
             else:
@@ -483,7 +452,6 @@ def generate_html(by_date: dict, updated_at: str) -> str:
         except Exception:
             label = date
 
-        # リベット（divider用）
         rivets = '<div class="rivet"></div>' * 10
 
         cards_html = ""
@@ -539,221 +507,46 @@ def generate_html(by_date: dict, updated_at: str) -> str:
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{{margin:0;padding:0;box-sizing:border-box;}}
-
-body{{
-  background:#111214;
-  background-image:
-    radial-gradient(ellipse at 20% 50%,rgba(30,40,60,.8) 0%,transparent 60%),
-    radial-gradient(ellipse at 80% 20%,rgba(50,30,20,.4) 0%,transparent 50%);
-  min-height:100vh;
-  font-family:'Rajdhani',sans-serif;
-  color:#ccc;
-  overflow-x:hidden;
-}}
-
-/* ── HEADER ── */
-header{{
-  position:sticky;top:0;z-index:100;
-  background:
-    linear-gradient(135deg,
-      rgba(255,255,255,.9) 0%,rgba(220,225,235,.6) 8%,
-      rgba(160,168,178,.4) 18%,rgba(120,128,138,.3) 30%,
-      rgba(140,148,158,.4) 52%,rgba(200,208,218,.6) 62%,
-      rgba(255,255,255,.85) 70%,rgba(100,108,118,.3) 90%,
-      rgba(60,68,78,.4) 100%),
-    linear-gradient(90deg,rgba(255,255,255,.1) 0%,transparent 50%,rgba(255,255,255,.05) 100%);
-  background-color:#b8bec8;
-  border-bottom:3px solid #505860;
-  box-shadow:0 4px 20px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.4) inset;
-  overflow:hidden;
-}}
-header::before{{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(168deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 35%,transparent 60%);
-  pointer-events:none;z-index:1;
-}}
-header::after{{
-  content:'';position:absolute;inset:0;
-  background-image:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,.03) 2px,rgba(255,255,255,.03) 3px);
-  pointer-events:none;z-index:2;
-}}
-.header-inner{{
-  position:relative;z-index:3;
-  max-width:1300px;margin:0 auto;
-  padding:20px 40px;
-  display:flex;align-items:center;gap:20px;
-}}
-.logo{{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(32px,6vw,52px);
-  letter-spacing:.12em;
-  background:linear-gradient(160deg,
-    #1a2030 0%,#283848 20%,#101820 40%,
-    #2a3848 60%,#182030 80%,#0e1820 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));
-  line-height:1;
-}}
+body{{background:#111214;background-image:radial-gradient(ellipse at 20% 50%,rgba(30,40,60,.8) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(50,30,20,.4) 0%,transparent 50%);min-height:100vh;font-family:'Rajdhani',sans-serif;color:#ccc;overflow-x:hidden;}}
+header{{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,rgba(255,255,255,.9) 0%,rgba(220,225,235,.6) 8%,rgba(160,168,178,.4) 18%,rgba(120,128,138,.3) 30%,rgba(140,148,158,.4) 52%,rgba(200,208,218,.6) 62%,rgba(255,255,255,.85) 70%,rgba(100,108,118,.3) 90%,rgba(60,68,78,.4) 100%),linear-gradient(90deg,rgba(255,255,255,.1) 0%,transparent 50%,rgba(255,255,255,.05) 100%);background-color:#b8bec8;border-bottom:3px solid #505860;box-shadow:0 4px 20px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.4) inset;overflow:hidden;}}
+header::before{{content:'';position:absolute;inset:0;background:linear-gradient(168deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 35%,transparent 60%);pointer-events:none;z-index:1;}}
+header::after{{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,.03) 2px,rgba(255,255,255,.03) 3px);pointer-events:none;z-index:2;}}
+.header-inner{{position:relative;z-index:3;max-width:1300px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;gap:20px;}}
+.logo{{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,6vw,52px);letter-spacing:.12em;background:linear-gradient(160deg,#1a2030 0%,#283848 20%,#101820 40%,#2a3848 60%,#182030 80%,#0e1820 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));line-height:1;}}
 .header-meta{{margin-left:auto;text-align:right;}}
-.header-tagline{{
-  font-size:10px;letter-spacing:.35em;text-transform:uppercase;
-  color:#404858;font-weight:700;
-}}
-.header-updated{{
-  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:#606878;margin-top:3px;
-}}
-
-/* ── MAIN ── */
+.header-tagline{{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#404858;font-weight:700;}}
+.header-updated{{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#606878;margin-top:3px;}}
 main{{max-width:1300px;margin:0 auto;padding:0 40px 60px;}}
-
-/* ── DIVIDER ── */
 .steel-divider-wrap{{margin:40px 0 0;}}
-.steel-divider{{
-  height:18px;
-  background:linear-gradient(180deg,#2a2e38 0%,#3a3e48 40%,#252830 100%);
-  border-top:1px solid rgba(255,255,255,.1);
-  border-bottom:1px solid rgba(0,0,0,.6);
-  display:flex;align-items:center;gap:12px;padding:0 16px;
-  box-shadow:0 2px 8px rgba(0,0,0,.5) inset;
-}}
-.rivet{{
-  width:8px;height:8px;border-radius:50%;flex-shrink:0;
-  background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8) 0%,rgba(180,190,200,.5) 40%,rgba(60,70,80,.6) 100%);
-  background-color:#909aa8;
-  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -1px 0 rgba(0,0,0,.4) inset,0 2px 4px rgba(0,0,0,.6);
-}}
-.steel-divider-bottom{{
-  height:2px;
-  background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(255,255,255,.06) 100%);
-}}
-
-/* ── DAY HEADER ── */
-.day-header{{
-  display:flex;align-items:baseline;gap:16px;
-  padding:20px 0 14px;
-  border-bottom:1px solid rgba(255,255,255,.06);
-  margin-bottom:20px;
-}}
-.day-label{{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(28px,5vw,44px);
-  letter-spacing:.15em;
-  background:linear-gradient(160deg,#fff 0%,#e0e8f0 15%,#a8b8c8 30%,#687888 45%,#c8d8e8 60%,#fff 72%,#90a0b0 85%,#d0d8e0 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));
-  line-height:1;
-}}
-.day-count{{
-  font-size:11px;letter-spacing:.3em;text-transform:uppercase;
-  color:#506070;font-weight:700;
-}}
-
-/* ── CARD GRID ── */
-.card-grid{{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-  gap:0;
-}}
-
-/* ── STEEL CARD ── */
-.steel-card{{
-  padding:22px 20px;
-  position:relative;overflow:hidden;
-  border:1px solid rgba(0,0,0,.5);
-  border-right-width:0;
-  outline:1px solid rgba(255,255,255,.07);
-  outline-offset:-2px;
-  background:linear-gradient(160deg,#1e2028 0%,#161820 40%,#12141c 70%,#1a1c24 100%);
-  background-color:#161820;
-  transition:filter .18s;
-}}
+.steel-divider{{height:18px;background:linear-gradient(180deg,#2a2e38 0%,#3a3e48 40%,#252830 100%);border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(0,0,0,.6);display:flex;align-items:center;gap:12px;padding:0 16px;box-shadow:0 2px 8px rgba(0,0,0,.5) inset;}}
+.rivet{{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8) 0%,rgba(180,190,200,.5) 40%,rgba(60,70,80,.6) 100%);background-color:#909aa8;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -1px 0 rgba(0,0,0,.4) inset,0 2px 4px rgba(0,0,0,.6);}}
+.steel-divider-bottom{{height:2px;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(255,255,255,.06) 100%);}}
+.day-header{{display:flex;align-items:baseline;gap:16px;padding:20px 0 14px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:20px;}}
+.day-label{{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,44px);letter-spacing:.15em;background:linear-gradient(160deg,#fff 0%,#e0e8f0 15%,#a8b8c8 30%,#687888 45%,#c8d8e8 60%,#fff 72%,#90a0b0 85%,#d0d8e0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));line-height:1;}}
+.day-count{{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#506070;font-weight:700;}}
+.card-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0;}}
+.steel-card{{padding:22px 20px;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.5);border-right-width:0;outline:1px solid rgba(255,255,255,.07);outline-offset:-2px;background:linear-gradient(160deg,#1e2028 0%,#161820 40%,#12141c 70%,#1a1c24 100%);background-color:#161820;transition:filter .18s;}}
 .steel-card:last-child{{border-right-width:1px;}}
 .steel-card:hover{{filter:brightness(1.12);}}
-
-/* brushed texture */
-.steel-card::after{{
-  content:'';position:absolute;inset:0;
-  background-image:
-    repeating-linear-gradient(0deg,transparent,transparent 6px,rgba(255,255,255,.008) 6px,rgba(255,255,255,.008) 7px),
-    repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(255,255,255,.005) 3px,rgba(255,255,255,.005) 4px);
-  pointer-events:none;z-index:0;
-}}
-
-/* fw-color left accent */
-.steel-card::before{{
-  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
-  background:var(--fw-color,#909aa8);
-  opacity:.8;z-index:1;
-}}
-
-/* corner marks */
+.steel-card::after{{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 6px,rgba(255,255,255,.008) 6px,rgba(255,255,255,.008) 7px),repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(255,255,255,.005) 3px,rgba(255,255,255,.005) 4px);pointer-events:none;z-index:0;}}
+.steel-card::before{{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--fw-color,#909aa8);opacity:.8;z-index:1;}}
 .corner-mark{{position:absolute;width:10px;height:10px;border-color:rgba(255,255,255,.15);border-style:solid;z-index:2;}}
 .corner-mark.tl{{top:6px;left:6px;border-width:1px 0 0 1px;}}
 .corner-mark.tr{{top:6px;right:6px;border-width:1px 1px 0 0;}}
 .corner-mark.bl{{bottom:6px;left:6px;border-width:0 0 1px 1px;}}
 .corner-mark.br{{bottom:6px;right:6px;border-width:0 1px 1px 0;}}
-
 .fw-badge-wrap{{position:relative;z-index:3;margin-bottom:10px;}}
-.fw-badge{{
-  display:inline-block;
-  font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;
-  padding:2px 8px;border-radius:0;
-  border-left:3px solid var(--fw-color,#909aa8);
-  background:rgba(255,255,255,.04);
-}}
-
-.steel-card h3{{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:17px;letter-spacing:.1em;line-height:1.3;
-  margin-bottom:10px;
-  position:relative;z-index:3;
-}}
-.steel-card h3 a{{
-  color:#c8d4e0;text-decoration:none;
-  transition:color .15s;
-}}
+.fw-badge{{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;padding:2px 8px;border-radius:0;border-left:3px solid var(--fw-color,#909aa8);background:rgba(255,255,255,.04);}}
+.steel-card h3{{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.1em;line-height:1.3;margin-bottom:10px;position:relative;z-index:3;}}
+.steel-card h3 a{{color:#c8d4e0;text-decoration:none;transition:color .15s;}}
 .steel-card h3 a:hover{{color:var(--fw-color,#c8d4e0);}}
-
-.card-summary{{
-  font-size:16px;line-height:1.7;letter-spacing:.04em;
-  color:#C1C8CF;position:relative;z-index:3;
-}}
-.card-no-summary{{
-  font-size:11px;letter-spacing:.25em;
-  color:#303840;font-style:normal;
-  position:relative;z-index:3;
-}}
-
-/* ── EMPTY STATE ── */
-.empty-state{{
-  margin:60px 0;border:1px solid rgba(255,255,255,.06);
-  outline:1px solid rgba(0,0,0,.6);outline-offset:3px;
-  overflow:hidden;
-}}
-.hazard-stripe-bar{{
-  height:8px;
-  background:repeating-linear-gradient(-45deg,#c09010 0px,#c09010 8px,#181410 8px,#181410 16px);
-}}
-.empty-state p{{
-  padding:32px;font-size:12px;letter-spacing:.3em;
-  text-transform:uppercase;color:#404850;text-align:center;
-}}
-
-/* ── FOOTER ── */
-footer{{
-  border-top:1px solid rgba(255,255,255,.06);
-  padding:20px 40px;
-  font-size:10px;letter-spacing:.25em;text-transform:uppercase;
-  color:#C1C8CF;text-align:center;
-}}
-
-@media(max-width:600px){{
-  .header-inner,main,footer{{padding-left:16px;padding-right:16px;}}
-  .card-grid{{grid-template-columns:1fr;}}
-  .steel-card{{border-right-width:1px !important;}}
-  .header-meta{{display:none;}}
-}}
+.card-summary{{font-size:16px;line-height:1.7;letter-spacing:.04em;color:#C1C8CF;position:relative;z-index:3;}}
+.card-no-summary{{font-size:11px;letter-spacing:.25em;color:#303840;font-style:normal;position:relative;z-index:3;}}
+.empty-state{{margin:60px 0;border:1px solid rgba(255,255,255,.06);outline:1px solid rgba(0,0,0,.6);outline-offset:3px;overflow:hidden;}}
+.hazard-stripe-bar{{height:8px;background:repeating-linear-gradient(-45deg,#c09010 0px,#c09010 8px,#181410 8px,#181410 16px);}}
+.empty-state p{{padding:32px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#404850;text-align:center;}}
+footer{{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#C1C8CF;text-align:center;}}
+@media(max-width:600px){{.header-inner,main,footer{{padding-left:16px;padding-right:16px;}}.card-grid{{grid-template-columns:1fr;}}.steel-card{{border-right-width:1px !important;}}.header-meta{{display:none;}}}}
 </style>
 </head>
 <body>
@@ -774,12 +567,6 @@ footer{{
 # ── RSS フィード生成 ──────────────────────────────────────────────────────────
 
 def generate_rss(by_date: dict, site_url: str = "") -> str:
-    """
-    1年以内の全記事から RSS 2.0 フィードを生成する。
-    site_url: GitHub Pages の URL（例: https://yourname.github.io/framework-pulse）
-              未設定でも動作するが、<link> が相対パスになる。
-    """
-    import xml.etree.ElementTree as ET
     from email.utils import format_datetime
 
     def to_rfc2822(pub_date_raw: str) -> str:
@@ -789,20 +576,14 @@ def generate_rss(by_date: dict, site_url: str = "") -> str:
         return format_datetime(datetime.now(JST))
 
     def escape_xml(text: str) -> str:
-        return (text or "")                 \
-            .replace("&", "&amp;")          \
-            .replace("<", "&lt;")           \
-            .replace(">", "&gt;")           \
-            .replace('"', "&quot;")         \
-            .replace("'", "&apos;")
+        return (text or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;").replace("'", "&apos;")
 
-    # 全記事を日付の新しい順にフラット化
     all_articles: list[dict] = []
     for date in sorted(by_date.keys(), reverse=True):
         all_articles.extend(by_date[date])
 
     items_xml = ""
-    for a in all_articles[:50]:  # RSSは最新50件まで
+    for a in all_articles[:50]:
         title   = escape_xml(f"{a['fw_icon']} {a['fw_name']} — {a['title']}")
         link    = escape_xml(a["link"])
         desc    = escape_xml(a.get("summary_ja") or a.get("description") or "")
@@ -823,9 +604,9 @@ def generate_rss(by_date: dict, site_url: str = "") -> str:
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Framework Pulse</title>
+    <title>Framework Releases Summary</title>
     <link>{feed_link}</link>
-    <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（AI日本語要約付き）</description>
+    <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
     <lastBuildDate>{now_rfc}</lastBuildDate>
     <atom:link href="{feed_link}/feed.xml" rel="self" type="application/rss+xml"/>
@@ -844,7 +625,7 @@ def notify_slack(webhook_url: str, new_articles: list[dict]):
     for a in new_articles:
         by_fw.setdefault(a["fw_id"], []).append(a)
 
-    lines = [f"*📡 Framework Pulse — {today_jst()} の新着 {total} 件*\n"]
+    lines = [f"*📡 Framework Releases Summary — {today_jst()} の新着 {total} 件*\n"]
     for fw in FEEDS:
         arts = by_fw.get(fw["id"], [])
         if not arts:
@@ -887,13 +668,13 @@ def main():
 
         for art in fetched:
             if art["id"] in seen_ids:
-                continue  # 既出 → スキップ（seen_ids登録済み）
+                continue
 
-            seen_ids.add(art["id"])  # 範囲外でも seen_ids には登録
+            seen_ids.add(art["id"])
 
             if not in_window(art["pub_date"], win_start, win_end):
                 print(f"    範囲外スキップ: {art['title'][:50]}")
-                continue  # 範囲外 → 要約・保存しない
+                continue
 
             print(f"    要約中: {art['title'][:50]}...")
             art["summary_ja"] = summarize(client, art)
@@ -903,7 +684,6 @@ def main():
         in_window_count = sum(1 for a in all_new if a["fw_id"] == feed["id"])
         print(f"    範囲内新着: {in_window_count} 件")
 
-    # 当日のJSONファイルに追記（既存分があれば先頭にマージ）
     if all_new:
         existing_today = load_date_file(today)
         save_date_file(today, all_new + existing_today)
@@ -914,7 +694,6 @@ def main():
     save_seen_ids(seen_ids)
     print(f"✅ data/seen_ids.json 更新完了 (合計 {len(seen_ids)} 件既知)")
 
-    # 1年以内の全JSONを読んでHTML・RSS生成
     by_date    = load_all_date_files()
     updated_at = datetime.now(JST).strftime("%Y-%m-%d %H:%M")
     HTML_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -924,7 +703,6 @@ def main():
     RSS_PATH.write_text(generate_rss(by_date, site_url), encoding="utf-8")
     print(f"✅ docs/feed.xml 生成完了{f' ({site_url})' if site_url else ' (SITE_URL未設定)'}")
 
-    # Slack通知
     if slack_url and all_new:
         notify_slack(slack_url, all_new)
     elif not all_new:

@@ -1,5 +1,18 @@
 [
   {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/gradle-cache",
+    "title": "Gradle cache for Android builds",
+    "link": "https://expo.dev/changelog/gradle-cache",
+    "pub_date": "2026-04-30T16:00:58.664Z",
+    "description": "You can now enable Gradle caching for your Android builds on EAS. This allows task outputs to be stored and reused between builds. We've observed around a 50% reduction in build times, with plans to continue improving from there! How it works Gradle's build cache stores task outputs so that when a task's inputs haven't changed, the result can be reused from cache instead of being recomputed. This is especially effective for projects with many native modules, where the same tasks are repeated across each module and can all be served from cache. You can verify that caching is working by checking the Run Gradle step in your build logs. Cached tasks will be marked with FROM CACHE : Get started Set the EAS_GRADLE_CACHE environment variable to 1 to enable Gradle caching. You can do this from you",
+    "summary_ja": "EAS上のAndroidビルドでGradle キャッシュが利用可能になり、タスク出力が再利用されることでビルド時間が約50%削減されます。EAS_GRADLE_CACHE環境変数を1に設定することで有効化でき、ビルドログのRun Gradleステップで「FROM CACHE」マークでキャッシュの動作を確認できます。特にネイティブモジュールが多いプロジェクトで効果的です。",
+    "fetched_at": "2026-05-16T09:05:52.046533+00:00"
+  },
+  {
     "fw_id": "flutter",
     "fw_name": "Flutter",
     "fw_icon": "🐦",
@@ -11,18 +24,5 @@
     "description": "Dash migration! Starting with the next stable Flutter release, 3.44, Swift Package Manager (SwiftPM) replaces CocoaPods as the default dependency manager for iOS and macOS apps. This means no more messing around with Ruby or CocoaPods installations just to get your app running! CocoaPods is officially in maintenance mode, and its registry will permanently become read-only on December 2, 2026 . While existing builds will still work, no new versions or pods will be added to the trunk after this date. To ensure that your apps continue receiving dependency updates and to provide access to the Swift package ecosystem, Flutter is transitioning to Apple’s supported dependency management solution: Swift Package Manager. If you’ve already migrated your plugin(s) to use SwiftPM, read the “Plugin dev",
     "summary_ja": "Flutter 3.44の次のリリース以降、iOSとmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になり新規追加が停止されるため、継続的なアップデートを受けるにはSwiftPMへの移行が必要です。既存ビルドは引き続き動作しますが、開発者はRubyやCocoaPodsのインストールが不要になりSwiftパッケージエコシステムへアクセスできるようになります。",
     "fetched_at": "2026-05-15T15:04:40.885304+00:00"
-  },
-  {
-    "fw_id": "expo",
-    "fw_name": "Expo",
-    "fw_icon": "🚀",
-    "fw_color": "#aaaaff",
-    "id": "https://expo.dev/changelog/gradle-cache",
-    "title": "Gradle cache for Android builds",
-    "link": "https://expo.dev/changelog/gradle-cache",
-    "pub_date": "2026-04-30T16:00:58.664Z",
-    "description": "",
-    "summary_ja": "要約失敗",
-    "fetched_at": "2026-05-15T15:04:44.966541+00:00"
   }
 ]

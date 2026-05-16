@@ -8,8 +8,8 @@
     "title": "Expo Go and the App Store in May 2026",
     "link": "https://expo.dev/changelog/expo-go-and-app-store-may-2026",
     "pub_date": "2026-05-04T19:15:00.000Z",
-    "description": "",
-    "summary_ja": "要約失敗",
-    "fetched_at": "2026-05-15T15:02:49.678153+00:00"
+    "description": "As of May 4th, a version of Expo Go for SDK 55 is still waiting for approval on the Apple App Store . We hope that in the near future we can release this update, but we cannot provide a timeline. In the meantime, Expo Go for SDK 54 will continue to be available on both the App Store and Play Store. The Expo Go app is your tool for getting started quickly with Expo, it's first and foremost an educational tool to help beginners take their first steps into mobile. If you're using it for another purpose, we encourage you to migrate your project to using a development build of your app, which is more powerful and provides you with everything that you need to build an app that you ship to stores. We understand that Expo Go's flexibility has allowed it to be adapted to other use cases, and that t",
+    "summary_ja": "Expo Go SDK 55はApple App Storeの承認待ち中であり、リリース時期は未定です。当面はSDK 54がApp StoreとPlay Storeで利用可能ですが、本番運用目的の場合は、より強力な開発ビルドへの移行を推奨しています。",
+    "fetched_at": "2026-05-16T09:04:34.191951+00:00"
   }
 ]

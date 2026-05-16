@@ -1,5 +1,18 @@
 [
   {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/sdk-56-beta",
+    "title": "Expo SDK 56 Beta is now available",
+    "link": "https://expo.dev/changelog/sdk-56-beta",
+    "pub_date": "2026-05-06T20:00:00.000Z",
+    "description": "The SDK 56 beta period begins today and will last approximately two weeks. The beta is an opportunity for developers to test out the SDK and ensure that the new release does not introduce any regressions for their particular systems and app configurations. We will be continuously releasing fixes and improvements during the beta period — some of these may include breaking changes. SDK 56 beta includes React Native 0.85.2 and React 19.2.3. The full release notes for SDK 56 won't be available until the stable release, but you can browse the changelogs in the expo/expo repository to learn more about the scope of the release and any breaking changes. We'll merge all changelogs into the root CHANGELOG.md when the beta is complete. Expo Go for SDK 56 on iOS simulators, eas go , and Android simula",
+    "summary_ja": "Expo SDK 56のベータ版がリリースされ、約2週間のベータ期間中に開発者はアプリの互換性を検証できます。React Native 0.85.2とReact 19.2.3が含まれており、ベータ期間中は破壊的変更を含む修正と改善が継続的にリリースされるため、定期的な確認が必要です。詳細なリリースノートは正式版リリース時に公開されますが、expo/expoリポジトリのチェンジログで変更内容を事前に確認できます。",
+    "fetched_at": "2026-05-16T09:02:52.927303+00:00"
+  },
+  {
     "fw_id": "tauri",
     "fw_name": "Tauri",
     "fw_icon": "🦀",
@@ -24,18 +37,5 @@
     "description": "Introducing prepackaged Dart and Flutter Skills! Improving AI with domain expertise AI agents are generalists, but when it comes to professional Flutter development, “general” isn’t enough. To build production-grade apps, you need an assistant that understands the nuance of localization, the latest Dart language features, and how to add integration tests. Today, we’re introducing Agent Skills for Flutter and Dart — a new way to give your AI tools domain-specific expertise. Beyond the knowledge gap One of the primary challenges in AI development is the “knowledge gap.” Flutter and Dart can launch new features more quickly than LLMs can update their fixed training data. As a part of how we are thinking about AI , we are looking for ways to not only address the knowledge gap but also ensure t",
     "summary_ja": "FlutterとDart向けのAI Agent Skillsが新たに導入され、開発者はローカライゼーション、最新のDart言語機能、統合テストなど、本番環境レベルのアプリ開発に必要なドメイン固有の専門知識をAIアシスタントに備えさせることができるようになります。これにより、FlutterやDartが急速に新機能を追加しても、LLMの固定学習データとの知識ギャップを解決し、より正確で実用的なAI支援が可能になります。",
     "fetched_at": "2026-05-15T14:59:47.703762+00:00"
-  },
-  {
-    "fw_id": "expo",
-    "fw_name": "Expo",
-    "fw_icon": "🚀",
-    "fw_color": "#aaaaff",
-    "id": "https://expo.dev/changelog/sdk-56-beta",
-    "title": "Expo SDK 56 Beta is now available",
-    "link": "https://expo.dev/changelog/sdk-56-beta",
-    "pub_date": "2026-05-06T20:00:00.000Z",
-    "description": "",
-    "summary_ja": "要約失敗",
-    "fetched_at": "2026-05-15T14:59:51.594269+00:00"
   }
 ]

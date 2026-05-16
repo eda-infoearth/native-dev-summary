@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Framework Pulse</title>
+    <title>Framework Releases Summary</title>
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
-    <description>Flutter / React Native / Expo / Electron / Tauri / Dioxus の最新ニュース（AI日本語要約付き）</description>
+    <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 16 May 2026 17:25:03 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 18:06:38 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
@@ -20,7 +20,7 @@
       <link>https://expo.dev/changelog/expo-go-loading-changes-may-2026</link>
       <guid isPermaLink="true">https://expo.dev/changelog/expo-go-loading-changes-may-2026</guid>
       <pubDate>Thu, 14 May 2026 05:00:00 +0900</pubDate>
-      <description>要約失敗</description>
+      <description>Expo Goでプロジェクト読み込み動作が2つ変更されました。第1に、EAS Updateで公開されたプロジェクトは自分が所有するか属する組織が所有するもののみ読み込み可能になりました（2026年5月12日から全バージョン対象）。第2に、Hermes bytecodeバンドル（HBC）はEAS Update経由のみサポートされ、自ホスト更新ではプレーンJavaScriptバンドルが必須です（SDK 54〜56の最新Expo Go対象）。</description>
     </item>
     <item>
       <title>🐟 Flet — Flet 0.85.0: Declarative apps grow up — Router, dialogs, and more</title>
@@ -37,6 +37,13 @@
       <description>Electron 42がリリースされ、Chromium 148.0.7778.96、V8 14.8、Node.js v24.15.0へのアップグレードが含まれています。これらの更新により、最新のWeb標準対応、JavaScript実行パフォーマンスの向上、Node.js最新機能の利用が可能になります。既存アプリケーションとの互換性を確認した上でアップグレードすることが推奨されます。</description>
     </item>
     <item>
+      <title>🚀 Expo — Expo SDK 56 Beta is now available</title>
+      <link>https://expo.dev/changelog/sdk-56-beta</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/sdk-56-beta</guid>
+      <pubDate>Thu, 07 May 2026 05:00:00 +0900</pubDate>
+      <description>Expo SDK 56のベータ版がリリースされ、約2週間のベータ期間中に開発者はアプリの互換性を検証できます。React Native 0.85.2とReact 19.2.3が含まれており、ベータ期間中は破壊的変更を含む修正と改善が継続的にリリースされるため、定期的な確認が必要です。詳細なリリースノートは正式版リリース時に公開されますが、expo/expoリポジトリのチェンジログで変更内容を事前に確認できます。</description>
+    </item>
+    <item>
       <title>🦀 Tauri — tauri v2.11.1</title>
       <link>https://v2.tauri.app/release/tauri/v2.11.1/</link>
       <guid isPermaLink="true">https://v2.tauri.app/release/tauri/v2.11.1/</guid>
@@ -51,18 +58,18 @@
       <description>FlutterとDart向けのAI Agent Skillsが新たに導入され、開発者はローカライゼーション、最新のDart言語機能、統合テストなど、本番環境レベルのアプリ開発に必要なドメイン固有の専門知識をAIアシスタントに備えさせることができるようになります。これにより、FlutterやDartが急速に新機能を追加しても、LLMの固定学習データとの知識ギャップを解決し、より正確で実用的なAI支援が可能になります。</description>
     </item>
     <item>
-      <title>🚀 Expo — Expo SDK 56 Beta is now available</title>
-      <link>https://expo.dev/changelog/sdk-56-beta</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/sdk-56-beta</guid>
-      <pubDate>Thu, 07 May 2026 05:00:00 +0900</pubDate>
-      <description>要約失敗</description>
-    </item>
-    <item>
       <title>🚀 Expo — Expo Go and the App Store in May 2026</title>
       <link>https://expo.dev/changelog/expo-go-and-app-store-may-2026</link>
       <guid isPermaLink="true">https://expo.dev/changelog/expo-go-and-app-store-may-2026</guid>
       <pubDate>Tue, 05 May 2026 04:15:00 +0900</pubDate>
-      <description>要約失敗</description>
+      <description>Expo Go SDK 55はApple App Storeの承認待ち中であり、リリース時期は未定です。当面はSDK 54がApp StoreとPlay Storeで利用可能ですが、本番運用目的の場合は、より強力な開発ビルドへの移行を推奨しています。</description>
+    </item>
+    <item>
+      <title>🚀 Expo — Gradle cache for Android builds</title>
+      <link>https://expo.dev/changelog/gradle-cache</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/gradle-cache</guid>
+      <pubDate>Fri, 01 May 2026 01:00:58 +0900</pubDate>
+      <description>EAS上のAndroidビルドでGradle キャッシュが利用可能になり、タスク出力が再利用されることでビルド時間が約50%削減されます。EAS_GRADLE_CACHE環境変数を1に設定することで有効化でき、ビルドログのRun Gradleステップで「FROM CACHE」マークでキャッシュの動作を確認できます。特にネイティブモジュールが多いプロジェクトで効果的です。</description>
     </item>
     <item>
       <title>🐦 Flutter — Saying goodbye to CocoaPods: Swift Package Manager is soon the default in Flutter!</title>
@@ -70,13 +77,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Fri, 01 May 2026 00:57:00 +0900</pubDate>
       <description>Flutter 3.44の次のリリース以降、iOSとmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になり新規追加が停止されるため、継続的なアップデートを受けるにはSwiftPMへの移行が必要です。既存ビルドは引き続き動作しますが、開発者はRubyやCocoaPodsのインストールが不要になりSwiftパッケージエコシステムへアクセスできるようになります。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Gradle cache for Android builds</title>
-      <link>https://expo.dev/changelog/gradle-cache</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/gradle-cache</guid>
-      <pubDate>Fri, 01 May 2026 01:00:58 +0900</pubDate>
-      <description>要約失敗</description>
     </item>
     <item>
       <title>🐦 Flutter — That’s a wrap: Everything Flutter at Google Cloud Next</title>
@@ -90,7 +90,7 @@
       <link>https://expo.dev/changelog/sign-in-with-github</link>
       <guid isPermaLink="true">https://expo.dev/changelog/sign-in-with-github</guid>
       <pubDate>Fri, 24 Apr 2026 05:30:11 +0900</pubDate>
-      <description>要約失敗</description>
+      <description>ExpoがGitHubアカウントでのサインイン機能を追加しました。この機能を利用するにはメールアドレス閲覧の権限許可が必要で、既存ユーザーには2026年4月23日にGitHubから権限リクエストメールが送信されています。既存のGitHub連携機能には影響なく、この権限リクエストは無視しても問題ありません。</description>
     </item>
     <item>
       <title>🐦 Flutter — We rebuilt Flutter’s websites with Dart and Jaspr</title>

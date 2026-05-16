@@ -8,8 +8,8 @@
     "title": "Sign in with GitHub",
     "link": "https://expo.dev/changelog/sign-in-with-github",
     "pub_date": "2026-04-23T20:30:11.236Z",
-    "description": "",
-    "summary_ja": "要約失敗",
-    "fetched_at": "2026-05-15T15:10:22.039186+00:00"
+    "description": "You can now use your GitHub account to sign up or log in to Expo. Oh, and you may have received an email from GitHub. It’s legit. You can now use your GitHub account to sign up or log in to Expo. GitHub App Permissions We require permission to view your email address in order to offer GitHub Sign In as an authentication method. If you already have Expo’s GitHub app authorized or installed, you likely received an email from GitHub requesting this permission on April 23, 2026 around 11:30AM PDT: This is what the email from GitHub looks like. If you would not like to set up GitHub Sign In on your Expo account, this email can be safely ignored. This does not affect existing integrations between GitHub and Expo. If you would like to set up GitHub Sign In, link your GitHub account to your Expo a",
+    "summary_ja": "ExpoがGitHubアカウントでのサインイン機能を追加しました。この機能を利用するにはメールアドレス閲覧の権限許可が必要で、既存ユーザーには2026年4月23日にGitHubから権限リクエストメールが送信されています。既存のGitHub連携機能には影響なく、この権限リクエストは無視しても問題ありません。",
+    "fetched_at": "2026-05-16T09:06:30.223267+00:00"
   }
 ]
