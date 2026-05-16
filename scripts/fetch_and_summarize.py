@@ -372,7 +372,8 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
 
 def fetch_crux_releases(feed: dict) -> list[dict]:
     """
-    github.com/redbadger/crux/releases.atom から crux_core のリリースのみ取得。
+    github.com/redbadger/crux/releases.atom から全クレートのリリースを取得。
+    同日（JST）にリリースされた複数クレートを1記事にまとめて要約させる。
     本文は summary フィールド（HTML）を strip_html で使用。
     日付は updated フィールドを使用。
     """
@@ -382,29 +383,58 @@ def fetch_crux_releases(feed: dict) -> list[dict]:
         resp.raise_for_status()
         parsed = feedparser.parse(resp.text)
 
-        articles = []
+        # エントリを日付（JST date）でグループ化
+        from collections import defaultdict
+        groups: dict[str, list[dict]] = defaultdict(list)
+
         for entry in parsed.entries:
             title = entry.get("title", "").strip()
-            if not title.startswith("crux_core-"):
-                continue  # crux_core 以外はスキップ
-
-            link = entry.get("link", "")
+            if not title:
+                continue
+            link     = entry.get("link", "")
             pub_date = entry.get("updated", entry.get("published", ""))
-            desc = strip_html(
+            desc     = strip_html(
                 (entry.get("content") or [{}])[0].get("value", "")
                 or entry.get("summary", "")
             )
+            # JST での日付キー
+            dt = parse_pub_date(pub_date)
+            date_key = dt.strftime("%Y-%m-%d") if dt else "unknown"
+
+            groups[date_key].append({
+                "title":    title,
+                "link":     link,
+                "pub_date": pub_date,
+                "desc":     desc,
+            })
+
+        # 日付降順でグループをまとめて記事化
+        articles = []
+        for date_key in sorted(groups.keys(), reverse=True):
+            entries = groups[date_key]
+
+            # タイトル: クレート名をスラッシュで結合
+            merged_title = " / ".join(e["title"] for e in entries)
+
+            # description: 各クレートの内容を結合（800文字上限は各クレート単位）
+            merged_desc = "\n\n".join(
+                f"[{e['title']}]\n{e['desc']}" for e in entries if e["desc"]
+            )[:2000]  # まとめ後は2000文字まで許容
+
+            # id は最初のエントリのリンク（seen_ids 管理用）
+            first_link = entries[0]["link"]
+            pub_date   = entries[0]["pub_date"]
 
             articles.append({
                 "fw_id":       feed["id"],
                 "fw_name":     feed["name"],
                 "fw_icon":     feed["icon"],
                 "fw_color":    feed["color"],
-                "id":          link,
-                "title":       title,
-                "link":        link,
+                "id":          first_link,
+                "title":       merged_title,
+                "link":        first_link,
                 "pub_date":    pub_date,
-                "description": desc,
+                "description": merged_desc,
                 "summary_ja":  None,
                 "fetched_at":  datetime.now(timezone.utc).isoformat(),
             })
@@ -412,7 +442,7 @@ def fetch_crux_releases(feed: dict) -> list[dict]:
             if len(articles) >= MAX_PER_FEED:
                 break
 
-        print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (GitHub Releases atom)")
+        print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 ({sum(len(v) for v in groups.values())} クレート, GitHub Releases atom)")
         return articles
     except Exception as e:
         print(f"  ⚠ {feed['name']} フィード取得失敗: {e}", file=sys.stderr)
@@ -471,9 +501,11 @@ def fetch_feed(feed: dict) -> list[dict]:
 
 def summarize(client: anthropic.Anthropic, article: dict) -> str:
     try:
+        # 複数クレートをまとめた記事は長いので max_tokens を増やす
+        max_tokens = 600 if len(article.get("description", "")) > 800 else 300
         msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=300,
+            max_tokens=max_tokens,
             messages=[{
                 "role": "user",
                 "content": (

@@ -4,12 +4,12 @@
     "fw_name": "Crux",
     "fw_icon": "🦞",
     "fw_color": "#E05A4E",
-    "id": "https://github.com/redbadger/crux/releases/tag/crux_core-v0.18.0",
-    "title": "crux_core-v0.18.0",
-    "link": "https://github.com/redbadger/crux/releases/tag/crux_core-v0.18.0",
-    "pub_date": "2026-05-08T07:25:25Z",
-    "description": "crux_core v0.18.0 - 2026-05-08 🚀 Features Fluent effect test assertions : The #[effect] macro (from crux_macros ) now generates a Effect TestExt trait on Command Effect, Event with fluent, chainable assertion and resolution methods per effect variant: expect_ effect ( mut self) - mut Self — assert the next effect is of this type and chain expect_ effect _with( mut self, |op| ...) - mut Self — assert and inspect the operation expect_only_ effect ( mut self) — assert this is the only remaining effect or event expect_only_ effect _with( mut self, |op| ...) — assert, inspect, and assert done resolve_ effect ( mut self, |op| output) - mut Self — assert, resolve, and chain then_event( mut self, |ev| ...) - mut Self — assert and inspect the next event These helpers are compiled in only when the t",
-    "summary_ja": "crux_core v0.18.0では、#[effect]マクロが生成するTestExt traitにより、Effectの流暢でチェーン可能なアサーションメソッド（expect_、resolve_など）が追加され、エフェクトテストが記述しやすくなりました。これらのヘルパーはテストビルド時のみコンパイルされます。",
-    "fetched_at": "2026-05-16T09:34:27.051804+00:00"
+    "id": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.16.0",
+    "title": "crux_time-v0.16.0 / crux_platform-v0.9.0 / crux_macros-v0.9.0 / crux_kv-v0.12.0 / crux_http-v0.17.0 / crux_core-v0.18.0 / crux_cli-v0.3.0",
+    "link": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.16.0",
+    "pub_date": "2026-05-08T06:31:14Z",
+    "description": "[crux_time-v0.16.0]\nMerge pull request #529 from redbadger/0-18\n\n[crux_platform-v0.9.0]\nMerge pull request #529 from redbadger/0-18\n\n[crux_macros-v0.9.0]\nMerge pull request #529 from redbadger/0-18\n\n[crux_kv-v0.12.0]\nMerge pull request #529 from redbadger/0-18\n\n[crux_http-v0.17.0]\nMerge pull request #529 from redbadger/0-18\n\n[crux_core-v0.18.0]\ncrux_core v0.18.0 - 2026-05-08 🚀 Features Fluent effect test assertions : The #[effect] macro (from crux_macros ) now generates a Effect TestExt trait on Command Effect, Event with fluent, chainable assertion and resolution methods per effect variant: expect_ effect ( mut self) - mut Self — assert the next effect is of this type and chain expect_ effect _with( mut self, |op| ...) - mut Self — assert and inspect the operation expect_only_ effect ( mut self) — assert this is the only remaining effect or event expect_only_ effect _with( mut self, |op| ...) — assert, inspect, and assert done resolve_ effect ( mut self, |op| output) - mut Self — assert, resolve, and chain then_event( mut self, |ev| ...) - mut Self — assert and inspect the next event These helpers are compiled in only when the t\n\n[crux_cli-v0.3.0]\nMerge pull request #529 from redbadger/0-18",
+    "summary_ja": "Crux v0.18.0では、crux_macrosの#[effect]マクロが生成するEffectTestExtトレイトに、fluent形式のチェーン可能なアサーションメソッド（expect_effect、expect_only_effect、resolve_effectなど）が追加されました。これにより、エフェクトとイベントのテストがより読みやすく簡潔に書けるようになりました。その他のパッケージ（crux_time、crux_platform、crux_kv、crux_httpなど）も同時にアップデートされています。",
+    "fetched_at": "2026-05-16T09:50:19.003573+00:00"
   }
 ]
