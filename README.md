@@ -8,20 +8,23 @@ Test implementation an app like a `samari.news`.
 
 ## dir structure
 ```sh
-/
-├── .github/
+$ tree --dirsfirst
+.
+├── .github
 │   └── workflows/
 │       └── update.yml      # GitHub Actions cron
-├── scripts/
-│   ├── backfill.py             # get RSS, samarize, diff (for past date)
-│   └── fetch_and_summarize.py  # get RSS, samarize, diff
-├── data/
+├── data
+│   ├── YYYY-MM-DD.json     # store articles
 │   ├── seen_ids.json       # store article ids
-│   └── YYYY-MM-DD.json     # store articles
-├── docs/ 
+│   └── tauri_versions.json # store Tauri versions from 
+├── docs
 │   ├── feed.xml            # RSS feed file
 │   └── index.html          # root of GitHub Pages
-└── README.md
+├── scripts
+│   ├── backfill.py            # get RSS, samarize, diff (for past date)
+│   └── fetch_and_summarize.py # get RSS, samarize, diff (main)
+├── README.md
+└── requirements.txt
 ```
 
 ---
@@ -73,14 +76,20 @@ Launch app manually, after that it will fetch every 8:00AM(JST).
 
 ```bash
 # in root dir
-pip install anthropic feedparser requests beautifulsoup4
 
+# launch virtual env and install libs
+source .venv/bin/activate
+pip install -r requirements.txt
 export ANTHROPIC_API_KEY=sk-ant-...
 export SLACK_WEBHOOK_URL=https://hooks.slack.com/...
 
+# run main script
 python3 scripts/fetch_and_summarize.py
-
+# run backfill script to read past data
 python scripts/backfill.py YYYY-MM-DD
+
+# kill virtual env
+deactivate
 ```
 
 see `docs/index.html` on browser.
@@ -88,11 +97,6 @@ see `docs/index.html` on browser.
 ## other memo 
 
 ```sh
-source .venv/bin/activate
-
+# write installed libs
 pip freeze > requirements.txt
-
-pip install -r requirements.txt
-
-deactivate
 ```
