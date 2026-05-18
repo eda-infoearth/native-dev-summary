@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4",
+    "title": "Flutter’s multiplatform value for agentic development",
+    "link": "https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4",
+    "pub_date": "Mon, 18 May 2026 18:42:10 GMT",
+    "description": "The fundamental value of multiplatform development with Flutter lies in building apps that support multiple platforms with just a single, shared source codebase, allowing developer teams to work in unison across all platforms. This is crucial in an AI-driven world where enhanced consistency, reduced token usage, and fast market reach become vital. By maintaining a single codebase, builders can focus their AI assistants on one unified context, drastically reduce token overhead, and minimize AI hallucinations. Instead of asking AI to translate features across fragmented, platform-specific languages, builders can leverage AI to write it once in Dart and instantly deploy it everywhere. Dash secretly hanging out in an alley doing agentive things The existing value proposition Multiplatform deve",
+    "summary_ja": "Flutterの単一コードベースでマルチプラットフォーム開発が可能な特性により、AIアシスタントが統一されたコンテキストで作業できるため、トークン使用量の削減とAIの幻覚現象の最小化が実現できます。Dartで一度書いたコードを全プラットフォームに即座にデプロイでき、プラットフォーム固有言語への翻訳をAIに依頼する必要がなくなるため、開発効率が大幅に向上します。",
+    "fetched_at": "2026-05-18T23:21:14.766134+00:00"
+  }
+]
