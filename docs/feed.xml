@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 20 May 2026 08:22:47 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 08:25:44 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐦 Flutter — What’s new in Flutter 3.44</title>
+      <link>https://blog.flutter.dev/whats-new-in-flutter-3-44-b0cc1ad3c527?source=rss----4da7dfd21a33---4</link>
+      <guid isPermaLink="true">https://blog.flutter.dev/whats-new-in-flutter-3-44-b0cc1ad3c527?source=rss----4da7dfd21a33---4</guid>
+      <pubDate>Thu, 21 May 2026 03:01:02 +0900</pubDate>
+      <description>Flutter 3.44では、Android向けHybrid Composition++、iOS/macOSのSwift Package Manager標準化、Impellerの改善されたVulkan対応が実装されました。デスクトップ向けマルチウィンドウサポートのプレビュー、MaterialとCupertinoのコアフレームワークからの分離、GenUIによるエージェント向けUX、Agentic Hot Reloadによる開発体験の向上が新たに追加されています。これらにより、自動車やスマートディスプレイなど多様なデバイスへの対応が強化されました。</description>
+    </item>
     <item>
       <title>🐦 Flutter — Flutter’s multiplatform value for agentic development</title>
       <link>https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4</link>

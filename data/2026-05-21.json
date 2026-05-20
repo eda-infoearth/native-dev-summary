@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/whats-new-in-flutter-3-44-b0cc1ad3c527?source=rss----4da7dfd21a33---4",
+    "title": "What’s new in Flutter 3.44",
+    "link": "https://blog.flutter.dev/whats-new-in-flutter-3-44-b0cc1ad3c527?source=rss----4da7dfd21a33---4",
+    "pub_date": "Wed, 20 May 2026 18:01:02 GMT",
+    "description": "Flutter 3.44: Scaling to more users on more devices! Empowering developers at Google I/O 2026 Flutter 3.44 is here, and it’s a big one! This release celebrates a milestone in the Flutter timeline: Hybrid Composition++ for Android, Swift Package Manager as the new iOS/macOS default, and improved Vulkan support for Impeller. We’re previewing multi-window desktop support with Canonical as our new lead maintainer, and embarking on a major architectural evolution by decoupling Material and Cupertino from the core framework. We’re redefining UX for agentic user experiences with GenUl and reimagining developer experience with Agentic Hot Reload and Dart Flutter Agent Skills. Flutter is empowering the next generation of apps-everywhere from the 2026 Toyota RAV4 multimedia system to the upcoming LG",
+    "summary_ja": "Flutter 3.44では、Android向けHybrid Composition++、iOS/macOSのSwift Package Manager標準化、Impellerの改善されたVulkan対応が実装されました。デスクトップ向けマルチウィンドウサポートのプレビュー、MaterialとCupertinoのコアフレームワークからの分離、GenUIによるエージェント向けUX、Agentic Hot Reloadによる開発体験の向上が新たに追加されています。これらにより、自動車やスマートディスプレイなど多様なデバイスへの対応が強化されました。",
+    "fetched_at": "2026-05-20T23:25:34.849840+00:00"
+  }
+]
