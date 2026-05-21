@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/sdk-56",
+    "title": "Expo SDK 56",
+    "link": "https://expo.dev/changelog/sdk-56",
+    "pub_date": "2026-05-21T20:00:00.000Z",
+    "description": "Today we're announcing the release of Expo SDK 56. SDK 56 includes React Native 0.85 and React 19.2 . Thank you to everyone who helped with beta testing. Expo UI is now ready for production As of SDK 56, the Jetpack Compose (Android) and SwiftUI (iOS) APIs in Expo UI are stable. We've added Expo UI to the default create-expo-app template, so new Expo apps can use a rich set of native UI primitives right out of the box, and Expo UI is now available in Expo Go. This milestone release builds on three SDK cycles of iteration across SDK 53, 54, and 55. Thank you to everyone on the Expo team and in the community who helped test, audit, and refine the APIs from the original SwiftUI prototype to the Jetpack Compose implementation. SDK 56 focuses on three core pieces of Expo UI: a new universal com",
+    "summary_ja": "Expo SDK 56ではReact Native 0.85とReact 19.2が統合されました。Expo UIはJetpack Compose（Android）とSwiftUI（iOS）APIが安定版となり、デフォルトテンプレートに含まれるようになったため、新規アプリで即座にネイティブUIコンポーネントが利用できます。Expo GoでもExpo UIが利用可能になり、3サイクルの反復を経た本格的な本番利用が実現しました。",
+    "fetched_at": "2026-05-21T23:19:38.422792+00:00"
+  }
+]
