@@ -1,0 +1,28 @@
+[
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4",
+    "title": "That’s a wrap: Everything Flutter at Google I/O 2026",
+    "link": "https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4",
+    "pub_date": "Thu, 28 May 2026 15:43:11 GMT",
+    "description": "Flutter recap at Google I/O 2026! What a week! Google I/O 2026 is officially in the books. It’s time to recap the whirlwind of updates for the Flutter and Dart communities. https://medium.com/media/d0d2e640108865de13df503f39550e39/href The onsite star was a full-sized specialty coffee shop in the absolute center of Google I/O, built entirely with Flutter GenUI , where nanobanana-generated artwork was printed right on the coffee foam. Just a few generated foam coffee art lattes at I/O But don’t worry if you weren’t able to make it to Shoreline. We recorded every moment and more, now available for on-demand viewing on the Flutter YouTube channel. 📺 Watch every session From keynote to tech session, we can’t wait for you to see every moment of Flutter from I/O 2026. 🌟 What’s new in Flutter htt",
+    "summary_ja": "Google I/O 2026ではFlutter GenUIを活用した完全なコーヒーショップがGoogle I/Oの中心に出展され、AI生成アートがコーヒーの泡に印刷されるデモンストレーションが行われました。すべてのセッションはFlutter YouTubeチャネルでオンデマンド視聴可能になっており、キーノートからテックセッションまで全ての内容が録画されています。",
+    "fetched_at": "2026-05-30T15:45:57.927476+00:00"
+  },
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/2026-05-28-flet-studio",
+    "title": "Flet Studio: build Python apps in your browser",
+    "link": "https://flet.dev/blog/2026-05-28-flet-studio",
+    "pub_date": "Thu, 28 May 2026 00:00:00 GMT",
+    "description": "Today we're launching Flet Studio — a browser-based IDE for writing, running, saving, and sharing Flet apps. Your Python code runs entirely in the browser, so there's no account required to try it and no local install required to run something a friend shared with you. It started life as a playground for Flet apps, but turned out to be much more: a place to prototype, a gallery of editable examples, and a way to send someone a working app as just a link. What you can do ​ Run. The simplest thing is to just run a Flet example. Open any of the 500+ apps in the gallery , hit run, and watch it work — no setup, nothing to install. Create. When you find one you like, fork it and make it your own. Or start from a blank cross-platform template if you'd rather build from scratch. Either way you get",
+    "summary_ja": "Flet Studioはブラウザベースの統合開発環境で、Pythonコードはブラウザ内で実行されるため、インストールやアカウント登録なしでFletアプリの開発・実行・共有ができます。500以上のギャラリー例から選択して実行したり、既存アプリをフォークしてカスタマイズしたり、空のテンプレートから新規開発することが可能です。作成したアプリはリンク共有により、他のユーザーがセットアップなしで即座に実行できます。",
+    "fetched_at": "2026-05-30T15:46:07.480556+00:00"
+  }
+]

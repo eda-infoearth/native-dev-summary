@@ -5,9 +5,30 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 26 May 2026 08:22:39 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 00:46:26 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐦 Flutter — That’s a wrap: Everything Flutter at Google I/O 2026</title>
+      <link>https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4</link>
+      <guid isPermaLink="true">https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4</guid>
+      <pubDate>Fri, 29 May 2026 00:43:11 +0900</pubDate>
+      <description>Google I/O 2026ではFlutter GenUIを活用した完全なコーヒーショップがGoogle I/Oの中心に出展され、AI生成アートがコーヒーの泡に印刷されるデモンストレーションが行われました。すべてのセッションはFlutter YouTubeチャネルでオンデマンド視聴可能になっており、キーノートからテックセッションまで全ての内容が録画されています。</description>
+    </item>
+    <item>
+      <title>🐟 Flet — Flet Studio: build Python apps in your browser</title>
+      <link>https://flet.dev/blog/2026-05-28-flet-studio</link>
+      <guid isPermaLink="true">https://flet.dev/blog/2026-05-28-flet-studio</guid>
+      <pubDate>Thu, 28 May 2026 09:00:00 +0900</pubDate>
+      <description>Flet Studioはブラウザベースの統合開発環境で、Pythonコードはブラウザ内で実行されるため、インストールやアカウント登録なしでFletアプリの開発・実行・共有ができます。500以上のギャラリー例から選択して実行したり、既存アプリをフォークしてカスタマイズしたり、空のテンプレートから新規開発することが可能です。作成したアプリはリンク共有により、他のユーザーがセットアップなしで即座に実行できます。</description>
+    </item>
+    <item>
+      <title>🚀 Expo — The Expo MCP Server is now available on the Free plan</title>
+      <link>https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan</guid>
+      <pubDate>Wed, 27 May 2026 04:00:40 +0900</pubDate>
+      <description>Expo MCP Serverが無料プランで利用可能になりました。これまで有料プランのみだったMCP（Model Context Protocol）機能が、すべてのExpoアカウントで使用でき、月間MCP使用量が無料枠に含まれます。AIコーディングアシスタントをExpoドキュメントやツールに接続し、Expo関連の質問への回答を素早く得られるようになります。</description>
+    </item>
     <item>
       <title>🚀 Expo — Expo SDK 56</title>
       <link>https://expo.dev/changelog/sdk-56</link>

@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan",
+    "title": "The Expo MCP Server is now available on the Free plan",
+    "link": "https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan",
+    "pub_date": "2026-05-26T19:00:40.395Z",
+    "description": "Connect your AI coding assistant to your Expo project from any Expo plan. The Expo MCP Server is now available on the Free plan, with monthly MCP usage included for Free accounts. When we first launched the Expo MCP Server, it was available only on paid plans. Now anyone with an Expo account can connect an AI coding assistant to Expo docs and tools. What you can do with Expo MCP MCP (Model Context Protocol) is an open standard that lets AI assistants connect to external tools and project context. We introduced the Expo MCP Server in Become an AI-native developer with the Expo MCP Server ; this update makes that workflow available to anyone with an Expo account. Developers are already using Expo MCP for a few common workflows: Finding the right Expo answer faster. Your assistant can pull in",
+    "summary_ja": "Expo MCP Serverが無料プランで利用可能になりました。これまで有料プランのみだったMCP（Model Context Protocol）機能が、すべてのExpoアカウントで使用でき、月間MCP使用量が無料枠に含まれます。AIコーディングアシスタントをExpoドキュメントやツールに接続し、Expo関連の質問への回答を素早く得られるようになります。",
+    "fetched_at": "2026-05-30T15:45:14.947254+00:00"
+  }
+]
