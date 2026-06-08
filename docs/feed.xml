@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 08 Jun 2026 08:21:19 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 08:24:17 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🦞 Crux — crux_time-v0.17.0 / crux_platform-v0.10.0 / crux_macros-v0.10.0 / crux_kv-v0.13.0 / crux_http-v0.18.0 / crux_core-v0.19.0</title>
+      <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0</link>
+      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0</guid>
+      <pubDate>Tue, 09 Jun 2026 01:02:33 +0900</pubDate>
+      <description>Cruxフレームワークの複数パッケージがv0.19.0にアップデートされ、新しいEffectRoutingシステムが導入されました。これにより、従来のミドルウェアに代わってEffectRouterが採用され、型ベースのエフェクトディスパッチングが可能になり、シリアライゼーションブリッジを経由しない効率的な処理フローが実現されました。SerializedレーンとParkedレーン、Bufferレーンの3種類のビルトインレーンが提供されており、開発者は Routes トレイトを実装してカスタマイズ可能です。</description>
+    </item>
     <item>
       <title>🐦 Flutter — That’s a wrap: Everything Flutter at Google I/O 2026</title>
       <link>https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4</link>

@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "crux",
+    "fw_name": "Crux",
+    "fw_icon": "🦞",
+    "fw_color": "#E05A4E",
+    "id": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0",
+    "title": "crux_time-v0.17.0 / crux_platform-v0.10.0 / crux_macros-v0.10.0 / crux_kv-v0.13.0 / crux_http-v0.18.0 / crux_core-v0.19.0",
+    "link": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0",
+    "pub_date": "2026-06-08T16:02:33Z",
+    "description": "[crux_time-v0.17.0]\nupdate book stable ref, and readme\n\n[crux_platform-v0.10.0]\nupdate book stable ref, and readme\n\n[crux_macros-v0.10.0]\nupdate book stable ref, and readme\n\n[crux_kv-v0.13.0]\nupdate book stable ref, and readme\n\n[crux_http-v0.18.0]\nupdate book stable ref, and readme\n\n[crux_core-v0.19.0]\n0.19.0 - 2026-06-08 🚀 Features Effect Routing ( #514 ): A new EffectRouter type replaces effect middleware, enabling type-based, per-effect dispatching without requiring every effect to pass through the serialisation bridge. You implement the Routes App trait to wire up one or more lanes , then wrap your Core with EffectRouter::new . Three built-in lane types are provided: Serialized — the standard serialised FFI lane, equivalent to the existing bridge Parked — parks requests by EffectId for effects that are awkward to serialise (e.g. opaque pointer handles passed across the FFI boundary) Buffer — accumulates requests in a buffer for synchronous drain-and-handle; useful in tests and for in-process Rust handlers Follow-up effects produced when a request is resolved are automatically re-rout",
+    "summary_ja": "Cruxフレームワークの複数パッケージがv0.19.0にアップデートされ、新しいEffectRoutingシステムが導入されました。これにより、従来のミドルウェアに代わってEffectRouterが採用され、型ベースのエフェクトディスパッチングが可能になり、シリアライゼーションブリッジを経由しない効率的な処理フローが実現されました。SerializedレーンとParkedレーン、Bufferレーンの3種類のビルトインレーンが提供されており、開発者は Routes トレイトを実装してカスタマイズ可能です。",
+    "fetched_at": "2026-06-08T23:24:12.383014+00:00"
+  }
+]
