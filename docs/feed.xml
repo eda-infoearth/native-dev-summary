@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Jun 2026 08:25:35 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 08:31:12 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐦 Flutter — Flutter Q2 survey</title>
+      <link>https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4</link>
+      <guid isPermaLink="true">https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4</guid>
+      <pubDate>Tue, 16 Jun 2026 01:42:40 +0900</pubDate>
+      <description>Flutter Q2アンケートが実施中で、6月19日(金)の終業時までの回答をお願いしています。アンケートは短時間で完了でき、フィードバックはFlutterの今後のロードマップ策定に活用されます。開発者の皆様の貴重なご意見をお聞かせください。</description>
+    </item>
     <item>
       <title>🦞 Crux — crux_time-v0.17.0 / crux_platform-v0.10.0 / crux_macros-v0.10.0 / crux_kv-v0.13.0 / crux_http-v0.18.0 / crux_core-v0.19.0</title>
       <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0</link>
