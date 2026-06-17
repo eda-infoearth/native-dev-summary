@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "tauri",
+    "fw_name": "Tauri",
+    "fw_icon": "🦀",
+    "fw_color": "#FFC131",
+    "id": "https://v2.tauri.app/release/tauri/v2.11.3/",
+    "title": "tauri v2.11.3",
+    "link": "https://v2.tauri.app/release/tauri/v2.11.3/",
+    "pub_date": "2026-06-17T13:46:45Z",
+    "description": "tauri@2.11.3 Return View on GitHub Bug Fixes Section titled “Bug Fixes” 5075c81a1 ( #15550 by @Legend-Master ) Fix double clicking data-tauri-drag-region maximizes the window even when is_maximizable is set to false 7af245c60 ( #15474 by @Legend-Master ) Fix tauri::scope::fs::Scope::once deadlocks 4c8bb98cd ( #15475 by @Legend-Master ) Fix Listener::once can be called multiple times if they trigger emit (s) inside the handler 66f873d62 ( #15491 by @bclarke123 ) Adjust mutex locking in send_channel_data_handler , handle_android_plugin_response , send_channel_data to avoid deadlocks Performance Improvements Section titled “Performance Improvements” e6083a111 ( #15220 by @DeTeam ) Load tauri:// custom protocol handlers asynchronously to speed up load time 800eade58 ( #15444 by @Legend-Master ",
+    "summary_ja": "Tauri v2.11.3では、ウィンドウの最大化不可設定が無視される問題やファイルスコープ・イベントリスナーのデッドロック問題が修正されました。また、Android プラグインレスポンス処理のミューテックスロック最適化により、デッドロックリスクが軽減されています。さらに、tauri:// カスタムプロトコルハンドラの非同期読み込み化により、アプリケーションの起動時間が改善されました。",
+    "fetched_at": "2026-06-17T23:29:27.734738+00:00"
+  }
+]

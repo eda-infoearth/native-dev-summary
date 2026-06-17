@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 17 Jun 2026 08:28:51 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 08:29:32 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🦀 Tauri — tauri v2.11.3</title>
+      <link>https://v2.tauri.app/release/tauri/v2.11.3/</link>
+      <guid isPermaLink="true">https://v2.tauri.app/release/tauri/v2.11.3/</guid>
+      <pubDate>Wed, 17 Jun 2026 22:46:45 +0900</pubDate>
+      <description>Tauri v2.11.3では、ウィンドウの最大化不可設定が無視される問題やファイルスコープ・イベントリスナーのデッドロック問題が修正されました。また、Android プラグインレスポンス処理のミューテックスロック最適化により、デッドロックリスクが軽減されています。さらに、tauri:// カスタムプロトコルハンドラの非同期読み込み化により、アプリケーションの起動時間が改善されました。</description>
+    </item>
     <item>
       <title>🐦 Flutter — Flutter Q2 survey</title>
       <link>https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4</link>
