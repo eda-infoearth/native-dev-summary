@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 18 Jun 2026 08:29:32 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 08:31:16 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🦞 Crux — crux_core-v0.19.0-docs.1</title>
+      <link>https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1</link>
+      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1</guid>
+      <pubDate>Thu, 18 Jun 2026 23:37:47 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
     <item>
       <title>🦀 Tauri — tauri v2.11.3</title>
       <link>https://v2.tauri.app/release/tauri/v2.11.3/</link>

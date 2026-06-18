@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "crux",
+    "fw_name": "Crux",
+    "fw_icon": "🦞",
+    "fw_color": "#E05A4E",
+    "id": "https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1",
+    "title": "crux_core-v0.19.0-docs.1",
+    "link": "https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1",
+    "pub_date": "2026-06-18T14:37:47Z",
+    "description": "[crux_core-v0.19.0-docs.1]\nchore: crux versions in docs",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-06-18T23:31:15.715946+00:00"
+  }
+]
