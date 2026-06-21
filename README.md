@@ -6,6 +6,31 @@ Test implementation an app like a `samari.news`.
 
 ---
 
+## targets
+
+### Done
+
+- Typescript
+  - Expo
+  - React Native
+  - Electron
+- Dart
+  - Flutter
+- Python
+  - Flet
+- Rust
+  - Tauri
+  - Dioxus
+  - Crux
+
+### Planed
+
+- OS update
+- Application development guideline
+- Application store guideline
+
+---
+
 ## dir structure
 ```sh
 $ tree --dirsfirst
