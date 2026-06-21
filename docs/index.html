@@ -15,7 +15,8 @@ header::after{content:'';position:absolute;inset:0;background-image:repeating-li
 .header-inner{position:relative;z-index:3;max-width:1300px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;gap:20px;}
 .logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,6vw,52px);letter-spacing:.12em;background:linear-gradient(160deg,#1a2030 0%,#283848 20%,#101820 40%,#2a3848 60%,#182030 80%,#0e1820 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));line-height:1;}
 .header-meta{margin-left:auto;text-align:right;}
-.header-tagline{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#404858;font-weight:700;}
+.header-tagline{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;}
+.tagline-icon{width:20px;height:20px;object-fit:cover;border-radius:3px;opacity:.85;}
 .header-updated{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#606878;margin-top:3px;}
 main{max-width:1300px;margin:0 auto;padding:0 40px 60px;}
 .steel-divider-wrap{margin:40px 0 0;}
@@ -37,7 +38,8 @@ main{max-width:1300px;margin:0 auto;padding:0 40px 60px;}
 .corner-mark.bl{bottom:6px;left:6px;border-width:0 0 1px 1px;}
 .corner-mark.br{bottom:6px;right:6px;border-width:0 1px 1px 0;}
 .fw-badge-wrap{position:relative;z-index:3;margin-bottom:10px;}
-.fw-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;padding:2px 8px;border-radius:0;border-left:3px solid var(--fw-color,#909aa8);background:rgba(255,255,255,.04);}
+.fw-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;padding:2px 8px;border-radius:0;border-left:3px solid var(--fw-color,#909aa8);background:rgba(255,255,255,.04);}
+.fw-icon{width:28px;height:28px;object-fit:cover;border-radius:3px;flex-shrink:0;}
 .steel-card h3{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.1em;line-height:1.3;margin-bottom:10px;position:relative;z-index:3;}
 .steel-card h3 a{color:#c8d4e0;text-decoration:none;transition:color .15s;}
 .steel-card h3 a:hover{color:var(--fw-color,#c8d4e0);}
@@ -55,8 +57,8 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
   <div class="header-inner">
     <div class="logo">Framework Releases Summary</div>
     <div class="header-meta">
-      <div class="header-tagline">React Native · Expo · Flutter · Flet · Electron · Tauri · Dioxus · Crux</div>
-      <div class="header-updated">Last updated: 2026-06-21 15:47 JST</div>
+      <div class="header-tagline"><img class="tagline-icon" src="assets/images/icons/flutter.jpg" alt="Flutter" title="Flutter" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/react-native.jpg" alt="React Native" title="React Native" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/expo.jpg" alt="Expo" title="Expo" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/electron.jpg" alt="Electron" title="Electron" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/tauri.jpg" alt="Tauri" title="Tauri" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/dioxus.jpg" alt="Dioxus" title="Dioxus" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/flet.jpg" alt="Flet" title="Flet" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/crux.jpg" alt="Crux" title="Crux" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/google-play.jpg" alt="Google Play" title="Google Play" loading="lazy" onerror="this.style.display='none'"><img class="tagline-icon" src="assets/images/icons/app-store.jpg" alt="App Store" title="App Store" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="header-updated">Last updated: 2026-06-21 18:46 JST</div>
     </div>
   </div>
 </header>
@@ -77,7 +79,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6">🍎 App Store</span>
+                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6"><img class="fw-icon" src="assets/images/icons/app-store.jpg" alt="" loading="lazy" onerror="this.style.display='none'">App Store</span>
               </div>
               <h3><a href="https://developer.apple.com/news/?id=umq9wxmm" target="_blank" rel="noopener">Updated Apple Developer Program License Agreement now available</a></h3>
               <p class="card-summary">Apple Developer Program License Agreementの付属書12がブラジルのiOSアプリに関する条項に対応するため改訂されました。代替配布、代替支払い方法、アプリ内オファー、およびCore Technology Commissionに関する条件が新たに明記されています。開発者はアカウントにサインインして更新された利用規約に同意する必要があり、日本語を含む翻訳版は1ヶ月以内にApple Developerウェブサイトで公開予定です。</p>
@@ -88,7 +90,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6">🍎 App Store</span>
+                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6"><img class="fw-icon" src="assets/images/icons/app-store.jpg" alt="" loading="lazy" onerror="this.style.display='none'">App Store</span>
               </div>
               <h3><a href="https://developer.apple.com/news/?id=dhwadr2x" target="_blank" rel="noopener">Changes to iOS in Brazil</a></h3>
               <p class="card-summary">iOS 26.5からブラジルでは、代替アプリマーケットプレイスでのアプリ配布やApple In-App Purchase以外での決済処理が可能になります。この変更によりマルウェアや詐欺のリスクが高まるため、アプリのNotarization認証やセキュリティ保護が導入されています。</p>
@@ -99,7 +101,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E">🦞 Crux</span>
+                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E"><img class="fw-icon" src="assets/images/icons/crux.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Crux</span>
               </div>
               <h3><a href="https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1" target="_blank" rel="noopener">crux_core-v0.19.0-docs.1</a></h3>
               <p class="card-summary">要約失敗</p>
@@ -121,7 +123,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131">🦀 Tauri</span>
+                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131"><img class="fw-icon" src="assets/images/icons/tauri.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Tauri</span>
               </div>
               <h3><a href="https://v2.tauri.app/release/tauri/v2.11.3/" target="_blank" rel="noopener">tauri v2.11.3</a></h3>
               <p class="card-summary">Tauri v2.11.3では、ウィンドウの最大化不可設定が無視される問題やファイルスコープ・イベントリスナーのデッドロック問題が修正されました。また、Android プラグインレスポンス処理のミューテックスロック最適化により、デッドロックリスクが軽減されています。さらに、tauri:// カスタムプロトコルハンドラの非同期読み込み化により、アプリケーションの起動時間が改善されました。</p>
@@ -143,7 +145,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/eas-internal-ios-ci-workflows" target="_blank" rel="noopener">Automate iOS device registration for internal builds in EAS Workflows</a></h3>
               <p class="card-summary">EAS WorkflowsはiOSアプリのデバイス登録プロセスを自動化し、ad hocプロビジョニングでのテスト配布を効率化します。従来はデバイス登録後にプロビジョニングプロファイルを再生成して再ビルドが必要でしたが、このワークフローにより自動化が実現します。TestFlightとEAS内部配布を組み合わせることで、チームへの柔軟な配布方法が可能になります。</p>
@@ -154,7 +156,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6">🍎 App Store</span>
+                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6"><img class="fw-icon" src="assets/images/icons/app-store.jpg" alt="" loading="lazy" onerror="this.style.display='none'">App Store</span>
               </div>
               <h3><a href="https://developer.apple.com/news/?id=sus6t6ab" target="_blank" rel="noopener">New domain for Sign in with Apple and iCloud+ Hide My Email</a></h3>
               <p class="card-summary">Apple IDでのサインインとiCloud+ Hide My Emailの機能で使用するメールドメインが、夏までに「private.icloud.com」に統一されます。既存のアドレス（privaterelay.appleid.comおよびicloud.com）は引き続き機能しますが、開発者は新しいドメインをメール検証ロジックとホワイトリストに対応させる必要があります。</p>
@@ -165,7 +167,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Flutter Q2 survey</a></h3>
               <p class="card-summary">Flutter Q2アンケートが実施中で、6月19日(金)の終業時までの回答をお願いしています。アンケートは短時間で完了でき、フィードバックはFlutterの今後のロードマップ策定に活用されます。開発者の皆様の貴重なご意見をお聞かせください。</p>
@@ -187,7 +189,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB"><img class="fw-icon" src="assets/images/icons/react-native.jpg" alt="" loading="lazy" onerror="this.style.display='none'">React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2026/06/11/react-native-0.86" target="_blank" rel="noopener">React Native 0.86 - Edge-to-Edge and DevTools Improvements, no breaking changes</a></h3>
               <p class="card-summary">React Native 0.86がリリースされ、Android 15以上での包括的なエッジツーエッジ対応とReact Native DevToolsの改善が実装されました。ユーザー向けの破壊的変更がないため、アップグレードがスムーズに行える点が特徴です。また、React Nativeリポジトリがfacebookからreact organizationへ移行し、React Foundationによる長期的な維持管理体制が整備されました。</p>
@@ -198,7 +200,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6">🍎 App Store</span>
+                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6"><img class="fw-icon" src="assets/images/icons/app-store.jpg" alt="" loading="lazy" onerror="this.style.display='none'">App Store</span>
               </div>
               <h3><a href="https://developer.apple.com/news/?id=15wishue" target="_blank" rel="noopener">WWDC26 survey</a></h3>
               <p class="card-summary">要約失敗</p>
@@ -220,7 +222,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6">🍎 App Store</span>
+                <span class="fw-badge" style="border-left-color:#0D96F6;color:#0D96F6"><img class="fw-icon" src="assets/images/icons/app-store.jpg" alt="" loading="lazy" onerror="this.style.display='none'">App Store</span>
               </div>
               <h3><a href="https://developer.apple.com/news/?id=8rgqj83s" target="_blank" rel="noopener">Find out what's new for Apple developers</a></h3>
               <p class="card-summary">Apple 開発者向けの最新 SDK では、Apple Intelligence などの AI 機能やプラットフォーム設計の改善が追加されました。言語、フレームワーク、ツール、サービス全般にわたって大幅な機能強化が行われています。最新ベータソフトウェアのインストール、ドキュメント確認、サンプルコード閲覧が推奨されています。</p>
@@ -231,7 +233,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E">🦞 Crux</span>
+                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E"><img class="fw-icon" src="assets/images/icons/crux.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Crux</span>
               </div>
               <h3><a href="https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0" target="_blank" rel="noopener">crux_time-v0.17.0 / crux_platform-v0.10.0 / crux_macros-v0.10.0 / crux_kv-v0.13.0 / crux_http-v0.18.0 / crux_core-v0.19.0</a></h3>
               <p class="card-summary">Cruxフレームワークの複数パッケージがv0.19.0にアップデートされ、新しいEffectRoutingシステムが導入されました。これにより、従来のミドルウェアに代わってEffectRouterが採用され、型ベースのエフェクトディスパッチングが可能になり、シリアライゼーションブリッジを経由しない効率的な処理フローが実現されました。SerializedレーンとParkedレーン、Bufferレーンの3種類のビルトインレーンが提供されており、開発者は Routes トレイトを実装してカスタマイズ可能です。</p>
@@ -253,7 +255,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">That’s a wrap: Everything Flutter at Google I/O 2026</a></h3>
               <p class="card-summary">Google I/O 2026ではFlutter GenUIを活用した完全なコーヒーショップがGoogle I/Oの中心に出展され、AI生成アートがコーヒーの泡に印刷されるデモンストレーションが行われました。すべてのセッションはFlutter YouTubeチャネルでオンデマンド視聴可能になっており、キーノートからテックセッションまで全ての内容が録画されています。</p>
@@ -264,7 +266,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA">🐟 Flet</span>
+                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA"><img class="fw-icon" src="assets/images/icons/flet.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flet</span>
               </div>
               <h3><a href="https://flet.dev/blog/2026-05-28-flet-studio" target="_blank" rel="noopener">Flet Studio: build Python apps in your browser</a></h3>
               <p class="card-summary">Flet Studioはブラウザベースの統合開発環境で、Pythonコードはブラウザ内で実行されるため、インストールやアカウント登録なしでFletアプリの開発・実行・共有ができます。500以上のギャラリー例から選択して実行したり、既存アプリをフォークしてカスタマイズしたり、空のテンプレートから新規開発することが可能です。作成したアプリはリンク共有により、他のユーザーがセットアップなしで即座に実行できます。</p>
@@ -286,7 +288,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan" target="_blank" rel="noopener">The Expo MCP Server is now available on the Free plan</a></h3>
               <p class="card-summary">Expo MCP Serverが無料プランで利用可能になりました。これまで有料プランのみだったMCP（Model Context Protocol）機能が、すべてのExpoアカウントで使用でき、月間MCP使用量が無料枠に含まれます。AIコーディングアシスタントをExpoドキュメントやツールに接続し、Expo関連の質問への回答を素早く得られるようになります。</p>
@@ -308,7 +310,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/sdk-56" target="_blank" rel="noopener">Expo SDK 56</a></h3>
               <p class="card-summary">Expo SDK 56ではReact Native 0.85とReact 19.2が統合されました。Expo UIはJetpack Compose（Android）とSwiftUI（iOS）APIが安定版となり、デフォルトテンプレートに含まれるようになったため、新規アプリで即座にネイティブUIコンポーネントが利用できます。Expo GoでもExpo UIが利用可能になり、3サイクルの反復を経た本格的な本番利用が実現しました。</p>
@@ -330,7 +332,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/whats-new-in-flutter-3-44-b0cc1ad3c527?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">What’s new in Flutter 3.44</a></h3>
               <p class="card-summary">Flutter 3.44では、Android向けHybrid Composition++、iOS/macOSのSwift Package Manager標準化、Impellerの改善されたVulkan対応が実装されました。デスクトップ向けマルチウィンドウサポートのプレビュー、MaterialとCupertinoのコアフレームワークからの分離、GenUIによるエージェント向けUX、Agentic Hot Reloadによる開発体験の向上が新たに追加されています。これらにより、自動車やスマートディスプレイなど多様なデバイスへの対応が強化されました。</p>
@@ -352,7 +354,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Flutter’s multiplatform value for agentic development</a></h3>
               <p class="card-summary">Flutterの単一コードベースでマルチプラットフォーム開発が可能な特性により、AIアシスタントが統一されたコンテキストで作業できるため、トークン使用量の削減とAIの幻覚現象の最小化が実現できます。Dartで一度書いたコードを全プラットフォームに即座にデプロイでき、プラットフォーム固有言語への翻訳をAIに依頼する必要がなくなるため、開発効率が大幅に向上します。</p>
@@ -374,7 +376,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/new-updates-to-a2ui-and-flutters-genui-package-e5ddff07737b?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">New updates to A2UI and Flutter’s GenUI package</a></h3>
               <p class="card-summary">A2UIプロトコルとFlutterのgenuiパッケージがアップデートされ、AI agentがコンテンツ生成と同時にUIの表示方法を決定するGenerative UI（GenUI）パターンの実装が改善されました。最新リリースではアーキテクチャの大幅な変更が導入され、A2UIのv0.9に対応することで、agentとrendererの連携がより効率的になりました。既存プロジェクトはアーキテクチャ変更への対応が必要な可能性があります。</p>
@@ -396,7 +398,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/expo-go-loading-changes-may-2026" target="_blank" rel="noopener">Changes to project loading behavior in Expo Go</a></h3>
               <p class="card-summary">Expo Goでプロジェクト読み込み動作が2つ変更されました。第1に、EAS Updateで公開されたプロジェクトは自分が所有するか属する組織が所有するもののみ読み込み可能になりました（2026年5月12日から全バージョン対象）。第2に、Hermes bytecodeバンドル（HBC）はEAS Update経由のみサポートされ、自ホスト更新ではプレーンJavaScriptバンドルが必須です（SDK 54〜56の最新Expo Go対象）。</p>
@@ -418,7 +420,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA">🐟 Flet</span>
+                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA"><img class="fw-icon" src="assets/images/icons/flet.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flet</span>
               </div>
               <h3><a href="https://flet.dev/blog/flet-v-0-85-release-announcement" target="_blank" rel="noopener">Flet 0.85.0: Declarative apps grow up — Router, dialogs, and more</a></h3>
               <p class="card-summary">Flet 0.85.0では、@ft.componentアプリ向けに宣言型ルーターが実装され、ネストされたルート・動的セグメント・データローダーなどが利用可能になりました。また、ft.use_dialog()フックにより、ダイアログが従来の命令型のpage.show_dialog()から反応型の状態管理に変更され、動画再生の設定可能なコントロール・スクリーンショット機能、オーディオレコーダーのPCM16ストリーミング機能が追加されています。</p>
@@ -440,7 +442,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E">🦞 Crux</span>
+                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E"><img class="fw-icon" src="assets/images/icons/crux.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Crux</span>
               </div>
               <h3><a href="https://github.com/redbadger/crux/releases/tag/crux_time-v0.16.0" target="_blank" rel="noopener">crux_time-v0.16.0 / crux_platform-v0.9.0 / crux_macros-v0.9.0 / crux_kv-v0.12.0 / crux_http-v0.17.0 / crux_core-v0.18.0 / crux_cli-v0.3.0</a></h3>
               <p class="card-summary">Crux v0.18.0では、crux_macrosの#[effect]マクロが生成するEffectTestExtトレイトに、fluent形式のチェーン可能なアサーションメソッド（expect_effect、expect_only_effect、resolve_effectなど）が追加されました。これにより、エフェクトとイベントのテストがより読みやすく簡潔に書けるようになりました。その他のパッケージ（crux_time、crux_platform、crux_kv、crux_httpなど）も同時にアップデートされています。</p>
@@ -462,7 +464,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9"><img class="fw-icon" src="assets/images/icons/electron.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/electron-42-0" target="_blank" rel="noopener">Electron 42</a></h3>
               <p class="card-summary">Electron 42がリリースされ、Chromium 148.0.7778.96、V8 14.8、Node.js v24.15.0へのアップグレードが含まれています。これらの更新により、最新のWeb標準対応、JavaScript実行パフォーマンスの向上、Node.js最新機能の利用が可能になります。既存アプリケーションとの互換性を確認した上でアップグレードすることが推奨されます。</p>
@@ -484,7 +486,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/sdk-56-beta" target="_blank" rel="noopener">Expo SDK 56 Beta is now available</a></h3>
               <p class="card-summary">Expo SDK 56のベータ版がリリースされ、約2週間のベータ期間中に開発者はアプリの互換性を検証できます。React Native 0.85.2とReact 19.2.3が含まれており、ベータ期間中は破壊的変更を含む修正と改善が継続的にリリースされるため、定期的な確認が必要です。詳細なリリースノートは正式版リリース時に公開されますが、expo/expoリポジトリのチェンジログで変更内容を事前に確認できます。</p>
@@ -495,7 +497,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131">🦀 Tauri</span>
+                <span class="fw-badge" style="border-left-color:#FFC131;color:#FFC131"><img class="fw-icon" src="assets/images/icons/tauri.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Tauri</span>
               </div>
               <h3><a href="https://v2.tauri.app/release/tauri/v2.11.1/" target="_blank" rel="noopener">tauri v2.11.1</a></h3>
               <p class="card-summary">Tauri v2.11.1では、モバイルでモニター（ディスプレイ）APIが利用可能になり、AndroidのrequestPermission APIのクラッシュが修正されました。重要なセキュリティ修正として、AppManifestがない場合でもIPC要求に対するACLチェックが適用され、リモートオリジンからのカスタムコマンド実行が制限されるようになりました。</p>
@@ -506,7 +508,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Introducing Skills for Dart and Flutter</a></h3>
               <p class="card-summary">FlutterとDart向けのAI Agent Skillsが新たに導入され、開発者はローカライゼーション、最新のDart言語機能、統合テストなど、本番環境レベルのアプリ開発に必要なドメイン固有の専門知識をAIアシスタントに備えさせることができるようになります。これにより、FlutterやDartが急速に新機能を追加しても、LLMの固定学習データとの知識ギャップを解決し、より正確で実用的なAI支援が可能になります。</p>
@@ -528,7 +530,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/expo-go-and-app-store-may-2026" target="_blank" rel="noopener">Expo Go and the App Store in May 2026</a></h3>
               <p class="card-summary">Expo Go SDK 55はApple App Storeの承認待ち中であり、リリース時期は未定です。当面はSDK 54がApp StoreとPlay Storeで利用可能ですが、本番運用目的の場合は、より強力な開発ビルドへの移行を推奨しています。</p>
@@ -550,7 +552,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/gradle-cache" target="_blank" rel="noopener">Gradle cache for Android builds</a></h3>
               <p class="card-summary">EAS上のAndroidビルドでGradle キャッシュが利用可能になり、タスク出力が再利用されることでビルド時間が約50%削減されます。EAS_GRADLE_CACHE環境変数を1に設定することで有効化でき、ビルドログのRun Gradleステップで「FROM CACHE」マークでキャッシュの動作を確認できます。特にネイティブモジュールが多いプロジェクトで効果的です。</p>
@@ -561,7 +563,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">Saying goodbye to CocoaPods: Swift Package Manager is soon the default in Flutter!</a></h3>
               <p class="card-summary">Flutter 3.44の次のリリース以降、iOSとmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になり新規追加が停止されるため、継続的なアップデートを受けるにはSwiftPMへの移行が必要です。既存ビルドは引き続き動作しますが、開発者はRubyやCocoaPodsのインストールが不要になりSwiftパッケージエコシステムへアクセスできるようになります。</p>
@@ -583,7 +585,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">That’s a wrap: Everything Flutter at Google Cloud Next</a></h3>
               <p class="card-summary">Google Cloud Next 2026でFlutterチームが発表した主な内容は、Firebase FunctionsでのDart対応のプレビューで、フロントエンドからバックエンドまでDartで統一開発が可能になります。Dart Admin SDKとの深い統合により、コンテキストスイッチングが減少し開発効率が向上します。詳細はGoogle I/Oの専門セッションで公開予定です。</p>
@@ -605,7 +607,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff">🚀 Expo</span>
+                <span class="fw-badge" style="border-left-color:#aaaaff;color:#aaaaff"><img class="fw-icon" src="assets/images/icons/expo.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Expo</span>
               </div>
               <h3><a href="https://expo.dev/changelog/sign-in-with-github" target="_blank" rel="noopener">Sign in with GitHub</a></h3>
               <p class="card-summary">ExpoがGitHubアカウントでのサインイン機能を追加しました。この機能を利用するにはメールアドレス閲覧の権限許可が必要で、既存ユーザーには2026年4月23日にGitHubから権限リクエストメールが送信されています。既存のGitHub連携機能には影響なく、この権限リクエストは無視しても問題ありません。</p>
@@ -627,7 +629,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#01875F;color:#01875F">▶️ Google Play</span>
+                <span class="fw-badge" style="border-left-color:#01875F;color:#01875F"><img class="fw-icon" src="assets/images/icons/google-play.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Google Play</span>
               </div>
               <h3><a href="https://support.google.com/googleplay/android-developer/answer/13986130" target="_blank" rel="noopener">Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）</a></h3>
               <p class="card-summary">Google Playは連絡先への広範なアクセスを制限する新しいポリシーを導入し、2026年10月28日までに対応が必要です。広範なアクセスが不要なアプリはAndroid Contact Pickerの使用が必須となり、より安全で統合が容易な仕様に移行する必要があります。このポリシー適用により、ユーザーのデータ収集が最小限に抑えられ、セキュリティが強化されます。</p>
@@ -638,7 +640,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#01875F;color:#01875F">▶️ Google Play</span>
+                <span class="fw-badge" style="border-left-color:#01875F;color:#01875F"><img class="fw-icon" src="assets/images/icons/google-play.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Google Play</span>
               </div>
               <h3><a href="https://support.google.com/googleplay/android-developer/answer/13986130" target="_blank" rel="noopener">Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）</a></h3>
               <p class="card-summary">ユーザープライバシー保護強化のため、位置情報パーミッションポリシーが更新され、正確な位置情報取得の最小限のスコープとして「位置情報ボタン」の使用が推奨されます。2026年10月28日までの適用期限内に対応が必要です。</p>
@@ -649,7 +651,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#01875F;color:#01875F">▶️ Google Play</span>
+                <span class="fw-badge" style="border-left-color:#01875F;color:#01875F"><img class="fw-icon" src="assets/images/icons/google-play.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Google Play</span>
               </div>
               <h3><a href="https://support.google.com/googleplay/android-developer/answer/10788890" target="_blank" rel="noopener">Play Console Requirements（適用期限: 2026-05-27）</a></h3>
               <p class="card-summary">Google Playは安全で信頼できるエコシステムの確保を目的として、開発者アカウントの譲渡に関する新しいポリシーを導入し、Play Console内の公式な「所有権の譲渡」ワークフローの使用を義務付けました。適用期限は2026年5月27日までであり、対象となる開発者は、この公式プロセスを通じてアカウント譲渡を行う必要があります。</p>
@@ -660,7 +662,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8">🐦 Flutter</span>
+                <span class="fw-badge" style="border-left-color:#54C5F8;color:#54C5F8"><img class="fw-icon" src="assets/images/icons/flutter.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flutter</span>
               </div>
               <h3><a href="https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4" target="_blank" rel="noopener">We rebuilt Flutter’s websites with Dart and Jaspr</a></h3>
               <p class="card-summary">Flutter公式サイト（dart.dev、flutter.dev、docs.flutter.dev）をJaspr（Dart製のオープンソースWebフレームワーク）で統一し、複数のツールの混在から脱却しました。これにより開発者はDart言語のみで貢献でき、開発体験が一貫性を持つようになりました。Dartを使ったWeb開発の新しい選択肢として、Jasprによる標準的なFlutter Webアプリ以外のWebサイト構築が可能になります。</p>
@@ -682,7 +684,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB"><img class="fw-icon" src="assets/images/icons/react-native.jpg" alt="" loading="lazy" onerror="this.style.display='none'">React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2026/04/07/react-native-0.85" target="_blank" rel="noopener">React Native 0.85 - New Animation Backend, New Jest Preset Package</a></h3>
               <p class="card-summary">React Native 0.85がリリースされ、Software Mansionと協力して開発された新しいShared Animation Backendが導入され、AnimatedとReanimatedの両方のアニメーション処理がコア部分で統一されました。Jestプリセットが専用パッケージに移行し、EOL Node.jsバージョンのサポートが廃止されたほか、StyleSheet.absoluteFillObjectが削除されるなどの破壊的変更が含まれています。DevToolsの改善とMetroのTLSサポートも追加されています。</p>
@@ -704,7 +706,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA">🐟 Flet</span>
+                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA"><img class="fw-icon" src="assets/images/icons/flet.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flet</span>
               </div>
               <h3><a href="https://flet.dev/blog/flet-v-0-84-release-announcement" target="_blank" rel="noopener">Flet 0.84.0: Goodbye MkDocs, hello CrocoDocs!</a></h3>
               <p class="card-summary">Flet 0.84.0はDocusaurusベースの新しいドキュメンテーションサイトとCrocoDocs（Pythonドキュメント文字列とDocusaurusを連携するツール）を導入し、開発者体験を大幅に改善しました。466個のFletサンプルがメタデータ付きの独立プロジェクトに移行され、ギャラリーとAI検出に対応しています。アップグレードはpipまたはuvコマンドで実施できます。</p>
@@ -726,7 +728,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA">🐟 Flet</span>
+                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA"><img class="fw-icon" src="assets/images/icons/flet.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flet</span>
               </div>
               <h3><a href="https://flet.dev/blog/flet-v-0-83-release-announcement" target="_blank" rel="noopener">Flet 0.83.0: Faster diffs, leaner packages, road to 1.0</a></h3>
               <p class="card-summary">Flet 0.83.0では、制御差分処理が最大6.7倍高速化され、.update()ロジックが改善されて冗長な更新が削除されました。デスクトップバイナリとビルドテンプレートがPyPIからGitHub Releasesに移動し、インストールサイズが削減されると同時に、バージョン管理がより明確になりました。Annotated型による宣言的なフィールド検証機能も新たに追加されています。</p>
@@ -748,7 +750,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E">🦞 Crux</span>
+                <span class="fw-badge" style="border-left-color:#E05A4E;color:#E05A4E"><img class="fw-icon" src="assets/images/icons/crux.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Crux</span>
               </div>
               <h3><a href="https://github.com/redbadger/crux/releases/tag/crux_time-v0.15.0" target="_blank" rel="noopener">crux_time-v0.15.0 / crux_platform-v0.8.0</a></h3>
               <p class="card-summary">要約失敗</p>
@@ -770,7 +772,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9"><img class="fw-icon" src="assets/images/icons/electron.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/tech-talk-wayland" target="_blank" rel="noopener">Tech Talk: How Electron went Wayland-native, and what it means for your apps</a></h3>
               <p class="card-summary">ElectronがLinux上でWaylandネイティブ対応に移行し、Chromiumのデフォルト有効化に伴い、多くのLinuxデスクトップアプリが自動的にWaylandで動作するようになりました。開発者は既存アプリがWaylandで正常に動作するか確認し、必要に応じて互換性の問題に対応する必要があります。</p>
@@ -792,7 +794,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9"><img class="fw-icon" src="assets/images/icons/electron.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/electron-41-0" target="_blank" rel="noopener">Electron 41</a></h3>
               <p class="card-summary">Electron 41がリリースされ、Chromium 146.0.7680.65、V8 14.6、Node v24.14.0にアップグレードされました。macOS向けにASAR Integrity digestによるセキュリティ強化が追加されました。アップグレード時は初期版の41.0.0ではなく、高優先度バグが修正された41.0.2以上のインストールが推奨されています。</p>
@@ -814,7 +816,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB"><img class="fw-icon" src="assets/images/icons/react-native.jpg" alt="" loading="lazy" onerror="this.style.display='none'">React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest" target="_blank" rel="noopener">React Native Comes to Meta Quest</a></h3>
               <p class="card-summary">React Confiterative 2025でMeta Quest向けのReact Native公式サポートが発表され、開発者は既存の知識とツールを活用してVRアプリを構築・配信できるようになりました。React Nativeのクロスプラットフォーム対応がAndroid/iOSから拡大し、Meta Questデバイスでも同じパターンで開発可能です。開発ビルド、ネイティブ機能、プラットフォーム固有の設定など、Meta Quest向け開発を開始するための具体的なガイドが提供されています。</p>
@@ -825,7 +827,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA">🐟 Flet</span>
+                <span class="fw-badge" style="border-left-color:#00D4AA;color:#00D4AA"><img class="fw-icon" src="assets/images/icons/flet.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Flet</span>
               </div>
               <h3><a href="https://flet.dev/blog/flet-v-0-81-release-announcement" target="_blank" rel="noopener">Flet 0.81.0: Camera, CodeEditor, color pickers and more</a></h3>
               <p class="card-summary">Flet 0.81.0がリリースされ、Camera、CodeEditor、PageView、色選択ツール、RotatedBoxなどの新コントロールが追加されました。Hero animationやMatrix4トランスフォーム、クリップボードAPI（画像・ファイル対応）、Web FilePicker、プラットフォームロケール情報などが新たに実装されています。アップグレードはpip install 'flet[all]' --upgradeまたはuvコマンドで実行可能です。</p>
@@ -847,7 +849,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB">⚛️ React Native</span>
+                <span class="fw-badge" style="border-left-color:#61DAFB;color:#61DAFB"><img class="fw-icon" src="assets/images/icons/react-native.jpg" alt="" loading="lazy" onerror="this.style.display='none'">React Native</span>
               </div>
               <h3><a href="https://reactnative.dev/blog/2026/02/11/react-native-0.84" target="_blank" rel="noopener">React Native 0.84 - Hermes V1 by Default</a></h3>
               <p class="card-summary">React Native 0.84では、Hermes V1がデフォルトのJavaScriptエンジンになり、全アプリのパフォーマンスが大幅に向上します。iOSのプリコンパイルバイナリがデフォルト化され、レガシーアーキテクチャが削除され、Node.js 22が最小要件になりました。</p>
@@ -869,7 +871,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:10
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9">⚡ Electron</span>
+                <span class="fw-badge" style="border-left-color:#9FEAF9;color:#9FEAF9"><img class="fw-icon" src="assets/images/icons/electron.jpg" alt="" loading="lazy" onerror="this.style.display='none'">Electron</span>
               </div>
               <h3><a href="https://electronjs.org/blog/electron-40-0" target="_blank" rel="noopener">Electron 40.0.0</a></h3>
               <p class="card-summary">Electron 40.0.0がリリースされ、Chromium 144.0.7559.60、V8 14.4、Node 24.11.1へのアップグレードが含まれています。主な変更点はChromium 142からの更新、Node.jsのv22.20.0からv24.11.1への昇格、V8の14.2から14.4への更新です。詳細な新機能や改善点については記事に記載されていますが、要約には明示されていません。</p>

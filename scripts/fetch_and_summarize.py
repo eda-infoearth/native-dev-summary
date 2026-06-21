@@ -662,6 +662,12 @@ def summarize(client: anthropic.Anthropic, article: dict) -> str:
 # ── HTML 生成（Shiny Metal Industrial デザイン） ──────────────────────────────
 
 def generate_html(by_date: dict, updated_at: str) -> str:
+    tagline_html = "".join(
+        f'<img class="tagline-icon" src="assets/images/icons/{fw["id"]}.jpg" '
+        f'alt="{fw["name"]}" title="{fw["name"]}" loading="lazy" onerror="this.style.display=\'none\'">'
+        for fw in FEEDS
+    )
+
     sections_html = ""
     for date in sorted(by_date.keys(), reverse=True):
         articles = by_date[date]
@@ -679,6 +685,8 @@ def generate_html(by_date: dict, updated_at: str) -> str:
         cards_html = ""
         for a in articles:
             color      = a.get("fw_color", "#909aa8")
+            fw_id      = a.get("fw_id", "")
+            icon_path  = f"assets/images/icons/{fw_id}.jpg"
             safe_title = a["title"].replace("<", "&lt;").replace(">", "&gt;")
             safe_link  = a["link"].replace('"', "&quot;")
             summary_block = (
@@ -693,7 +701,7 @@ def generate_html(by_date: dict, updated_at: str) -> str:
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
               <div class="fw-badge-wrap">
-                <span class="fw-badge" style="border-left-color:{color};color:{color}">{a['fw_icon']} {a['fw_name']}</span>
+                <span class="fw-badge" style="border-left-color:{color};color:{color}"><img class="fw-icon" src="{icon_path}" alt="" loading="lazy" onerror="this.style.display='none'">{a['fw_name']}</span>
               </div>
               <h3><a href="{safe_link}" target="_blank" rel="noopener">{safe_title}</a></h3>
               {summary_block}
@@ -736,7 +744,8 @@ header::after{{content:'';position:absolute;inset:0;background-image:repeating-l
 .header-inner{{position:relative;z-index:3;max-width:1300px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;gap:20px;}}
 .logo{{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,6vw,52px);letter-spacing:.12em;background:linear-gradient(160deg,#1a2030 0%,#283848 20%,#101820 40%,#2a3848 60%,#182030 80%,#0e1820 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 1px 0 rgba(255,255,255,.5));line-height:1;}}
 .header-meta{{margin-left:auto;text-align:right;}}
-.header-tagline{{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#404858;font-weight:700;}}
+.header-tagline{{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;}}
+.tagline-icon{{width:20px;height:20px;object-fit:cover;border-radius:3px;opacity:.85;}}
 .header-updated{{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#606878;margin-top:3px;}}
 main{{max-width:1300px;margin:0 auto;padding:0 40px 60px;}}
 .steel-divider-wrap{{margin:40px 0 0;}}
@@ -758,7 +767,8 @@ main{{max-width:1300px;margin:0 auto;padding:0 40px 60px;}}
 .corner-mark.bl{{bottom:6px;left:6px;border-width:0 0 1px 1px;}}
 .corner-mark.br{{bottom:6px;right:6px;border-width:0 1px 1px 0;}}
 .fw-badge-wrap{{position:relative;z-index:3;margin-bottom:10px;}}
-.fw-badge{{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;padding:2px 8px;border-radius:0;border-left:3px solid var(--fw-color,#909aa8);background:rgba(255,255,255,.04);}}
+.fw-badge{{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;padding:2px 8px;border-radius:0;border-left:3px solid var(--fw-color,#909aa8);background:rgba(255,255,255,.04);}}
+.fw-icon{{width:28px;height:28px;object-fit:cover;border-radius:3px;flex-shrink:0;}}
 .steel-card h3{{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.1em;line-height:1.3;margin-bottom:10px;position:relative;z-index:3;}}
 .steel-card h3 a{{color:#c8d4e0;text-decoration:none;transition:color .15s;}}
 .steel-card h3 a:hover{{color:var(--fw-color,#c8d4e0);}}
@@ -776,7 +786,7 @@ footer{{border-top:1px solid rgba(255,255,255,.06);padding:20px 40px;font-size:1
   <div class="header-inner">
     <div class="logo">Framework Releases Summary</div>
     <div class="header-meta">
-      <div class="header-tagline">React Native · Expo · Flutter · Flet · Electron · Tauri · Dioxus · Crux</div>
+      <div class="header-tagline">{tagline_html}</div>
       <div class="header-updated">Last updated: {updated_at} JST</div>
     </div>
   </div>
