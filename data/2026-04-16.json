@@ -1,5 +1,44 @@
 [
   {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/13986130#2026-10-28",
+    "title": "Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/13986130",
+    "pub_date": "2026-04-15",
+    "description": "Permissions and APIs that Access Sensitive Information We're introducing the Contacts Permissions policy to govern broad access of users' contacts. Apps that don't need broad access must use the Android Contact Picker , a more secure, easy-to-integrate alternative that minimizes data collection and improves user safety. Announced 2026-04-15",
+    "summary_ja": "Google Playは連絡先への広範なアクセスを制限する新しいポリシーを導入し、2026年10月28日までに対応が必要です。広範なアクセスが不要なアプリはAndroid Contact Pickerの使用が必須となり、より安全で統合が容易な仕様に移行する必要があります。このポリシー適用により、ユーザーのデータ収集が最小限に抑えられ、セキュリティが強化されます。",
+    "fetched_at": "2026-06-21T04:49:09.827957+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/13986130#2026-10-28",
+    "title": "Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/13986130",
+    "pub_date": "2026-04-15",
+    "description": "Permissions and APIs that Access Sensitive Information To better protect user privacy, we're updating our Location Permissions policy. We're introducing the location button as the recommended minimum scope for precise location in line with our user data and sensitive permissions requirements. Announced 2026-04-15",
+    "summary_ja": "ユーザープライバシー保護強化のため、位置情報パーミッションポリシーが更新され、正確な位置情報取得の最小限のスコープとして「位置情報ボタン」の使用が推奨されます。2026年10月28日までの適用期限内に対応が必要です。",
+    "fetched_at": "2026-06-21T04:49:09.828135+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/10788890#2026-05-27",
+    "title": "Play Console Requirements（適用期限: 2026-05-27）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/10788890",
+    "pub_date": "2026-04-15",
+    "description": "Play Console Requirements To ensure a safe and trusted ecosystem, we're introducing the Account Transfer policy to require developers to use the official \"Transfer ownership\" workflow within the Play Console. If eligible, use this process to transfer your developer account. Announced 2026-04-15",
+    "summary_ja": "Google Playは安全で信頼できるエコシステムの確保を目的として、開発者アカウントの譲渡に関する新しいポリシーを導入し、Play Console内の公式な「所有権の譲渡」ワークフローの使用を義務付けました。適用期限は2026年5月27日までであり、対象となる開発者は、この公式プロセスを通じてアカウント譲渡を行う必要があります。",
+    "fetched_at": "2026-06-21T04:49:09.828270+00:00"
+  },
+  {
     "fw_id": "flutter",
     "fw_name": "Flutter",
     "fw_icon": "🐦",

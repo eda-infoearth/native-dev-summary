@@ -1,5 +1,18 @@
 [
   {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=8rgqj83s",
+    "title": "Find out what's new for Apple developers",
+    "link": "https://developer.apple.com/news/?id=8rgqj83s",
+    "pub_date": "Mon, 08 Jun 2026 11:20:01 PDT",
+    "description": "Discover the latest advancements on all Apple platforms and create even more unique, intelligent experiences in your apps and games with major enhancements across languages, frameworks, tools, and services. The latest SDKs bring incredible new features, including platform design refinements, powerful Apple Intelligence capabilities, and new AI development frameworks. Explore what’s new Install the latest beta software Browse documentation and sample code",
+    "summary_ja": "Apple 開発者向けの最新 SDK では、Apple Intelligence などの AI 機能やプラットフォーム設計の改善が追加されました。言語、フレームワーク、ツール、サービス全般にわたって大幅な機能強化が行われています。最新ベータソフトウェアのインストール、ドキュメント確認、サンプルコード閲覧が推奨されています。",
+    "fetched_at": "2026-06-21T06:41:21.240544+00:00"
+  },
+  {
     "fw_id": "crux",
     "fw_name": "Crux",
     "fw_icon": "🦞",

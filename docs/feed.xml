@@ -2,12 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Framework Releases Summary</title>
-    <link>https://eda-infoearth.github.io/native-dev-summary</link>
+    <link>https://example.github.io/framework-pulse</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 21 Jun 2026 08:24:21 +0900</lastBuildDate>
-    <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sun, 21 Jun 2026 15:47:17 +0900</lastBuildDate>
+    <atom:link href="https://example.github.io/framework-pulse/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Updated Apple Developer Program License Agreement now available</title>
+      <link>https://developer.apple.com/news/?id=umq9wxmm</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=umq9wxmm</guid>
+      <pubDate>Thu, 18 Jun 2026 23:30:54 +0900</pubDate>
+      <description>Apple Developer Program License Agreementの付属書12がブラジルのiOSアプリに関する条項に対応するため改訂されました。代替配布、代替支払い方法、アプリ内オファー、およびCore Technology Commissionに関する条件が新たに明記されています。開発者はアカウントにサインインして更新された利用規約に同意する必要があり、日本語を含む翻訳版は1ヶ月以内にApple Developerウェブサイトで公開予定です。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Changes to iOS in Brazil</title>
+      <link>https://developer.apple.com/news/?id=dhwadr2x</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=dhwadr2x</guid>
+      <pubDate>Thu, 18 Jun 2026 23:30:05 +0900</pubDate>
+      <description>iOS 26.5からブラジルでは、代替アプリマーケットプレイスでのアプリ配布やApple In-App Purchase以外での決済処理が可能になります。この変更によりマルウェアや詐欺のリスクが高まるため、アプリのNotarization認証やセキュリティ保護が導入されています。</description>
+    </item>
     <item>
       <title>🦞 Crux — crux_core-v0.19.0-docs.1</title>
       <link>https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1</link>
@@ -23,11 +37,46 @@
       <description>Tauri v2.11.3では、ウィンドウの最大化不可設定が無視される問題やファイルスコープ・イベントリスナーのデッドロック問題が修正されました。また、Android プラグインレスポンス処理のミューテックスロック最適化により、デッドロックリスクが軽減されています。さらに、tauri:// カスタムプロトコルハンドラの非同期読み込み化により、アプリケーションの起動時間が改善されました。</description>
     </item>
     <item>
+      <title>🚀 Expo — Automate iOS device registration for internal builds in EAS Workflows</title>
+      <link>https://expo.dev/changelog/eas-internal-ios-ci-workflows</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/eas-internal-ios-ci-workflows</guid>
+      <pubDate>Tue, 16 Jun 2026 01:00:00 +0900</pubDate>
+      <description>EAS WorkflowsはiOSアプリのデバイス登録プロセスを自動化し、ad hocプロビジョニングでのテスト配布を効率化します。従来はデバイス登録後にプロビジョニングプロファイルを再生成して再ビルドが必要でしたが、このワークフローにより自動化が実現します。TestFlightとEAS内部配布を組み合わせることで、チームへの柔軟な配布方法が可能になります。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — New domain for Sign in with Apple and iCloud+ Hide My Email</title>
+      <link>https://developer.apple.com/news/?id=sus6t6ab</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=sus6t6ab</guid>
+      <pubDate>Tue, 16 Jun 2026 07:00:28 +0900</pubDate>
+      <description>Apple IDでのサインインとiCloud+ Hide My Emailの機能で使用するメールドメインが、夏までに「private.icloud.com」に統一されます。既存のアドレス（privaterelay.appleid.comおよびicloud.com）は引き続き機能しますが、開発者は新しいドメインをメール検証ロジックとホワイトリストに対応させる必要があります。</description>
+    </item>
+    <item>
       <title>🐦 Flutter — Flutter Q2 survey</title>
       <link>https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4</link>
       <guid isPermaLink="true">https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Tue, 16 Jun 2026 01:42:40 +0900</pubDate>
       <description>Flutter Q2アンケートが実施中で、6月19日(金)の終業時までの回答をお願いしています。アンケートは短時間で完了でき、フィードバックはFlutterの今後のロードマップ策定に活用されます。開発者の皆様の貴重なご意見をお聞かせください。</description>
+    </item>
+    <item>
+      <title>⚛️ React Native — React Native 0.86 - Edge-to-Edge and DevTools Improvements, no breaking changes</title>
+      <link>https://reactnative.dev/blog/2026/06/11/react-native-0.86</link>
+      <guid isPermaLink="true">https://reactnative.dev/blog/2026/06/11/react-native-0.86</guid>
+      <pubDate>Thu, 11 Jun 2026 09:00:00 +0900</pubDate>
+      <description>React Native 0.86がリリースされ、Android 15以上での包括的なエッジツーエッジ対応とReact Native DevToolsの改善が実装されました。ユーザー向けの破壊的変更がないため、アップグレードがスムーズに行える点が特徴です。また、React Nativeリポジトリがfacebookからreact organizationへ移行し、React Foundationによる長期的な維持管理体制が整備されました。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — WWDC26 survey</title>
+      <link>https://developer.apple.com/news/?id=15wishue</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=15wishue</guid>
+      <pubDate>Thu, 11 Jun 2026 23:00:32 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Find out what&apos;s new for Apple developers</title>
+      <link>https://developer.apple.com/news/?id=8rgqj83s</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=8rgqj83s</guid>
+      <pubDate>Tue, 09 Jun 2026 03:20:01 +0900</pubDate>
+      <description>Apple 開発者向けの最新 SDK では、Apple Intelligence などの AI 機能やプラットフォーム設計の改善が追加されました。言語、フレームワーク、ツール、サービス全般にわたって大幅な機能強化が行われています。最新ベータソフトウェアのインストール、ドキュメント確認、サンプルコード閲覧が推奨されています。</description>
     </item>
     <item>
       <title>🦞 Crux — crux_time-v0.17.0 / crux_platform-v0.10.0 / crux_macros-v0.10.0 / crux_kv-v0.13.0 / crux_http-v0.18.0 / crux_core-v0.19.0</title>
@@ -168,6 +217,27 @@
       <guid isPermaLink="true">https://expo.dev/changelog/sign-in-with-github</guid>
       <pubDate>Fri, 24 Apr 2026 05:30:11 +0900</pubDate>
       <description>ExpoがGitHubアカウントでのサインイン機能を追加しました。この機能を利用するにはメールアドレス閲覧の権限許可が必要で、既存ユーザーには2026年4月23日にGitHubから権限リクエストメールが送信されています。既存のGitHub連携機能には影響なく、この権限リクエストは無視しても問題ありません。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/13986130</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/13986130#2026-10-28</guid>
+      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate>
+      <description>Google Playは連絡先への広範なアクセスを制限する新しいポリシーを導入し、2026年10月28日までに対応が必要です。広範なアクセスが不要なアプリはAndroid Contact Pickerの使用が必須となり、より安全で統合が容易な仕様に移行する必要があります。このポリシー適用により、ユーザーのデータ収集が最小限に抑えられ、セキュリティが強化されます。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/13986130</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/13986130#2026-10-28</guid>
+      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate>
+      <description>ユーザープライバシー保護強化のため、位置情報パーミッションポリシーが更新され、正確な位置情報取得の最小限のスコープとして「位置情報ボタン」の使用が推奨されます。2026年10月28日までの適用期限内に対応が必要です。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Play Console Requirements（適用期限: 2026-05-27）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/10788890</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/10788890#2026-05-27</guid>
+      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate>
+      <description>Google Playは安全で信頼できるエコシステムの確保を目的として、開発者アカウントの譲渡に関する新しいポリシーを導入し、Play Console内の公式な「所有権の譲渡」ワークフローの使用を義務付けました。適用期限は2026年5月27日までであり、対象となる開発者は、この公式プロセスを通じてアカウント譲渡を行う必要があります。</description>
     </item>
     <item>
       <title>🐦 Flutter — We rebuilt Flutter’s websites with Dart and Jaspr</title>

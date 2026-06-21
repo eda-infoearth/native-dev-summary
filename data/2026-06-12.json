@@ -1,0 +1,28 @@
+[
+  {
+    "fw_id": "react-native",
+    "fw_name": "React Native",
+    "fw_icon": "⚛️",
+    "fw_color": "#61DAFB",
+    "id": "https://reactnative.dev/blog/2026/06/11/react-native-0.86",
+    "title": "React Native 0.86 - Edge-to-Edge and DevTools Improvements, no breaking changes",
+    "link": "https://reactnative.dev/blog/2026/06/11/react-native-0.86",
+    "pub_date": "Thu, 11 Jun 2026 00:00:00 GMT",
+    "description": "Today we are excited to release React Native 0.86! This release includes comprehensive edge-to-edge support on Android 15+ and improvements in React Native DevTools. Following 0.83, this is the second React Native release with no user-facing breaking changes, reflecting our continued commitment to making upgrades more predictable and seamless. Highlights ​ A New Home for React Native Edge-to-Edge on Android React Native DevTools Improvements A New Home for React Native ​ The React Native repository, together with React, Metro, Yoga and the React Native Website, has moved from the facebook GitHub organization to the react organization. This move reflects the transition of React and React Native to the React Foundation , an independent foundation dedicated to the long-term stewardship of the",
+    "summary_ja": "React Native 0.86がリリースされ、Android 15以上での包括的なエッジツーエッジ対応とReact Native DevToolsの改善が実装されました。ユーザー向けの破壊的変更がないため、アップグレードがスムーズに行える点が特徴です。また、React Nativeリポジトリがfacebookからreact organizationへ移行し、React Foundationによる長期的な維持管理体制が整備されました。",
+    "fetched_at": "2026-06-21T06:43:13.356842+00:00"
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=15wishue",
+    "title": "WWDC26 survey",
+    "link": "https://developer.apple.com/news/?id=15wishue",
+    "pub_date": "Thu, 11 Jun 2026 07:00:32 PDT",
+    "description": "Share your thoughts on this year’s conference. Take the survey",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-06-21T06:43:23.874673+00:00"
+  }
+]

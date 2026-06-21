@@ -1,5 +1,31 @@
 [
   {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=umq9wxmm",
+    "title": "Updated Apple Developer Program License Agreement now available",
+    "link": "https://developer.apple.com/news/?id=umq9wxmm",
+    "pub_date": "Thu, 18 Jun 2026 07:30:54 PDT",
+    "description": "Attachment 12 of the Apple Developer Program License Agreement has been revised to specify terms for iOS apps in Brazil, including alternative distribution, alternative payments and out-of-app offers, and the Core Technology Commission. Please review the changes and sign in to your account to accept the updated terms. Translations of the updated agreement will be available on the Apple Developer website within one month.",
+    "summary_ja": "Apple Developer Program License Agreementの付属書12がブラジルのiOSアプリに関する条項に対応するため改訂されました。代替配布、代替支払い方法、アプリ内オファー、およびCore Technology Commissionに関する条件が新たに明記されています。開発者はアカウントにサインインして更新された利用規約に同意する必要があり、日本語を含む翻訳版は1ヶ月以内にApple Developerウェブサイトで公開予定です。",
+    "fetched_at": "2026-06-21T05:00:01.305343+00:00"
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=dhwadr2x",
+    "title": "Changes to iOS in Brazil",
+    "link": "https://developer.apple.com/news/?id=dhwadr2x",
+    "pub_date": "Thu, 18 Jun 2026 07:30:05 PDT",
+    "description": "As part of a recent agreement with Brazil’s competition regulator CADE (Conselho Administrativo de Defesa Econômica), Apple is introducing changes to iOS that create new options for developers' apps in Brazil. Beginning with iOS 26.5, developers can distribute apps on alternative app marketplaces, operate alternative app marketplaces, process app payments for digital goods and services outside of Apple In-App Purchase in iOS, and more. The new options for downloading apps from alternative app marketplaces and making app payments open new avenues for malware, fraud, scams, and privacy and security risks. Apple has worked with CADE to introduce protections from these new threats — with a special emphasis on child safety. Those protections include Notarization for iOS apps, an authorization p",
+    "summary_ja": "iOS 26.5からブラジルでは、代替アプリマーケットプレイスでのアプリ配布やApple In-App Purchase以外での決済処理が可能になります。この変更によりマルウェアや詐欺のリスクが高まるため、アプリのNotarization認証やセキュリティ保護が導入されています。",
+    "fetched_at": "2026-06-21T05:00:01.305385+00:00"
+  },
+  {
     "fw_id": "crux",
     "fw_name": "Crux",
     "fw_icon": "🦞",

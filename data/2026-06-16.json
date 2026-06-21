@@ -1,5 +1,31 @@
 [
   {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/eas-internal-ios-ci-workflows",
+    "title": "Automate iOS device registration for internal builds in EAS Workflows",
+    "link": "https://expo.dev/changelog/eas-internal-ios-ci-workflows",
+    "pub_date": "2026-06-15T16:00:00.000Z",
+    "description": "There are several ways to distribute iOS apps to your team: for devices, you can use TestFlight, ad hoc provisioning, or enterprise provisioning, and for simulators you can share a direct link to the build that can be installed manually or through Orbit . EAS makes it easy to use all of these approaches , so you can do what works best for any particular build or process. When distributing to devices, most developers will use some combination of TestFlight and EAS internal distribution with ad hoc provisioning. With ad hoc provisioning, only devices listed in the profile at build time can install the build. So you need to register your device with EAS (which handles registering it with Apple), regenerate the profile, and then rebuild the app. This process has been difficult to automate in t",
+    "summary_ja": "EAS WorkflowsはiOSアプリのデバイス登録プロセスを自動化し、ad hocプロビジョニングでのテスト配布を効率化します。従来はデバイス登録後にプロビジョニングプロファイルを再生成して再ビルドが必要でしたが、このワークフローにより自動化が実現します。TestFlightとEAS内部配布を組み合わせることで、チームへの柔軟な配布方法が可能になります。",
+    "fetched_at": "2026-06-21T06:45:39.550612+00:00"
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=sus6t6ab",
+    "title": "New domain for Sign in with Apple and iCloud+ Hide My Email",
+    "link": "https://developer.apple.com/news/?id=sus6t6ab",
+    "pub_date": "Mon, 15 Jun 2026 15:00:28 PDT",
+    "description": "Later this summer, Apple will unify the email domains used by Sign in with Apple and iCloud+ Hide My Email under a single, shared domain: private.icloud.com . New addresses generated for both features will be issued on the new domain. For example: Sign in with Apple addresses, previously issued on privaterelay.appleid.com , will be issued on private.icloud.com . iCloud+ Hide My Email addresses, previously issued on icloud.com , will be issued on private.icloud.com . Existing addresses on the legacy domains will continue to work and forward mail to users without interruption. What you need to do Developers with apps or websites that use Sign in with Apple should ensure that their account systems, email validation logic, and allowlists accept addresses on the new private.icloud.com domain in",
+    "summary_ja": "Apple IDでのサインインとiCloud+ Hide My Emailの機能で使用するメールドメインが、夏までに「private.icloud.com」に統一されます。既存のアドレス（privaterelay.appleid.comおよびicloud.com）は引き続き機能しますが、開発者は新しいドメインをメール検証ロジックとホワイトリストに対応させる必要があります。",
+    "fetched_at": "2026-06-21T06:45:51.617885+00:00"
+  },
+  {
     "fw_id": "flutter",
     "fw_name": "Flutter",
     "fw_icon": "🐦",

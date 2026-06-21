@@ -68,12 +68,16 @@ FEEDS = [
     {"id": "dioxus",       "name": "Dioxus",       "icon": "🧩", "color": "#EB4E3D", "url": "https://dioxuslabs.com/blog/rss.xml"},
     {"id": "flet",         "name": "Flet",         "icon": "🐟", "color": "#00D4AA", "url": "https://flet.dev/blog/rss.xml"},
     {"id": "crux",         "name": "Crux",         "icon": "🦞", "color": "#E05A4E", "url": None},  # GitHub Releases atom
+    {"id": "google-play",  "name": "Google Play",  "icon": "▶️", "color": "#01875F", "url": None},  # スクレイピング
+    {"id": "app-store",    "name": "App Store",    "icon": "🍎", "color": "#0D96F6", "url": "https://developer.apple.com/news/rss/news.rss"},
 ]
 
 EXPO_CHANGELOG_URL    = "https://expo.dev/changelog"
 TAURI_RELEASE_URL     = "https://v2.tauri.app/release/"
 TAURI_VERSIONS_PATH   = DATA_DIR / "tauri_versions.json"
 CRUX_RELEASES_ATOM    = "https://github.com/redbadger/crux/releases.atom"
+GOOGLE_PLAY_DEADLINES_URL     = "https://support.google.com/googleplay/android-developer/table/12921780?hl=en"
+GOOGLE_PLAY_POLICY_CENTER_URL = "https://play.google/developer-content-policy/"
 
 # ── ユーティリティ ──────────────────────────────────────────────────────────────
 
@@ -448,6 +452,136 @@ def fetch_crux_releases(feed: dict) -> list[dict]:
         print(f"  ⚠ {feed['name']} フィード取得失敗: {e}", file=sys.stderr)
         return []
 
+# ── Google Play ポリシー更新 スクレイピング ──────────────────────────────────
+
+GOOGLE_PLAY_ANNOUNCED_RE = re.compile(r"Announced\s+(\d{4}-\d{2}-\d{2})")
+
+def fetch_google_play_deadlines(feed: dict) -> list[dict]:
+    """
+    Policy Deadlines ページのテーブルから各行を記事化する。
+    各行: Deadline(YYYY-MM-DD) / Policy change(タイトル+本文+Announced日付) / Resources(リンク群)
+    pub_date は本文中の "Announced YYYY-MM-DD" を優先し、なければ Deadline 日付を使う。
+    id は最初に見つかるリンク（無ければタイトルのハッシュ的役割としてDeadline+タイトル文字列）。
+    """
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
+    articles = []
+    try:
+        resp = requests.get(GOOGLE_PLAY_DEADLINES_URL, headers=headers, timeout=15)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        table = soup.find("table")
+        if not table:
+            print("  ⚠ Google Play Deadlines: テーブルが見つかりません", file=sys.stderr)
+            return []
+
+        rows = table.find_all("tr")
+        for row in rows:
+            cells = row.find_all("td")
+            if len(cells) < 2:
+                continue  # ヘッダ行をスキップ
+
+            deadline_cell = cells[0]
+            change_cell   = cells[1]
+
+            deadline_text = deadline_cell.get_text(strip=True)
+            if not re.match(r"^\d{4}-\d{2}-\d{2}$", deadline_text):
+                continue
+
+            title_link = change_cell.find("a")
+            title = title_link.get_text(strip=True) if title_link else change_cell.get_text(strip=True)[:120]
+            link  = title_link["href"] if title_link and title_link.get("href") else GOOGLE_PLAY_DEADLINES_URL
+
+            body_text = strip_html(str(change_cell))
+
+            announced_match = GOOGLE_PLAY_ANNOUNCED_RE.search(body_text)
+            pub_date = announced_match.group(1) if announced_match else deadline_text
+
+            article_id = f"{link}#{deadline_text}"
+
+            articles.append({
+                "fw_id":       feed["id"],
+                "fw_name":     feed["name"],
+                "fw_icon":     feed["icon"],
+                "fw_color":    feed["color"],
+                "id":          article_id,
+                "title":       f"{title}（適用期限: {deadline_text}）",
+                "link":        link,
+                "pub_date":    pub_date,
+                "description": body_text,
+                "summary_ja":  None,
+                "fetched_at":  datetime.now(timezone.utc).isoformat(),
+            })
+
+        print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (Policy Deadlines, scraping)")
+        return articles
+    except Exception as e:
+        print(f"  ⚠ Google Play Deadlines スクレイピング失敗: {e}", file=sys.stderr)
+        return []
+
+def fetch_google_play_policy_center(feed: dict) -> list[dict]:
+    """
+    Developer Policy Center ページの「Latest Information」セクションのカードを記事化する。
+    各カードに明確な公開日が無いため pub_date は取得時刻（fetched_at と同じ）を使う。
+
+    NOTE: 現在は未使用。Google Play側はまず Policy Deadlines 単独で運用し、
+    実データが溜まってから第2ソースとして有効化するか検討する。
+    """
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
+    articles = []
+    try:
+        resp = requests.get(GOOGLE_PLAY_POLICY_CENTER_URL, headers=headers, timeout=15)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # 「Latest Information」見出し以降にある記事カード（見出し+本文のペア）を探す
+        heading = soup.find(lambda tag: tag.name in ("h1", "h2", "h3") and "Latest Information" in tag.get_text())
+        if not heading:
+            print("  ⚠ Google Play Policy Center: Latest Information セクションが見つかりません", file=sys.stderr)
+            return []
+
+        now_iso = datetime.now(timezone.utc).isoformat()
+
+        for sibling in heading.find_all_next(["h3", "h4"]):
+            # Resources等の別セクションに到達したら終了
+            if sibling.get_text(strip=True) in ("Resources",):
+                break
+
+            title = sibling.get_text(strip=True)
+            if not title:
+                continue
+
+            a_tag = sibling.find("a", href=True) or sibling.find_parent("a", href=True)
+            link  = a_tag["href"] if a_tag else GOOGLE_PLAY_POLICY_CENTER_URL
+            if link.startswith("/"):
+                link = f"https://play.google{link}"
+
+            desc_tag = sibling.find_next_sibling("p")
+            desc = strip_html(desc_tag.get_text(" ", strip=True)) if desc_tag else ""
+
+            articles.append({
+                "fw_id":       feed["id"],
+                "fw_name":     feed["name"],
+                "fw_icon":     feed["icon"],
+                "fw_color":    feed["color"],
+                "id":          link if link != GOOGLE_PLAY_POLICY_CENTER_URL else f"{link}#{title}",
+                "title":       title,
+                "link":        link,
+                "pub_date":    now_iso,
+                "description": desc,
+                "summary_ja":  None,
+                "fetched_at":  now_iso,
+            })
+
+            if len(articles) >= MAX_PER_FEED:
+                break
+
+        print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (Developer Policy Center, scraping)")
+        return articles
+    except Exception as e:
+        print(f"  ⚠ Google Play Policy Center スクレイピング失敗: {e}", file=sys.stderr)
+        return []
+
 # ── RSS 取得 ──────────────────────────────────────────────────────────────────
 
 def fetch_feed(feed: dict) -> list[dict]:
@@ -457,6 +591,8 @@ def fetch_feed(feed: dict) -> list[dict]:
         return fetch_tauri_releases(feed)
     if feed["id"] == "crux":
         return fetch_crux_releases(feed)
+    if feed["id"] == "google-play":
+        return fetch_google_play_deadlines(feed)
 
     try:
         headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
