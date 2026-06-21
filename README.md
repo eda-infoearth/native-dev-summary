@@ -23,7 +23,7 @@ Test implementation an app like a `samari.news`.
   - Dioxus
   - Crux
 
-### Planed
+### Planned
 
 - OS update
 - Application development guideline
