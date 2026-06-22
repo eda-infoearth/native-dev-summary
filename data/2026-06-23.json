@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/how-we-built-a-flutter-powered-ai-coffee-shop-878c60a11f1a?source=rss----4da7dfd21a33---4",
+    "title": "How we built a Flutter-powered AI coffee shop",
+    "link": "https://blog.flutter.dev/how-we-built-a-flutter-powered-ai-coffee-shop-878c60a11f1a?source=rss----4da7dfd21a33---4",
+    "pub_date": "Mon, 22 Jun 2026 15:16:53 GMT",
+    "description": "Dash sits on a coffee shop’s checkout counter drinking a latte with the Flutter logo printed on top If you start giving away coffee, people will show up. The Flutter team had been trying for a while to find a way to put this principle to work with a demo that started with a Flutter app and ended with a hot, tasty beverage. The problem was how to make it more interesting, more personal than just taking orders and delivering. Coffee’s cool, but it’s not The One Thing You Definitely Remember from Google I/O cool. So what changed? Two new bits of tech arrived on scene. One is Nano Banana, with its ability to quickly generate customized images. The second is GenUI, with its ability to generate UX dynamically at runtime and offer attendees personally tailored questions about how they’d like to m",
+    "summary_ja": "Flutter チームが Google I/O で展示したデモでは、Nano Banana による動的な画像生成と GenUI によるランタイム UI 生成を組み合わせ、ユーザーの好みに応じてパーソナライズされたコーヒー注文体験を実現しました。この統合により、単なる注文アプリから、ユーザーの嗜好に合わせた個別対応のインタラクティブな体験へと進化させることができます。",
+    "fetched_at": "2026-06-22T23:27:46.113033+00:00"
+  }
+]
