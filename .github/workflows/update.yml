@@ -28,6 +28,7 @@ jobs:
       - name: Fetch, summarize, and update
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SITE_URL: ${{ secrets.SITE_URL }}
         run: python scripts/fetch_and_summarize.py
 
