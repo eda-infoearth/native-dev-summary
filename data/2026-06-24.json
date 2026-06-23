@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=e2lxw9l1",
+    "title": "Design kits for iOS, iPadOS, and macOS 27 are here",
+    "link": "https://developer.apple.com/news/?id=e2lxw9l1",
+    "pub_date": "Tue, 23 Jun 2026 14:00:01 PDT",
+    "description": "Apple design kits for Figma and Sketch are now available for iOS, iPadOS, and macOS 27. These include: Updates to Liquid Glass Expanded component and state support Naming changes to better align with code Improved resizing The addition of Dark Mode for macOS Download the design kits from the Apple Design Resources",
+    "summary_ja": "iOS、iPadOS、macOS 27向けのApple設計キットがFigmaおよびSketchで利用可能になりました。Liquid Glassコンポーネントの拡張、状態サポートの追加、コードとの命名規則の統一、リサイズ機能の改善、macOSのダークモード対応などが主な更新内容です。Apple Design Resourcesからダウンロード可能です。",
+    "fetched_at": "2026-06-23T23:22:22.399441+00:00"
+  }
+]
