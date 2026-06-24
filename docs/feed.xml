@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 24 Jun 2026 08:22:24 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 08:22:43 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Maestro testing: insights, clearer results, and faster retries</title>
+      <link>https://expo.dev/changelog/maestro-testing-improvements</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/maestro-testing-improvements</guid>
+      <pubDate>Wed, 24 Jun 2026 23:00:00 +0900</pubDate>
+      <description>Maestroの新しいInsightsダッシュボードにより、E2Eテストの実行履歴を可視化でき、不安定なテストの特定や回帰の時期を把握できるようになりました。テストの成功率の推移、フローの信頼性、再試行の必要性などをログを掘り下げることなく確認でき、デバッグと改善の効率が大幅に向上します。</description>
+    </item>
     <item>
       <title>🍎 App Store — Design kits for iOS, iPadOS, and macOS 27 are here</title>
       <link>https://developer.apple.com/news/?id=e2lxw9l1</link>

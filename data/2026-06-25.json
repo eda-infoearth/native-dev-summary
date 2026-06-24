@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/maestro-testing-improvements",
+    "title": "Maestro testing: insights, clearer results, and faster retries",
+    "link": "https://expo.dev/changelog/maestro-testing-improvements",
+    "pub_date": "2026-06-24T14:00:00.000Z",
+    "description": "Introducing a new insights dashboard, showing you how every Maestro end-to-end test run performed over time, across your whole team. Identify flakey tests, see when regressions were introduced, and stop scrolling through endless logs. Your end-to-end tests pass, until they don't. When a Maestro end-to-end (E2E) test fails, acting on it usually means digging through logs to find out what broke, re-running your whole suite to retry one flaky test, and guessing whether things are getting better over time. Maestro insights Maestro insights collects and visualizes how your Maestro tests perform over time, right in your project's Insights tab. It surfaces: Trends: Maestro runs and pass rate across all your flows over time Flaky flows identification: flows that pass only after a retry, so you can",
+    "summary_ja": "Maestroの新しいInsightsダッシュボードにより、E2Eテストの実行履歴を可視化でき、不安定なテストの特定や回帰の時期を把握できるようになりました。テストの成功率の推移、フローの信頼性、再試行の必要性などをログを掘り下げることなく確認でき、デバッグと改善の効率が大幅に向上します。",
+    "fetched_at": "2026-06-24T23:22:32.665752+00:00"
+  }
+]
