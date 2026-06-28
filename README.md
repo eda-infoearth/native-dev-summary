@@ -22,12 +22,14 @@ Test implementation an app like a `samari.news`.
   - Tauri
   - Dioxus
   - Crux
+- Application store guideline
+  - Apple
+  - Google
 
 ### Planned
 
 - OS update
 - Application development guideline
-- Application store guideline
 
 ---
 
