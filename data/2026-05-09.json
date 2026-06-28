@@ -1,5 +1,31 @@
 [
   {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.9",
+    "title": "v0.7.9",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.9",
+    "pub_date": "2026-05-08T00:29:16Z",
+    "description": "This release fixes an issue where dx --version would use an outdated git SHA, and dioxus-cli installed from cargo install would not have a version at all, preventing self-update from functioning properly. Full Changelog : v0.7.8...v0.7.9",
+    "summary_ja": "dx --versionコマンドが古いgit SHAを使用していた問題と、cargo installでインストールしたdioxus-cliがバージョン情報を持たないため自動更新が機能しない問題を修正しました。このリリースはバージョン管理とセルフアップデート機能の改善に焦点を当てています。",
+    "fetched_at": "2026-06-28T07:28:50.082221+00:00"
+  },
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.8",
+    "title": "v0.7.8",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.8",
+    "pub_date": "2026-05-07T23:03:15Z",
+    "description": "This release fixes a few small bugs discovered while working on v0.8. We decided the backport these to bring out fixes faster. What's Changed Fix macos signing/notarization (0.7 backport) by @nicoburns in #5528 fix: toctou in wasm hotpatch apply_patch causing UB by @jkelleyrtp in #5534 backport iframe fix to v0.7 by @jkelleyrtp in #5535 Full Changelog : v0.7.7...v0.7.8",
+    "summary_ja": "Dioxos v0.7.8はv0.8開発中に発見されたバグの修正を複数バックポートしたリリースです。macOSの署名・公証機能の修正、wasmホットパッチ適用時のUB（未定義動作）の修正、iframeの修正が含まれています。",
+    "fetched_at": "2026-06-28T07:28:50.082237+00:00"
+  },
+  {
     "fw_id": "crux",
     "fw_name": "Crux",
     "fw_icon": "🦞",

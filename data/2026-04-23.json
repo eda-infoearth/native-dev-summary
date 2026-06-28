@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.6",
+    "title": "v0.7.6",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.6",
+    "pub_date": "2026-04-22T02:04:39Z",
+    "description": "Dioxus v0.7.6 This release solves a large number of bugs and adds a few new features! We intend for it to be the final release of 0.7 - our git repo will now ship breaking changes in prep for 0.8. Shell-completions for dx using dx completions Much faster dev server starts for dx serve --hotpatch Dioxus web apps that panic while handling events will no longer brick the webpage 20+ new code examples cursor editor debug support Windows app icon bundling in dx serve and dx bundle What's Changed Fix too restrictive Clone bounds in props with generics by @Gohla in #5451 fix: ensure file type bit is set for rpm bundle by @acrilique in #5459 Fix autofill event downcast - ignore events of the wrong type by @ealmloff in #5379 Add shell-completions for dx by @sermuns in #5232 fix(autofmt): add suppor",
+    "summary_ja": "Dioxus v0.7.6は、dx completionsコマンドによるシェル補完機能の追加、dx serve --hotpatchでの開発サーバー起動の高速化、イベント処理中のパニックによるウェブページの破損回避など、複数のバグ修正と新機能を含む0.7系の最終リリースです。Windows アプリアイコンバンドル機能やカーソルエディタのデバッグサポートも新たに追加されました。このリリース以降、メインリポジトリは0.8に向けた破壊的変更を含む開発に移行します。",
+    "fetched_at": "2026-06-28T07:31:09.968182+00:00"
+  }
+]

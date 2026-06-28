@@ -65,7 +65,7 @@ FEEDS = [
     {"id": "expo",         "name": "Expo",         "icon": "🚀", "color": "#aaaaff", "url": None},  # スクレイピング
     {"id": "electron",     "name": "Electron",     "icon": "⚡", "color": "#9FEAF9", "url": "https://www.electronjs.org/blog/rss.xml"},
     {"id": "tauri",        "name": "Tauri",        "icon": "🦀", "color": "#FFC131", "url": None},  # スクレイピング
-    {"id": "dioxus",       "name": "Dioxus",       "icon": "🧩", "color": "#EB4E3D", "url": "https://dioxuslabs.com/blog/rss.xml"},
+    {"id": "dioxus",       "name": "Dioxus",       "icon": "🧩", "color": "#EB4E3D", "url": None},  # GitHub Releases atom
     {"id": "flet",         "name": "Flet",         "icon": "🐟", "color": "#00D4AA", "url": "https://flet.dev/blog/rss.xml"},
     {"id": "crux",         "name": "Crux",         "icon": "🦞", "color": "#E05A4E", "url": None},  # GitHub Releases atom
     {"id": "google-play",  "name": "Google Play",  "icon": "▶️", "color": "#01875F", "url": None},  # スクレイピング
@@ -76,6 +76,7 @@ EXPO_CHANGELOG_URL    = "https://expo.dev/changelog"
 TAURI_RELEASE_URL     = "https://v2.tauri.app/release/"
 TAURI_VERSIONS_PATH   = DATA_DIR / "tauri_versions.json"
 CRUX_RELEASES_ATOM    = "https://github.com/redbadger/crux/releases.atom"
+DIOXUS_RELEASES_ATOM  = "https://github.com/DioxusLabs/dioxus/releases.atom"
 GOOGLE_PLAY_DEADLINES_URL     = "https://support.google.com/googleplay/android-developer/table/12921780?hl=en"
 GOOGLE_PLAY_POLICY_CENTER_URL = "https://play.google/developer-content-policy/"
 
@@ -452,6 +453,56 @@ def fetch_crux_releases(feed: dict) -> list[dict]:
         print(f"  ⚠ {feed['name']} フィード取得失敗: {e}", file=sys.stderr)
         return []
 
+# ── Dioxus GitHub Releases ───────────────────────────────────────────────────
+
+def fetch_dioxus_releases(feed: dict) -> list[dict]:
+    """
+    github.com/DioxusLabs/dioxus/releases.atom から各リリースを1記事として取得。
+    Cruxと違い単一リポジトリのため、複数リリースをまとめるグルーピングは行わない。
+    本文は content/summary フィールド（HTML）を strip_html で使用。
+    日付は updated フィールドを使用。
+    """
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
+    try:
+        resp = requests.get(DIOXUS_RELEASES_ATOM, headers=headers, timeout=15)
+        resp.raise_for_status()
+        parsed = feedparser.parse(resp.text)
+
+        articles = []
+        for entry in parsed.entries:
+            title = entry.get("title", "").strip()
+            if not title:
+                continue
+            link     = entry.get("link", "")
+            pub_date = entry.get("updated", entry.get("published", ""))
+            desc     = strip_html(
+                (entry.get("content") or [{}])[0].get("value", "")
+                or entry.get("summary", "")
+            )
+
+            articles.append({
+                "fw_id":       feed["id"],
+                "fw_name":     feed["name"],
+                "fw_icon":     feed["icon"],
+                "fw_color":    feed["color"],
+                "id":          link,
+                "title":       title,
+                "link":        link,
+                "pub_date":    pub_date,
+                "description": desc,
+                "summary_ja":  None,
+                "fetched_at":  datetime.now(timezone.utc).isoformat(),
+            })
+
+            if len(articles) >= MAX_PER_FEED:
+                break
+
+        print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (GitHub Releases atom)")
+        return articles
+    except Exception as e:
+        print(f"  ⚠ {feed['name']} フィード取得失敗: {e}", file=sys.stderr)
+        return []
+
 # ── Google Play ポリシー更新 スクレイピング ──────────────────────────────────
 
 GOOGLE_PLAY_ANNOUNCED_RE = re.compile(r"Announced\s+(\d{4}-\d{2}-\d{2})")
@@ -591,6 +642,8 @@ def fetch_feed(feed: dict) -> list[dict]:
         return fetch_tauri_releases(feed)
     if feed["id"] == "crux":
         return fetch_crux_releases(feed)
+    if feed["id"] == "dioxus":
+        return fetch_dioxus_releases(feed)
     if feed["id"] == "google-play":
         return fetch_google_play_deadlines(feed)
 

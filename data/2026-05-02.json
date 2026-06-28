@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.7",
+    "title": "v0.7.7",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.7",
+    "pub_date": "2026-05-01T01:18:10Z",
+    "description": "This release fixes a regression with JS bundling where DX would always bundle JS snippets as ESM, even though they might be CJS, UMD, or a generic JS snippet. We now properly detect the js module type and then run esbuild with the appropriate flags. What's Changed autodetect js module type - only bundle esm by @jkelleyrtp in #5515 Full Changelog : v0.7.6...v0.7.7",
+    "summary_ja": "Dioxus v0.7.7ではJSバンドリングの回帰を修正し、JavaScriptスニペットのモジュール型（ESM、CJS、UMD等）を自動検出して、適切なesbuildフラグで処理するようになりました。これまでのリリースではすべてESMとしてバンドルされていた問題が解決されます。",
+    "fetched_at": "2026-06-28T07:30:44.622299+00:00"
+  }
+]

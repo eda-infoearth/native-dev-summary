@@ -5,7 +5,7 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 28 Jun 2026 08:19:45 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 16:35:17 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
@@ -142,6 +142,13 @@
       <description>Flutter 3.44では、Android向けHybrid Composition++、iOS/macOSのSwift Package Manager標準化、Impellerの改善されたVulkan対応が実装されました。デスクトップ向けマルチウィンドウサポートのプレビュー、MaterialとCupertinoのコアフレームワークからの分離、GenUIによるエージェント向けUX、Agentic Hot Reloadによる開発体験の向上が新たに追加されています。これらにより、自動車やスマートディスプレイなど多様なデバイスへの対応が強化されました。</description>
     </item>
     <item>
+      <title>🧩 Dioxus — v0.8.0-alpha.0</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.0</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.0</guid>
+      <pubDate>Wed, 20 May 2026 05:17:18 +0900</pubDate>
+      <description>Dioxus v0.8.0-alpha.0は、内部APIの破壊的変更とシグナル機能の信頼性・パフォーマンス向上を含む0.8シリーズの第一弾です。dioxus-nativeは大幅に改善され、レンダリング機能の拡張やカスタム要素対応などが実装されています。ソースからビルドする場合は`--locked`フラグでCLIをインストールする必要があり、この制限は今後解決予定です。</description>
+    </item>
+    <item>
       <title>🐦 Flutter — Flutter’s multiplatform value for agentic development</title>
       <link>https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4</link>
       <guid isPermaLink="true">https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4</guid>
@@ -168,6 +175,20 @@
       <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-85-release-announcement</guid>
       <pubDate>Mon, 11 May 2026 09:00:00 +0900</pubDate>
       <description>Flet 0.85.0では、@ft.componentアプリ向けに宣言型ルーターが実装され、ネストされたルート・動的セグメント・データローダーなどが利用可能になりました。また、ft.use_dialog()フックにより、ダイアログが従来の命令型のpage.show_dialog()から反応型の状態管理に変更され、動画再生の設定可能なコントロール・スクリーンショット機能、オーディオレコーダーのPCM16ストリーミング機能が追加されています。</description>
+    </item>
+    <item>
+      <title>🧩 Dioxus — v0.7.9</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.9</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.9</guid>
+      <pubDate>Fri, 08 May 2026 09:29:16 +0900</pubDate>
+      <description>dx --versionコマンドが古いgit SHAを使用していた問題と、cargo installでインストールしたdioxus-cliがバージョン情報を持たないため自動更新が機能しない問題を修正しました。このリリースはバージョン管理とセルフアップデート機能の改善に焦点を当てています。</description>
+    </item>
+    <item>
+      <title>🧩 Dioxus — v0.7.8</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.8</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.8</guid>
+      <pubDate>Fri, 08 May 2026 08:03:15 +0900</pubDate>
+      <description>Dioxos v0.7.8はv0.8開発中に発見されたバグの修正を複数バックポートしたリリースです。macOSの署名・公証機能の修正、wasmホットパッチ適用時のUB（未定義動作）の修正、iframeの修正が含まれています。</description>
     </item>
     <item>
       <title>🦞 Crux — crux_time-v0.16.0 / crux_platform-v0.9.0 / crux_macros-v0.9.0 / crux_kv-v0.12.0 / crux_http-v0.17.0 / crux_core-v0.18.0 / crux_cli-v0.3.0</title>
@@ -212,6 +233,13 @@
       <description>Expo Go SDK 55はApple App Storeの承認待ち中であり、リリース時期は未定です。当面はSDK 54がApp StoreとPlay Storeで利用可能ですが、本番運用目的の場合は、より強力な開発ビルドへの移行を推奨しています。</description>
     </item>
     <item>
+      <title>🧩 Dioxus — v0.7.7</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.7</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.7</guid>
+      <pubDate>Fri, 01 May 2026 10:18:10 +0900</pubDate>
+      <description>Dioxus v0.7.7ではJSバンドリングの回帰を修正し、JavaScriptスニペットのモジュール型（ESM、CJS、UMD等）を自動検出して、適切なesbuildフラグで処理するようになりました。これまでのリリースではすべてESMとしてバンドルされていた問題が解決されます。</description>
+    </item>
+    <item>
       <title>🚀 Expo — Gradle cache for Android builds</title>
       <link>https://expo.dev/changelog/gradle-cache</link>
       <guid isPermaLink="true">https://expo.dev/changelog/gradle-cache</guid>
@@ -238,6 +266,13 @@
       <guid isPermaLink="true">https://expo.dev/changelog/sign-in-with-github</guid>
       <pubDate>Fri, 24 Apr 2026 05:30:11 +0900</pubDate>
       <description>ExpoがGitHubアカウントでのサインイン機能を追加しました。この機能を利用するにはメールアドレス閲覧の権限許可が必要で、既存ユーザーには2026年4月23日にGitHubから権限リクエストメールが送信されています。既存のGitHub連携機能には影響なく、この権限リクエストは無視しても問題ありません。</description>
+    </item>
+    <item>
+      <title>🧩 Dioxus — v0.7.6</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.6</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.6</guid>
+      <pubDate>Wed, 22 Apr 2026 11:04:39 +0900</pubDate>
+      <description>Dioxus v0.7.6は、dx completionsコマンドによるシェル補完機能の追加、dx serve --hotpatchでの開発サーバー起動の高速化、イベント処理中のパニックによるウェブページの破損回避など、複数のバグ修正と新機能を含む0.7系の最終リリースです。Windows アプリアイコンバンドル機能やカーソルエディタのデバッグサポートも新たに追加されました。このリリース以降、メインリポジトリは0.8に向けた破壊的変更を含む開発に移行します。</description>
     </item>
     <item>
       <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）</title>
@@ -322,20 +357,6 @@
       <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-81-release-announcement</guid>
       <pubDate>Tue, 24 Feb 2026 09:00:00 +0900</pubDate>
       <description>Flet 0.81.0がリリースされ、Camera、CodeEditor、PageView、色選択ツール、RotatedBoxなどの新コントロールが追加されました。Hero animationやMatrix4トランスフォーム、クリップボードAPI（画像・ファイル対応）、Web FilePicker、プラットフォームロケール情報などが新たに実装されています。アップグレードはpip install &apos;flet[all]&apos; --upgradeまたはuvコマンドで実行可能です。</description>
-    </item>
-    <item>
-      <title>⚛️ React Native — React Native 0.84 - Hermes V1 by Default</title>
-      <link>https://reactnative.dev/blog/2026/02/11/react-native-0.84</link>
-      <guid isPermaLink="true">https://reactnative.dev/blog/2026/02/11/react-native-0.84</guid>
-      <pubDate>Wed, 11 Feb 2026 09:00:00 +0900</pubDate>
-      <description>React Native 0.84では、Hermes V1がデフォルトのJavaScriptエンジンになり、全アプリのパフォーマンスが大幅に向上します。iOSのプリコンパイルバイナリがデフォルト化され、レガシーアーキテクチャが削除され、Node.js 22が最小要件になりました。</description>
-    </item>
-    <item>
-      <title>⚡ Electron — Electron 40.0.0</title>
-      <link>https://electronjs.org/blog/electron-40-0</link>
-      <guid isPermaLink="true">https://electronjs.org/blog/electron-40-0</guid>
-      <pubDate>Tue, 13 Jan 2026 09:00:00 +0900</pubDate>
-      <description>Electron 40.0.0がリリースされ、Chromium 144.0.7559.60、V8 14.4、Node 24.11.1へのアップグレードが含まれています。主な変更点はChromium 142からの更新、Node.jsのv22.20.0からv24.11.1への昇格、V8の14.2から14.4への更新です。詳細な新機能や改善点については記事に記載されていますが、要約には明示されていません。</description>
     </item>
   </channel>
 </rss>

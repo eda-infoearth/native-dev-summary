@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.0",
+    "title": "v0.8.0-alpha.0",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.0",
+    "pub_date": "2026-05-19T20:17:18Z",
+    "description": "Dioxus v0.8.0-alpha.0 This release is the first in the 0.8 series. We've merged a number of breaking changes to internal APIs and slight behavior changes that improve reliability and performance of the CLI and Signals. We also are shipping a huge quality upgrade to dioxus-native, with lots more rendering capabilities, incremental rendering, custom elements, and more. Make sure to check out the blitz talk from Rustweek 2026 for more updates on blitz! Blitz rendering the rustweek talk schedule in the new browser app: This is the first of the 0.8 cycle, expect more feature-packed releases coming soon. Note that due to changes upstream, the cli must be installed via --locked if you wish to build from source. We hope to have this resolved soon. What's Changed Port dioxus to use objc2 for intera",
+    "summary_ja": "Dioxus v0.8.0-alpha.0は、内部APIの破壊的変更とシグナル機能の信頼性・パフォーマンス向上を含む0.8シリーズの第一弾です。dioxus-nativeは大幅に改善され、レンダリング機能の拡張やカスタム要素対応などが実装されています。ソースからビルドする場合は`--locked`フラグでCLIをインストールする必要があり、この制限は今後解決予定です。",
+    "fetched_at": "2026-06-28T07:27:39.606518+00:00"
+  }
+]
