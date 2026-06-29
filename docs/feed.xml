@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 29 Jun 2026 08:20:33 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 08:19:38 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐦 Flutter — Vibe once, run anywhere with Antigravity and Flutter</title>
+      <link>https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4</link>
+      <guid isPermaLink="true">https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4</guid>
+      <pubDate>Tue, 30 Jun 2026 01:01:02 +0900</pubDate>
+      <description>FlutterとGoogle Antigravityを使用してゲーム開発、アセット生成、マーケティングページ作成、デプロイメントを全てAIエージェントで自動化するワークフローを紹介しています。従来の出力確認中心から、AIモデルの高度化に伴い概念的な目標設定に重点を置き、詳細な実装はエージェントに委譲するアジャイル開発へのシフトを実践例で示しています。</description>
+    </item>
     <item>
       <title>🚀 Expo — Maestro testing: insights, clearer results, and faster retries</title>
       <link>https://expo.dev/changelog/maestro-testing-improvements</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest</guid>
       <pubDate>Tue, 24 Feb 2026 09:00:00 +0900</pubDate>
       <description>React Confiterative 2025でMeta Quest向けのReact Native公式サポートが発表され、開発者は既存の知識とツールを活用してVRアプリを構築・配信できるようになりました。React Nativeのクロスプラットフォーム対応がAndroid/iOSから拡大し、Meta Questデバイスでも同じパターンで開発可能です。開発ビルド、ネイティブ機能、プラットフォーム固有の設定など、Meta Quest向け開発を開始するための具体的なガイドが提供されています。</description>
-    </item>
-    <item>
-      <title>🐟 Flet — Flet 0.81.0: Camera, CodeEditor, color pickers and more</title>
-      <link>https://flet.dev/blog/flet-v-0-81-release-announcement</link>
-      <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-81-release-announcement</guid>
-      <pubDate>Tue, 24 Feb 2026 09:00:00 +0900</pubDate>
-      <description>Flet 0.81.0がリリースされ、Camera、CodeEditor、PageView、色選択ツール、RotatedBoxなどの新コントロールが追加されました。Hero animationやMatrix4トランスフォーム、クリップボードAPI（画像・ファイル対応）、Web FilePicker、プラットフォームロケール情報などが新たに実装されています。アップグレードはpip install &apos;flet[all]&apos; --upgradeまたはuvコマンドで実行可能です。</description>
     </item>
   </channel>
 </rss>

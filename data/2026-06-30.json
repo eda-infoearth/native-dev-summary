@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flutter",
+    "fw_name": "Flutter",
+    "fw_icon": "🐦",
+    "fw_color": "#54C5F8",
+    "id": "https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4",
+    "title": "Vibe once, run anywhere with Antigravity and Flutter",
+    "link": "https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4",
+    "pub_date": "Mon, 29 Jun 2026 16:01:02 GMT",
+    "description": "co-authored with Rody Davis Coding agents and the way we use them has already dramatically evolved since their arrival just a handful of months ago. Initially, the focus was heavily on observation — reviewing every single output line by line. But as models rapidly increased in capability, the industry shifted toward true agentic engineering. Today, developers, PMs, and designers are wearing multiple hats, focusing on lofty conceptual goals and letting agents tackle the individual components. To explore this new frontier, our team wanted to build an experience that showcased this exact workflow. We wanted to build a game, generate its assets, write the marketing page, and deploy the whole thing, all using Google’s premiere AI-native platform: Antigravity. Antigravity brings the best of Goog",
+    "summary_ja": "FlutterとGoogle Antigravityを使用してゲーム開発、アセット生成、マーケティングページ作成、デプロイメントを全てAIエージェントで自動化するワークフローを紹介しています。従来の出力確認中心から、AIモデルの高度化に伴い概念的な目標設定に重点を置き、詳細な実装はエージェントに委譲するアジャイル開発へのシフトを実践例で示しています。",
+    "fetched_at": "2026-06-29T23:19:28.268939+00:00"
+  }
+]
