@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 30 Jun 2026 08:19:38 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 08:25:32 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Expo SDK 57</title>
+      <link>https://expo.dev/changelog/sdk-57</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/sdk-57</guid>
+      <pubDate>Wed, 01 Jul 2026 05:00:00 +0900</pubDate>
+      <description>Expo SDK 57はReact Native 0.86をもたらす小規模でフォーカスされたリリースで、SDK 56からの最小限の非破壊的アップグレードを実現しています。主な改善点はAndroidのエッジツーエッジサポートの修正、ライト/ダークモードエミュレーション機能の強化、そしてReactバージョンはSDK 56と同じReact 19.2のままです。React Native 0.86は0.85との互換性を保つため、詳細はReact Native公式リリースノートで確認することを推奨します。</description>
+    </item>
+    <item>
+      <title>🦀 Tauri — tauri v2.11.4</title>
+      <link>https://v2.tauri.app/release/tauri/v2.11.4/</link>
+      <guid isPermaLink="true">https://v2.tauri.app/release/tauri/v2.11.4/</guid>
+      <pubDate>Wed, 01 Jul 2026 00:14:31 +0900</pubDate>
+      <description>Tauri v2.11.4では、tauri-runtime-wryが2.11.4にアップグレードされました。また、cookieが使用するtimeライブラリを0.3.52にピン留めして、コンパイルエラーを回避しています。これは依存関係の安定性向上と既知の互換性問題への対処です。</description>
+    </item>
     <item>
       <title>🐦 Flutter — Vibe once, run anywhere with Antigravity and Flutter</title>
       <link>https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://electronjs.org/blog/tech-talk-wayland</guid>
       <pubDate>Tue, 17 Mar 2026 09:00:00 +0900</pubDate>
       <description>ElectronがLinux上でWaylandネイティブ対応に移行し、Chromiumのデフォルト有効化に伴い、多くのLinuxデスクトップアプリが自動的にWaylandで動作するようになりました。開発者は既存アプリがWaylandで正常に動作するか確認し、必要に応じて互換性の問題に対応する必要があります。</description>
-    </item>
-    <item>
-      <title>⚡ Electron — Electron 41</title>
-      <link>https://electronjs.org/blog/electron-41-0</link>
-      <guid isPermaLink="true">https://electronjs.org/blog/electron-41-0</guid>
-      <pubDate>Tue, 10 Mar 2026 09:00:00 +0900</pubDate>
-      <description>Electron 41がリリースされ、Chromium 146.0.7680.65、V8 14.6、Node v24.14.0にアップグレードされました。macOS向けにASAR Integrity digestによるセキュリティ強化が追加されました。アップグレード時は初期版の41.0.0ではなく、高優先度バグが修正された41.0.2以上のインストールが推奨されています。</description>
-    </item>
-    <item>
-      <title>⚛️ React Native — React Native Comes to Meta Quest</title>
-      <link>https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest</link>
-      <guid isPermaLink="true">https://reactnative.dev/blog/2026/02/24/react-native-comes-to-meta-quest</guid>
-      <pubDate>Tue, 24 Feb 2026 09:00:00 +0900</pubDate>
-      <description>React Confiterative 2025でMeta Quest向けのReact Native公式サポートが発表され、開発者は既存の知識とツールを活用してVRアプリを構築・配信できるようになりました。React Nativeのクロスプラットフォーム対応がAndroid/iOSから拡大し、Meta Questデバイスでも同じパターンで開発可能です。開発ビルド、ネイティブ機能、プラットフォーム固有の設定など、Meta Quest向け開発を開始するための具体的なガイドが提供されています。</description>
     </item>
   </channel>
 </rss>

@@ -19,6 +19,7 @@
   "https://electronjs.org/blog/electron-40-0",
   "https://electronjs.org/blog/electron-41-0",
   "https://electronjs.org/blog/electron-42-0",
+  "https://electronjs.org/blog/electron-43-0",
   "https://electronjs.org/blog/tech-talk-wayland",
   "https://electronjs.org/blog/tech-talk-window-resize-behavior",
   "https://expo.dev/changelog/eas-internal-ios-ci-workflows",
@@ -28,6 +29,7 @@
   "https://expo.dev/changelog/maestro-testing-improvements",
   "https://expo.dev/changelog/sdk-56",
   "https://expo.dev/changelog/sdk-56-beta",
+  "https://expo.dev/changelog/sdk-57",
   "https://expo.dev/changelog/sign-in-with-github",
   "https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan",
   "https://flet.dev/blog/2026-05-28-flet-studio",
@@ -56,5 +58,6 @@
   "https://support.google.com/googleplay/android-developer/answer/13986130#2026-10-28",
   "https://v2.tauri.app/release/tauri/v2.11.1/",
   "https://v2.tauri.app/release/tauri/v2.11.2/",
-  "https://v2.tauri.app/release/tauri/v2.11.3/"
+  "https://v2.tauri.app/release/tauri/v2.11.3/",
+  "https://v2.tauri.app/release/tauri/v2.11.4/"
 ]

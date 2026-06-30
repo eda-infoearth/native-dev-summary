@@ -1,0 +1,28 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/sdk-57",
+    "title": "Expo SDK 57",
+    "link": "https://expo.dev/changelog/sdk-57",
+    "pub_date": "2026-06-30T20:00:00.000Z",
+    "description": "Today we're announcing the release of Expo SDK 57. This is a small, focused release: it brings React Native 0.86 to Expo. We intend for this to be the easiest Expo SDK upgrade you've ever made. It represents a possible shift towards a new Expo SDK release cadence that could provide you with simple non-breaking upgrades in between more significant releases. React Native 0.86 SDK 57 upgrades React Native from 0.85 to 0.86. The React version is unchanged from SDK 56 — both SDK 56 and SDK 57 use React 19.2. React Native 0.86 is intended to have no breaking changes from 0.85. To decide whether it's worth upgrading your app, refer to the React Native 0.86 release notes for the full picture. Highlights include: fixes and improvements to edge-to-edge support on Android , light/dark mode emulation ",
+    "summary_ja": "Expo SDK 57はReact Native 0.86をもたらす小規模でフォーカスされたリリースで、SDK 56からの最小限の非破壊的アップグレードを実現しています。主な改善点はAndroidのエッジツーエッジサポートの修正、ライト/ダークモードエミュレーション機能の強化、そしてReactバージョンはSDK 56と同じReact 19.2のままです。React Native 0.86は0.85との互換性を保つため、詳細はReact Native公式リリースノートで確認することを推奨します。",
+    "fetched_at": "2026-06-30T23:25:21.426900+00:00"
+  },
+  {
+    "fw_id": "tauri",
+    "fw_name": "Tauri",
+    "fw_icon": "🦀",
+    "fw_color": "#FFC131",
+    "id": "https://v2.tauri.app/release/tauri/v2.11.4/",
+    "title": "tauri v2.11.4",
+    "link": "https://v2.tauri.app/release/tauri/v2.11.4/",
+    "pub_date": "2026-06-30T15:14:31Z",
+    "description": "tauri@2.11.4 Return View on GitHub Dependencies Section titled “Dependencies” Upgraded to tauri-runtime-wry@2.11.4 0299da0d3 ( #15616 by @Legend-Master ) Pinning time to 0.3.52 used by cookie to mitigate a compilation error, see https://github.com/tauri-apps/tauri/issues/15615 https://github.com/rwf2/cookie-rs/issues/255 Edit page Previous Overview Next 2.11.3 Support on Open Collective Sponsor on GitHub © 2026 Tauri Contributors. CC-BY / MIT",
+    "summary_ja": "Tauri v2.11.4では、tauri-runtime-wryが2.11.4にアップグレードされました。また、cookieが使用するtimeライブラリを0.3.52にピン留めして、コンパイルエラーを回避しています。これは依存関係の安定性向上と既知の互換性問題への対処です。",
+    "fetched_at": "2026-06-30T23:25:27.378456+00:00"
+  }
+]
