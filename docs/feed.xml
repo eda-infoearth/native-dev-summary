@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 01 Jul 2026 08:25:32 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 08:26:41 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐦 Flutter — Learning faster with Antigravity</title>
+      <link>https://blog.flutter.dev/learning-faster-with-antigravity-cd735bfe44e7?source=rss----4da7dfd21a33---4</link>
+      <guid isPermaLink="true">https://blog.flutter.dev/learning-faster-with-antigravity-cd735bfe44e7?source=rss----4da7dfd21a33---4</guid>
+      <pubDate>Wed, 01 Jul 2026 13:08:53 +0900</pubDate>
+      <description>Flutterフロントエンド開発における、AI coding partner「Antigravity」を活用した学習方法を紹介しており、Python/ADKベースのバックエンド連携時の学習曲線を段階的なワークフローで克服できることが特徴です。単なるコード生成ではなく、開発者自身が理解しながら進めるアプローチにより、再利用可能なスキルセットを構築できます。</description>
+    </item>
     <item>
       <title>🚀 Expo — Expo SDK 57</title>
       <link>https://expo.dev/changelog/sdk-57</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.15.0</guid>
       <pubDate>Fri, 20 Mar 2026 19:12:52 +0900</pubDate>
       <description>要約失敗</description>
-    </item>
-    <item>
-      <title>⚡ Electron — Tech Talk: How Electron went Wayland-native, and what it means for your apps</title>
-      <link>https://electronjs.org/blog/tech-talk-wayland</link>
-      <guid isPermaLink="true">https://electronjs.org/blog/tech-talk-wayland</guid>
-      <pubDate>Tue, 17 Mar 2026 09:00:00 +0900</pubDate>
-      <description>ElectronがLinux上でWaylandネイティブ対応に移行し、Chromiumのデフォルト有効化に伴い、多くのLinuxデスクトップアプリが自動的にWaylandで動作するようになりました。開発者は既存アプリがWaylandで正常に動作するか確認し、必要に応じて互換性の問題に対応する必要があります。</description>
     </item>
   </channel>
 </rss>
