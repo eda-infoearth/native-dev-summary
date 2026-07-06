@@ -1,0 +1,28 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/sign-in-with-passkeys",
+    "title": "Sign in with passkeys",
+    "link": "https://expo.dev/changelog/sign-in-with-passkeys",
+    "pub_date": "2026-07-06T16:00:00.000Z",
+    "description": "You can now add passkeys to your Expo account and use them to sign in. They can be managed at expo.dev/settings#sign-in-methods . Passkeys are a primary authentication factor that is more secure than the combination of a password and OTP. Users who have 2FA enabled can use a passkey to sign in directly, without a second step. Passkeys are not available to SSO users, as their authentication is managed through their organization's identity provider. Learn more about passkeys at fidoalliance.org/passkeys .",
+    "summary_ja": "Expoアカウントにパスキーを追加でき、expo.dev/settings#sign-in-methodsで管理できるようになりました。パスキーはパスワード+OTPより安全な認証方式で、2FAを有効にしているユーザーは二段階認証なしで直接サインインできます。ただしSSO利用ユーザーはパスキーが使用できません。",
+    "fetched_at": "2026-07-06T23:56:28.382640+00:00"
+  },
+  {
+    "fw_id": "crux",
+    "fw_name": "Crux",
+    "fw_icon": "🦞",
+    "fw_color": "#E05A4E",
+    "id": "https://github.com/redbadger/crux/releases/tag/crux_http-v0.19.0",
+    "title": "crux_http v0.19.0",
+    "link": "https://github.com/redbadger/crux/releases/tag/crux_http-v0.19.0",
+    "pub_date": "2026-07-06T13:03:22Z",
+    "description": "[crux_http v0.19.0]\ncrux_http now builds on the standard http crate (v1.4) instead of the http-types fork. This is a breaking change. 📖 See the Migrating crux_http to native http types guide for a step-by-step walkthrough. 💥 Breaking changes crux_http::http re-exports the real http crate , not http-types . Method and StatusCode are now http 's (use Method::GET , StatusCode::UNAUTHORIZED , …). http-compat feature removed — native From / TryFrom conversions between crux_http types and http::Request Body / http::Response Body are now provided unconditionally. New crux_http::Body type replaces the async http_types::Body ; body-reading methods on RawResponse are now synchronous (drop the .await ). ResponseAsync renamed to RawResponse . insert_header / append_header take http::HeaderValue and return the evicted val",
+    "summary_ja": "crux_http v0.19.0は標準httpクレート(v1.4)へ移行し、http-typesフォークを廃止した破壊的変更です。MethodやStatusCodeは`http`クレートのものを使用し、http-compat機能は削除されました。また、新しい`crux_http::Body`型が導入され、RawResponse(旧ResponseAsync)のボディ読み取りメソッドは非同期から同期に変更されています。",
+    "fetched_at": "2026-07-06T23:56:37.782260+00:00"
+  }
+]
