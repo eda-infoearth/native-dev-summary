@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=grx7lcto",
+    "title": "Hello Developer: July 2026",
+    "link": "https://developer.apple.com/news/?id=grx7lcto",
+    "pub_date": "Tue, 07 Jul 2026 09:00:15 PDT",
+    "description": "In this edition: Try an all-new search tool on the Apple Developer website. Download design kits for Figma and Sketch. Explore the biggest updates from WWDC26 in new activities around the world and online. Read about Apple Design Award winners grug and Cyberpunk 2077. Browse the latest updates to the 27 platform releases, documentation, sample code, and release notes. Read now",
+    "summary_ja": "Apple Developer ウェブサイトの新しい検索ツール、FigmaとSketchの設計キット、WWDC26の最新アップデートを紹介しており、デベロッパーは27のプラットフォームリリース、ドキュメント、サンプルコード、リリースノートの最新情報を確認できます。Apple Design Award受賞アプリ「grug」と「Cyberpunk 2077」の事例も参考になります。",
+    "fetched_at": "2026-07-07T23:44:09.507406+00:00"
+  }
+]
