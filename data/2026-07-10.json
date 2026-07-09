@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=tlur8uvi",
+    "title": "Age rating questionnaire now includes social media questions",
+    "link": "https://developer.apple.com/news/?id=tlur8uvi",
+    "pub_date": "Thu, 09 Jul 2026 15:00:01 PDT",
+    "description": "As announced in June , new Time Allowances in iOS 27, iPadOS 27, and macOS 27, or later, give parents more flexible ways to manage the time their kids spend in apps across categories, including Entertainment, Games, and Social Media. To support this, the age rating questionnaire in App Store Connect now includes questions about your app’s social media capabilities. A social media capability is defined as the ability to redistribute, amplify, or interact with user-generated content through a social feed or similar discovery method. The Time Allowance category for Social Media is based on whether your app or game offers social media capabilities, regardless of the app category selected in App Store Connect. Apps with these capabilities will display a new Social Media content descriptor on th",
+    "summary_ja": "iOS 27以降の新機能「Time Allowances」で保護者がアプリの使用時間をカテゴリ別に管理できるようになるため、App Store Connectの年齢評価アンケートにソーシャルメディア機能に関する質問が追加されました。ソーシャルメディア機能とは、ユーザー生成コンテンツをフィードなどで再配信・増幅・交互作用させる機能を指し、アプリのカテゴリ選択に関わらず、この機能を備えていればソーシャルメディアコンテンツディスクリプタが表示されます。",
+    "fetched_at": "2026-07-09T23:56:37.257302+00:00"
+  }
+]

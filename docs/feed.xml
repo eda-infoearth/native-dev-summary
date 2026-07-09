@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 09 Jul 2026 08:58:40 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 08:56:39 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Age rating questionnaire now includes social media questions</title>
+      <link>https://developer.apple.com/news/?id=tlur8uvi</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=tlur8uvi</guid>
+      <pubDate>Fri, 10 Jul 2026 07:00:01 +0900</pubDate>
+      <description>iOS 27以降の新機能「Time Allowances」で保護者がアプリの使用時間をカテゴリ別に管理できるようになるため、App Store Connectの年齢評価アンケートにソーシャルメディア機能に関する質問が追加されました。ソーシャルメディア機能とは、ユーザー生成コンテンツをフィードなどで再配信・増幅・交互作用させる機能を指し、アプリのカテゴリ選択に関わらず、この機能を備えていればソーシャルメディアコンテンツディスクリプタが表示されます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Hello Developer: July 2026</title>
       <link>https://developer.apple.com/news/?id=grx7lcto</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Thu, 16 Apr 2026 03:31:01 +0900</pubDate>
       <description>Flutter公式サイト（dart.dev、flutter.dev、docs.flutter.dev）をJaspr（Dart製のオープンソースWebフレームワーク）で統一し、複数のツールの混在から脱却しました。これにより開発者はDart言語のみで貢献でき、開発体験が一貫性を持つようになりました。Dartを使ったWeb開発の新しい選択肢として、Jasprによる標準的なFlutter Webアプリ以外のWebサイト構築が可能になります。</description>
-    </item>
-    <item>
-      <title>⚛️ React Native — React Native 0.85 - New Animation Backend, New Jest Preset Package</title>
-      <link>https://reactnative.dev/blog/2026/04/07/react-native-0.85</link>
-      <guid isPermaLink="true">https://reactnative.dev/blog/2026/04/07/react-native-0.85</guid>
-      <pubDate>Tue, 07 Apr 2026 09:00:00 +0900</pubDate>
-      <description>React Native 0.85がリリースされ、Software Mansionと協力して開発された新しいShared Animation Backendが導入され、AnimatedとReanimatedの両方のアニメーション処理がコア部分で統一されました。Jestプリセットが専用パッケージに移行し、EOL Node.jsバージョンのサポートが廃止されたほか、StyleSheet.absoluteFillObjectが削除されるなどの破壊的変更が含まれています。DevToolsの改善とMetroのTLSサポートも追加されています。</description>
     </item>
   </channel>
 </rss>
