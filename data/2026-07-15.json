@@ -1,0 +1,15 @@
+[
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/flet-v-0-86-release-announcement",
+    "title": "Flet 0.86.0: Faster everywhere — new Android packaging, dart-bridge, and Python 3.14",
+    "link": "https://flet.dev/blog/flet-v-0-86-release-announcement",
+    "pub_date": "Tue, 14 Jul 2026 00:00:00 GMT",
+    "description": "Flet 0.86.0 is our \"anniversary\" release — the last one before 1.0 — and the logo is a nod to Expo 86 , the World's Fair held in Vancouver in 1986. Expo 86's theme was \"Transportation and Communication\" , and by a happy coincidence that's exactly what this release is about: how Python and Dart communicate — a new in-process dart-bridge transport replacing sockets, plus dedicated data channels for bulk binary traffic — and how your app is transported to devices, with completely re-designed Android packaging and faster, leaner packaging on every other platform. Under the retro logo, 0.86 pays down the last big pieces of technical debt on the road to 1.0: direct Python↔Dart communication without sockets, and a real integration-testing story for your apps. Highlights in this release: Multi-ver",
+    "summary_ja": "Flet 0.86.0は1.0前の記念リリースで、PythonとDart間の通信をソケットから新しいin-process dart-bridgeに変更し、バイナリデータ用の専用チャネルを追加しました。Androidパッケージングが完全に再設計され、全プラットフォームでアプリの配布がより高速で軽量になります。1.0に向けた大きな技術的負債の解消と、アプリの統合テスト機能の実装が実現されました。",
+    "fetched_at": "2026-07-14T23:40:25.004975+00:00"
+  }
+]

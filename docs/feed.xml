@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 14 Jul 2026 08:41:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 08:40:30 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐟 Flet — Flet 0.86.0: Faster everywhere — new Android packaging, dart-bridge, and Python 3.14</title>
+      <link>https://flet.dev/blog/flet-v-0-86-release-announcement</link>
+      <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-86-release-announcement</guid>
+      <pubDate>Tue, 14 Jul 2026 09:00:00 +0900</pubDate>
+      <description>Flet 0.86.0は1.0前の記念リリースで、PythonとDart間の通信をソケットから新しいin-process dart-bridgeに変更し、バイナリデータ用の専用チャネルを追加しました。Androidパッケージングが完全に再設計され、全プラットフォームでアプリの配布がより高速で軽量になります。1.0に向けた大きな技術的負債の解消と、アプリの統合テスト機能の実装が実現されました。</description>
+    </item>
     <item>
       <title>🍎 App Store — Age rating questionnaire now includes social media questions</title>
       <link>https://developer.apple.com/news/?id=tlur8uvi</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/10788890#2026-05-27</guid>
       <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate>
       <description>Google Playは安全で信頼できるエコシステムの確保を目的として、開発者アカウントの譲渡に関する新しいポリシーを導入し、Play Console内の公式な「所有権の譲渡」ワークフローの使用を義務付けました。適用期限は2026年5月27日までであり、対象となる開発者は、この公式プロセスを通じてアカウント譲渡を行う必要があります。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — We rebuilt Flutter’s websites with Dart and Jaspr</title>
-      <link>https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/we-rebuilt-flutters-websites-with-dart-and-jaspr-317c00e8b400?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Thu, 16 Apr 2026 03:31:01 +0900</pubDate>
-      <description>Flutter公式サイト（dart.dev、flutter.dev、docs.flutter.dev）をJaspr（Dart製のオープンソースWebフレームワーク）で統一し、複数のツールの混在から脱却しました。これにより開発者はDart言語のみで貢献でき、開発体験が一貫性を持つようになりました。Dartを使ったWeb開発の新しい選択肢として、Jasprによる標準的なFlutter Webアプリ以外のWebサイト構築が可能になります。</description>
     </item>
   </channel>
 </rss>
