@@ -5,9 +5,44 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 15 Jul 2026 08:40:30 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 08:47:29 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>▶️ Google Play — Age-Restricted Content and Functionality（適用期限: 2026-08-26）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/16302250</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/16302250#2026-08-26</guid>
+      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+      <description>Google Playの年齢制限コンテンツおよび機能ポリシーが2026年8月26日から匿名チャットおよびランダムチャットアプリにも適用されるように拡大されます。開発者は該当するアプリに対して、年齢に応じた適切なコンテンツフィルタリングと利用者認証機能の実装が必要になるため、早急な対応が求められます。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Google Play Families Policies（適用期限: 2026-08-26）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/9893335</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/9893335#2026-08-26</guid>
+      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+      <description>Google Playは2026年8月26日から、匿名チャットアプリが子どもをターゲットとすることを禁止する新しいファミリーポリシー要件を適用します。これまで以上に児童保護を強化する施策となるため、匿名チャット機能を持つアプリ開発者は対象年齢の設定を見直す必要があります。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Child Endangerment（適用期限: 2026-08-26）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/9878809</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/9878809#2026-08-26</guid>
+      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+      <description>Google Playの児童安全基準ポリシーが匿名チャットおよびランダムチャットアプリに拡大適用されます（適用期限：2026年8月26日）。開発者は該当アプリにおいて、児童への危害防止対策（年齢確認、コンテンツフィルタリング、報告機能など）の実装が必須となります。2026年8月26日までに基準を満たさないアプリはGoogle Playから削除される可能性があるため、早急な対応が必要です。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Play Console Requirements（適用期限: 2026-09-30）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/10788890</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/10788890#2026-09-30</guid>
+      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+      <description>Google Playでアプリを配信するには、2026年9月30日までにPlay Consoleへの登録が必須となります。99%のアプリは自動登録されていますが、残りのアプリについては手動で登録しないとGoogle Playから削除される可能性があります。また、Google Play外で配信するアプリもPlay Consoleに登録することで、認定Androidデバイスへのインストールが可能になります。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Use of SMS or call log permission groups（適用期限: 2027-01-27）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/17225965</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/17225965#2027-01-27</guid>
+      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+      <description>SMSおよび通話ログの権限ポリシーが変更され、2027年1月27日以降、READ_CALL_LOG権限を使用した電話による本人確認が禁止されます。本人確認にはDigital Credentials APIまたはSMS Retriever APIなどのより安全な代替APIの使用が必須となります。</description>
+    </item>
     <item>
       <title>🐟 Flet — Flet 0.86.0: Faster everywhere — new Android packaging, dart-bridge, and Python 3.14</title>
       <link>https://flet.dev/blog/flet-v-0-86-release-announcement</link>
@@ -322,41 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Tue, 28 Apr 2026 04:19:56 +0900</pubDate>
       <description>Google Cloud Next 2026でFlutterチームが発表した主な内容は、Firebase FunctionsでのDart対応のプレビューで、フロントエンドからバックエンドまでDartで統一開発が可能になります。Dart Admin SDKとの深い統合により、コンテキストスイッチングが減少し開発効率が向上します。詳細はGoogle I/Oの専門セッションで公開予定です。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Sign in with GitHub</title>
-      <link>https://expo.dev/changelog/sign-in-with-github</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/sign-in-with-github</guid>
-      <pubDate>Fri, 24 Apr 2026 05:30:11 +0900</pubDate>
-      <description>ExpoがGitHubアカウントでのサインイン機能を追加しました。この機能を利用するにはメールアドレス閲覧の権限許可が必要で、既存ユーザーには2026年4月23日にGitHubから権限リクエストメールが送信されています。既存のGitHub連携機能には影響なく、この権限リクエストは無視しても問題ありません。</description>
-    </item>
-    <item>
-      <title>🧩 Dioxus — v0.7.6</title>
-      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.6</link>
-      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.6</guid>
-      <pubDate>Wed, 22 Apr 2026 11:04:39 +0900</pubDate>
-      <description>Dioxus v0.7.6は、dx completionsコマンドによるシェル補完機能の追加、dx serve --hotpatchでの開発サーバー起動の高速化、イベント処理中のパニックによるウェブページの破損回避など、複数のバグ修正と新機能を含む0.7系の最終リリースです。Windows アプリアイコンバンドル機能やカーソルエディタのデバッグサポートも新たに追加されました。このリリース以降、メインリポジトリは0.8に向けた破壊的変更を含む開発に移行します。</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/13986130</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/13986130#2026-10-28</guid>
-      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate>
-      <description>Google Playは連絡先への広範なアクセスを制限する新しいポリシーを導入し、2026年10月28日までに対応が必要です。広範なアクセスが不要なアプリはAndroid Contact Pickerの使用が必須となり、より安全で統合が容易な仕様に移行する必要があります。このポリシー適用により、ユーザーのデータ収集が最小限に抑えられ、セキュリティが強化されます。</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2026-10-28）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/13986130</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/13986130#2026-10-28</guid>
-      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate>
-      <description>ユーザープライバシー保護強化のため、位置情報パーミッションポリシーが更新され、正確な位置情報取得の最小限のスコープとして「位置情報ボタン」の使用が推奨されます。2026年10月28日までの適用期限内に対応が必要です。</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Play Console Requirements（適用期限: 2026-05-27）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/10788890</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/10788890#2026-05-27</guid>
-      <pubDate>Wed, 15 Apr 2026 09:00:00 +0900</pubDate>
-      <description>Google Playは安全で信頼できるエコシステムの確保を目的として、開発者アカウントの譲渡に関する新しいポリシーを導入し、Play Console内の公式な「所有権の譲渡」ワークフローの使用を義務付けました。適用期限は2026年5月27日までであり、対象となる開発者は、この公式プロセスを通じてアカウント譲渡を行う必要があります。</description>
     </item>
   </channel>
 </rss>
