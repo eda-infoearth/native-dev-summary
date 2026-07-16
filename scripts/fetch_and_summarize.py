@@ -760,6 +760,16 @@ def generate_html(by_date: dict, updated_at: str) -> str:
               {summary_block}
             </div>"""
 
+        if len(articles) > 5:
+            cards_html += f"""
+            <div class="steel-card count-card">
+              <div class="corner-mark tl"></div>
+              <div class="corner-mark tr"></div>
+              <div class="corner-mark bl"></div>
+              <div class="corner-mark br"></div>
+              <p class="count-card-text">この日のリリースは<br>全部で<span class="count-card-num">{len(articles)}</span>件です</p>
+            </div>"""
+
         sections_html += f"""
         <section class="day-section">
           <div class="steel-divider-wrap">
@@ -827,6 +837,10 @@ main{{max-width:1300px;margin:0 auto;padding:0 40px 60px;}}
 .steel-card h3 a:hover{{color:var(--fw-color,#c8d4e0);}}
 .card-summary{{font-size:16px;line-height:1.7;letter-spacing:.04em;color:#C1C8CF;position:relative;z-index:3;}}
 .card-no-summary{{font-size:11px;letter-spacing:.25em;color:#303840;font-style:normal;position:relative;z-index:3;}}
+.count-card{{display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(160deg,#22242e 0%,#1a1c26 40%,#14161e 70%,#1e2028 100%)!important;}}
+.count-card::before{{background:#505860!important;}}
+.count-card-text{{font-size:15px;line-height:1.7;letter-spacing:.04em;color:#8a94a0;position:relative;z-index:3;}}
+.count-card-num{{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.05em;color:#c8d4e0;margin:0 2px;}}
 .empty-state{{margin:60px 0;border:1px solid rgba(255,255,255,.06);outline:1px solid rgba(0,0,0,.6);outline-offset:3px;overflow:hidden;}}
 .hazard-stripe-bar{{height:8px;background:repeating-linear-gradient(-45deg,#c09010 0px,#c09010 8px,#181410 8px,#181410 16px);}}
 .empty-state p{{padding:32px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#404850;text-align:center;}}
