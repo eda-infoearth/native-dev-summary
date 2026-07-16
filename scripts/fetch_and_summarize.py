@@ -40,6 +40,7 @@ import os
 import re
 import sys
 import time
+from collections import Counter
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -192,14 +193,15 @@ def parse_expo_date(text: str) -> str:
         pass
     return ""
 
-def fetch_expo_changelog(feed: dict) -> list[dict]:
+def fetch_expo_changelog(feed: dict, win_start: datetime | None = None, win_end: datetime | None = None) -> list[dict]:
     try:
         headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
         resp = requests.get(EXPO_CHANGELOG_URL, headers=headers, timeout=15)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
-        articles = []
+        # 1st pass: 軽量情報（タイトル・リンク・日付）だけ集める
+        candidates = []
         for h2 in soup.find_all("h2"):
             title = h2.get_text(strip=True)
             a_tag = h2.parent if h2.parent.name == "a" else h2.find("a", href=True)
@@ -217,28 +219,36 @@ def fetch_expo_changelog(feed: dict) -> list[dict]:
             except Exception:
                 pass
 
-            # 本文: 詳細ページの main → article → section から取得
-            desc = fetch_page_description(link, None)
-
             if not title or not link:
                 continue
 
+            candidates.append({"title": title, "link": link, "pub_date": pub_date})
+
+        total_in_window = None
+        if win_start and win_end:
+            candidates_in_window = [c for c in candidates if in_window(c["pub_date"], win_start, win_end)]
+            total_in_window = len(candidates_in_window)
+        else:
+            candidates_in_window = candidates
+
+        # 2nd pass: 上位 MAX_PER_FEED 件だけ詳細ページを取得（コスト対策）
+        articles = []
+        for c in candidates_in_window[:MAX_PER_FEED]:
+            desc = fetch_page_description(c["link"], None)
             articles.append({
                 "fw_id":       feed["id"],
                 "fw_name":     feed["name"],
                 "fw_icon":     feed["icon"],
                 "fw_color":    feed["color"],
-                "id":          link,
-                "title":       title,
-                "link":        link,
-                "pub_date":    pub_date,
+                "id":          c["link"],
+                "title":       c["title"],
+                "link":        c["link"],
+                "pub_date":    c["pub_date"],
                 "description": desc,
                 "summary_ja":  None,
                 "fetched_at":  datetime.now(timezone.utc).isoformat(),
+                "fw_total_in_window": total_in_window,
             })
-
-            if len(articles) >= MAX_PER_FEED:
-                break
 
         print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (scraping)")
         return articles
@@ -306,7 +316,7 @@ def fetch_tauri_release_dates() -> dict[str, str]:
         print(f"  ⚠ Tauri GitHub atom 取得失敗（日付取得用）: {e}", file=sys.stderr)
     return version_dates
 
-def fetch_tauri_releases(feed: dict) -> list[dict]:
+def fetch_tauri_releases(feed: dict, win_start: datetime | None = None, win_end: datetime | None = None) -> list[dict]:
     headers = {"User-Agent": "Mozilla/5.0 (compatible; FrameworkPulse/1.0)"}
     try:
         resp = requests.get(TAURI_RELEASE_URL, headers=headers, timeout=15)
@@ -321,19 +331,30 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
 
         known_versions  = load_tauri_versions()
         release_dates   = fetch_tauri_release_dates()
-        articles        = []
-        fetched_versions: set[str] = set()
 
+        # 1st pass: 未知バージョンだけ抽出し、pub_date（詳細ページ取得なしで判明済み）でwindow判定
+        candidates = []
         for a in tauri_links:
             version  = a.get_text(strip=True)
             page_url = f"https://v2.tauri.app{a['href']}"
-
             if version in known_versions:
                 continue
-
-            print(f"    新バージョン検出: tauri v{version}")
-
             pub_date = release_dates.get(version, datetime.now(timezone.utc).isoformat())
+            candidates.append({"version": version, "page_url": page_url, "pub_date": pub_date})
+
+        total_in_window = None
+        if win_start and win_end:
+            candidates_in_window = [c for c in candidates if in_window(c["pub_date"], win_start, win_end)]
+            total_in_window = len(candidates_in_window)
+        else:
+            candidates_in_window = candidates
+
+        # 2nd pass: 上位 MAX_PER_FEED 件だけ詳細ページを取得（コスト対策）
+        articles = []
+        fetched_versions: set[str] = set()
+        for c in candidates_in_window[:MAX_PER_FEED]:
+            version, page_url, pub_date = c["version"], c["page_url"], c["pub_date"]
+            print(f"    新バージョン検出: tauri v{version}")
 
             try:
                 r2 = requests.get(page_url, headers=headers, timeout=15)
@@ -357,11 +378,9 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
                 "description": desc,
                 "summary_ja":  None,
                 "fetched_at":  datetime.now(timezone.utc).isoformat(),
+                "fw_total_in_window": total_in_window,
             })
             fetched_versions.add(version)
-
-            if len(articles) >= MAX_PER_FEED:
-                break
 
         if fetched_versions:
             save_tauri_versions(known_versions | fetched_versions)
@@ -375,7 +394,7 @@ def fetch_tauri_releases(feed: dict) -> list[dict]:
 
 # ── Crux GitHub Releases ─────────────────────────────────────────────────────
 
-def fetch_crux_releases(feed: dict) -> list[dict]:
+def fetch_crux_releases(feed: dict, win_start: datetime | None = None, win_end: datetime | None = None) -> list[dict]:
     """
     github.com/redbadger/crux/releases.atom から全クレートのリリースを取得。
     同日（JST）にリリースされた複数クレートを1記事にまとめて要約させる。
@@ -414,8 +433,19 @@ def fetch_crux_releases(feed: dict) -> list[dict]:
             })
 
         # 日付降順でグループをまとめて記事化
+        date_keys = sorted(groups.keys(), reverse=True)
+        total_in_window = None
+        if win_start and win_end:
+            date_keys_in_window = [
+                dk for dk in date_keys
+                if in_window(groups[dk][0]["pub_date"], win_start, win_end)
+            ]
+            total_in_window = len(date_keys_in_window)
+        else:
+            date_keys_in_window = date_keys
+
         articles = []
-        for date_key in sorted(groups.keys(), reverse=True):
+        for date_key in date_keys_in_window[:MAX_PER_FEED]:
             entries = groups[date_key]
 
             # タイトル: クレート名をスラッシュで結合
@@ -442,10 +472,8 @@ def fetch_crux_releases(feed: dict) -> list[dict]:
                 "description": merged_desc,
                 "summary_ja":  None,
                 "fetched_at":  datetime.now(timezone.utc).isoformat(),
+                "fw_total_in_window": total_in_window,
             })
-
-            if len(articles) >= MAX_PER_FEED:
-                break
 
         print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 ({sum(len(v) for v in groups.values())} クレート, GitHub Releases atom)")
         return articles
@@ -455,7 +483,7 @@ def fetch_crux_releases(feed: dict) -> list[dict]:
 
 # ── Dioxus GitHub Releases ───────────────────────────────────────────────────
 
-def fetch_dioxus_releases(feed: dict) -> list[dict]:
+def fetch_dioxus_releases(feed: dict, win_start: datetime | None = None, win_end: datetime | None = None) -> list[dict]:
     """
     github.com/DioxusLabs/dioxus/releases.atom から各リリースを1記事として取得。
     Cruxと違い単一リポジトリのため、複数リリースをまとめるグルーピングは行わない。
@@ -468,7 +496,7 @@ def fetch_dioxus_releases(feed: dict) -> list[dict]:
         resp.raise_for_status()
         parsed = feedparser.parse(resp.text)
 
-        articles = []
+        candidates = []
         for entry in parsed.entries:
             title = entry.get("title", "").strip()
             if not title:
@@ -479,23 +507,31 @@ def fetch_dioxus_releases(feed: dict) -> list[dict]:
                 (entry.get("content") or [{}])[0].get("value", "")
                 or entry.get("summary", "")
             )
+            candidates.append({"title": title, "link": link, "pub_date": pub_date, "desc": desc})
 
+        total_in_window = None
+        if win_start and win_end:
+            candidates_in_window = [c for c in candidates if in_window(c["pub_date"], win_start, win_end)]
+            total_in_window = len(candidates_in_window)
+        else:
+            candidates_in_window = candidates
+
+        articles = []
+        for c in candidates_in_window[:MAX_PER_FEED]:
             articles.append({
                 "fw_id":       feed["id"],
                 "fw_name":     feed["name"],
                 "fw_icon":     feed["icon"],
                 "fw_color":    feed["color"],
-                "id":          link,
-                "title":       title,
-                "link":        link,
-                "pub_date":    pub_date,
-                "description": desc,
+                "id":          c["link"],
+                "title":       c["title"],
+                "link":        c["link"],
+                "pub_date":    c["pub_date"],
+                "description": c["desc"],
                 "summary_ja":  None,
                 "fetched_at":  datetime.now(timezone.utc).isoformat(),
+                "fw_total_in_window": total_in_window,
             })
-
-            if len(articles) >= MAX_PER_FEED:
-                break
 
         print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得 (GitHub Releases atom)")
         return articles
@@ -635,15 +671,15 @@ def fetch_google_play_policy_center(feed: dict) -> list[dict]:
 
 # ── RSS 取得 ──────────────────────────────────────────────────────────────────
 
-def fetch_feed(feed: dict) -> list[dict]:
+def fetch_feed(feed: dict, win_start: datetime | None = None, win_end: datetime | None = None) -> list[dict]:
     if feed["id"] == "expo":
-        return fetch_expo_changelog(feed)
+        return fetch_expo_changelog(feed, win_start, win_end)
     if feed["id"] == "tauri":
-        return fetch_tauri_releases(feed)
+        return fetch_tauri_releases(feed, win_start, win_end)
     if feed["id"] == "crux":
-        return fetch_crux_releases(feed)
+        return fetch_crux_releases(feed, win_start, win_end)
     if feed["id"] == "dioxus":
-        return fetch_dioxus_releases(feed)
+        return fetch_dioxus_releases(feed, win_start, win_end)
     if feed["id"] == "google-play":
         return fetch_google_play_deadlines(feed)
 
@@ -652,8 +688,18 @@ def fetch_feed(feed: dict) -> list[dict]:
         resp = requests.get(feed["url"], headers=headers, timeout=15)
         resp.raise_for_status()
         parsed = feedparser.parse(resp.text)
+
+        dated_entries = list(parsed.entries)
+        total_in_window = None
+        if win_start and win_end:
+            dated_entries = [
+                e for e in dated_entries
+                if in_window(e.get("published", e.get("updated", "")), win_start, win_end)
+            ]
+            total_in_window = len(dated_entries)
+
         articles = []
-        for entry in parsed.entries[:MAX_PER_FEED]:
+        for entry in dated_entries[:MAX_PER_FEED]:
             link  = entry.get("link", "")
             title = entry.get("title", "").strip()
             if not link or not title:
@@ -679,6 +725,7 @@ def fetch_feed(feed: dict) -> list[dict]:
                 "description": desc,
                 "summary_ja":  None,
                 "fetched_at":  datetime.now(timezone.utc).isoformat(),
+                "fw_total_in_window": total_in_window,
             })
         print(f"  {feed['icon']} {feed['name']}: {len(articles)} 件取得")
         return articles
@@ -736,6 +783,13 @@ def generate_html(by_date: dict, updated_at: str) -> str:
         rivets = '<div class="rivet"></div>' * 10
 
         cards_html = ""
+        fw_counts = Counter(a.get("fw_id", "") for a in articles)
+        fw_reported_total = Counter()
+        for a in articles:
+            fw_reported_total[a.get("fw_id", "")] = max(
+                fw_reported_total[a.get("fw_id", "")],
+                a.get("fw_total_in_window") or 0,
+            )
         for a in articles:
             color      = a.get("fw_color", "#909aa8")
             fw_id      = a.get("fw_id", "")
@@ -760,14 +814,18 @@ def generate_html(by_date: dict, updated_at: str) -> str:
               {summary_block}
             </div>"""
 
-        if len(articles) > 4:
-            cards_html += f"""
+        fw_lookup = {fw["id"]: fw["name"] for fw in FEEDS}
+        for fw_id, count in fw_counts.items():
+            real_total = max(count, fw_reported_total.get(fw_id, 0))
+            if real_total > 5:
+                fw_name = fw_lookup.get(fw_id, fw_id)
+                cards_html += f"""
             <div class="steel-card count-card">
               <div class="corner-mark tl"></div>
               <div class="corner-mark tr"></div>
               <div class="corner-mark bl"></div>
               <div class="corner-mark br"></div>
-              <p class="count-card-text">この日のリリースは<br>全部で<span class="count-card-num">{len(articles)}</span>件です</p>
+              <p class="count-card-text">{fw_name}のリリースは<br>全部で<span class="count-card-num">{real_total}</span>件です</p>
             </div>"""
 
         sections_html += f"""
@@ -963,7 +1021,7 @@ def main():
 
     for feed in FEEDS:
         print(f"\n{feed['icon']} {feed['name']} 処理中...")
-        fetched  = fetch_feed(feed)
+        fetched  = fetch_feed(feed, win_start, win_end)
 
         for art in fetched:
             if art["id"] in seen_ids:
