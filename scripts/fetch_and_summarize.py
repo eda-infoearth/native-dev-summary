@@ -760,7 +760,7 @@ def generate_html(by_date: dict, updated_at: str) -> str:
               {summary_block}
             </div>"""
 
-        if len(articles) > 5:
+        if len(articles) > 4:
             cards_html += f"""
             <div class="steel-card count-card">
               <div class="corner-mark tl"></div>
