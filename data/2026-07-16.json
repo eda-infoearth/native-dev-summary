@@ -1,0 +1,67 @@
+[
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/16302250#2026-08-26",
+    "title": "Age-Restricted Content and Functionality（適用期限: 2026-08-26）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/16302250",
+    "pub_date": "2026-07-15",
+    "description": "Age-Restricted Content and Functionality We're expanding our Age-Restricted Content and Functionality policy to apply to anonymous chat and random chat apps. Announced 2026-07-15",
+    "summary_ja": "Googleが年齢制限付きコンテンツおよび機能ポリシーを拡大し、2026年8月26日より匿名チャットおよびランダムチャットアプリに適用することを発表しました。開発者は、これらのアプリが年齢認証機能を実装し、未成年ユーザーへの不適切なコンテンツ配信を防ぐための対応が必要になります。",
+    "fetched_at": "2026-07-16T06:34:13.382085+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/9893335#2026-08-26",
+    "title": "Google Play Families Policies（適用期限: 2026-08-26）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/9893335",
+    "pub_date": "2026-07-15",
+    "description": "Google Play Families Policies We're expanding our Families Policy Requirements policy to prohibit developers of anonymous chat apps from targeting children. Announced 2026-07-15",
+    "summary_ja": "Google Playは2026年8月26日より、匿名チャットアプリの子どもへのターゲティングを禁止する新ポリシーを施行します。開発者は子ども向けとして設計・マーケティングしている匿名チャットアプリをGoogle Playで提供できなくなるため、対象アプリは早急にポリシー対応が必要です。",
+    "fetched_at": "2026-07-16T06:34:13.382288+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/9878809#2026-08-26",
+    "title": "Child Endangerment（適用期限: 2026-08-26）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/9878809",
+    "pub_date": "2026-07-15",
+    "description": "Child Endangerment We're expanding our Child Safety Standards policy to apply to anonymous chat and random chat apps. Announced 2026-07-15",
+    "summary_ja": "Google Playのチャイルドセーフティ基準が拡大され、匿名チャットおよびランダムチャットアプリにも適用されます(適用期限: 2026年8月26日)。開発者は該当するアプリが児童保護要件を満たしていることを確認し、必要な安全機能の実装やコンテンツモデレーション体制の整備が必須となります。違反するアプリはGoogle Playから削除される可能性があるため、早急な対応が必要です。",
+    "fetched_at": "2026-07-16T06:34:13.382544+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/10788890#2026-09-30",
+    "title": "Play Console Requirements（適用期限: 2026-09-30）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/10788890",
+    "pub_date": "2026-07-15",
+    "description": "Play Console Requirements To meet Android developer verification requirements and Play Console requirements , you must register your Play apps in Play Console. While 99% of apps on Play have been registered automatically, you should check your Play Console Home page and register any remaining apps you want to continue distributing to avoid global removal from Google Play and ensure a seamless user installation experience. You can also use Play Console to register apps you distribute outside of Google Play to ensure they can be installed on certified Android devices. Announced 2026-07-15",
+    "summary_ja": "Play Consoleへのアプリ登録がAndroid開発者認証の必須要件となり、2026年9月30日までに登録しないと Google Playから削除される可能性があります。既に99%のアプリは自動登録されていますが、Play Console ホームページで確認し、未登録アプリがあれば登録が必要です。また、Google Play外で配布するアプリについても Play Consoleに登録することで、認定 Android デバイスへのインストールが可能になります。",
+    "fetched_at": "2026-07-16T06:34:13.382838+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/17225965#2027-01-27",
+    "title": "Use of SMS or call log permission groups（適用期限: 2027-01-27）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/17225965",
+    "pub_date": "2026-07-15",
+    "description": "Use of SMS or call log permission groups Our SMS and Call Log Permissions policy will no longer permit account verification via phone call as a use case for the READ_CALL_LOG permission. To securely verify accounts without requiring sensitive app permissions, use the Digital Credentials API instead, either directly or through a verification provider built upon it, or the SMS Retriever API . Please refer to this page for additional alternative APIs. Announced 2026-07-15",
+    "summary_ja": "Google Playのポリシーが2027年1月27日に変更され、READ_CALL_LOG権限を使用したアカウント認証（電話通話経由）は許可されなくなります。代わりに、Digital Credentials APIまたはSMS Retriever APIなどの安全な代替APIの使用が必須となります。開発者はこれらの新しいAPIへの移行を急ぎ、電話通話によるアカウント認証機能を削除または置き換える必要があります。",
+    "fetched_at": "2026-07-16T06:34:13.383141+00:00"
+  }
+]

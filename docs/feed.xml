@@ -5,7 +5,7 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 16 Jul 2026 15:12:52 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 15:34:25 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
@@ -13,35 +13,35 @@
       <link>https://support.google.com/googleplay/android-developer/answer/16302250</link>
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/16302250#2026-08-26</guid>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Google Playの年齢制限コンテンツ・機能ポリシーが2026年8月26日より拡大され、匿名チャットおよびランダムチャットアプリにも適用されます。開発者は該当するアプリについて、年齢に応じたコンテンツフィルタリングや保護者管理機能の実装、ユーザー認証の強化などの対応が必須となります。既存アプリは適用期限までにポリシー要件を満たすよう修正する必要があります。</description>
+      <description>Googleが年齢制限付きコンテンツおよび機能ポリシーを拡大し、2026年8月26日より匿名チャットおよびランダムチャットアプリに適用することを発表しました。開発者は、これらのアプリが年齢認証機能を実装し、未成年ユーザーへの不適切なコンテンツ配信を防ぐための対応が必要になります。</description>
     </item>
     <item>
       <title>▶️ Google Play — Google Play Families Policies（適用期限: 2026-08-26）</title>
       <link>https://support.google.com/googleplay/android-developer/answer/9893335</link>
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/9893335#2026-08-26</guid>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Google Playは2026年8月26日より、匿名チャットアプリの児童向けターゲティングを禁止する新ルールを実施します。このポリシー変更により、子どもを対象とした匿名チャット機能を持つアプリの配信ができなくなるため、該当するアプリの開発者は仕様変更が必要です。Families Policyの要件が拡大されたため、児童向けアプリの開発・配信を予定している場合は、匿名性の排除を含むコンプライアンス対応が急務となります。</description>
+      <description>Google Playは2026年8月26日より、匿名チャットアプリの子どもへのターゲティングを禁止する新ポリシーを施行します。開発者は子ども向けとして設計・マーケティングしている匿名チャットアプリをGoogle Playで提供できなくなるため、対象アプリは早急にポリシー対応が必要です。</description>
     </item>
     <item>
       <title>▶️ Google Play — Child Endangerment（適用期限: 2026-08-26）</title>
       <link>https://support.google.com/googleplay/android-developer/answer/9878809</link>
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/9878809#2026-08-26</guid>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Googleプレイの児童安全基準ポリシーが匿名チャットおよびランダムチャットアプリに適用範囲を拡大されます。本ポリシー変更は2026年8月26日が適用期限となるため、該当するアプリを提供している開発者は期限までにポリシーに準拠する必要があります。</description>
+      <description>Google Playのチャイルドセーフティ基準が拡大され、匿名チャットおよびランダムチャットアプリにも適用されます(適用期限: 2026年8月26日)。開発者は該当するアプリが児童保護要件を満たしていることを確認し、必要な安全機能の実装やコンテンツモデレーション体制の整備が必須となります。違反するアプリはGoogle Playから削除される可能性があるため、早急な対応が必要です。</description>
     </item>
     <item>
       <title>▶️ Google Play — Play Console Requirements（適用期限: 2026-09-30）</title>
       <link>https://support.google.com/googleplay/android-developer/answer/10788890</link>
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/10788890#2026-09-30</guid>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Google Playの開発者認証とPlay Console要件に対応するため、すべてのアプリをPlay Consoleに登録する必要があります。99%のアプリは自動登録されていますが、未登録のアプリは2026年9月30日までに手動登録しないとGoogle Playから全世界で削除されるため注意が必要です。また、Google Play外で配布するアプリもPlay Consoleに登録することで、認定Androidデバイスでのインストールが確保されます。</description>
+      <description>Play Consoleへのアプリ登録がAndroid開発者認証の必須要件となり、2026年9月30日までに登録しないと Google Playから削除される可能性があります。既に99%のアプリは自動登録されていますが、Play Console ホームページで確認し、未登録アプリがあれば登録が必要です。また、Google Play外で配布するアプリについても Play Consoleに登録することで、認定 Android デバイスへのインストールが可能になります。</description>
     </item>
     <item>
       <title>▶️ Google Play — Use of SMS or call log permission groups（適用期限: 2027-01-27）</title>
       <link>https://support.google.com/googleplay/android-developer/answer/17225965</link>
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/17225965#2027-01-27</guid>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Google Playのポリシー変更により、2027年1月27日以降、READ_CALL_LOG権限を使用した電話による本人確認は許可されなくなります。代わりにDigital Credentials APIまたはSMS Retriever APIの使用を推奨しており、これらのAPIを直接利用するか、それらに基づいた検証プロバイダーを通じて実装する必要があります。</description>
+      <description>Google Playのポリシーが2027年1月27日に変更され、READ_CALL_LOG権限を使用したアカウント認証（電話通話経由）は許可されなくなります。代わりに、Digital Credentials APIまたはSMS Retriever APIなどの安全な代替APIの使用が必須となります。開発者はこれらの新しいAPIへの移行を急ぎ、電話通話によるアカウント認証機能を削除または置き換える必要があります。</description>
     </item>
     <item>
       <title>🐟 Flet — Flet 0.86.0: Faster everywhere — new Android packaging, dart-bridge, and Python 3.14</title>
