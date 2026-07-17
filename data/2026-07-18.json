@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/2026-07-17-smarter-flet-studio-with-ai-agent",
+    "title": "Smarter Flet Studio with AI Agent",
+    "link": "https://flet.dev/blog/2026-07-17-smarter-flet-studio-with-ai-agent",
+    "pub_date": "Fri, 17 Jul 2026 00:00:00 GMT",
+    "description": "In case you missed it, we have Flet Studio - an online tool for building Flet apps and sharing them with other users. What started as a quick \"FletPad\" experiment has already grown into a solid app - an online Flet IDE, if you will - with user accounts, a forkable gallery of examples, multiple apps per account, and version history. You can play with Flet and learn the framework before ever running pip install flet on your machine. Flet Studio itself is written in Flet, with a custom FastAPI backend, and it's a fantastic opportunity for us to dogfood Flet ourselves. Our vision is to shape Flet Studio into a hub of online services that help you build better Flet apps. The first such service was an online editor with the ability to share your apps with other users. Today we are introducing a ",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-07-17T23:40:38.705234+00:00",
+    "fw_total_in_window": 1
+  }
+]

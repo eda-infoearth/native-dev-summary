@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 17 Jul 2026 08:46:09 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 08:40:42 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐟 Flet — Smarter Flet Studio with AI Agent</title>
+      <link>https://flet.dev/blog/2026-07-17-smarter-flet-studio-with-ai-agent</link>
+      <guid isPermaLink="true">https://flet.dev/blog/2026-07-17-smarter-flet-studio-with-ai-agent</guid>
+      <pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
     <item>
       <title>▶️ Google Play — Age-Restricted Content and Functionality（適用期限: 2026-08-26）</title>
       <link>https://support.google.com/googleplay/android-developer/answer/16302250</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Fri, 01 May 2026 00:57:00 +0900</pubDate>
       <description>Flutter 3.44の次のリリース以降、iOSとmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になり新規追加が停止されるため、継続的なアップデートを受けるにはSwiftPMへの移行が必要です。既存ビルドは引き続き動作しますが、開発者はRubyやCocoaPodsのインストールが不要になりSwiftパッケージエコシステムへアクセスできるようになります。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — That’s a wrap: Everything Flutter at Google Cloud Next</title>
-      <link>https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-cloud-next-1f4d3c6c6a6e?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Tue, 28 Apr 2026 04:19:56 +0900</pubDate>
-      <description>Google Cloud Next 2026でFlutterチームが発表した主な内容は、Firebase FunctionsでのDart対応のプレビューで、フロントエンドからバックエンドまでDartで統一開発が可能になります。Dart Admin SDKとの深い統合により、コンテキストスイッチングが減少し開発効率が向上します。詳細はGoogle I/Oの専門セッションで公開予定です。</description>
     </item>
   </channel>
 </rss>
