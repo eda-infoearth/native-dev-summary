@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 20 Jul 2026 12:16:35 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 08:45:00 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — EAS Observe moves to general availability on August 20</title>
+      <link>https://expo.dev/changelog/eas-observe-moves-to-general-availability-on-august-20</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/eas-observe-moves-to-general-availability-on-august-20</guid>
+      <pubDate>Mon, 20 Jul 2026 19:00:00 +0900</pubDate>
+      <description>EAS Observeは2026年8月20日に一般提供となり、全プランで90日間のデータ保持が可能になります。Freeプランは月100,000イベント、Starterプラン以上は月500,000イベントが含まれ、超過分は100万イベントあたり$5で課金されます。現在のベータ利用者に変更は不要で、詳細な料金表は公式サイトで確認できます。</description>
+    </item>
     <item>
       <title>🐟 Flet — Smarter Flet Studio with AI Agent</title>
       <link>https://flet.dev/blog/2026-07-17-smarter-flet-studio-with-ai-agent</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/gradle-cache</guid>
       <pubDate>Fri, 01 May 2026 01:00:58 +0900</pubDate>
       <description>EAS上のAndroidビルドでGradle キャッシュが利用可能になり、タスク出力が再利用されることでビルド時間が約50%削減されます。EAS_GRADLE_CACHE環境変数を1に設定することで有効化でき、ビルドログのRun Gradleステップで「FROM CACHE」マークでキャッシュの動作を確認できます。特にネイティブモジュールが多いプロジェクトで効果的です。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — Saying goodbye to CocoaPods: Swift Package Manager is soon the default in Flutter!</title>
-      <link>https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/saying-goodbye-to-cocoapods-swift-package-manager-is-soon-the-default-in-flutter-645a92714a57?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Fri, 01 May 2026 00:57:00 +0900</pubDate>
-      <description>Flutter 3.44の次のリリース以降、iOSとmacOSアプリの依存関係管理がCocoaPodsからSwift Package Manager(SwiftPM)にデフォルト変更されます。CocoaPodsは2026年12月2日にレジストリが読み取り専用になり新規追加が停止されるため、継続的なアップデートを受けるにはSwiftPMへの移行が必要です。既存ビルドは引き続き動作しますが、開発者はRubyやCocoaPodsのインストールが不要になりSwiftパッケージエコシステムへアクセスできるようになります。</description>
     </item>
   </channel>
 </rss>
