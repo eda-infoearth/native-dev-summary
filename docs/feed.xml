@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 31 Jul 2026 08:51:36 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 08:51:18 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🧩 Dioxus — v0.8.0-alpha.1</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1</guid>
+      <pubDate>Fri, 31 Jul 2026 09:55:57 +0900</pubDate>
+      <description>Dioxos v0.8.0-alpha.1では、選択イベントとbeforeinputイベントのサポート追加、クリップボードイベントでペーストデータの露出、ルーターのクエリ・ハッシュセグメント保持機能改善などが実装されました。autofmtのフォーマット等冪性修正、ReadStoreのLens要件修正、応答ボディ読み込みエラーの伝播修正など複数のバグ修正も含まれています。v0.7のアセットフォールバック削除により、既存コードの更新が必要になる可能性があります。</description>
+    </item>
+    <item>
+      <title>🧩 Dioxus — v0.7.10</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.10</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.10</guid>
+      <pubDate>Fri, 31 Jul 2026 09:13:26 +0900</pubDate>
+      <description>Dioxusのバイナリターゲットのクレート名がパッケージ名と異なる場合、ホットパッチングが正常に機能しなかった問題が修正されました。この修正により、開発時のホットリロード機能がより安定して動作するようになります。</description>
+    </item>
     <item>
       <title>🚀 Expo — EAS Observe moves to general availability on August 20</title>
       <link>https://expo.dev/changelog/eas-observe-moves-to-general-availability-on-august-20</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/expo-go-and-app-store-may-2026</guid>
       <pubDate>Tue, 05 May 2026 04:15:00 +0900</pubDate>
       <description>Expo Go SDK 55はApple App Storeの承認待ち中であり、リリース時期は未定です。当面はSDK 54がApp StoreとPlay Storeで利用可能ですが、本番運用目的の場合は、より強力な開発ビルドへの移行を推奨しています。</description>
-    </item>
-    <item>
-      <title>🧩 Dioxus — v0.7.7</title>
-      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.7</link>
-      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.7</guid>
-      <pubDate>Fri, 01 May 2026 10:18:10 +0900</pubDate>
-      <description>Dioxus v0.7.7ではJSバンドリングの回帰を修正し、JavaScriptスニペットのモジュール型（ESM、CJS、UMD等）を自動検出して、適切なesbuildフラグで処理するようになりました。これまでのリリースではすべてESMとしてバンドルされていた問題が解決されます。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Gradle cache for Android builds</title>
-      <link>https://expo.dev/changelog/gradle-cache</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/gradle-cache</guid>
-      <pubDate>Fri, 01 May 2026 01:00:58 +0900</pubDate>
-      <description>EAS上のAndroidビルドでGradle キャッシュが利用可能になり、タスク出力が再利用されることでビルド時間が約50%削減されます。EAS_GRADLE_CACHE環境変数を1に設定することで有効化でき、ビルドログのRun Gradleステップで「FROM CACHE」マークでキャッシュの動作を確認できます。特にネイティブモジュールが多いプロジェクトで効果的です。</description>
     </item>
   </channel>
 </rss>

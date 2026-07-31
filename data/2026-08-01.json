@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1",
+    "title": "v0.8.0-alpha.1",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1",
+    "pub_date": "2026-07-31T00:55:57Z",
+    "description": "What's Changed Implement support for selection events by @ealmloff in #5570 fix: release pins on git2 to fix non --locked cli installs by @jkelleyrtp in #5575 remove v0.7 asset fallback by @jkelleyrtp in #5576 Pin rhai_codegen by @ealmloff in #5593 fix(autofmt): formatting idempotency for long if/else attrs, empty bodies, and split_line_attributes by @micahkepe in #5509 fix: propagate response body read errors by @nanookclaw in #5595 fix: ReadStore from MappedMutSignal requires Lens: Readable by @MonaMayrhofer in #5607 Implement support for beforeinput event by @danielkov in #5581 Bump anyrender_vello_hybrid by @ealmloff in #5609 feat: expose pasted data on clipboard events by @danielkov in #5611 fix(router): preserve query and hash segments on child routes by @JOSEPHGILBY in #5613 Fix hot",
+    "summary_ja": "Dioxos v0.8.0-alpha.1では、選択イベントとbeforeinputイベントのサポート追加、クリップボードイベントでペーストデータの露出、ルーターのクエリ・ハッシュセグメント保持機能改善などが実装されました。autofmtのフォーマット等冪性修正、ReadStoreのLens要件修正、応答ボディ読み込みエラーの伝播修正など複数のバグ修正も含まれています。v0.7のアセットフォールバック削除により、既存コードの更新が必要になる可能性があります。",
+    "fetched_at": "2026-07-31T23:51:12.354196+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.10",
+    "title": "v0.7.10",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.10",
+    "pub_date": "2026-07-31T00:13:26Z",
+    "description": "What's Changed [v0.7] Fix hotpatching when the bin target's crate name differs from the package name by @nicoburns in #5720 Full Changelog : v0.7.9...v0.7.10",
+    "summary_ja": "Dioxusのバイナリターゲットのクレート名がパッケージ名と異なる場合、ホットパッチングが正常に機能しなかった問題が修正されました。この修正により、開発時のホットリロード機能がより安定して動作するようになります。",
+    "fetched_at": "2026-07-31T23:51:12.354209+00:00",
+    "fw_total_in_window": 2
+  }
+]
