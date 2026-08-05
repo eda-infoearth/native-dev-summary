@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=kug6m2ea",
+    "title": "Get ready for new creative assets on the App Store",
+    "link": "https://developer.apple.com/news/?id=kug6m2ea",
+    "pub_date": "Wed, 05 Aug 2026 08:00:58 PDT",
+    "description": "As we announced in June , Apple is introducing new ways to market your apps and games on the App Store. With these new assets, you can go beyond in-use visuals to highlight your brand, seasonal offerings, exciting new content, and more. Your creative assets can be used across the App Store in multiple places, including your product page header, search results, In-App Events, and more. To help you plan your images and videos ahead of the fall launch, review our new App Store asset best practices, which include recommendations, as well as Figma, Photoshop, and Pixelmator design templates you can use to create captivating and compelling assets. Learn about best practices and resources",
+    "summary_ja": "App Storeで新しいクリエイティブアセット機能が秋に導入され、アプリの商品ページ、検索結果、アプリ内イベントなど複数の場所でブランド、季節限定オファー、新コンテンツなどをアピールできるようになります。開発者は公開されているベストプラクティスガイドとFigma、Photoshop、Pixelmatorのテンプレートを活用して、事前に画像と動画アセットを準備する必要があります。",
+    "fetched_at": "2026-08-05T23:19:45.250015+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=vrvvlonn",
+    "title": "Hello Developer: August 2026",
+    "link": "https://developer.apple.com/news/?id=vrvvlonn",
+    "pub_date": "Wed, 05 Aug 2026 08:00:51 PDT",
+    "description": "In this edition: Check out an all-new video from Cupertino to dive deeper into the biggest updates from WWDC26. Download templates and get started building App Store assets for iOS 27. Discover best practices for integrating visual intelligence in your app. Learn how to supercharge your builds with Xcode Cloud workflows. Meet the clever creators of Is This Seat Taken? Read now",
+    "summary_ja": "WWDC26の最新情報を解説した新動画が公開され、iOS 27用のApp Storeアセットテンプレートがダウンロード可能になりました。Visual Intelligenceの統合ベストプラクティスとXcode Cloudワークフローによるビルド高速化の方法が紹介されています。",
+    "fetched_at": "2026-08-05T23:19:45.250061+00:00",
+    "fw_total_in_window": 2
+  }
+]

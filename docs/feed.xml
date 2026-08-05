@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 05 Aug 2026 08:52:43 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 08:19:49 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Get ready for new creative assets on the App Store</title>
+      <link>https://developer.apple.com/news/?id=kug6m2ea</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=kug6m2ea</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:58 +0900</pubDate>
+      <description>App Storeで新しいクリエイティブアセット機能が秋に導入され、アプリの商品ページ、検索結果、アプリ内イベントなど複数の場所でブランド、季節限定オファー、新コンテンツなどをアピールできるようになります。開発者は公開されているベストプラクティスガイドとFigma、Photoshop、Pixelmatorのテンプレートを活用して、事前に画像と動画アセットを準備する必要があります。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Hello Developer: August 2026</title>
+      <link>https://developer.apple.com/news/?id=vrvvlonn</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=vrvvlonn</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:51 +0900</pubDate>
+      <description>WWDC26の最新情報を解説した新動画が公開され、iOS 27用のApp Storeアセットテンプレートがダウンロード可能になりました。Visual Intelligenceの統合ベストプラクティスとXcode Cloudワークフローによるビルド高速化の方法が紹介されています。</description>
+    </item>
     <item>
       <title>🧩 Dioxus — v0.8.0-alpha.1</title>
       <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://v2.tauri.app/release/tauri/v2.11.1/</guid>
       <pubDate>Wed, 06 May 2026 19:17:49 +0900</pubDate>
       <description>Tauri v2.11.1では、モバイルでモニター（ディスプレイ）APIが利用可能になり、AndroidのrequestPermission APIのクラッシュが修正されました。重要なセキュリティ修正として、AppManifestがない場合でもIPC要求に対するACLチェックが適用され、リモートオリジンからのカスタムコマンド実行が制限されるようになりました。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — Introducing Skills for Dart and Flutter</title>
-      <link>https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/introducing-skills-for-dart-and-flutter-23837c6ec0ae?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Thu, 07 May 2026 03:19:09 +0900</pubDate>
-      <description>FlutterとDart向けのAI Agent Skillsが新たに導入され、開発者はローカライゼーション、最新のDart言語機能、統合テストなど、本番環境レベルのアプリ開発に必要なドメイン固有の専門知識をAIアシスタントに備えさせることができるようになります。これにより、FlutterやDartが急速に新機能を追加しても、LLMの固定学習データとの知識ギャップを解決し、より正確で実用的なAI支援が可能になります。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Expo Go and the App Store in May 2026</title>
-      <link>https://expo.dev/changelog/expo-go-and-app-store-may-2026</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/expo-go-and-app-store-may-2026</guid>
-      <pubDate>Tue, 05 May 2026 04:15:00 +0900</pubDate>
-      <description>Expo Go SDK 55はApple App Storeの承認待ち中であり、リリース時期は未定です。当面はSDK 54がApp StoreとPlay Storeで利用可能ですが、本番運用目的の場合は、より強力な開発ビルドへの移行を推奨しています。</description>
     </item>
   </channel>
 </rss>
