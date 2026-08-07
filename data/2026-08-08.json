@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "crux",
+    "fw_name": "Crux",
+    "fw_icon": "🦞",
+    "fw_color": "#E05A4E",
+    "id": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.18.0",
+    "title": "crux_time-v0.18.0: Merge pull request #571 from redbadger/readme-single-source / crux_macros-v0.10.1: Merge pull request #571 from redbadger/readme-single-source / crux_kv-v0.14.0: Merge pull request #571 from redbadger/readme-single-source / crux_http-v0.20.0 / crux_core-v0.20.0",
+    "link": "https://github.com/redbadger/crux/releases/tag/crux_time-v0.18.0",
+    "pub_date": "2026-08-07T14:18:21Z",
+    "description": "[crux_time-v0.18.0: Merge pull request #571 from redbadger/readme-single-source]\ndocs: make the root README canonical and share it with crux_core\n\n[crux_macros-v0.10.1: Merge pull request #571 from redbadger/readme-single-source]\ndocs: make the root README canonical and share it with crux_core\n\n[crux_kv-v0.14.0: Merge pull request #571 from redbadger/readme-single-source]\ndocs: make the root README canonical and share it with crux_core\n\n[crux_http-v0.20.0]\n0.20.0 - 2026-08-06 Added HttpError::body , HttpError::body_json and HttpError::code — read what the server said when it rejected a request, without destructuring the variant. A 4xx/5xx arrives as Err(HttpError::Http { code, message, body }) , and body has always held the server's own explanation. But Display shows only the status ( \"HTTP error 409: 409 Conflict\" ), so getting at the message meant hand-rolling this in every app: // before let crux_http :: HttpError :: Http { body : Some ( body ) , .. } = error else { return None } ; serde_json :: from_slice :: serde_json :: Value ( body ) . ok ( ) . and_then ( |b| b . get ( \"error\" ) . and_then ( |e| e . as_str ( ) ) . map ( String :: from ) ) // after error . body_json :: serde_json :: Value ( ) . ok ( ) . and_then ( |b| b [ \"error\" ] . a\n\n[crux_core-v0.20.0]\n0.20.0 - 2026-08-06 💥 Breaking Changes crux_core::effects::EffectId is renamed to ParkedEffectId . There were two public types called EffectId , and they are not interchangeable: crux_core::bridge::EffectId was crux_core::effects::EffectId T Shape pub struct EffectId(pub u32) opaque u64 , phantom-typed by Op::Output Contents a slab index slab index and generation Used by every shell, on the serialized lane the Parked lane only A shell wiring up both lanes needs both in scope, so one of them has to be aliased — as crux_core 's own routing test had to do. The Parked one is renamed because it is the newer of the two (0.19.0), is used by no example, and reaches only the handful of people using a custom FFI lane;",
+    "summary_ja": "Crux フレームワークの複数パッケージが更新され、crux_http v0.20.0では HttpError のボディ内容を簡単に取得できる `body()` と `body_json()` メソッドが追加されました。crux_core v0.20.0では破壊的変更として `EffectId` が `ParkedEffectId` に名前変更され、カスタムFFIレーンを使用する場合は対応が必要です。その他のパッケージ(crux_time、crux_macros、crux_kv)ではREADMEを統一する改善が行われました。",
+    "fetched_at": "2026-08-07T23:09:51.621545+00:00",
+    "fw_total_in_window": 1
+  }
+]

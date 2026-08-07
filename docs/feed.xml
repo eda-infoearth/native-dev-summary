@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 07 Aug 2026 09:45:44 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 08:09:54 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🦞 Crux — crux_time-v0.18.0: Merge pull request #571 from redbadger/readme-single-source / crux_macros-v0.10.1: Merge pull request #571 from redbadger/readme-single-source / crux_kv-v0.14.0: Merge pull request #571 from redbadger/readme-single-source / crux_http-v0.20.0 / crux_core-v0.20.0</title>
+      <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.18.0</link>
+      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.18.0</guid>
+      <pubDate>Fri, 07 Aug 2026 23:18:21 +0900</pubDate>
+      <description>Crux フレームワークの複数パッケージが更新され、crux_http v0.20.0では HttpError のボディ内容を簡単に取得できる `body()` と `body_json()` メソッドが追加されました。crux_core v0.20.0では破壊的変更として `EffectId` が `ParkedEffectId` に名前変更され、カスタムFFIレーンを使用する場合は対応が必要です。その他のパッケージ(crux_time、crux_macros、crux_kv)ではREADMEを統一する改善が行われました。</description>
+    </item>
     <item>
       <title>🍎 App Store — Get ready for new creative assets on the App Store</title>
       <link>https://developer.apple.com/news/?id=kug6m2ea</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/sdk-56-beta</guid>
       <pubDate>Thu, 07 May 2026 05:00:00 +0900</pubDate>
       <description>Expo SDK 56のベータ版がリリースされ、約2週間のベータ期間中に開発者はアプリの互換性を検証できます。React Native 0.85.2とReact 19.2.3が含まれており、ベータ期間中は破壊的変更を含む修正と改善が継続的にリリースされるため、定期的な確認が必要です。詳細なリリースノートは正式版リリース時に公開されますが、expo/expoリポジトリのチェンジログで変更内容を事前に確認できます。</description>
-    </item>
-    <item>
-      <title>🦀 Tauri — tauri v2.11.1</title>
-      <link>https://v2.tauri.app/release/tauri/v2.11.1/</link>
-      <guid isPermaLink="true">https://v2.tauri.app/release/tauri/v2.11.1/</guid>
-      <pubDate>Wed, 06 May 2026 19:17:49 +0900</pubDate>
-      <description>Tauri v2.11.1では、モバイルでモニター（ディスプレイ）APIが利用可能になり、AndroidのrequestPermission APIのクラッシュが修正されました。重要なセキュリティ修正として、AppManifestがない場合でもIPC要求に対するACLチェックが適用され、リモートオリジンからのカスタムコマンド実行が制限されるようになりました。</description>
     </item>
   </channel>
 </rss>
