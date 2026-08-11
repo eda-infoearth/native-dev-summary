@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 11 Aug 2026 08:10:08 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 08:13:40 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>⚛️ React Native — React Native 0.87 - Strict TypeScript API, Metro Update, Swift Package Manager, AGP 9 Support</title>
+      <link>https://reactnative.dev/blog/2026/08/11/react-native-0.87</link>
+      <guid isPermaLink="true">https://reactnative.dev/blog/2026/08/11/react-native-0.87</guid>
+      <pubDate>Tue, 11 Aug 2026 09:00:00 +0900</pubDate>
+      <description>React Native 0.87ではStrict TypeScript APIがデフォルト化され、Metro 0.87への更新、Swift Package Managerの実験的サポートが追加されました。Node.js 22、Android Gradle Plugin 9、Kotlin 2.0以上が最小要件として引き上げられたため、プロジェクトの互換性確認が必要です。深いインポート（deep imports）の廃止により、公開APIの使用が強制されるようになります。</description>
+    </item>
     <item>
       <title>🦞 Crux — crux_time-v0.18.0: Merge pull request #571 from redbadger/readme-single-source / crux_macros-v0.10.1: Merge pull request #571 from redbadger/readme-single-source / crux_kv-v0.14.0: Merge pull request #571 from redbadger/readme-single-source / crux_http-v0.20.0 / crux_core-v0.20.0</title>
       <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.18.0</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://electronjs.org/blog/electron-42-0</guid>
       <pubDate>Thu, 07 May 2026 09:00:00 +0900</pubDate>
       <description>Electron 42がリリースされ、Chromium 148.0.7778.96、V8 14.8、Node.js v24.15.0へのアップグレードが含まれています。これらの更新により、最新のWeb標準対応、JavaScript実行パフォーマンスの向上、Node.js最新機能の利用が可能になります。既存アプリケーションとの互換性を確認した上でアップグレードすることが推奨されます。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Expo SDK 56 Beta is now available</title>
-      <link>https://expo.dev/changelog/sdk-56-beta</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/sdk-56-beta</guid>
-      <pubDate>Thu, 07 May 2026 05:00:00 +0900</pubDate>
-      <description>Expo SDK 56のベータ版がリリースされ、約2週間のベータ期間中に開発者はアプリの互換性を検証できます。React Native 0.85.2とReact 19.2.3が含まれており、ベータ期間中は破壊的変更を含む修正と改善が継続的にリリースされるため、定期的な確認が必要です。詳細なリリースノートは正式版リリース時に公開されますが、expo/expoリポジトリのチェンジログで変更内容を事前に確認できます。</description>
     </item>
   </channel>
 </rss>

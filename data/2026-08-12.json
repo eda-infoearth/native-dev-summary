@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "react-native",
+    "fw_name": "React Native",
+    "fw_icon": "⚛️",
+    "fw_color": "#61DAFB",
+    "id": "https://reactnative.dev/blog/2026/08/11/react-native-0.87",
+    "title": "React Native 0.87 - Strict TypeScript API, Metro Update, Swift Package Manager, AGP 9 Support",
+    "link": "https://reactnative.dev/blog/2026/08/11/react-native-0.87",
+    "pub_date": "Tue, 11 Aug 2026 00:00:00 GMT",
+    "description": "Today we are excited to release React Native 0.87! This release makes the Strict TypeScript API the default JavaScript API, updates Metro to 0.87, adds experimental support for Swift Package Manager (SwiftPM) . It also raises the minimum toolchain requirements: Node.js 22, Android Gradle Plugin 9, and Kotlin 2.0+. Highlights ​ Strict TypeScript API by default Faster, leaner Metro Experimental Swift Package Manager support for iOS Android Gradle Plugin (AGP) v9 Highlights ​ Strict TypeScript API by default ​ React Native's public JavaScript API is now the Strict TypeScript API . This was originally available as an opt-in preview in 0.80, alongside the deprecation of deep imports . In 0.87, it becomes the default for all projects. This is an ecosystem-wide change and brings intentional break",
+    "summary_ja": "React Native 0.87ではStrict TypeScript APIがデフォルト化され、Metro 0.87への更新、Swift Package Managerの実験的サポートが追加されました。Node.js 22、Android Gradle Plugin 9、Kotlin 2.0以上が最小要件として引き上げられたため、プロジェクトの互換性確認が必要です。深いインポート（deep imports）の廃止により、公開APIの使用が強制されるようになります。",
+    "fetched_at": "2026-08-11T23:13:34.299093+00:00",
+    "fw_total_in_window": 1
+  }
+]
