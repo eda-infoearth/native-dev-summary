@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 12 Aug 2026 08:13:40 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 08:12:45 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Updates to age ratings for the Republic of Korea</title>
+      <link>https://developer.apple.com/news/?id=oj3r9pvw</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=oj3r9pvw</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:03 +0900</pubDate>
+      <description>App StoreのKorea地域における年齢レーティングが更新されます。Games と Entertainment カテゴリのアプリは、GRAC（ゲーム等級委員会）から公式レーティングを取得した場合、RCN（レーティング分類番号）を提供することで、既存のレーティングを All、12+、15+、19+ のいずれかにオーバーライドできるようになりました。本変更は本日から適用され、次のバージョン申請時に対応可能です。</description>
+    </item>
     <item>
       <title>⚛️ React Native — React Native 0.87 - Strict TypeScript API, Metro Update, Swift Package Manager, AGP 9 Support</title>
       <link>https://reactnative.dev/blog/2026/08/11/react-native-0.87</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.16.0</guid>
       <pubDate>Fri, 08 May 2026 15:31:14 +0900</pubDate>
       <description>Crux v0.18.0では、crux_macrosの#[effect]マクロが生成するEffectTestExtトレイトに、fluent形式のチェーン可能なアサーションメソッド（expect_effect、expect_only_effect、resolve_effectなど）が追加されました。これにより、エフェクトとイベントのテストがより読みやすく簡潔に書けるようになりました。その他のパッケージ（crux_time、crux_platform、crux_kv、crux_httpなど）も同時にアップデートされています。</description>
-    </item>
-    <item>
-      <title>⚡ Electron — Electron 42</title>
-      <link>https://electronjs.org/blog/electron-42-0</link>
-      <guid isPermaLink="true">https://electronjs.org/blog/electron-42-0</guid>
-      <pubDate>Thu, 07 May 2026 09:00:00 +0900</pubDate>
-      <description>Electron 42がリリースされ、Chromium 148.0.7778.96、V8 14.8、Node.js v24.15.0へのアップグレードが含まれています。これらの更新により、最新のWeb標準対応、JavaScript実行パフォーマンスの向上、Node.js最新機能の利用が可能になります。既存アプリケーションとの互換性を確認した上でアップグレードすることが推奨されます。</description>
     </item>
   </channel>
 </rss>

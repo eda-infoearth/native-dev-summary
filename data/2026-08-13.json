@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=oj3r9pvw",
+    "title": "Updates to age ratings for the Republic of Korea",
+    "link": "https://developer.apple.com/news/?id=oj3r9pvw",
+    "pub_date": "Wed, 12 Aug 2026 08:00:03 PDT",
+    "description": "Apple generates appropriate age ratings based on your answers to the age rating questionnaire in App Store Connect. In compliance with local regulatory requirements, apps in the Games and Entertainment categories distributed on the App Store in Korea receive a region-specific age rating based on these answers. We’re making two changes to age ratings in the Republic of Korea: one taking effect today and the other later this year. First, starting today, if your app has received an official rating from the Game Rating and Administration Committee (GRAC), you can now override your app’s existing age rating for the App Store in Korea to any of the region-specific ratings (All, 12+, 15+, or 19+) by providing your GRAC Rating Classification Number (RCN) with your app’s next version submission. Le",
+    "summary_ja": "App StoreのKorea地域における年齢レーティングが更新されます。Games と Entertainment カテゴリのアプリは、GRAC（ゲーム等級委員会）から公式レーティングを取得した場合、RCN（レーティング分類番号）を提供することで、既存のレーティングを All、12+、15+、19+ のいずれかにオーバーライドできるようになりました。本変更は本日から適用され、次のバージョン申請時に対応可能です。",
+    "fetched_at": "2026-08-12T23:12:43.175858+00:00",
+    "fw_total_in_window": 1
+  }
+]
