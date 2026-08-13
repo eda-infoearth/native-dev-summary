@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/connect-expo-in-claude",
+    "title": "Connect Expo in the Claude desktop app",
+    "link": "https://expo.dev/changelog/connect-expo-in-claude",
+    "pub_date": "2026-08-13T12:45:43.980Z",
+    "description": "The Expo MCP server is now in Claude's connector directory . Add it at claude.ai/directory/connectors/expo , sign in with your Expo account once, and it stays connected. Thanks to the Anthropic team for reviewing the submission and getting us listed. On a Claude Team plan you may see a Request button instead of Connect. That is expected, not an error. It sends the connector to your admins, who can enable it for the whole organization. What a connector is, and what changes You could always add the Expo MCP server by hand: a CLI command in your coding agent, or a URL in a config file. That still works, and existing setups keep working. The listing removes the setup step. A connector is a hosted MCP server that Claude talks to over the network. You authorize it once and Claude can use its too",
+    "summary_ja": "ExpoのMCPサーバーがClaudeのコネクタディレクトリに登録され、claude.ai/directory/connectors/expoから簡単に接続できるようになりました。Expo アカウントで一度認証すれば継続的に接続された状態が保たれ、CLIコマンドやconfig ファイルでの手動設定は不要になります。Claude Team プランではリクエストボタンが表示される場合がありますが、これは組織全体での有効化を管理者に申請する正常な動作です。",
+    "fetched_at": "2026-08-13T23:13:11.340076+00:00",
+    "fw_total_in_window": 1
+  }
+]

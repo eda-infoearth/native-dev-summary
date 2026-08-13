@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 13 Aug 2026 08:12:45 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 08:13:18 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Connect Expo in the Claude desktop app</title>
+      <link>https://expo.dev/changelog/connect-expo-in-claude</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/connect-expo-in-claude</guid>
+      <pubDate>Thu, 13 Aug 2026 21:45:43 +0900</pubDate>
+      <description>ExpoのMCPサーバーがClaudeのコネクタディレクトリに登録され、claude.ai/directory/connectors/expoから簡単に接続できるようになりました。Expo アカウントで一度認証すれば継続的に接続された状態が保たれ、CLIコマンドやconfig ファイルでの手動設定は不要になります。Claude Team プランではリクエストボタンが表示される場合がありますが、これは組織全体での有効化を管理者に申請する正常な動作です。</description>
+    </item>
     <item>
       <title>🍎 App Store — Updates to age ratings for the Republic of Korea</title>
       <link>https://developer.apple.com/news/?id=oj3r9pvw</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.8</guid>
       <pubDate>Fri, 08 May 2026 08:03:15 +0900</pubDate>
       <description>Dioxos v0.7.8はv0.8開発中に発見されたバグの修正を複数バックポートしたリリースです。macOSの署名・公証機能の修正、wasmホットパッチ適用時のUB（未定義動作）の修正、iframeの修正が含まれています。</description>
-    </item>
-    <item>
-      <title>🦞 Crux — crux_time-v0.16.0 / crux_platform-v0.9.0 / crux_macros-v0.9.0 / crux_kv-v0.12.0 / crux_http-v0.17.0 / crux_core-v0.18.0 / crux_cli-v0.3.0</title>
-      <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.16.0</link>
-      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.16.0</guid>
-      <pubDate>Fri, 08 May 2026 15:31:14 +0900</pubDate>
-      <description>Crux v0.18.0では、crux_macrosの#[effect]マクロが生成するEffectTestExtトレイトに、fluent形式のチェーン可能なアサーションメソッド（expect_effect、expect_only_effect、resolve_effectなど）が追加されました。これにより、エフェクトとイベントのテストがより読みやすく簡潔に書けるようになりました。その他のパッケージ（crux_time、crux_platform、crux_kv、crux_httpなど）も同時にアップデートされています。</description>
     </item>
   </channel>
 </rss>
