@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=gmws0jgp",
+    "title": "Changes for apps in the European Union",
+    "link": "https://developer.apple.com/news/?id=gmws0jgp",
+    "pub_date": "Tue, 18 Aug 2026 08:00:38 PDT",
+    "description": "Apple is making changes to its business terms for apps in the European Union, following close collaboration with the European Commission. The changes reduce complexity by moving every developer that distributes apps in the EU to a single set of business terms. Under the new business terms, Apple will charge a commission on the sale of digital goods and services. The Core Technology Fee, a per-install fee for developers who achieve extraordinary scale, will be replaced by the Core Technology Commission, a simple 5% commission on digital transactions in apps distributed outside the App Store. The new terms also eliminate the Initial Acquisition Fee and Store Services Fee. Members of the Apple Developer Program can review and agree to the updated terms today in the Apple Developer Program Lic",
+    "summary_ja": "Appleは欧州委員会との協議に基づき、EU内でのアプリ配信に関する新しいビジネス条件を導入します。従来のCore Technology Feeに代わって、App Store外で配信されるアプリのデジタル取引に対して5%の手数料（Core Technology Commission）を課す仕組みに変更されます。また、Initial Acquisition FeeとStore Services Feeが廃止され、条件がシンプル化されます。",
+    "fetched_at": "2026-08-18T23:03:31.892590+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=0cgo95n6",
+    "title": "Updated Apple Developer Program License Agreement now available",
+    "link": "https://developer.apple.com/news/?id=0cgo95n6",
+    "pub_date": "Tue, 18 Aug 2026 08:00:32 PDT",
+    "description": "Attachment 14 of the Apple Developer Program License Agreement has been added to specify updated terms for apps in the European Union, including alternative distribution, alternative payments, and business terms. These terms will go into effect on October 1, 2026. Please review the changes and sign in to your account to accept the updated terms. Translations of the updated agreement will be available on the Apple Developer website within one month.",
+    "summary_ja": "Apple Developer Program License Agreement の Attachment 14 が更新され、EU 向けアプリの代替流通、代替決済、ビジネス条件に関する新たな規定が追加されました。これらの新規定は 2026 年 10 月 1 日から施行されるため、開発者アカウントにサインインして更新された利用規約に同意する必要があります。翻訳版は Apple Developer ウェブサイトで 1 ヶ月以内に公開予定です。",
+    "fetched_at": "2026-08-18T23:03:31.892641+00:00",
+    "fw_total_in_window": 2
+  }
+]
