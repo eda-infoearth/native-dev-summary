@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 20 Aug 2026 08:03:55 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 08:05:10 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — EAS Observe is now generally available</title>
+      <link>https://expo.dev/changelog/eas-observe-is-now-generally-available</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/eas-observe-is-now-generally-available</guid>
+      <pubDate>Thu, 20 Aug 2026 21:00:00 +0900</pubDate>
+      <description>EAS Observeが本日一般提供開始され、アプリのスタートアップやナビゲーションなどのパフォーマンスをダッシュボードで監視できます。無料プランは月100,000イベント、Starter以上は月500,000イベントまで無料で90日間のデータ保持が可能です。超過分は月100万イベントあたり5ドルの課金対象となり、サンプルレート調整で利用量を管理できます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Changes for apps in the European Union</title>
       <link>https://developer.apple.com/news/?id=gmws0jgp</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/expo-go-loading-changes-may-2026</guid>
       <pubDate>Thu, 14 May 2026 05:00:00 +0900</pubDate>
       <description>Expo Goでプロジェクト読み込み動作が2つ変更されました。第1に、EAS Updateで公開されたプロジェクトは自分が所有するか属する組織が所有するもののみ読み込み可能になりました（2026年5月12日から全バージョン対象）。第2に、Hermes bytecodeバンドル（HBC）はEAS Update経由のみサポートされ、自ホスト更新ではプレーンJavaScriptバンドルが必須です（SDK 54〜56の最新Expo Go対象）。</description>
-    </item>
-    <item>
-      <title>🐟 Flet — Flet 0.85.0: Declarative apps grow up — Router, dialogs, and more</title>
-      <link>https://flet.dev/blog/flet-v-0-85-release-announcement</link>
-      <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-85-release-announcement</guid>
-      <pubDate>Mon, 11 May 2026 09:00:00 +0900</pubDate>
-      <description>Flet 0.85.0では、@ft.componentアプリ向けに宣言型ルーターが実装され、ネストされたルート・動的セグメント・データローダーなどが利用可能になりました。また、ft.use_dialog()フックにより、ダイアログが従来の命令型のpage.show_dialog()から反応型の状態管理に変更され、動画再生の設定可能なコントロール・スクリーンショット機能、オーディオレコーダーのPCM16ストリーミング機能が追加されています。</description>
     </item>
   </channel>
 </rss>

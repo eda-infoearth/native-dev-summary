@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/eas-observe-is-now-generally-available",
+    "title": "EAS Observe is now generally available",
+    "link": "https://expo.dev/changelog/eas-observe-is-now-generally-available",
+    "pub_date": "2026-08-20T12:00:00.000Z",
+    "description": "EAS Observe helps you understand how your app performs in the real world, with dashboards for app startup, navigation, EAS Update, and more. Today, August 20, 2026, it moves from public beta to general availability. No action is required to continue using Observe. Every plan includes 90 days of data retention. The Free plan includes 100,000 events per month and access to the main Observe dashboard. Starter plans and above include 500,000 events per month and access to current and future observability dashboards. Starting today, usage beyond the included amount is billed at $5 per 1 million events for Starter plans and above. You can see the full pricing table for Observe on our pricing page . If you would like to manage event volume, you can adjust your project’s sample rate. You can also ",
+    "summary_ja": "EAS Observeが本日一般提供開始され、アプリのスタートアップやナビゲーションなどのパフォーマンスをダッシュボードで監視できます。無料プランは月100,000イベント、Starter以上は月500,000イベントまで無料で90日間のデータ保持が可能です。超過分は月100万イベントあたり5ドルの課金対象となり、サンプルレート調整で利用量を管理できます。",
+    "fetched_at": "2026-08-20T23:05:00.169062+00:00",
+    "fw_total_in_window": 1
+  }
+]
