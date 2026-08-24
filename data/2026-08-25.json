@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=1ptvdtcm",
+    "title": "Update: New domain for Sign in with Apple",
+    "link": "https://developer.apple.com/news/?id=1ptvdtcm",
+    "pub_date": "Mon, 24 Aug 2026 11:00:46 PDT",
+    "description": "Starting later this year, new Sign in with Apple addresses, previously issued on privaterelay.appleid.com , will be issued on private.icloud.com . Existing addresses on privaterelay.appleid.com will continue to work and forward mail to users without interruption. After further consideration and reviewing community feedback, iCloud+ Hide My Email addresses will remain on icloud.com . What you need to do Developers with apps or websites that use Sign in with Apple should ensure that their account systems, email validation logic, and allowlists accept addresses on the new private.icloud.com domain in addition to the existing privaterelay.appleid.com domain. Learn more about Sign in with Apple Communicating using the Private Email Relay Service",
+    "summary_ja": "Sign in with Appleの新しいメールアドレスは、今年後半から privaterelay.appleid.com から private.icloud.com ドメインで発行されるようになります。既存のアドレスは引き続き機能しますが、開発者はアカウントシステムやメール検証ロジック、許可リストを両方のドメインに対応させる必要があります。なお、iCloud+ Hide My Emailのアドレスは icloud.com ドメインのままです。",
+    "fetched_at": "2026-08-24T23:04:31.299730+00:00",
+    "fw_total_in_window": 1
+  }
+]

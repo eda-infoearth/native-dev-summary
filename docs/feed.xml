@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 24 Aug 2026 08:02:37 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 08:04:33 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Update: New domain for Sign in with Apple</title>
+      <link>https://developer.apple.com/news/?id=1ptvdtcm</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=1ptvdtcm</guid>
+      <pubDate>Tue, 25 Aug 2026 03:00:46 +0900</pubDate>
+      <description>Sign in with Appleの新しいメールアドレスは、今年後半から privaterelay.appleid.com から private.icloud.com ドメインで発行されるようになります。既存のアドレスは引き続き機能しますが、開発者はアカウントシステムやメール検証ロジック、許可リストを両方のドメインに対応させる必要があります。なお、iCloud+ Hide My Emailのアドレスは icloud.com ドメインのままです。</description>
+    </item>
     <item>
       <title>🚀 Expo — EAS Observe is now generally available</title>
       <link>https://expo.dev/changelog/eas-observe-is-now-generally-available</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/new-updates-to-a2ui-and-flutters-genui-package-e5ddff07737b?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Thu, 14 May 2026 23:18:22 +0900</pubDate>
       <description>A2UIプロトコルとFlutterのgenuiパッケージがアップデートされ、AI agentがコンテンツ生成と同時にUIの表示方法を決定するGenerative UI（GenUI）パターンの実装が改善されました。最新リリースではアーキテクチャの大幅な変更が導入され、A2UIのv0.9に対応することで、agentとrendererの連携がより効率的になりました。既存プロジェクトはアーキテクチャ変更への対応が必要な可能性があります。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Changes to project loading behavior in Expo Go</title>
-      <link>https://expo.dev/changelog/expo-go-loading-changes-may-2026</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/expo-go-loading-changes-may-2026</guid>
-      <pubDate>Thu, 14 May 2026 05:00:00 +0900</pubDate>
-      <description>Expo Goでプロジェクト読み込み動作が2つ変更されました。第1に、EAS Updateで公開されたプロジェクトは自分が所有するか属する組織が所有するもののみ読み込み可能になりました（2026年5月12日から全バージョン対象）。第2に、Hermes bytecodeバンドル（HBC）はEAS Update経由のみサポートされ、自ホスト更新ではプレーンJavaScriptバンドルが必須です（SDK 54〜56の最新Expo Go対象）。</description>
     </item>
   </channel>
 </rss>
