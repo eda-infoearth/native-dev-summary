@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=s6spdug0",
+    "title": "Surprise and shine",
+    "link": "https://developer.apple.com/news/?id=s6spdug0",
+    "pub_date": "Wed, 26 Aug 2026 08:00:55 PDT",
+    "description": "Join us for a special Apple Event on September 9, at 10 a.m. PT. Watch on apple.com , Apple TV, or YouTube Live.",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-08-27T00:06:36.795046+00:00",
+    "fw_total_in_window": 1
+  }
+]

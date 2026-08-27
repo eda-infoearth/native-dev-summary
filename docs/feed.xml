@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 26 Aug 2026 08:05:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 09:06:38 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Surprise and shine</title>
+      <link>https://developer.apple.com/news/?id=s6spdug0</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=s6spdug0</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:55 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
     <item>
       <title>🍎 App Store — Update: New domain for Sign in with Apple</title>
       <link>https://developer.apple.com/news/?id=1ptvdtcm</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Tue, 19 May 2026 03:42:10 +0900</pubDate>
       <description>Flutterの単一コードベースでマルチプラットフォーム開発が可能な特性により、AIアシスタントが統一されたコンテキストで作業できるため、トークン使用量の削減とAIの幻覚現象の最小化が実現できます。Dartで一度書いたコードを全プラットフォームに即座にデプロイでき、プラットフォーム固有言語への翻訳をAIに依頼する必要がなくなるため、開発効率が大幅に向上します。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — New updates to A2UI and Flutter’s GenUI package</title>
-      <link>https://blog.flutter.dev/new-updates-to-a2ui-and-flutters-genui-package-e5ddff07737b?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/new-updates-to-a2ui-and-flutters-genui-package-e5ddff07737b?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Thu, 14 May 2026 23:18:22 +0900</pubDate>
-      <description>A2UIプロトコルとFlutterのgenuiパッケージがアップデートされ、AI agentがコンテンツ生成と同時にUIの表示方法を決定するGenerative UI（GenUI）パターンの実装が改善されました。最新リリースではアーキテクチャの大幅な変更が導入され、A2UIのv0.9に対応することで、agentとrendererの連携がより効率的になりました。既存プロジェクトはアーキテクチャ変更への対応が必要な可能性があります。</description>
     </item>
   </channel>
 </rss>
