@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 27 Aug 2026 09:06:38 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 10:38:22 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Tax and price updates for apps, In-App Purchases, and subscriptions</title>
+      <link>https://developer.apple.com/news/?id=artln8br</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=artln8br</guid>
+      <pubDate>Fri, 28 Aug 2026 04:00:43 +0900</pubDate>
+      <description>App Storeは税制変更に対応するため、2024年8月27日より複数国で売上金を調整します。モロッコ（VAT 20%導入）、コンゴ共和国（VAT 18%導入）、タンザニア（デジタル売上税率引き上げ）が対象となり、開発者の収益に反映されます。調整には公開されている信頼できる金融情報源のレート情報が使用されます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Surprise and shine</title>
       <link>https://developer.apple.com/news/?id=s6spdug0</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.0</guid>
       <pubDate>Wed, 20 May 2026 05:17:18 +0900</pubDate>
       <description>Dioxus v0.8.0-alpha.0は、内部APIの破壊的変更とシグナル機能の信頼性・パフォーマンス向上を含む0.8シリーズの第一弾です。dioxus-nativeは大幅に改善され、レンダリング機能の拡張やカスタム要素対応などが実装されています。ソースからビルドする場合は`--locked`フラグでCLIをインストールする必要があり、この制限は今後解決予定です。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — Flutter’s multiplatform value for agentic development</title>
-      <link>https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/flutters-multiplatform-value-for-agentic-development-cb5c7da7c2bc?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Tue, 19 May 2026 03:42:10 +0900</pubDate>
-      <description>Flutterの単一コードベースでマルチプラットフォーム開発が可能な特性により、AIアシスタントが統一されたコンテキストで作業できるため、トークン使用量の削減とAIの幻覚現象の最小化が実現できます。Dartで一度書いたコードを全プラットフォームに即座にデプロイでき、プラットフォーム固有言語への翻訳をAIに依頼する必要がなくなるため、開発効率が大幅に向上します。</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=artln8br",
+    "title": "Tax and price updates for apps, In-App Purchases, and subscriptions",
+    "link": "https://developer.apple.com/news/?id=artln8br",
+    "pub_date": "Thu, 27 Aug 2026 12:00:43 PDT",
+    "description": "The App Store is designed to make it easy to sell your digital goods and services globally, with support for 43 currencies across 175 storefronts. From time to time, we may need to adjust prices or your proceeds due to changes in tax regulations or foreign exchange rates. These adjustments are made using publicly available exchange rate information from reputable financial media (e.g., The Wall Street Journal) or financial companies (e.g., Bloomberg) to help make sure prices for apps and In-App Purchases stay consistent across all storefronts. As of August 27: Your proceeds from the sale of eligible apps and In‑App Purchases have been modified in: * Morocco: Value‑added tax (VAT) introduction of 20% Republic of the Congo: VAT introduction of 18% Tanzania: Digital sales tax (DST) rate incre",
+    "summary_ja": "App Storeは税制変更に対応するため、2024年8月27日より複数国で売上金を調整します。モロッコ（VAT 20%導入）、コンゴ共和国（VAT 18%導入）、タンザニア（デジタル売上税率引き上げ）が対象となり、開発者の収益に反映されます。調整には公開されている信頼できる金融情報源のレート情報が使用されます。",
+    "fetched_at": "2026-08-28T01:38:19.561992+00:00",
+    "fw_total_in_window": 1
+  }
+]
