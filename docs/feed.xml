@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 01 Sep 2026 08:01:54 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 08:02:31 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Upcoming changes to Rosetta support for Intel-based macOS apps</title>
+      <link>https://developer.apple.com/news/?id=w5ngl9k2</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=w5ngl9k2</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:41 +0900</pubDate>
+      <description>macOS 26.4以降、Rosettaに依存するアプリ起動時にユーザーへの更新通知が表示されるようになります。macOS 27では Rosettaサポートが終了し、Intel専用アプリはApple silicon Macで動作しなくなるため、開発者はApple silicon対応版への更新が必須です。ただし、古いゲームタイトルについてはRosetta機能が継続サポートされます。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — “The impact was the biggest surprise“: Swiggy’s transition to native pays off</title>
+      <link>https://developer.apple.com/news/?id=o5spbekm</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=o5spbekm</guid>
+      <pubDate>Tue, 01 Sep 2026 22:00:01 +0900</pubDate>
+      <description>Swiggyは食品配達サービスから複数事業を統合したオンデマンド便利プラットフォームへ成長し、2024年からネイティブツールへの移行を完了しました。HybridアプリだったInstamartとDineoutをネイティブ化することで、パフォーマンス制限を解決し、数百万ユーザーへのシームレスなモバイル体験を実現しました。ネイティブ移行により、予期しない設計への好影響を含むパフォーマンス改善が得られたとのことです。</description>
+    </item>
     <item>
       <title>🍎 App Store — Tax and price updates for apps, In-App Purchases, and subscriptions</title>
       <link>https://developer.apple.com/news/?id=artln8br</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/sdk-56</guid>
       <pubDate>Fri, 22 May 2026 05:00:00 +0900</pubDate>
       <description>Expo SDK 56ではReact Native 0.85とReact 19.2が統合されました。Expo UIはJetpack Compose（Android）とSwiftUI（iOS）APIが安定版となり、デフォルトテンプレートに含まれるようになったため、新規アプリで即座にネイティブUIコンポーネントが利用できます。Expo GoでもExpo UIが利用可能になり、3サイクルの反復を経た本格的な本番利用が実現しました。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — What’s new in Flutter 3.44</title>
-      <link>https://blog.flutter.dev/whats-new-in-flutter-3-44-b0cc1ad3c527?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/whats-new-in-flutter-3-44-b0cc1ad3c527?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Thu, 21 May 2026 03:01:02 +0900</pubDate>
-      <description>Flutter 3.44では、Android向けHybrid Composition++、iOS/macOSのSwift Package Manager標準化、Impellerの改善されたVulkan対応が実装されました。デスクトップ向けマルチウィンドウサポートのプレビュー、MaterialとCupertinoのコアフレームワークからの分離、GenUIによるエージェント向けUX、Agentic Hot Reloadによる開発体験の向上が新たに追加されています。これらにより、自動車やスマートディスプレイなど多様なデバイスへの対応が強化されました。</description>
-    </item>
-    <item>
-      <title>🧩 Dioxus — v0.8.0-alpha.0</title>
-      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.0</link>
-      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.0</guid>
-      <pubDate>Wed, 20 May 2026 05:17:18 +0900</pubDate>
-      <description>Dioxus v0.8.0-alpha.0は、内部APIの破壊的変更とシグナル機能の信頼性・パフォーマンス向上を含む0.8シリーズの第一弾です。dioxus-nativeは大幅に改善され、レンダリング機能の拡張やカスタム要素対応などが実装されています。ソースからビルドする場合は`--locked`フラグでCLIをインストールする必要があり、この制限は今後解決予定です。</description>
     </item>
   </channel>
 </rss>

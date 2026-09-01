@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=w5ngl9k2",
+    "title": "Upcoming changes to Rosetta support for Intel-based macOS apps",
+    "link": "https://developer.apple.com/news/?id=w5ngl9k2",
+    "pub_date": "Tue, 01 Sep 2026 08:00:41 PDT",
+    "description": "In 2020, we introduced Apple silicon for Mac computers, providing Rosetta as a translation layer during the transition period. As announced at WWDC last year , we’re now concluding this transition. What this means for developers who have macOS apps: macOS 26.4 or later: Users may receive a system notification when launching apps that rely on Rosetta, alerting them to update to an Apple silicon native version. macOS 27: Final release to support Rosetta — Intel-only apps will no longer run on Mac computers with Apple silicon after this update. Please note that Rosetta functionality for older, unmaintained gaming titles that rely on Intel-based frameworks will continue to be supported. What you need to do: To ensure your apps remain available and your users aren't interrupted by system notifi",
+    "summary_ja": "macOS 26.4以降、Rosettaに依存するアプリ起動時にユーザーへの更新通知が表示されるようになります。macOS 27では Rosettaサポートが終了し、Intel専用アプリはApple silicon Macで動作しなくなるため、開発者はApple silicon対応版への更新が必須です。ただし、古いゲームタイトルについてはRosetta機能が継続サポートされます。",
+    "fetched_at": "2026-09-01T23:02:25.987410+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=o5spbekm",
+    "title": "“The impact was the biggest surprise“: Swiggy’s transition to native pays off",
+    "link": "https://developer.apple.com/news/?id=o5spbekm",
+    "pub_date": "Tue, 01 Sep 2026 06:00:01 PDT",
+    "description": "Swiggy began as a humble food delivery service. Today, it’s India’s leading on-demand convenience platform, one that offers everything from groceries via Instamart to restaurant bookings via Dineout . And since 2024, it’s been powered by native tools that create seamless mobile experiences for an audience that numbers in the millions. We caught up with Swiggy’s iOS development team to discuss performance metrics, proactive technology adoption, and the surprising ways transitioning to native tools impacted design. When did you begin the process of transitioning to native apps? Agam Mahajan, senior engineering manager: We’ve always built Swiggy Food natively, but Instamart and Dineout started as hybrid experiences. As these businesses scaled rapidly, we began to see clear limitations in perf",
+    "summary_ja": "Swiggyは食品配達サービスから複数事業を統合したオンデマンド便利プラットフォームへ成長し、2024年からネイティブツールへの移行を完了しました。HybridアプリだったInstamartとDineoutをネイティブ化することで、パフォーマンス制限を解決し、数百万ユーザーへのシームレスなモバイル体験を実現しました。ネイティブ移行により、予期しない設計への好影響を含むパフォーマンス改善が得られたとのことです。",
+    "fetched_at": "2026-09-01T23:02:25.987691+00:00",
+    "fw_total_in_window": 2
+  }
+]
