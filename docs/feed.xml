@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 02 Sep 2026 08:02:31 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 09:47:45 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Hello Developer: September 2026</title>
+      <link>https://developer.apple.com/news/?id=ote61lrx</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=ote61lrx</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:02 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
     <item>
       <title>🍎 App Store — Upcoming changes to Rosetta support for Intel-based macOS apps</title>
       <link>https://developer.apple.com/news/?id=w5ngl9k2</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan</guid>
       <pubDate>Wed, 27 May 2026 04:00:40 +0900</pubDate>
       <description>Expo MCP Serverが無料プランで利用可能になりました。これまで有料プランのみだったMCP（Model Context Protocol）機能が、すべてのExpoアカウントで使用でき、月間MCP使用量が無料枠に含まれます。AIコーディングアシスタントをExpoドキュメントやツールに接続し、Expo関連の質問への回答を素早く得られるようになります。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Expo SDK 56</title>
-      <link>https://expo.dev/changelog/sdk-56</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/sdk-56</guid>
-      <pubDate>Fri, 22 May 2026 05:00:00 +0900</pubDate>
-      <description>Expo SDK 56ではReact Native 0.85とReact 19.2が統合されました。Expo UIはJetpack Compose（Android）とSwiftUI（iOS）APIが安定版となり、デフォルトテンプレートに含まれるようになったため、新規アプリで即座にネイティブUIコンポーネントが利用できます。Expo GoでもExpo UIが利用可能になり、3サイクルの反復を経た本格的な本番利用が実現しました。</description>
     </item>
   </channel>
 </rss>
