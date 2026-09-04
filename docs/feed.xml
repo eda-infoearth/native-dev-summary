@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 03 Sep 2026 09:47:45 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 09:29:43 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Login now required for running projects in Expo Go</title>
+      <link>https://expo.dev/changelog/expo-go-57-login</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/expo-go-57-login</guid>
+      <pubDate>Thu, 03 Sep 2026 13:30:00 +0900</pubDate>
+      <description>Expo Go がExpo SDK 57に対応し、開発モードの実行時に Expo CLI とExpo Go アプリの両方へのログインが必須となりました。ログインが不足している場合、アプリ側でその旨が通知されるため、`npx expo login`コマンドまたはアプリの設定画面から適切にログインしてください。</description>
+    </item>
     <item>
       <title>🍎 App Store — Hello Developer: September 2026</title>
       <link>https://developer.apple.com/news/?id=ote61lrx</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://flet.dev/blog/2026-05-28-flet-studio</guid>
       <pubDate>Thu, 28 May 2026 09:00:00 +0900</pubDate>
       <description>Flet Studioはブラウザベースの統合開発環境で、Pythonコードはブラウザ内で実行されるため、インストールやアカウント登録なしでFletアプリの開発・実行・共有ができます。500以上のギャラリー例から選択して実行したり、既存アプリをフォークしてカスタマイズしたり、空のテンプレートから新規開発することが可能です。作成したアプリはリンク共有により、他のユーザーがセットアップなしで即座に実行できます。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — The Expo MCP Server is now available on the Free plan</title>
-      <link>https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/the-expo-mcp-server-is-now-available-on-the-free-plan</guid>
-      <pubDate>Wed, 27 May 2026 04:00:40 +0900</pubDate>
-      <description>Expo MCP Serverが無料プランで利用可能になりました。これまで有料プランのみだったMCP（Model Context Protocol）機能が、すべてのExpoアカウントで使用でき、月間MCP使用量が無料枠に含まれます。AIコーディングアシスタントをExpoドキュメントやツールに接続し、Expo関連の質問への回答を素早く得られるようになります。</description>
     </item>
   </channel>
 </rss>

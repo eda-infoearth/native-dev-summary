@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/expo-go-57-login",
+    "title": "Login now required for running projects in Expo Go",
+    "link": "https://expo.dev/changelog/expo-go-57-login",
+    "pub_date": "2026-09-03T04:30:00.000Z",
+    "description": "Expo Go has recently been updated in the Apple App Store, and now supports projects running on Expo SDK 57. Expo Go users are now required to be logged in to both the Expo CLI running in your terminal and the Expo Go app in order to run your app in development mode. If you are not logged in on either the terminal or in the app, when running npx expo start and scanning a QR code with your camera app, you may see one of the following messages: The Expo Go app will tell you if you need to login on the terminal, the app, or both. If you need to login on the terminal, run npx expo login and follow the link to login to your account in your web browser. If you need to login on Expo Go, go to home, tap the avatar icon in the upper right corner and enter your Expo username and password to login. On",
+    "summary_ja": "Expo Go がExpo SDK 57に対応し、開発モードの実行時に Expo CLI とExpo Go アプリの両方へのログインが必須となりました。ログインが不足している場合、アプリ側でその旨が通知されるため、`npx expo login`コマンドまたはアプリの設定画面から適切にログインしてください。",
+    "fetched_at": "2026-09-04T00:29:37.520469+00:00",
+    "fw_total_in_window": 1
+  }
+]
