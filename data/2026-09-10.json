@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/posthog-integration",
+    "title": "Connect PostHog to your Expo app in one command",
+    "link": "https://expo.dev/changelog/posthog-integration",
+    "pub_date": "2026-09-09T13:45:39.134Z",
+    "description": "Set up PostHog analytics, session replay, and error tracking, then tag every event with the EAS update it came from. Adding PostHog to a React Native app used to mean creating an org, creating a project, installing three or four packages depending on the features you wanted, wiring up a config plugin, copying keys between browser tabs, and setting up all the local and remote environments so not only you but your whole team and CI could leverage it. Now it's one command: It creates your PostHog org and project, installs the SDK, adds the config plugin, and writes your keys into .env.local and your EAS environment variables for Production, Preview, and Development. You choose the data region and the features you want. If you are already on PostHog, it opens your browser once to link your exi",
+    "summary_ja": "Expoで1コマンドを実行するだけでPostHogのアナリティクス、セッションリプレイ、エラー追跡を設定できるようになりました。従来は複数パッケージのインストールやキー設定に手間がかかっていましたが、新機能では自動的にPostHog組織とプロジェクトを作成し、SDKをインストール、環境変数を設定します。データリージョンと必要な機能を選択でき、既存ユーザーはブラウザで一度リンクするだけで利用開始できます。",
+    "fetched_at": "2026-09-10T00:41:38.125655+00:00",
+    "fw_total_in_window": 1
+  }
+]

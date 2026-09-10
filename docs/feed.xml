@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 09 Sep 2026 09:47:54 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 09:41:44 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Connect PostHog to your Expo app in one command</title>
+      <link>https://expo.dev/changelog/posthog-integration</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/posthog-integration</guid>
+      <pubDate>Wed, 09 Sep 2026 22:45:39 +0900</pubDate>
+      <description>Expoで1コマンドを実行するだけでPostHogのアナリティクス、セッションリプレイ、エラー追跡を設定できるようになりました。従来は複数パッケージのインストールやキー設定に手間がかかっていましたが、新機能では自動的にPostHog組織とプロジェクトを作成し、SDKをインストール、環境変数を設定します。データリージョンと必要な機能を選択でき、既存ユーザーはブラウザで一度リンクするだけで利用開始できます。</description>
+    </item>
     <item>
       <title>🚀 Expo — Login now required for running projects in Expo Go</title>
       <link>https://expo.dev/changelog/expo-go-57-login</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Fri, 29 May 2026 00:43:11 +0900</pubDate>
       <description>Google I/O 2026ではFlutter GenUIを活用した完全なコーヒーショップがGoogle I/Oの中心に出展され、AI生成アートがコーヒーの泡に印刷されるデモンストレーションが行われました。すべてのセッションはFlutter YouTubeチャネルでオンデマンド視聴可能になっており、キーノートからテックセッションまで全ての内容が録画されています。</description>
-    </item>
-    <item>
-      <title>🐟 Flet — Flet Studio: build Python apps in your browser</title>
-      <link>https://flet.dev/blog/2026-05-28-flet-studio</link>
-      <guid isPermaLink="true">https://flet.dev/blog/2026-05-28-flet-studio</guid>
-      <pubDate>Thu, 28 May 2026 09:00:00 +0900</pubDate>
-      <description>Flet Studioはブラウザベースの統合開発環境で、Pythonコードはブラウザ内で実行されるため、インストールやアカウント登録なしでFletアプリの開発・実行・共有ができます。500以上のギャラリー例から選択して実行したり、既存アプリをフォークしてカスタマイズしたり、空のテンプレートから新規開発することが可能です。作成したアプリはリンク共有により、他のユーザーがセットアップなしで即座に実行できます。</description>
     </item>
   </channel>
 </rss>
