@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 10 Sep 2026 09:41:44 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 09:38:54 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Get ready for iPhone Duo</title>
+      <link>https://developer.apple.com/news/?id=vn8abkxx</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=vn8abkxx</guid>
+      <pubDate>Thu, 10 Sep 2026 08:05:23 +0900</pubDate>
+      <description>iPhone Duo向けのアプリ開発に向けて、Apple Developerが新しいビデオコンテンツ、Group Labsへの登録、およびApple Developer Forumsでのセッションを提供しています。開発者は二つのディスプレイ対応アプリの実装方法を学び、コミュニティサポートを活用できます。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — App Store submissions now open for the latest OS releases</title>
+      <link>https://developer.apple.com/news/?id=k1mtkt1k</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=k1mtkt1k</guid>
+      <pubDate>Thu, 10 Sep 2026 08:00:38 +0900</pubDate>
+      <description>iOS 27など最新OSがリリース予定となり、アプリ提出の受付が開始されました。Apple Intelligence、Foundation Modelsフレームワーク、新しいApp Store機能など最新技術の活用が可能になります。macOS 27はApple silicon専用となり、Intel Macとのサポートが終了するため、Xcodeのビルドアーキテクチャをarm64のみに設定して再提出が必要です。</description>
+    </item>
     <item>
       <title>🚀 Expo — Connect PostHog to your Expo app in one command</title>
       <link>https://expo.dev/changelog/posthog-integration</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://developer.apple.com/news/?id=8rgqj83s</guid>
       <pubDate>Tue, 09 Jun 2026 03:20:01 +0900</pubDate>
       <description>Apple 開発者向けの最新 SDK では、Apple Intelligence などの AI 機能やプラットフォーム設計の改善が追加されました。言語、フレームワーク、ツール、サービス全般にわたって大幅な機能強化が行われています。最新ベータソフトウェアのインストール、ドキュメント確認、サンプルコード閲覧が推奨されています。</description>
-    </item>
-    <item>
-      <title>🦞 Crux — crux_time-v0.17.0 / crux_platform-v0.10.0 / crux_macros-v0.10.0 / crux_kv-v0.13.0 / crux_http-v0.18.0 / crux_core-v0.19.0</title>
-      <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0</link>
-      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.17.0</guid>
-      <pubDate>Tue, 09 Jun 2026 01:02:33 +0900</pubDate>
-      <description>Cruxフレームワークの複数パッケージがv0.19.0にアップデートされ、新しいEffectRoutingシステムが導入されました。これにより、従来のミドルウェアに代わってEffectRouterが採用され、型ベースのエフェクトディスパッチングが可能になり、シリアライゼーションブリッジを経由しない効率的な処理フローが実現されました。SerializedレーンとParkedレーン、Bufferレーンの3種類のビルトインレーンが提供されており、開発者は Routes トレイトを実装してカスタマイズ可能です。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — That’s a wrap: Everything Flutter at Google I/O 2026</title>
-      <link>https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/thats-a-wrap-everything-flutter-at-google-i-o-2026-f316e57186e3?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Fri, 29 May 2026 00:43:11 +0900</pubDate>
-      <description>Google I/O 2026ではFlutter GenUIを活用した完全なコーヒーショップがGoogle I/Oの中心に出展され、AI生成アートがコーヒーの泡に印刷されるデモンストレーションが行われました。すべてのセッションはFlutter YouTubeチャネルでオンデマンド視聴可能になっており、キーノートからテックセッションまで全ての内容が録画されています。</description>
     </item>
   </channel>
 </rss>

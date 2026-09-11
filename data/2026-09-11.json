@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=vn8abkxx",
+    "title": "Get ready for iPhone Duo",
+    "link": "https://developer.apple.com/news/?id=vn8abkxx",
+    "pub_date": "Wed, 09 Sep 2026 16:05:23 PDT",
+    "description": "Start getting ready for iPhone Duo today. Watch new videos, sign up for Group Labs, and take part in Q As on the Apple Developer Forums. Explore now",
+    "summary_ja": "iPhone Duo向けのアプリ開発に向けて、Apple Developerが新しいビデオコンテンツ、Group Labsへの登録、およびApple Developer Forumsでのセッションを提供しています。開発者は二つのディスプレイ対応アプリの実装方法を学び、コミュニティサポートを活用できます。",
+    "fetched_at": "2026-09-11T00:38:49.682382+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=k1mtkt1k",
+    "title": "App Store submissions now open for the latest OS releases",
+    "link": "https://developer.apple.com/news/?id=k1mtkt1k",
+    "pub_date": "Wed, 09 Sep 2026 16:00:38 PDT",
+    "description": "iOS 27, iPadOS 27, macOS 27, tvOS 27, visionOS 27, and watchOS 27 will soon be available to customers worldwide, which means you can now submit apps and games that take advantage of the latest Apple technologies and innovations like Apple Intelligence, the Foundation Models framework, design updates, new App Store features, and more. Download the Xcode 27 Release Candidate. Build your apps and games using the latest SDKs, test with TestFlight, and submit for review to the App Store. Optimize your app for macOS 27. macOS 26 is the final release supporting Intel Mac computers and Rosetta — macOS 27 will be Apple silicon only. To limit your app to Macs with Apple silicon, set your Xcode build architecture to arm64 only, then rebuild and resubmit. Removing support for Intel-based apps lets you",
+    "summary_ja": "iOS 27など最新OSがリリース予定となり、アプリ提出の受付が開始されました。Apple Intelligence、Foundation Modelsフレームワーク、新しいApp Store機能など最新技術の活用が可能になります。macOS 27はApple silicon専用となり、Intel Macとのサポートが終了するため、Xcodeのビルドアーキテクチャをarm64のみに設定して再提出が必要です。",
+    "fetched_at": "2026-09-11T00:38:49.682512+00:00",
+    "fw_total_in_window": 2
+  }
+]
