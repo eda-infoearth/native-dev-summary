@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 15 Sep 2026 10:02:30 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 09:52:14 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Expo SDK 58 Beta is now available</title>
+      <link>https://expo.dev/changelog/sdk-58-beta</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/sdk-58-beta</guid>
+      <pubDate>Wed, 16 Sep 2026 05:17:00 +0900</pubDate>
+      <description>Expo SDK 58ベータが3～4週間の期間で利用可能になり、iOS 27対応やReact Native 0.88 RC（リリース候補版）が含まれています。開発者はベータ期間中にテストを行い、回帰問題がないか確認できます。React Native 0.88の正式版リリース後、SDK 58の安定版がリリースされる予定です。</description>
+    </item>
+    <item>
+      <title>🐟 Flet — Flet 1.0</title>
+      <link>https://flet.dev/blog/flet-1-0</link>
+      <guid isPermaLink="true">https://flet.dev/blog/flet-1-0</guid>
+      <pubDate>Tue, 15 Sep 2026 09:00:00 +0900</pubDate>
+      <description>Flet 1.0がリリースされ、Pythonでのクロスプラットフォームアプリ開発がさらに容易になりました。ブラウザ上でアプリを構築・共有できるFlet Studioと、AIコーディングアシスタント向けのFlet MCPサーバーが新たに提供されます。GitHubで16,700以上のスター、900万回以上のPyPI ダウンロード、6,000人以上のDiscordコミュニティを達成し、プロダクション対応レベルの成熟度に到達しています。</description>
+    </item>
     <item>
       <title>🍎 App Store — Get ready for iPhone Duo</title>
       <link>https://developer.apple.com/news/?id=vn8abkxx</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://reactnative.dev/blog/2026/06/11/react-native-0.86</guid>
       <pubDate>Thu, 11 Jun 2026 09:00:00 +0900</pubDate>
       <description>React Native 0.86がリリースされ、Android 15以上での包括的なエッジツーエッジ対応とReact Native DevToolsの改善が実装されました。ユーザー向けの破壊的変更がないため、アップグレードがスムーズに行える点が特徴です。また、React Nativeリポジトリがfacebookからreact organizationへ移行し、React Foundationによる長期的な維持管理体制が整備されました。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — WWDC26 survey</title>
-      <link>https://developer.apple.com/news/?id=15wishue</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=15wishue</guid>
-      <pubDate>Thu, 11 Jun 2026 23:00:32 +0900</pubDate>
-      <description>要約失敗</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Find out what&apos;s new for Apple developers</title>
-      <link>https://developer.apple.com/news/?id=8rgqj83s</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=8rgqj83s</guid>
-      <pubDate>Tue, 09 Jun 2026 03:20:01 +0900</pubDate>
-      <description>Apple 開発者向けの最新 SDK では、Apple Intelligence などの AI 機能やプラットフォーム設計の改善が追加されました。言語、フレームワーク、ツール、サービス全般にわたって大幅な機能強化が行われています。最新ベータソフトウェアのインストール、ドキュメント確認、サンプルコード閲覧が推奨されています。</description>
     </item>
   </channel>
 </rss>
