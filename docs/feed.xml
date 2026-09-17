@@ -5,9 +5,30 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 16 Sep 2026 09:52:14 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 09:56:46 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Get ready with the latest beta releases</title>
+      <link>https://developer.apple.com/news/?id=rfb1rooi</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=rfb1rooi</guid>
+      <pubDate>Thu, 17 Sep 2026 02:03:39 +0900</pubDate>
+      <description>iOS 27.2、iPadOS 27.2、macOS 27.2、tvOS 27.2、visionOS 27.2、watchOS 27.2のベータ版がリリースされており、Xcode 27.2で構築・テストすることで最新SDKの機能を活用できます。10月23日にiPhone Duoが利用可能になる際はiOS 27.1が搭載され、折りたたみデザイン向けの専用機能が導入されるため、Xcode 27.1で新しいシミュレータと更新SDKを使用した開発対応が必要です。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Get your subscriptions ready for iOS 27</title>
+      <link>https://developer.apple.com/news/?id=likeohx4</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=likeohx4</guid>
+      <pubDate>Thu, 17 Sep 2026 02:02:58 +0900</pubDate>
+      <description>iOS 27では、StoreKit 2を使用して複数のサブスクリプションを1つのアプリ内課金として提供できる「Bundles」と「Suites」の新機能が追加されます。Bundlesは単一アプリ、複数アプリ、または異なる開発者のアプリ横断で複数のサブスクリプションを束ねて販売でき、Suitesは単一開発者の複数アプリで機能する1つのサブスクリプションを提供できます。これらの機能を利用するには事前にアクセスリクエストが必要で、開発者は今からStoreKit 2への対応準備を進める必要があります。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Updates to App Tracking Transparency in the European Union</title>
+      <link>https://developer.apple.com/news/?id=idsft9ai</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=idsft9ai</guid>
+      <pubDate>Thu, 17 Sep 2026 02:00:11 +0900</pubDate>
+      <description>iOS 27.2およびiPadOS 27.2より、EU地域の開発者はApp Tracking Transparencyのシステムプロンプトの代替版を選択できるようになります。ユーザーの追跡許可を求める要件は変わりませんが、ドイツ、フランス、イタリア、ポーランド、ルーマニアでは法的要件により代替版のみの使用が必須となります。</description>
+    </item>
     <item>
       <title>🚀 Expo — Expo SDK 58 Beta is now available</title>
       <link>https://expo.dev/changelog/sdk-58-beta</link>
@@ -336,27 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/eas-internal-ios-ci-workflows</guid>
       <pubDate>Tue, 16 Jun 2026 01:00:00 +0900</pubDate>
       <description>EAS WorkflowsはiOSアプリのデバイス登録プロセスを自動化し、ad hocプロビジョニングでのテスト配布を効率化します。従来はデバイス登録後にプロビジョニングプロファイルを再生成して再ビルドが必要でしたが、このワークフローにより自動化が実現します。TestFlightとEAS内部配布を組み合わせることで、チームへの柔軟な配布方法が可能になります。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — New domain for Sign in with Apple and iCloud+ Hide My Email</title>
-      <link>https://developer.apple.com/news/?id=sus6t6ab</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=sus6t6ab</guid>
-      <pubDate>Tue, 16 Jun 2026 07:00:28 +0900</pubDate>
-      <description>Apple IDでのサインインとiCloud+ Hide My Emailの機能で使用するメールドメインが、夏までに「private.icloud.com」に統一されます。既存のアドレス（privaterelay.appleid.comおよびicloud.com）は引き続き機能しますが、開発者は新しいドメインをメール検証ロジックとホワイトリストに対応させる必要があります。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — Flutter Q2 survey</title>
-      <link>https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/flutter-q2-survey-475913d622ec?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Tue, 16 Jun 2026 01:42:40 +0900</pubDate>
-      <description>Flutter Q2アンケートが実施中で、6月19日(金)の終業時までの回答をお願いしています。アンケートは短時間で完了でき、フィードバックはFlutterの今後のロードマップ策定に活用されます。開発者の皆様の貴重なご意見をお聞かせください。</description>
-    </item>
-    <item>
-      <title>⚛️ React Native — React Native 0.86 - Edge-to-Edge and DevTools Improvements, no breaking changes</title>
-      <link>https://reactnative.dev/blog/2026/06/11/react-native-0.86</link>
-      <guid isPermaLink="true">https://reactnative.dev/blog/2026/06/11/react-native-0.86</guid>
-      <pubDate>Thu, 11 Jun 2026 09:00:00 +0900</pubDate>
-      <description>React Native 0.86がリリースされ、Android 15以上での包括的なエッジツーエッジ対応とReact Native DevToolsの改善が実装されました。ユーザー向けの破壊的変更がないため、アップグレードがスムーズに行える点が特徴です。また、React Nativeリポジトリがfacebookからreact organizationへ移行し、React Foundationによる長期的な維持管理体制が整備されました。</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,44 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=rfb1rooi",
+    "title": "Get ready with the latest beta releases",
+    "link": "https://developer.apple.com/news/?id=rfb1rooi",
+    "pub_date": "Wed, 16 Sep 2026 10:03:39 PDT",
+    "description": "The beta versions of iOS 27.2, iPadOS 27.2, macOS 27.2, tvOS 27.2, visionOS 27.2, and watchOS 27.2 are now available. Get your apps ready by confirming they work as expected on these releases. And make sure to build and test with Xcode 27.2 to take advantage of the advancements in the latest SDKs. Note about iOS 27.1 and iPhone Duo When iPhone Duo becomes available on October 23, it will run iOS 27.1. This version builds on the foundation of iOS 27 and introduces features that were purpose-built for the new foldable design. Xcode 27.1 will add development support for iPhone Duo. This includes updated SDKs and a simulator that supports the all-new poses and orientations of iPhone Duo. A beta version will be available later this month. View downloads and release notes Learn about testing a b",
+    "summary_ja": "iOS 27.2、iPadOS 27.2、macOS 27.2、tvOS 27.2、visionOS 27.2、watchOS 27.2のベータ版がリリースされており、Xcode 27.2で構築・テストすることで最新SDKの機能を活用できます。10月23日にiPhone Duoが利用可能になる際はiOS 27.1が搭載され、折りたたみデザイン向けの専用機能が導入されるため、Xcode 27.1で新しいシミュレータと更新SDKを使用した開発対応が必要です。",
+    "fetched_at": "2026-09-17T00:56:38.903989+00:00",
+    "fw_total_in_window": 3
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=likeohx4",
+    "title": "Get your subscriptions ready for iOS 27",
+    "link": "https://developer.apple.com/news/?id=likeohx4",
+    "pub_date": "Wed, 16 Sep 2026 10:02:58 PDT",
+    "description": "Discover how you can expand the reach of your subscriptions with new features in iOS 27. You can start preparing today by making sure your apps use StoreKit 2 to handle your Apple In-App Purchases. Request access to Bundles and Suites Offer multiple subscriptions as a single Apple In-App Purchase in your apps with new Bundles and Suites capabilities. With Bundles, people can access multiple subscriptions in one purchase — across a single app, multiple apps from the same developer, or even spanning multiple developers’ apps. With Suites, people get access to a single subscription that seamlessly works across a set of apps from a single developer. The App Store provides the purchase experience, which displays all apps included in your Bundle or Suite, so it’s easy for people to download and ",
+    "summary_ja": "iOS 27では、StoreKit 2を使用して複数のサブスクリプションを1つのアプリ内課金として提供できる「Bundles」と「Suites」の新機能が追加されます。Bundlesは単一アプリ、複数アプリ、または異なる開発者のアプリ横断で複数のサブスクリプションを束ねて販売でき、Suitesは単一開発者の複数アプリで機能する1つのサブスクリプションを提供できます。これらの機能を利用するには事前にアクセスリクエストが必要で、開発者は今からStoreKit 2への対応準備を進める必要があります。",
+    "fetched_at": "2026-09-17T00:56:38.904122+00:00",
+    "fw_total_in_window": 3
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=idsft9ai",
+    "title": "Updates to App Tracking Transparency in the European Union",
+    "link": "https://developer.apple.com/news/?id=idsft9ai",
+    "pub_date": "Wed, 16 Sep 2026 10:00:11 PDT",
+    "description": "As part of agreements with select European competition authorities, Apple is introducing changes to its App Tracking Transparency framework in the European Union. Beginning with iOS 27.2 and iPadOS 27.2, developers will have the option to use an alternative version of the App Tracking Transparency system prompt in the EU. The requirements for when you must seek permission to track users will remain the same. Due to legal requirements, only the alternative version of the system prompt is available for apps distributed in Germany, France, Italy, Poland, and Romania. Learn more",
+    "summary_ja": "iOS 27.2およびiPadOS 27.2より、EU地域の開発者はApp Tracking Transparencyのシステムプロンプトの代替版を選択できるようになります。ユーザーの追跡許可を求める要件は変わりませんが、ドイツ、フランス、イタリア、ポーランド、ルーマニアでは法的要件により代替版のみの使用が必須となります。",
+    "fetched_at": "2026-09-17T00:56:38.904155+00:00",
+    "fw_total_in_window": 3
+  }
+]
