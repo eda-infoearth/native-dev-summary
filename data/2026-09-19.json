@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=nyuppv9r",
+    "title": "Build for iPhone Duo with new resources",
+    "link": "https://developer.apple.com/news/?id=nyuppv9r",
+    "pub_date": "Fri, 18 Sep 2026 10:00:57 PDT",
+    "description": "Get Xcode 27.1 beta. View downloads and release notes Get Figma and Sketch design kits for iPhone Duo from the Apple Design Resources. Download design kits from the Apple Design Resources Sign up for workshops around the world to learn how to optimize your app and build customized experiences for all screen sizes. Explore workshops Find out more about preparing your app for iPhone Duo. Learn more about iPhone Duo",
+    "summary_ja": "Xcode 27.1 betaが利用可能になり、iPhone Duo対応アプリ開発のための新しいリソースが提供されています。Apple Design ResourcesからFigmaおよびSketch用のiPhone Duo設計キットをダウンロードでき、複数画面サイズでのアプリ最適化に向けたワークショップが世界中で開催されています。iPhone Duo向けのカスタマイズされた体験構築に関する詳細情報は公式ドキュメントで確認できます。",
+    "fetched_at": "2026-09-19T00:43:57.920786+00:00",
+    "fw_total_in_window": 1
+  }
+]

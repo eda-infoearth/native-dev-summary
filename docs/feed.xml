@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 18 Sep 2026 09:52:32 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 09:44:01 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Build for iPhone Duo with new resources</title>
+      <link>https://developer.apple.com/news/?id=nyuppv9r</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=nyuppv9r</guid>
+      <pubDate>Sat, 19 Sep 2026 02:00:57 +0900</pubDate>
+      <description>Xcode 27.1 betaが利用可能になり、iPhone Duo対応アプリ開発のための新しいリソースが提供されています。Apple Design ResourcesからFigmaおよびSketch用のiPhone Duo設計キットをダウンロードでき、複数画面サイズでのアプリ最適化に向けたワークショップが世界中で開催されています。iPhone Duo向けのカスタマイズされた体験構築に関する詳細情報は公式ドキュメントで確認できます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Get ready with the latest beta releases</title>
       <link>https://developer.apple.com/news/?id=rfb1rooi</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://v2.tauri.app/release/tauri/v2.11.3/</guid>
       <pubDate>Wed, 17 Jun 2026 22:46:45 +0900</pubDate>
       <description>Tauri v2.11.3では、ウィンドウの最大化不可設定が無視される問題やファイルスコープ・イベントリスナーのデッドロック問題が修正されました。また、Android プラグインレスポンス処理のミューテックスロック最適化により、デッドロックリスクが軽減されています。さらに、tauri:// カスタムプロトコルハンドラの非同期読み込み化により、アプリケーションの起動時間が改善されました。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Automate iOS device registration for internal builds in EAS Workflows</title>
-      <link>https://expo.dev/changelog/eas-internal-ios-ci-workflows</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/eas-internal-ios-ci-workflows</guid>
-      <pubDate>Tue, 16 Jun 2026 01:00:00 +0900</pubDate>
-      <description>EAS WorkflowsはiOSアプリのデバイス登録プロセスを自動化し、ad hocプロビジョニングでのテスト配布を効率化します。従来はデバイス登録後にプロビジョニングプロファイルを再生成して再ビルドが必要でしたが、このワークフローにより自動化が実現します。TestFlightとEAS内部配布を組み合わせることで、チームへの柔軟な配布方法が可能になります。</description>
     </item>
   </channel>
 </rss>
