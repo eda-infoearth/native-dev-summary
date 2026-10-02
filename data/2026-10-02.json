@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=w4atic4c",
+    "title": "Upcoming expiration of Developer ID Certification Authority (Sub-CA)",
+    "link": "https://developer.apple.com/news/?id=w4atic4c",
+    "pub_date": "Thu, 01 Oct 2026 10:00:11 PDT",
+    "description": "The original Developer ID Certification Authority (Sub-CA) expires on February 1, 2027. Certificates issued by this authority will stop working on that date. What to do: Check if you’re affected. In Certificates, Identifiers Profiles , look for certificates expiring on or before February 1, 2027. See Replacing Developer ID certificates issued from the previous Sub-CA for help identifying your certificate’s authority. Create a new certificate. Generate a replacement from the current authority, Developer ID Certification Authority (G2). Note: This certificate authority is valid until 2031, but the certificates issued by the certificate authority expire annually and must be renewed each year. If you’re using Xcode 11.4 or earlier, update before creating your new certificate. When prompted for",
+    "summary_ja": "2027年2月1日にDeveloper ID認証局（Sub-CA）が失効するため、この認証局から発行された証明書は使用不可になります。Apple Developer Programのメンバーは、Certificate, Identifiers & Profilesで失効予定の証明書を確認し、現在の認証局「Developer ID Certification Authority (G2)」から新しい証明書を生成する必要があります。新しい証明書の有効期限は2031年までですが、発行された証明書は毎年更新が必要です。",
+    "fetched_at": "2026-10-02T01:51:31.279101+00:00",
+    "fw_total_in_window": 1
+  }
+]
