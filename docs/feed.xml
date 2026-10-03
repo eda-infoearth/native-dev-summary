@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 02 Oct 2026 10:51:33 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 10:30:40 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Updates to Full Disk Access in macOS</title>
+      <link>https://developer.apple.com/news/?id=p6zjojqw</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=p6zjojqw</guid>
+      <pubDate>Sat, 03 Oct 2026 01:00:19 +0900</pubDate>
+      <description>macOSのフルディスクアクセス権限について、Appleは悪用を防ぐため追加の制御を導入します。ユーザーがこの強力な権限を付与する際には、より明確で明示的な同意プロセスが必須となり、バックアップアプリ以外の用途での無断アクセスが制限されます。開発者は通信アプリなど機密性の高いアプリでの不正な権限利用に注意が必要です。</description>
+    </item>
     <item>
       <title>🍎 App Store — Upcoming expiration of Developer ID Certification Authority (Sub-CA)</title>
       <link>https://developer.apple.com/news/?id=w4atic4c</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://developer.apple.com/news/?id=dhwadr2x</guid>
       <pubDate>Thu, 18 Jun 2026 23:30:05 +0900</pubDate>
       <description>iOS 26.5からブラジルでは、代替アプリマーケットプレイスでのアプリ配布やApple In-App Purchase以外での決済処理が可能になります。この変更によりマルウェアや詐欺のリスクが高まるため、アプリのNotarization認証やセキュリティ保護が導入されています。</description>
-    </item>
-    <item>
-      <title>🦞 Crux — crux_core-v0.19.0-docs.1</title>
-      <link>https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1</link>
-      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_core-v0.19.0-docs.1</guid>
-      <pubDate>Thu, 18 Jun 2026 23:37:47 +0900</pubDate>
-      <description>要約失敗</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=p6zjojqw",
+    "title": "Updates to Full Disk Access in macOS",
+    "link": "https://developer.apple.com/news/?id=p6zjojqw",
+    "pub_date": "Fri, 02 Oct 2026 09:00:19 PDT",
+    "description": "We give developers powerful APIs to build incredible capabilities into their apps for Apple products, backed by a set of controls designed to protect users’ private data. Full Disk Access largely sidesteps these controls in order to allow backup apps to function properly on the Mac. Some developers are using Full Disk Access in ways that could put users at risk, exposing everything on their systems—including files, mail, messages, and even browsing history—without users’ full knowledge and understanding. For communication apps, this can also compromise the privacy of the people users are communicating with. Going forward, we will introduce additional controls to ensure that users who genuinely wish to grant an app this extraordinary level of access can only do so with very explicit user ac",
+    "summary_ja": "macOSのフルディスクアクセス権限について、Appleは悪用を防ぐため追加の制御を導入します。ユーザーがこの強力な権限を付与する際には、より明確で明示的な同意プロセスが必須となり、バックアップアプリ以外の用途での無断アクセスが制限されます。開発者は通信アプリなど機密性の高いアプリでの不正な権限利用に注意が必要です。",
+    "fetched_at": "2026-10-03T01:30:38.228831+00:00",
+    "fw_total_in_window": 1
+  }
+]
