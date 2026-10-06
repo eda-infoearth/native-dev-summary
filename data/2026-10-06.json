@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=ljpl7kyn",
+    "title": "Showcase your apps with new assets on the App Store",
+    "link": "https://developer.apple.com/news/?id=ljpl7kyn",
+    "pub_date": "Mon, 05 Oct 2026 13:00:27 PDT",
+    "description": "Make your apps and games stand out with new creative assets on the App Store and asset management tools in App Store Connect. Market your app or game in new ways Use new creative assets on your product page headers and in search result assets to highlight your brand, promote seasonal offerings, showcase new content, and more. These new image and video assets complement your existing app previews and screenshots to give your app additional visibility across the App Store. Take advantage of design guidance and downloadable templates to help you build captivating visuals. Get templates and best practices for creating your App Store assets View creative assets specifications View app preview specifications View screenshot specifications Visualize your assets across the App Store Use the new pr",
+    "summary_ja": "App Store Connectで新しいクリエイティブアセット（画像・動画）がサポートされ、プロダクトページヘッダーと検索結果に表示できるようになり、アプリの視認性が向上します。既存のプレビューやスクリーンショットを補完する形で、季節キャンペーンや新コンテンツの宣伝が可能になります。Appleが提供するテンプレートとベストプラクティスを活用して、キャプティブなビジュアルを作成できます。",
+    "fetched_at": "2026-10-06T02:34:16.586498+00:00",
+    "fw_total_in_window": 1
+  }
+]

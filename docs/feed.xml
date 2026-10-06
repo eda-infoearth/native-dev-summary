@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 05 Oct 2026 10:21:42 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 11:34:19 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Showcase your apps with new assets on the App Store</title>
+      <link>https://developer.apple.com/news/?id=ljpl7kyn</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=ljpl7kyn</guid>
+      <pubDate>Tue, 06 Oct 2026 05:00:27 +0900</pubDate>
+      <description>App Store Connectで新しいクリエイティブアセット（画像・動画）がサポートされ、プロダクトページヘッダーと検索結果に表示できるようになり、アプリの視認性が向上します。既存のプレビューやスクリーンショットを補完する形で、季節キャンペーンや新コンテンツの宣伝が可能になります。Appleが提供するテンプレートとベストプラクティスを活用して、キャプティブなビジュアルを作成できます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Updates to Full Disk Access in macOS</title>
       <link>https://developer.apple.com/news/?id=p6zjojqw</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://developer.apple.com/news/?id=umq9wxmm</guid>
       <pubDate>Thu, 18 Jun 2026 23:30:54 +0900</pubDate>
       <description>Apple Developer Program License Agreementの付属書12がブラジルのiOSアプリに関する条項に対応するため改訂されました。代替配布、代替支払い方法、アプリ内オファー、およびCore Technology Commissionに関する条件が新たに明記されています。開発者はアカウントにサインインして更新された利用規約に同意する必要があり、日本語を含む翻訳版は1ヶ月以内にApple Developerウェブサイトで公開予定です。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Changes to iOS in Brazil</title>
-      <link>https://developer.apple.com/news/?id=dhwadr2x</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=dhwadr2x</guid>
-      <pubDate>Thu, 18 Jun 2026 23:30:05 +0900</pubDate>
-      <description>iOS 26.5からブラジルでは、代替アプリマーケットプレイスでのアプリ配布やApple In-App Purchase以外での決済処理が可能になります。この変更によりマルウェアや詐欺のリスクが高まるため、アプリのNotarization認証やセキュリティ保護が導入されています。</description>
     </item>
   </channel>
 </rss>
