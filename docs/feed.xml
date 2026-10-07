@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 06 Oct 2026 11:34:19 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 10:52:45 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Hello Developer: October 2026</title>
+      <link>https://developer.apple.com/news/?id=gv788oj6</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=gv788oj6</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:23 +0900</pubDate>
+      <description>iPhone Duo アプリの申請方法に関するヒント、新しい iPhone Duo Group Labs への登録、速度と効率性に関する開発者向けイベントへの参加が可能になっています。また、ローカライズされたドキュメントの参照と新しい App Store クリエイティブアセットの利用が可能です。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Prepare and submit your apps for iPhone Duo</title>
+      <link>https://developer.apple.com/news/?id=kkphp5qo</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=kkphp5qo</guid>
+      <pubDate>Tue, 06 Oct 2026 09:05:33 +0900</pubDate>
+      <description>iPhone Duo対応アプリの準備について、Xcode 27.1を使用した再コンパイルとDevice Hubでのビジュアライゼーション機能が新たに提供されます。App Store製品ページのスクリーンショットとプレビュー仕様が更新されたため、新しいテンプレートを使用して各デバイスの向きに対応したアセットを準備する必要があります。2026年10月23日のiPhone Duo発売に向けて、開発者はこれらのツールとガイダンスを活用してアプリの対応を進める必要があります。</description>
+    </item>
     <item>
       <title>🍎 App Store — Showcase your apps with new assets on the App Store</title>
       <link>https://developer.apple.com/news/?id=ljpl7kyn</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://developer.apple.com/news/?id=e2lxw9l1</guid>
       <pubDate>Wed, 24 Jun 2026 06:00:01 +0900</pubDate>
       <description>iOS、iPadOS、macOS 27向けのApple設計キットがFigmaおよびSketchで利用可能になりました。Liquid Glassコンポーネントの拡張、状態サポートの追加、コードとの命名規則の統一、リサイズ機能の改善、macOSのダークモード対応などが主な更新内容です。Apple Design Resourcesからダウンロード可能です。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — How we built a Flutter-powered AI coffee shop</title>
-      <link>https://blog.flutter.dev/how-we-built-a-flutter-powered-ai-coffee-shop-878c60a11f1a?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/how-we-built-a-flutter-powered-ai-coffee-shop-878c60a11f1a?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Tue, 23 Jun 2026 00:16:53 +0900</pubDate>
-      <description>Flutter チームが Google I/O で展示したデモでは、Nano Banana による動的な画像生成と GenUI によるランタイム UI 生成を組み合わせ、ユーザーの好みに応じてパーソナライズされたコーヒー注文体験を実現しました。この統合により、単なる注文アプリから、ユーザーの嗜好に合わせた個別対応のインタラクティブな体験へと進化させることができます。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Updated Apple Developer Program License Agreement now available</title>
-      <link>https://developer.apple.com/news/?id=umq9wxmm</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=umq9wxmm</guid>
-      <pubDate>Thu, 18 Jun 2026 23:30:54 +0900</pubDate>
-      <description>Apple Developer Program License Agreementの付属書12がブラジルのiOSアプリに関する条項に対応するため改訂されました。代替配布、代替支払い方法、アプリ内オファー、およびCore Technology Commissionに関する条件が新たに明記されています。開発者はアカウントにサインインして更新された利用規約に同意する必要があり、日本語を含む翻訳版は1ヶ月以内にApple Developerウェブサイトで公開予定です。</description>
     </item>
   </channel>
 </rss>

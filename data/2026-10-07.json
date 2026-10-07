@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=gv788oj6",
+    "title": "Hello Developer: October 2026",
+    "link": "https://developer.apple.com/news/?id=gv788oj6",
+    "pub_date": "Tue, 06 Oct 2026 08:00:23 PDT",
+    "description": "In this edition: Get tips on submitting your iPhone Duo app. Sign up for new iPhone Duo Group Labs. Join us for a new developer event on speed and efficiency. Explore localized documentation. Browse new App Store creative assets. Read now",
+    "summary_ja": "iPhone Duo アプリの申請方法に関するヒント、新しい iPhone Duo Group Labs への登録、速度と効率性に関する開発者向けイベントへの参加が可能になっています。また、ローカライズされたドキュメントの参照と新しい App Store クリエイティブアセットの利用が可能です。",
+    "fetched_at": "2026-10-07T01:52:40.776000+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=kkphp5qo",
+    "title": "Prepare and submit your apps for iPhone Duo",
+    "link": "https://developer.apple.com/news/?id=kkphp5qo",
+    "pub_date": "Mon, 05 Oct 2026 17:05:33 PDT",
+    "description": "iPhone Duo will be available to customers starting October 23, 2026. To get your apps and games ready today, you can: Build or recompile with Xcode Recompile existing apps with Xcode 27.1, which adds development support for iPhone Duo. Use Device Hub to visualize how your apps behave on iPhone Duo across all poses and orientations. Get the latest version of Xcode Three steps to make your app shine on iPhone Duo Learn more about iPhone Duo Prepare your App Store product page assets Updated screenshot and app preview specifications are now available for the latest Apple devices, including iPhone Duo, so you can showcase your app at its best across orientations. Explore design guidance and get downloadable templates to help you build your App Store assets, including new product page headers a",
+    "summary_ja": "iPhone Duo対応アプリの準備について、Xcode 27.1を使用した再コンパイルとDevice Hubでのビジュアライゼーション機能が新たに提供されます。App Store製品ページのスクリーンショットとプレビュー仕様が更新されたため、新しいテンプレートを使用して各デバイスの向きに対応したアセットを準備する必要があります。2026年10月23日のiPhone Duo発売に向けて、開発者はこれらのツールとガイダンスを活用してアプリの対応を進める必要があります。",
+    "fetched_at": "2026-10-07T01:52:40.776097+00:00",
+    "fw_total_in_window": 2
+  }
+]
