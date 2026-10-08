@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 07 Oct 2026 10:52:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 11:20:29 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Native crash reporting in Expo&apos;s Observability service</title>
+      <link>https://expo.dev/changelog/native-crash-reporting-in-eas-observe</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/native-crash-reporting-in-eas-observe</guid>
+      <pubDate>Wed, 07 Oct 2026 22:45:09 +0900</pubDate>
+      <description>SDK 57の57.0.21以降に更新することで、JavaScriptエラーに加えてネイティブコード（Android/iOS）のクラッシュもEAS Observeで自動記録されるようになりました。AndroidではJava/Kotlinの例外とOS記録、iOSではMach例外やUnix信号、Objective-C/Swift例外が対象で、セットアップ不要です。JavaScriptエラーと同じリストに表示され、ソースでフィルタリングして確認できます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Hello Developer: October 2026</title>
       <link>https://developer.apple.com/news/?id=gv788oj6</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/maestro-testing-improvements</guid>
       <pubDate>Wed, 24 Jun 2026 23:00:00 +0900</pubDate>
       <description>Maestroの新しいInsightsダッシュボードにより、E2Eテストの実行履歴を可視化でき、不安定なテストの特定や回帰の時期を把握できるようになりました。テストの成功率の推移、フローの信頼性、再試行の必要性などをログを掘り下げることなく確認でき、デバッグと改善の効率が大幅に向上します。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Design kits for iOS, iPadOS, and macOS 27 are here</title>
-      <link>https://developer.apple.com/news/?id=e2lxw9l1</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=e2lxw9l1</guid>
-      <pubDate>Wed, 24 Jun 2026 06:00:01 +0900</pubDate>
-      <description>iOS、iPadOS、macOS 27向けのApple設計キットがFigmaおよびSketchで利用可能になりました。Liquid Glassコンポーネントの拡張、状態サポートの追加、コードとの命名規則の統一、リサイズ機能の改善、macOSのダークモード対応などが主な更新内容です。Apple Design Resourcesからダウンロード可能です。</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/native-crash-reporting-in-eas-observe",
+    "title": "Native crash reporting in Expo's Observability service",
+    "link": "https://expo.dev/changelog/native-crash-reporting-in-eas-observe",
+    "pub_date": "2026-10-07T13:45:09.527Z",
+    "description": "EAS Observe now records native crashes alongside JavaScript errors. Update to 57.0.21 or later on SDK 57. Until now, the Errors page showed only what went wrong in your JavaScript. A crash in native code took the app down without a trace. Now expo-observe records those too, on both Android and iOS, with no setup. Update to 57.0.21 or later on SDK 57. On Android, this covers uncaught Java and Kotlin exceptions, plus the crash records the operating system keeps for your app on Android 11 and later. On iOS, it covers Mach exceptions such as EXC_BAD_ACCESS , Unix signals such as SIGSEGV , and uncaught Objective-C and Swift exceptions. Native crashes land in the same list as your JavaScript errors. Filter by source to see one or the other, and watch crash-free sessions for the overall picture. ",
+    "summary_ja": "SDK 57の57.0.21以降に更新することで、JavaScriptエラーに加えてネイティブコード（Android/iOS）のクラッシュもEAS Observeで自動記録されるようになりました。AndroidではJava/Kotlinの例外とOS記録、iOSではMach例外やUnix信号、Objective-C/Swift例外が対象で、セットアップ不要です。JavaScriptエラーと同じリストに表示され、ソースでフィルタリングして確認できます。",
+    "fetched_at": "2026-10-08T02:20:23.588210+00:00",
+    "fw_total_in_window": 1
+  }
+]
