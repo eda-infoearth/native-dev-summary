@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 13 Oct 2026 12:15:13 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 10:28:02 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Updated Apple Developer Program License Agreement now available</title>
+      <link>https://developer.apple.com/news/?id=17mwd36z</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=17mwd36z</guid>
+      <pubDate>Wed, 14 Oct 2026 07:00:09 +0900</pubDate>
+      <description>Apple Developer Program License Agreementが更新され、Live Assistance APIとApp Replacement Entitlementの使用条件、iOSウィジェットのApple HomeView対応、CarPlayアプリの利用可能性、グループ購入による複数シート提供などの新機能と変更点が追加されました。開発者はアカウントにサインインして、セキュリティ要件の強化を含む更新された利用規約に同意する必要があります。</description>
+    </item>
     <item>
       <title>🚀 Expo — Native crash reporting in Expo&apos;s Observability service</title>
       <link>https://expo.dev/changelog/native-crash-reporting-in-eas-observe</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Tue, 30 Jun 2026 01:01:02 +0900</pubDate>
       <description>FlutterとGoogle Antigravityを使用してゲーム開発、アセット生成、マーケティングページ作成、デプロイメントを全てAIエージェントで自動化するワークフローを紹介しています。従来の出力確認中心から、AIモデルの高度化に伴い概念的な目標設定に重点を置き、詳細な実装はエージェントに委譲するアジャイル開発へのシフトを実践例で示しています。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Maestro testing: insights, clearer results, and faster retries</title>
-      <link>https://expo.dev/changelog/maestro-testing-improvements</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/maestro-testing-improvements</guid>
-      <pubDate>Wed, 24 Jun 2026 23:00:00 +0900</pubDate>
-      <description>Maestroの新しいInsightsダッシュボードにより、E2Eテストの実行履歴を可視化でき、不安定なテストの特定や回帰の時期を把握できるようになりました。テストの成功率の推移、フローの信頼性、再試行の必要性などをログを掘り下げることなく確認でき、デバッグと改善の効率が大幅に向上します。</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=17mwd36z",
+    "title": "Updated Apple Developer Program License Agreement now available",
+    "link": "https://developer.apple.com/news/?id=17mwd36z",
+    "pub_date": "Tue, 13 Oct 2026 15:00:09 PDT",
+    "description": "The Apple Developer Program License Agreement has been revised to support new features and updated policies, and to provide clarification. Please review the changes below and sign in to your account to accept the updated terms. Section 3.2: Updated security and related requirements for using Apple’s software and services. Definitions, Section 3.3.8(j): Specified terms for use of the Live Assistance API. Definitions, Section 3.3.8(k): Specified terms for use of the App Replacement Entitlement. Definitions, Definitions, Sections 6.4, 6.4.1, 6.4.2: Specified terms for iOS app widgets on Apple HomeView and availability of iOS apps for CarPlay on Apple HomeView. Schedule 2, Sections 1.1(b), 1.2(d)(iv), 3.1, 3.8(c): Specified terms for offering multiple seats for a subscription through Group Pur",
+    "summary_ja": "Apple Developer Program License Agreementが更新され、Live Assistance APIとApp Replacement Entitlementの使用条件、iOSウィジェットのApple HomeView対応、CarPlayアプリの利用可能性、グループ購入による複数シート提供などの新機能と変更点が追加されました。開発者はアカウントにサインインして、セキュリティ要件の強化を含む更新された利用規約に同意する必要があります。",
+    "fetched_at": "2026-10-14T01:27:59.785470+00:00",
+    "fw_total_in_window": 1
+  }
+]
