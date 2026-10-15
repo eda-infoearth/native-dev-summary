@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/settings-navigation-refresh",
+    "title": "Refreshed settings navigation on expo.dev",
+    "link": "https://expo.dev/changelog/settings-navigation-refresh",
+    "pub_date": "2026-10-14T18:45:00.000Z",
+    "description": "User, account, and project settings have a new design, with dedicated pages and a consistent sidebar to make settings easier to find. User settings : a refreshed General page, Authentication for sign-in methods and two-factor configuration, a standalone Security page, and an Advanced page for renaming and deletion. Account settings : a refreshed General page, and standalone Connections , Security , and Advanced pages. Billing , Receipts , Access Tokens , and Notifications have moved from the app-wide account sidebar into the account settings sidebar. Project settings : a refreshed General page, with dedicated Notifications , Connections , and Advanced pages. Credentials , Hosting , and GitHub have moved from the app-wide project sidebar into the project settings sidebar. To view the new ch",
+    "summary_ja": "Expo.devの設定ナビゲーションがリデザインされ、ユーザー・アカウント・プロジェクト設定が専用ページと統一されたサイドバーで整理されました。各設定カテゴリ（認証、セキュリティ、接続、通知など）が独立したページに分割され、以前はアプリ全体のサイドバーに散在していた機能（Billing、Access Tokens、Credentialsなど）が各設定セクション内に統合されました。設定項目の検索性と整理が大幅に向上しています。",
+    "fetched_at": "2026-10-15T01:02:02.387043+00:00",
+    "fw_total_in_window": 1
+  },
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.2",
+    "title": "v0.8.0-alpha.2",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.2",
+    "pub_date": "2026-10-14T21:13:57Z",
+    "description": "Highlights New template and rendering internals ( #5554 ): Dioxus no longer uses comment-node placeholders and markers, either at runtime or during hydration. Elements that treat their children as text, such as textarea , now render correctly. rsx! now expands to a const builder API, which you can also use directly. HTML elements are trait-based, and you can define your own with dioxus::html::define_elements! . Core now supports renderer IDs. These lay the groundwork for portals and multiple windows sharing one runtime. Dioxus Native is updated to Blitz 0.3.0-beta.3 ( #5780 , #5909 ). This release also fixes a leak where removed nodes were never freed ( #5911 ). A falsy boolean attribute like disabled: false is now removed instead of being written as \"false\" ( #5913 ). Attributes now defau",
+    "summary_ja": "Dioxus v0.8.0-alpha.2では、テンプレート・レンダリング内部が刷新され、コメントノードプレースホルダーが廃止されテキスト要素（textareaなど）の正確なレンダリングが実現しました。rsx!マクロはコンスト形式のビルダーAPIに展開され、HTML要素は特性ベースになり、カスタム定義も可能になっています。また、Dioxus Nativeが0.3.0-beta.3に更新され、メモリリークの修正と属性の仕様変更（false値は記述されず削除される）が行われました。",
+    "fetched_at": "2026-10-15T01:02:07.140229+00:00",
+    "fw_total_in_window": 2
+  }
+]

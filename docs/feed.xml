@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 14 Oct 2026 10:28:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 10:02:11 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Refreshed settings navigation on expo.dev</title>
+      <link>https://expo.dev/changelog/settings-navigation-refresh</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/settings-navigation-refresh</guid>
+      <pubDate>Thu, 15 Oct 2026 03:45:00 +0900</pubDate>
+      <description>Expo.devの設定ナビゲーションがリデザインされ、ユーザー・アカウント・プロジェクト設定が専用ページと統一されたサイドバーで整理されました。各設定カテゴリ（認証、セキュリティ、接続、通知など）が独立したページに分割され、以前はアプリ全体のサイドバーに散在していた機能（Billing、Access Tokens、Credentialsなど）が各設定セクション内に統合されました。設定項目の検索性と整理が大幅に向上しています。</description>
+    </item>
+    <item>
+      <title>🧩 Dioxus — v0.8.0-alpha.2</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.2</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.2</guid>
+      <pubDate>Thu, 15 Oct 2026 06:13:57 +0900</pubDate>
+      <description>Dioxus v0.8.0-alpha.2では、テンプレート・レンダリング内部が刷新され、コメントノードプレースホルダーが廃止されテキスト要素（textareaなど）の正確なレンダリングが実現しました。rsx!マクロはコンスト形式のビルダーAPIに展開され、HTML要素は特性ベースになり、カスタム定義も可能になっています。また、Dioxus Nativeが0.3.0-beta.3に更新され、メモリリークの修正と属性の仕様変更（false値は記述されず削除される）が行われました。</description>
+    </item>
     <item>
       <title>🍎 App Store — Updated Apple Developer Program License Agreement now available</title>
       <link>https://developer.apple.com/news/?id=17mwd36z</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/sdk-57</guid>
       <pubDate>Wed, 01 Jul 2026 05:00:00 +0900</pubDate>
       <description>Expo SDK 57はReact Native 0.86をもたらす小規模でフォーカスされたリリースで、SDK 56からの最小限の非破壊的アップグレードを実現しています。主な改善点はAndroidのエッジツーエッジサポートの修正、ライト/ダークモードエミュレーション機能の強化、そしてReactバージョンはSDK 56と同じReact 19.2のままです。React Native 0.86は0.85との互換性を保つため、詳細はReact Native公式リリースノートで確認することを推奨します。</description>
-    </item>
-    <item>
-      <title>🦀 Tauri — tauri v2.11.4</title>
-      <link>https://v2.tauri.app/release/tauri/v2.11.4/</link>
-      <guid isPermaLink="true">https://v2.tauri.app/release/tauri/v2.11.4/</guid>
-      <pubDate>Wed, 01 Jul 2026 00:14:31 +0900</pubDate>
-      <description>Tauri v2.11.4では、tauri-runtime-wryが2.11.4にアップグレードされました。また、cookieが使用するtimeライブラリを0.3.52にピン留めして、コンパイルエラーを回避しています。これは依存関係の安定性向上と既知の互換性問題への対処です。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — Vibe once, run anywhere with Antigravity and Flutter</title>
-      <link>https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/vibe-once-run-anywhere-with-antigravity-and-flutter-25af06e60a91?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Tue, 30 Jun 2026 01:01:02 +0900</pubDate>
-      <description>FlutterとGoogle Antigravityを使用してゲーム開発、アセット生成、マーケティングページ作成、デプロイメントを全てAIエージェントで自動化するワークフローを紹介しています。従来の出力確認中心から、AIモデルの高度化に伴い概念的な目標設定に重点を置き、詳細な実装はエージェントに委譲するアジャイル開発へのシフトを実践例で示しています。</description>
     </item>
   </channel>
 </rss>
