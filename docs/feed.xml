@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 15 Oct 2026 10:02:11 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 09:52:19 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — Expo SDK 58</title>
+      <link>https://expo.dev/changelog/sdk-58</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/sdk-58</guid>
+      <pubDate>Fri, 16 Oct 2026 05:00:00 +0900</pubDate>
+      <description>Expo SDK 58がリリースされ、iOS 27対応とReact Native 0.88が搭載されました。iOS 27ではUIKitシーンベースのライフサイクルが必須となり、AppDelegate.swiftをカスタマイズしている場合は移行ガイドの確認が必要です。UIScreen.mainからのジオメトリ読み込みが廃止されたため、既存コードの更新が必要になる可能性があります。</description>
+    </item>
     <item>
       <title>🚀 Expo — Refreshed settings navigation on expo.dev</title>
       <link>https://expo.dev/changelog/settings-navigation-refresh</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://blog.flutter.dev/learning-faster-with-antigravity-cd735bfe44e7?source=rss----4da7dfd21a33---4</guid>
       <pubDate>Wed, 01 Jul 2026 13:08:53 +0900</pubDate>
       <description>Flutterフロントエンド開発における、AI coding partner「Antigravity」を活用した学習方法を紹介しており、Python/ADKベースのバックエンド連携時の学習曲線を段階的なワークフローで克服できることが特徴です。単なるコード生成ではなく、開発者自身が理解しながら進めるアプローチにより、再利用可能なスキルセットを構築できます。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Expo SDK 57</title>
-      <link>https://expo.dev/changelog/sdk-57</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/sdk-57</guid>
-      <pubDate>Wed, 01 Jul 2026 05:00:00 +0900</pubDate>
-      <description>Expo SDK 57はReact Native 0.86をもたらす小規模でフォーカスされたリリースで、SDK 56からの最小限の非破壊的アップグレードを実現しています。主な改善点はAndroidのエッジツーエッジサポートの修正、ライト/ダークモードエミュレーション機能の強化、そしてReactバージョンはSDK 56と同じReact 19.2のままです。React Native 0.86は0.85との互換性を保つため、詳細はReact Native公式リリースノートで確認することを推奨します。</description>
     </item>
   </channel>
 </rss>

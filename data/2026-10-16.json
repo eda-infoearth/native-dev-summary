@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/sdk-58",
+    "title": "Expo SDK 58",
+    "link": "https://expo.dev/changelog/sdk-58",
+    "pub_date": "2026-10-15T20:00:00.000Z",
+    "description": "Today we're announcing the release of Expo SDK 58. SDK 58 is built for iOS 27 and includes React Native 0.88. Thank you to everyone who helped with beta testing. Note : Expo Go for SDK 58 on the Apple App Store and Google Play Store will be released within a few weeks. Learn more . SDK 58 is built for iOS 27 iOS 27 requires the UIKit scene-based life cycle and makes iPhone apps resizable, and apps built with the iOS 27 SDK get both automatically. Expo apps use the scene-based life cycle so they launch correctly on iOS 27 ( #46733 ). This changes how app delegate callbacks are delivered, so read the scene life cycle migration guide if you customize AppDelegate.swift . Expo packages no longer read geometry from UIScreen.main ( #48172 , #48315 , #48316 , #48170 , #48169 ), and expo-modules-co",
+    "summary_ja": "Expo SDK 58がリリースされ、iOS 27対応とReact Native 0.88が搭載されました。iOS 27ではUIKitシーンベースのライフサイクルが必須となり、AppDelegate.swiftをカスタマイズしている場合は移行ガイドの確認が必要です。UIScreen.mainからのジオメトリ読み込みが廃止されたため、既存コードの更新が必要になる可能性があります。",
+    "fetched_at": "2026-10-16T00:52:13.668097+00:00",
+    "fw_total_in_window": 1
+  }
+]
