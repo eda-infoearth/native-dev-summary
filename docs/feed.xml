@@ -5,9 +5,23 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 16 Oct 2026 09:52:19 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 09:52:49 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Updated App Review Guidelines are now available</title>
+      <link>https://developer.apple.com/news/?id=92th7e5i</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=92th7e5i</guid>
+      <pubDate>Sat, 17 Oct 2026 05:05:42 +0900</pubDate>
+      <description>App Review Guidelinesが更新され、ガイドライン1.2ではアプリコンテンツの定義が明確化され、2.3.14では新たにクリエイティブアセットに関するガイドラインが追加されました。ガイドライン2.5.19では隠れた機能や未文書化機能に関する方針が新設され、3.1.1(a)ではMusic Streaming Services Entitlementsの記述が削除されてStoreKit External Purchase Link Entitlementsに統合されました。開発者は提出前にこれらの変更点を確認し、適切なセーフガードの実装と違反後の対応が求められています。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Strengthening App Review Guidelines against nonconsensual intimate imagery and bait-and-switch apps</title>
+      <link>https://developer.apple.com/news/?id=vvzx6cul</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=vvzx6cul</guid>
+      <pubDate>Sat, 17 Oct 2026 05:00:56 +0900</pubDate>
+      <description>App Storeのレビューガイドラインが強化され、本人の同意なしに作成された露骨な画像を生成するアプリ（ヌード化アプリなど）や、隠された機能を持つ詐欺的なアプリが明示的に禁止されます。ユーザー生成コンテンツを扱うアプリは、不適切なコンテンツのフィルタリング、報告機能、ブロック機能の提供が必須となります。開発者は提出前にこれらの基準を厳密に確認し、アプリの全機能を明確に文書化する必要があります。</description>
+    </item>
     <item>
       <title>🚀 Expo — Expo SDK 58</title>
       <link>https://expo.dev/changelog/sdk-58</link>
@@ -343,20 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/sign-in-with-passkeys</guid>
       <pubDate>Tue, 07 Jul 2026 01:00:00 +0900</pubDate>
       <description>Expoアカウントにパスキーを追加でき、expo.dev/settings#sign-in-methodsで管理できるようになりました。パスキーはパスワード+OTPより安全な認証方式で、2FAを有効にしているユーザーは二段階認証なしで直接サインインできます。ただしSSO利用ユーザーはパスキーが使用できません。</description>
-    </item>
-    <item>
-      <title>🦞 Crux — crux_http v0.19.0</title>
-      <link>https://github.com/redbadger/crux/releases/tag/crux_http-v0.19.0</link>
-      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_http-v0.19.0</guid>
-      <pubDate>Mon, 06 Jul 2026 22:03:22 +0900</pubDate>
-      <description>crux_http v0.19.0は標準httpクレート(v1.4)へ移行し、http-typesフォークを廃止した破壊的変更です。MethodやStatusCodeは`http`クレートのものを使用し、http-compat機能は削除されました。また、新しい`crux_http::Body`型が導入され、RawResponse(旧ResponseAsync)のボディ読み取りメソッドは非同期から同期に変更されています。</description>
-    </item>
-    <item>
-      <title>🐦 Flutter — Learning faster with Antigravity</title>
-      <link>https://blog.flutter.dev/learning-faster-with-antigravity-cd735bfe44e7?source=rss----4da7dfd21a33---4</link>
-      <guid isPermaLink="true">https://blog.flutter.dev/learning-faster-with-antigravity-cd735bfe44e7?source=rss----4da7dfd21a33---4</guid>
-      <pubDate>Wed, 01 Jul 2026 13:08:53 +0900</pubDate>
-      <description>Flutterフロントエンド開発における、AI coding partner「Antigravity」を活用した学習方法を紹介しており、Python/ADKベースのバックエンド連携時の学習曲線を段階的なワークフローで克服できることが特徴です。単なるコード生成ではなく、開発者自身が理解しながら進めるアプローチにより、再利用可能なスキルセットを構築できます。</description>
     </item>
   </channel>
 </rss>

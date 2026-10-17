@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=92th7e5i",
+    "title": "Updated App Review Guidelines are now available",
+    "link": "https://developer.apple.com/news/?id=92th7e5i",
+    "pub_date": "Fri, 16 Oct 2026 13:05:42 PDT",
+    "description": "The App Review Guidelines have been revised to support new features, updated policies, and to provide clarification. App Review Guidelines Before You Submit: Added links to additional documentation. 1.2: Clarified app content and app types that are subject to this guideline, and potential Developer Code of Conduct violation for failing to implement appropriate safeguards or remediating violations after notice. 2.3.14: New guideline covering creative assets. 2.5.19: New guideline clarifies long-standing policy on hidden, dormant, or undocumented features, formerly covered in Guideline 2.3.1. 3.1.1(a): Removed bullet point on Music Streaming Services Entitlements, which is now incorporated in the bullet point on StoreKit External Purchase Link Entitlements; clarified that links may be provid",
+    "summary_ja": "App Review Guidelinesが更新され、ガイドライン1.2ではアプリコンテンツの定義が明確化され、2.3.14では新たにクリエイティブアセットに関するガイドラインが追加されました。ガイドライン2.5.19では隠れた機能や未文書化機能に関する方針が新設され、3.1.1(a)ではMusic Streaming Services Entitlementsの記述が削除されてStoreKit External Purchase Link Entitlementsに統合されました。開発者は提出前にこれらの変更点を確認し、適切なセーフガードの実装と違反後の対応が求められています。",
+    "fetched_at": "2026-10-17T00:52:43.076509+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=vvzx6cul",
+    "title": "Strengthening App Review Guidelines against nonconsensual intimate imagery and bait-and-switch apps",
+    "link": "https://developer.apple.com/news/?id=vvzx6cul",
+    "pub_date": "Fri, 16 Oct 2026 13:00:56 PDT",
+    "description": "The App Review Guidelines are a core part of the safe and trusted experience that the App Store strives to offer users around the world — and the foundation of that trust is clear standards that are consistently enforced. As outlined in our App Review Guidelines, pornographic material has long been prohibited on the App Store — this includes apps that generate nudity or sexually explicit imagery, such as “nudification” apps that create sexually explicit images of real individuals without their consent. Apps that host user-generated content are required to filter objectionable material, give users a way to report offensive content, and let users block abusive accounts. Apps containing hidden or undocumented features are also prohibited on the App Store, including apps that misrepresent thei",
+    "summary_ja": "App Storeのレビューガイドラインが強化され、本人の同意なしに作成された露骨な画像を生成するアプリ（ヌード化アプリなど）や、隠された機能を持つ詐欺的なアプリが明示的に禁止されます。ユーザー生成コンテンツを扱うアプリは、不適切なコンテンツのフィルタリング、報告機能、ブロック機能の提供が必須となります。開発者は提出前にこれらの基準を厳密に確認し、アプリの全機能を明確に文書化する必要があります。",
+    "fetched_at": "2026-10-17T00:52:43.076684+00:00",
+    "fw_total_in_window": 2
+  }
+]
