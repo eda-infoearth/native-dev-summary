@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.3",
+    "title": "v0.8.0-alpha.3",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.3",
+    "pub_date": "2026-10-16T23:16:04Z",
+    "description": "Highlights Security updates. Dependencies with RustSec advisories are updated, including rustls 0.23.46, h2 0.4.20 (DoS against fullstack servers) and webbrowser 1.2.4. The minimum versions of rustls, webbrowser and plist are raised so downstream projects can't resolve to vulnerable releases ( #5938 ). The discontinued async-std is removed from examples and tests ( #5939 ). Desktop and mobile on tao 0.37 / wry 0.57 ( #5936 ). On Android, toggling dark mode, font scale, density and similar settings no longer re-creates the activity and leaves a blank webview. manganis::android::with_activity now tracks the current activity instead of caching the first one. Native: NodeHandle methods such as set_focus , scroll_to and get_client_rect no longer panic with a RefCell double borrow when called fr",
+    "summary_ja": "Dioxus v0.8.0-alpha.3では、rustls、h2、webbrowserなどの脆弱性対応を含むセキュリティアップデートが実施されました。デスクトップ・モバイルがtao 0.37/wry 0.57に対応し、Androidではダークモード切り替え時の画面再作成問題が解決されています。NodeHandleのメソッド呼び出し時のRefCell二重借用パニックも修正されました。",
+    "fetched_at": "2026-10-18T00:28:32.188019+00:00",
+    "fw_total_in_window": 1
+  }
+]

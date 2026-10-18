@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 17 Oct 2026 09:52:49 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 09:28:36 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🧩 Dioxus — v0.8.0-alpha.3</title>
+      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.3</link>
+      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.3</guid>
+      <pubDate>Sat, 17 Oct 2026 08:16:04 +0900</pubDate>
+      <description>Dioxus v0.8.0-alpha.3では、rustls、h2、webbrowserなどの脆弱性対応を含むセキュリティアップデートが実施されました。デスクトップ・モバイルがtao 0.37/wry 0.57に対応し、Androidではダークモード切り替え時の画面再作成問題が解決されています。NodeHandleのメソッド呼び出し時のRefCell二重借用パニックも修正されました。</description>
+    </item>
     <item>
       <title>🍎 App Store — Updated App Review Guidelines are now available</title>
       <link>https://developer.apple.com/news/?id=92th7e5i</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://developer.apple.com/news/?id=grx7lcto</guid>
       <pubDate>Wed, 08 Jul 2026 01:00:15 +0900</pubDate>
       <description>Apple Developer ウェブサイトの新しい検索ツール、FigmaとSketchの設計キット、WWDC26の最新アップデートを紹介しており、デベロッパーは27のプラットフォームリリース、ドキュメント、サンプルコード、リリースノートの最新情報を確認できます。Apple Design Award受賞アプリ「grug」と「Cyberpunk 2077」の事例も参考になります。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Sign in with passkeys</title>
-      <link>https://expo.dev/changelog/sign-in-with-passkeys</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/sign-in-with-passkeys</guid>
-      <pubDate>Tue, 07 Jul 2026 01:00:00 +0900</pubDate>
-      <description>Expoアカウントにパスキーを追加でき、expo.dev/settings#sign-in-methodsで管理できるようになりました。パスキーはパスワード+OTPより安全な認証方式で、2FAを有効にしているユーザーは二段階認証なしで直接サインインできます。ただしSSO利用ユーザーはパスキーが使用できません。</description>
     </item>
   </channel>
 </rss>
