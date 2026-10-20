@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 19 Oct 2026 09:34:24 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 10:20:05 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>⚛️ React Native — React Native 0.88 - Web-Based Event Dispatching, Variable Fonts, SceneDelegate, no breaking changes</title>
+      <link>https://reactnative.dev/blog/2026/10/19/react-native-0.88</link>
+      <guid isPermaLink="true">https://reactnative.dev/blog/2026/10/19/react-native-0.88</guid>
+      <pubDate>Mon, 19 Oct 2026 09:00:00 +0900</pubDate>
+      <description>React Native 0.88では、イベントディスパッチがW3C EventTarget APIベースに変更され、可変フォント(fontVariationSettings)がTextおよびTextInputで両プラットフォーム対応となり、iOSではSceneDelegateのライフサイクルサポートが追加されました。React 19.3.0への更新とMetro 0.87への移行が行われており、0.83・0.86に続いて3番目のユーザー向けブレーキングチェンジなしのリリースとなります。ArrayBuffer for Java TurboModulesとSwift Package Managerの実験的サポートも含まれています。</description>
+    </item>
     <item>
       <title>🧩 Dioxus — v0.8.0-alpha.3</title>
       <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.3</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://developer.apple.com/news/?id=tlur8uvi</guid>
       <pubDate>Fri, 10 Jul 2026 07:00:01 +0900</pubDate>
       <description>iOS 27以降の新機能「Time Allowances」で保護者がアプリの使用時間をカテゴリ別に管理できるようになるため、App Store Connectの年齢評価アンケートにソーシャルメディア機能に関する質問が追加されました。ソーシャルメディア機能とは、ユーザー生成コンテンツをフィードなどで再配信・増幅・交互作用させる機能を指し、アプリのカテゴリ選択に関わらず、この機能を備えていればソーシャルメディアコンテンツディスクリプタが表示されます。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Hello Developer: July 2026</title>
-      <link>https://developer.apple.com/news/?id=grx7lcto</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=grx7lcto</guid>
-      <pubDate>Wed, 08 Jul 2026 01:00:15 +0900</pubDate>
-      <description>Apple Developer ウェブサイトの新しい検索ツール、FigmaとSketchの設計キット、WWDC26の最新アップデートを紹介しており、デベロッパーは27のプラットフォームリリース、ドキュメント、サンプルコード、リリースノートの最新情報を確認できます。Apple Design Award受賞アプリ「grug」と「Cyberpunk 2077」の事例も参考になります。</description>
     </item>
   </channel>
 </rss>

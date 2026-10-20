@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "react-native",
+    "fw_name": "React Native",
+    "fw_icon": "⚛️",
+    "fw_color": "#61DAFB",
+    "id": "https://reactnative.dev/blog/2026/10/19/react-native-0.88",
+    "title": "React Native 0.88 - Web-Based Event Dispatching, Variable Fonts, SceneDelegate, no breaking changes",
+    "link": "https://reactnative.dev/blog/2026/10/19/react-native-0.88",
+    "pub_date": "Mon, 19 Oct 2026 00:00:00 GMT",
+    "description": "Today we are excited to release React Native 0.88! This release switches event dispatching to the Web-based path by default, brings variable fonts to Text and TextInput on both platforms and adds SceneDelegate lifecycle support on iOS. It also bumps the React version to 19.3.0 and moves to Metro 0.87. Following 0.83 and 0.86 , this is the third React Native release with no user-facing breaking changes, reflecting our continued commitment to making upgrades more predictable and seamless. Highlights ​ Web-based event dispatching Variable fonts with fontVariationSettings SceneDelegate lifecycle support on iOS ArrayBuffer for Java TurboModules Experimental Swift Package Manager support Web-based event dispatching ​ React Native now dispatches events through the W3C EventTarget API by default, ",
+    "summary_ja": "React Native 0.88では、イベントディスパッチがW3C EventTarget APIベースに変更され、可変フォント(fontVariationSettings)がTextおよびTextInputで両プラットフォーム対応となり、iOSではSceneDelegateのライフサイクルサポートが追加されました。React 19.3.0への更新とMetro 0.87への移行が行われており、0.83・0.86に続いて3番目のユーザー向けブレーキングチェンジなしのリリースとなります。ArrayBuffer for Java TurboModulesとSwift Package Managerの実験的サポートも含まれています。",
+    "fetched_at": "2026-10-20T01:19:57.806491+00:00",
+    "fw_total_in_window": 1
+  }
+]
