@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=yfo21auu",
+    "title": "Offer your subscriptions to businesses and schools",
+    "link": "https://developer.apple.com/news/?id=yfo21auu",
+    "pub_date": "Thu, 22 Oct 2026 11:00:08 PDT",
+    "description": "Starting today, organizations and educational institutions can purchase subscriptions to apps in volume with multiseat purchasing. This makes it easy for organizations that use Apple Business or Apple School Manager to discover and purchase your auto-renewable subscription. Organizations can purchase the seats they need through a single Apple In-App Purchase, then assign and manage those seats using their existing device management tools. Organizations can also add and remove seats at any time depending on their needs. Multiseat purchasing for subscriptions is enabled by default in App Store Connect, unless you’ve previously adjusted this setting. This makes your subscription available for purchase through Apple Business, Apple School Manager, and the App Store. You can change these availa",
+    "summary_ja": "App Storeで、組織や教育機関がアプリのサブスクリプションを複数ライセンス購入できるマルチシート購入機能が利用可能になりました。Apple BusinessやApple School Managerを通じて、組織は必要なシート数を一度に購入し、既存のデバイス管理ツールで割り当て・管理でき、いつでもシート数を追加・削除できます。この機能はApp Store Connectでデフォルト有効ですが、設定で変更可能です。",
+    "fetched_at": "2026-10-23T01:03:47.128565+00:00",
+    "fw_total_in_window": 1
+  }
+]

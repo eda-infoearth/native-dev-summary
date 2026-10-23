@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 22 Oct 2026 10:03:28 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 10:03:49 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Offer your subscriptions to businesses and schools</title>
+      <link>https://developer.apple.com/news/?id=yfo21auu</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=yfo21auu</guid>
+      <pubDate>Fri, 23 Oct 2026 03:00:08 +0900</pubDate>
+      <description>App Storeで、組織や教育機関がアプリのサブスクリプションを複数ライセンス購入できるマルチシート購入機能が利用可能になりました。Apple BusinessやApple School Managerを通じて、組織は必要なシート数を一度に購入し、既存のデバイス管理ツールで割り当て・管理でき、いつでもシート数を追加・削除できます。この機能はApp Store Connectでデフォルト有効ですが、設定で変更可能です。</description>
+    </item>
     <item>
       <title>⚛️ React Native — React Native 0.88 - Web-Based Event Dispatching, Variable Fonts, SceneDelegate, no breaking changes</title>
       <link>https://reactnative.dev/blog/2026/10/19/react-native-0.88</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-86-release-announcement</guid>
       <pubDate>Tue, 14 Jul 2026 09:00:00 +0900</pubDate>
       <description>Flet 0.86.0は1.0前の記念リリースで、PythonとDart間の通信をソケットから新しいin-process dart-bridgeに変更し、バイナリデータ用の専用チャネルを追加しました。Androidパッケージングが完全に再設計され、全プラットフォームでアプリの配布がより高速で軽量になります。1.0に向けた大きな技術的負債の解消と、アプリの統合テスト機能の実装が実現されました。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Age rating questionnaire now includes social media questions</title>
-      <link>https://developer.apple.com/news/?id=tlur8uvi</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=tlur8uvi</guid>
-      <pubDate>Fri, 10 Jul 2026 07:00:01 +0900</pubDate>
-      <description>iOS 27以降の新機能「Time Allowances」で保護者がアプリの使用時間をカテゴリ別に管理できるようになるため、App Store Connectの年齢評価アンケートにソーシャルメディア機能に関する質問が追加されました。ソーシャルメディア機能とは、ユーザー生成コンテンツをフィードなどで再配信・増幅・交互作用させる機能を指し、アプリのカテゴリ選択に関わらず、この機能を備えていればソーシャルメディアコンテンツディスクリプタが表示されます。</description>
     </item>
   </channel>
 </rss>
