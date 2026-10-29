@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=i9boeiqc",
+    "title": "Say hello to Touch on Mac",
+    "link": "https://developer.apple.com/news/?id=i9boeiqc",
+    "pub_date": "Wed, 28 Oct 2026 10:00:55 PDT",
+    "description": "Start getting ready for MacBook Pro with Touch today. Watch new developer videos, sign up for Group Labs, and check out new articles and resources. Explore now",
+    "summary_ja": "MacBook ProへのTouch導入に向けて、開発者向けの新しいビデオやGroup Labs、記事やリソースが利用可能になりました。Touchに対応したアプリ開発に必要な情報と学習機会が提供されています。",
+    "fetched_at": "2026-10-29T01:59:24.652446+00:00",
+    "fw_total_in_window": 1
+  }
+]

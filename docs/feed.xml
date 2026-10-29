@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 28 Oct 2026 10:52:25 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 10:59:26 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Say hello to Touch on Mac</title>
+      <link>https://developer.apple.com/news/?id=i9boeiqc</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=i9boeiqc</guid>
+      <pubDate>Thu, 29 Oct 2026 02:00:55 +0900</pubDate>
+      <description>MacBook ProへのTouch導入に向けて、開発者向けの新しいビデオやGroup Labs、記事やリソースが利用可能になりました。Touchに対応したアプリ開発に必要な情報と学習機会が提供されています。</description>
+    </item>
     <item>
       <title>🍎 App Store — Offer your subscriptions to businesses and schools</title>
       <link>https://developer.apple.com/news/?id=yfo21auu</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/17225965#2027-01-27</guid>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
       <description>Google Playのポリシーが2027年1月27日に変更され、READ_CALL_LOG権限を使用したアカウント認証（電話通話経由）は許可されなくなります。代わりに、Digital Credentials APIまたはSMS Retriever APIなどの安全な代替APIの使用が必須となります。開発者はこれらの新しいAPIへの移行を急ぎ、電話通話によるアカウント認証機能を削除または置き換える必要があります。</description>
-    </item>
-    <item>
-      <title>🐟 Flet — Flet 0.86.0: Faster everywhere — new Android packaging, dart-bridge, and Python 3.14</title>
-      <link>https://flet.dev/blog/flet-v-0-86-release-announcement</link>
-      <guid isPermaLink="true">https://flet.dev/blog/flet-v-0-86-release-announcement</guid>
-      <pubDate>Tue, 14 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Flet 0.86.0は1.0前の記念リリースで、PythonとDart間の通信をソケットから新しいin-process dart-bridgeに変更し、バイナリデータ用の専用チャネルを追加しました。Androidパッケージングが完全に再設計され、全プラットフォームでアプリの配布がより高速で軽量になります。1.0に向けた大きな技術的負債の解消と、アプリの統合テスト機能の実装が実現されました。</description>
     </item>
   </channel>
 </rss>
