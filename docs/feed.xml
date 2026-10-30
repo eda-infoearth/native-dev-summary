@@ -5,9 +5,37 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 29 Oct 2026 10:59:26 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 11:13:50 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2027-08-25）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/13986130</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/13986130#2027-08-25</guid>
+      <pubDate>Thu, 29 Oct 2026 09:00:00 +0900</pubDate>
+      <description>ローカルネットワークパーミッション（LOCAL_NETWORK）について、Android 17（API 37）以上をターゲットとするアプリは、デバイスピッカーでは不十分な場合に限り、Play Consoleで使用宣言を提出する必要があります。このパーミッションは2027年8月25日までが適用期限となるため、該当するアプリ開発者は早めの対応が必須です。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2027-04-14）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/13986130</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/13986130#2027-04-14</guid>
+      <pubDate>Thu, 29 Oct 2026 09:00:00 +0900</pubDate>
+      <description>AppFunctions APIを開発する際は、既存のGoogle Playポリシーすべてに準拠する必要があり、AIエージェントの欺瞞・操作、セキュリティ制御の回避、他のアプリケーションへの干渉は厳密に禁止されています。本ポリシーは2027年4月14日までの適用期限となります。</description>
+    </item>
+    <item>
+      <title>▶️ Google Play — Subscriptions（適用期限: 2027-01-27）</title>
+      <link>https://support.google.com/googleplay/android-developer/answer/9900533</link>
+      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/9900533#2027-01-27</guid>
+      <pubDate>Thu, 29 Oct 2026 09:00:00 +0900</pubDate>
+      <description>学生プランなどの適格性ベースの継続割引を提供するサブスクリプションについて、2027年1月27日までに適格基準、認証プロセス、適格喪失後の価格・特典変更内容を明確に開示することが義務付けられます。この新要件により、ユーザーが割引終了後の料金体系を事前に理解できるようになります。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Adjustments to the Taiwan storefront of the App Store on iOS and iPadOS</title>
+      <link>https://developer.apple.com/news/?id=w9mxlhek</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=w9mxlhek</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:56 +0900</pubDate>
+      <description>2026年10月31日から、台湾のApp Storeにおける標準的なアプリ内課金と有料アプリの手数料率が30%から26%に引き下げられます。この変更を受けるために期限までに更新契約に署名する必要はありません。Apple Developer Program License Agreementが更新されており、開発者アカウントにサインインして新しい利用規約に同意できます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Say hello to Touch on Mac</title>
       <link>https://developer.apple.com/news/?id=i9boeiqc</link>
@@ -329,34 +357,6 @@
       <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/16302250#2026-08-26</guid>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
       <description>Googleが年齢制限付きコンテンツおよび機能ポリシーを拡大し、2026年8月26日より匿名チャットおよびランダムチャットアプリに適用することを発表しました。開発者は、これらのアプリが年齢認証機能を実装し、未成年ユーザーへの不適切なコンテンツ配信を防ぐための対応が必要になります。</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Google Play Families Policies（適用期限: 2026-08-26）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/9893335</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/9893335#2026-08-26</guid>
-      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Google Playは2026年8月26日より、匿名チャットアプリの子どもへのターゲティングを禁止する新ポリシーを施行します。開発者は子ども向けとして設計・マーケティングしている匿名チャットアプリをGoogle Playで提供できなくなるため、対象アプリは早急にポリシー対応が必要です。</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Child Endangerment（適用期限: 2026-08-26）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/9878809</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/9878809#2026-08-26</guid>
-      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Google Playのチャイルドセーフティ基準が拡大され、匿名チャットおよびランダムチャットアプリにも適用されます(適用期限: 2026年8月26日)。開発者は該当するアプリが児童保護要件を満たしていることを確認し、必要な安全機能の実装やコンテンツモデレーション体制の整備が必須となります。違反するアプリはGoogle Playから削除される可能性があるため、早急な対応が必要です。</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Play Console Requirements（適用期限: 2026-09-30）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/10788890</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/10788890#2026-09-30</guid>
-      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Play Consoleへのアプリ登録がAndroid開発者認証の必須要件となり、2026年9月30日までに登録しないと Google Playから削除される可能性があります。既に99%のアプリは自動登録されていますが、Play Console ホームページで確認し、未登録アプリがあれば登録が必要です。また、Google Play外で配布するアプリについても Play Consoleに登録することで、認定 Android デバイスへのインストールが可能になります。</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Use of SMS or call log permission groups（適用期限: 2027-01-27）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/17225965</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/17225965#2027-01-27</guid>
-      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Google Playのポリシーが2027年1月27日に変更され、READ_CALL_LOG権限を使用したアカウント認証（電話通話経由）は許可されなくなります。代わりに、Digital Credentials APIまたはSMS Retriever APIなどの安全な代替APIの使用が必須となります。開発者はこれらの新しいAPIへの移行を急ぎ、電話通話によるアカウント認証機能を削除または置き換える必要があります。</description>
     </item>
   </channel>
 </rss>

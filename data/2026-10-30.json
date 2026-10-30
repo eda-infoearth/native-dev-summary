@@ -1,0 +1,55 @@
+[
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/13986130#2027-08-25",
+    "title": "Permissions and APIs that Access Sensitive Information（適用期限: 2027-08-25）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/13986130",
+    "pub_date": "2026-10-29",
+    "description": "Permissions and APIs that Access Sensitive Information Local Network Permission : This permission is restricted to apps that need it for core functionality when device pickers are insufficient. Apps targeting Android 17 or higher (API 37+) must submit a Play Console declaration to use this permission. Announced 2026-10-29",
+    "summary_ja": "ローカルネットワークパーミッション（LOCAL_NETWORK）について、Android 17（API 37）以上をターゲットとするアプリは、デバイスピッカーでは不十分な場合に限り、Play Consoleで使用宣言を提出する必要があります。このパーミッションは2027年8月25日までが適用期限となるため、該当するアプリ開発者は早めの対応が必須です。",
+    "fetched_at": "2026-10-30T02:13:40.937567+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/13986130#2027-04-14",
+    "title": "Permissions and APIs that Access Sensitive Information（適用期限: 2027-04-14）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/13986130",
+    "pub_date": "2026-10-29",
+    "description": "Permissions and APIs that Access Sensitive Information AppFunctions API : Developers building AppFunctions must comply with all existing Google Play policies. AppFunctions are strictly prohibited from deceiving or manipulating AI agents, bypassing security controls, or interfering with other applications. Announced 2026-10-29",
+    "summary_ja": "AppFunctions APIを開発する際は、既存のGoogle Playポリシーすべてに準拠する必要があり、AIエージェントの欺瞞・操作、セキュリティ制御の回避、他のアプリケーションへの干渉は厳密に禁止されています。本ポリシーは2027年4月14日までの適用期限となります。",
+    "fetched_at": "2026-10-30T02:13:40.937806+00:00"
+  },
+  {
+    "fw_id": "google-play",
+    "fw_name": "Google Play",
+    "fw_icon": "▶️",
+    "fw_color": "#01875F",
+    "id": "https://support.google.com/googleplay/android-developer/answer/9900533#2027-01-27",
+    "title": "Subscriptions（適用期限: 2027-01-27）",
+    "link": "https://support.google.com/googleplay/android-developer/answer/9900533",
+    "pub_date": "2026-10-29",
+    "description": "Subscriptions Subscriptions with ongoing eligibility-based discounts : Subscriptions with ongoing eligibility-based discounts, such as student plans, must clearly disclose eligibility criteria, the verification process, and post-eligibility pricing and benefit changes. Announced 2026-10-29",
+    "summary_ja": "学生プランなどの適格性ベースの継続割引を提供するサブスクリプションについて、2027年1月27日までに適格基準、認証プロセス、適格喪失後の価格・特典変更内容を明確に開示することが義務付けられます。この新要件により、ユーザーが割引終了後の料金体系を事前に理解できるようになります。",
+    "fetched_at": "2026-10-30T02:13:40.937921+00:00"
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=w9mxlhek",
+    "title": "Adjustments to the Taiwan storefront of the App Store on iOS and iPadOS",
+    "link": "https://developer.apple.com/news/?id=w9mxlhek",
+    "pub_date": "Thu, 29 Oct 2026 08:00:56 PDT",
+    "description": "Apple is making changes to the Taiwan storefront of the App Store, following discussions with the Taiwan Fair Trade Commission. As of October 31, 2026, the commission rate for standard Apple In-App Purchase and paid app transactions will be 26% on the Taiwan storefront of the App Store on iOS and iPadOS. Currently, that rate is 30%. Signing the updated terms by October 31 is not required to receive the benefit of these commission rate changes starting that date. The Apple Developer Program License Agreement has been revised to support updated policies. You can sign in to your account to accept the updated terms. 查看繁體中文翻譯 Translations of the updated agreement will be available on the Apple Developer website within one month.",
+    "summary_ja": "2026年10月31日から、台湾のApp Storeにおける標準的なアプリ内課金と有料アプリの手数料率が30%から26%に引き下げられます。この変更を受けるために期限までに更新契約に署名する必要はありません。Apple Developer Program License Agreementが更新されており、開発者アカウントにサインインして新しい利用規約に同意できます。",
+    "fetched_at": "2026-10-30T02:13:48.149819+00:00",
+    "fw_total_in_window": 1
+  }
+]
