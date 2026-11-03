@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 02 Nov 2026 10:57:01 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 12:45:45 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Upcoming: New age rating content descriptors in App Store Connect</title>
+      <link>https://developer.apple.com/news/?id=yxkh08us</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=yxkh08us</guid>
+      <pubDate>Tue, 03 Nov 2026 02:30:07 +0900</pubDate>
+      <description>2026年11月16日より、App Store Connectは「共有位置情報」と「デート・恋愛機能」の新しいコンテンツ記述子を追加し、年齢レーティングの正確性を強化します。アプリ更新時または年齢レーティング変更時にこれらの宣言が必須となり、全アプリは2027年1月12日までに対応を完了する必要があります。</description>
+    </item>
     <item>
       <title>▶️ Google Play — Permissions and APIs that Access Sensitive Information（適用期限: 2027-08-25）</title>
       <link>https://support.google.com/googleplay/android-developer/answer/13986130</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://flet.dev/blog/2026-07-17-smarter-flet-studio-with-ai-agent</guid>
       <pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
       <description>要約失敗</description>
-    </item>
-    <item>
-      <title>▶️ Google Play — Age-Restricted Content and Functionality（適用期限: 2026-08-26）</title>
-      <link>https://support.google.com/googleplay/android-developer/answer/16302250</link>
-      <guid isPermaLink="true">https://support.google.com/googleplay/android-developer/answer/16302250#2026-08-26</guid>
-      <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-      <description>Googleが年齢制限付きコンテンツおよび機能ポリシーを拡大し、2026年8月26日より匿名チャットおよびランダムチャットアプリに適用することを発表しました。開発者は、これらのアプリが年齢認証機能を実装し、未成年ユーザーへの不適切なコンテンツ配信を防ぐための対応が必要になります。</description>
     </item>
   </channel>
 </rss>

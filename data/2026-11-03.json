@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=yxkh08us",
+    "title": "Upcoming: New age rating content descriptors in App Store Connect",
+    "link": "https://developer.apple.com/news/?id=yxkh08us",
+    "pub_date": "Mon, 02 Nov 2026 09:30:07 PST",
+    "description": "Starting November 16, 2026, App Store Connect will include new content descriptors to help ensure your app’s age ratings accurately reflect its features and are in accordance with local regulations. When completing the age rating questionnaire in App Store Connect, you’ll need to declare whether your app includes: Shared Location: Sharing of real-world location with another person or group. Dating and Relationships: Features that enable dating or relationship connections between real people and/or a virtual companion that engages a user in sexual or romantic content. You must provide these declarations when submitting an app update or making changes to your age rating questionnaire. All apps must have these declarations completed by January 12, 2027. Apps that include Dating and Relationsh",
+    "summary_ja": "2026年11月16日より、App Store Connectは「共有位置情報」と「デート・恋愛機能」の新しいコンテンツ記述子を追加し、年齢レーティングの正確性を強化します。アプリ更新時または年齢レーティング変更時にこれらの宣言が必須となり、全アプリは2027年1月12日までに対応を完了する必要があります。",
+    "fetched_at": "2026-11-03T03:45:43.397197+00:00",
+    "fw_total_in_window": 1
+  }
+]
