@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=gdk2umrf",
+    "title": "Siri AI is now open to all developers",
+    "link": "https://developer.apple.com/news/?id=gdk2umrf",
+    "pub_date": "Tue, 03 Nov 2026 10:00:20 PST",
+    "description": "Starting today with the iOS 27.3, iPadOS 27.3, macOS 27.3, and visionOS 27.3 betas, a new Developer Preview enables any developer to integrate their app with Siri AI, giving businesses and developers new ways to reach and serve their customers. Siri AI, an entirely new version of Siri that is profoundly more capable, conversational, and personal, is designed to be deeply integrated into Apple’s operating systems and the apps people use every day, including the apps from our vast ecosystem of developers. Thousands of developers have already built integrations with Siri to let users ask for directions, manage a to-do list, send a message, or catch up on an audiobook. Siri AI is available in many languages, including English, French, Japanese, Korean, Portuguese, and Spanish and will soon exp",
+    "summary_ja": "iOS 27.3以降のベータ版から、すべての開発者がSiri AIとアプリを統合できるDeveloper Previewが利用可能になりました。Siri AIは従来版より格段に高い会話能力と個人化機能を備えており、英語・フランス語・日本語など複数言語に対応し、今後さらに対応言語が拡大予定です。開発者は既に方向案内、ToDoリスト管理、メッセージ送信、オーディオブック再生など様々な機能でSiri統合を実現しており、この新プレビュープログラムにより統合の選択肢がさらに拡がります。",
+    "fetched_at": "2026-11-04T02:48:06.317725+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=6gpufove",
+    "title": "Get ready with the latest beta releases",
+    "link": "https://developer.apple.com/news/?id=6gpufove",
+    "pub_date": "Tue, 03 Nov 2026 08:00:26 PST",
+    "description": "The beta versions of iOS 27.3, iPadOS 27.3, macOS 27.3, tvOS 27.3, visionOS 27.3, and watchOS 27.3 are now available. Get your apps ready by confirming they work as expected on these releases. And make sure to build and test with Xcode 27.3 to take advantage of the advancements in the latest SDKs. View downloads and release notes Learn about testing a beta OS Learn about sending feedback",
+    "summary_ja": "iOS 27.3、iPadOS 27.3、macOS 27.3、tvOS 27.3、visionOS 27.3、watchOS 27.3のベータ版が利用可能になりました。開発者は最新SDKの機能向上を活用するため、Xcode 27.3でビルド・テストし、各プラットフォームでのアプリ動作を確認する必要があります。",
+    "fetched_at": "2026-11-04T02:48:06.317774+00:00",
+    "fw_total_in_window": 2
+  }
+]
