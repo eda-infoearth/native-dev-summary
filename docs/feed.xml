@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 04 Nov 2026 11:48:11 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 11:56:24 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Now available: Retention messages for subscriptions</title>
+      <link>https://developer.apple.com/news/?id=fk9ps3gv</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=fk9ps3gv</guid>
+      <pubDate>Thu, 05 Nov 2026 01:00:56 +0900</pubDate>
+      <description>App Storeのサブスクリプション解約フロー中に、購読者に価値を想起させるリテンションメッセージ（テキスト、画像、特別オファーを含む）を表示できる新機能が利用可能になりました。App Store Connectで対象購読者や送信待機時間を設定でき、Retention Messaging APIを使用すれば購読者情報に基づいてメッセージを動的に選択できます（API利用はリクエスト申請が必要）。</description>
+    </item>
     <item>
       <title>🍎 App Store — Siri AI is now open to all developers</title>
       <link>https://developer.apple.com/news/?id=gdk2umrf</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1</guid>
       <pubDate>Fri, 31 Jul 2026 09:55:57 +0900</pubDate>
       <description>Dioxos v0.8.0-alpha.1では、選択イベントとbeforeinputイベントのサポート追加、クリップボードイベントでペーストデータの露出、ルーターのクエリ・ハッシュセグメント保持機能改善などが実装されました。autofmtのフォーマット等冪性修正、ReadStoreのLens要件修正、応答ボディ読み込みエラーの伝播修正など複数のバグ修正も含まれています。v0.7のアセットフォールバック削除により、既存コードの更新が必要になる可能性があります。</description>
-    </item>
-    <item>
-      <title>🧩 Dioxus — v0.7.10</title>
-      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.10</link>
-      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.10</guid>
-      <pubDate>Fri, 31 Jul 2026 09:13:26 +0900</pubDate>
-      <description>Dioxusのバイナリターゲットのクレート名がパッケージ名と異なる場合、ホットパッチングが正常に機能しなかった問題が修正されました。この修正により、開発時のホットリロード機能がより安定して動作するようになります。</description>
     </item>
   </channel>
 </rss>

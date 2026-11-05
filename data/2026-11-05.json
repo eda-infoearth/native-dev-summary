@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=fk9ps3gv",
+    "title": "Now available: Retention messages for subscriptions",
+    "link": "https://developer.apple.com/news/?id=fk9ps3gv",
+    "pub_date": "Wed, 04 Nov 2026 08:00:56 PST",
+    "description": "Reduce cancellations with retention messages that remind subscribers of your subscription's value as they decide whether to cancel. Retention messages appear in the cancellation flow and can include text, images, or a special offer. In App Store Connect, you can configure retention messages for your auto-renewable subscriptions, including subscriber eligibility and the wait time between messages. With the Retention Messaging API , you can choose which message to show each subscriber based on their subscription details. API access is available by request. Configure retention messages in App Store Connect Learn about auto-renewable subscriptions",
+    "summary_ja": "App Storeのサブスクリプション解約フロー中に、購読者に価値を想起させるリテンションメッセージ（テキスト、画像、特別オファーを含む）を表示できる新機能が利用可能になりました。App Store Connectで対象購読者や送信待機時間を設定でき、Retention Messaging APIを使用すれば購読者情報に基づいてメッセージを動的に選択できます（API利用はリクエスト申請が必要）。",
+    "fetched_at": "2026-11-05T02:56:21.914084+00:00",
+    "fw_total_in_window": 1
+  }
+]
