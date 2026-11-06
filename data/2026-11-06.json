@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/flet-v-1-1-release-announcement",
+    "title": "Flet 1.1: shadcn/ui controls, notifications and a fresh neutral look",
+    "link": "https://flet.dev/blog/flet-v-1-1-release-announcement",
+    "pub_date": "Thu, 05 Nov 2026 00:00:00 GMT",
+    "description": "Flet 1.1.0 is here, the first feature release since Flet 1.0 ! When we shipped 1.0, the roadmap promised \"more UI choices such as shadcn\" and newer Flutter versions. 1.1 delivers the first of both: a full set of shadcn/ui-styled controls , local notifications on every platform, a cleaner neutral default theme , and Flutter 3.47 with the Impeller renderer on desktop. There's also a long list of flet build improvements and bug fixes, many of them from the community. Highlights in this release: shadcn/ui controls - 33 new controls styled after shadcn/ui , with color schemes and the Lucide icon set. Local notifications - show, schedule and cancel notifications on Android, iOS, macOS, Windows, Linux and web. Neutral theme surfaces - white and near-black backgrounds by default, plus new themes f",
+    "summary_ja": "Flet 1.1.0がリリースされ、shadcn/ui風の33個の新しいコントロールとLucideアイコンセットが追加されました。すべてのプラットフォーム（Android、iOS、macOS、Windows、Linux、Web）でローカル通知の表示・スケジュール・キャンセル機能が実装されました。デフォルトテーマがニュートラルな配色に刷新され、Flutter 3.47とImpellerレンダラーがデスクトップに対応しました。",
+    "fetched_at": "2026-11-06T02:56:24.575054+00:00",
+    "fw_total_in_window": 1
+  }
+]

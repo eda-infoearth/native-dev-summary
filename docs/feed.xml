@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 05 Nov 2026 11:56:24 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 11:56:27 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🐟 Flet — Flet 1.1: shadcn/ui controls, notifications and a fresh neutral look</title>
+      <link>https://flet.dev/blog/flet-v-1-1-release-announcement</link>
+      <guid isPermaLink="true">https://flet.dev/blog/flet-v-1-1-release-announcement</guid>
+      <pubDate>Thu, 05 Nov 2026 09:00:00 +0900</pubDate>
+      <description>Flet 1.1.0がリリースされ、shadcn/ui風の33個の新しいコントロールとLucideアイコンセットが追加されました。すべてのプラットフォーム（Android、iOS、macOS、Windows、Linux、Web）でローカル通知の表示・スケジュール・キャンセル機能が実装されました。デフォルトテーマがニュートラルな配色に刷新され、Flutter 3.47とImpellerレンダラーがデスクトップに対応しました。</description>
+    </item>
     <item>
       <title>🍎 App Store — Now available: Retention messages for subscriptions</title>
       <link>https://developer.apple.com/news/?id=fk9ps3gv</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://developer.apple.com/news/?id=vrvvlonn</guid>
       <pubDate>Thu, 06 Aug 2026 00:00:51 +0900</pubDate>
       <description>WWDC26の最新情報を解説した新動画が公開され、iOS 27用のApp Storeアセットテンプレートがダウンロード可能になりました。Visual Intelligenceの統合ベストプラクティスとXcode Cloudワークフローによるビルド高速化の方法が紹介されています。</description>
-    </item>
-    <item>
-      <title>🧩 Dioxus — v0.8.0-alpha.1</title>
-      <link>https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1</link>
-      <guid isPermaLink="true">https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.1</guid>
-      <pubDate>Fri, 31 Jul 2026 09:55:57 +0900</pubDate>
-      <description>Dioxos v0.8.0-alpha.1では、選択イベントとbeforeinputイベントのサポート追加、クリップボードイベントでペーストデータの露出、ルーターのクエリ・ハッシュセグメント保持機能改善などが実装されました。autofmtのフォーマット等冪性修正、ReadStoreのLens要件修正、応答ボディ読み込みエラーの伝播修正など複数のバグ修正も含まれています。v0.7のアセットフォールバック削除により、既存コードの更新が必要になる可能性があります。</description>
     </item>
   </channel>
 </rss>
