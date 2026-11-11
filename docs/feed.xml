@@ -5,9 +5,30 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 10 Nov 2026 13:23:49 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 11:20:12 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — One command to connect Supabase with Expo</title>
+      <link>https://expo.dev/changelog/supabase-integration-with-expo</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/supabase-integration-with-expo</guid>
+      <pubDate>Wed, 11 Nov 2026 01:15:37 +0900</pubDate>
+      <description>Expoで一度のコマンド実行によってSupabaseプロジェクトを自動作成し、必要なSDK(@supabase/supabase-js、expo-sqlite)をインストール、環境変数をDevelopment/Preview/Production環境に自動設定できるようになりました。既存プロジェクトとの連携は--linkオプションで指定でき、再実行時も安全に既存設定を再利用します。ローカル開発からビルド、OTA更新まで統一された認証情報を使用できます。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Announcing the Swift Student Challenge 2027</title>
+      <link>https://developer.apple.com/news/?id=jkykd58d</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=jkykd58d</guid>
+      <pubDate>Wed, 11 Nov 2026 02:00:12 +0900</pubDate>
+      <description>Appleが次世代開発者向けに「Swift Student Challenge 2027」を開催し、2月8日～28日に応募を受け付けます。今年の新機能として、iOSやmacOS、iPadOS等のAppleプラットフォーム全般でのアプリ開発が対象となり、従来よりも応募範囲が拡大されました。世界中の学生が創造性とアプリ開発スキルを競う機会が提供されます。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Hello Developer: November 2026</title>
+      <link>https://developer.apple.com/news/?id=ow0j45ny</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=ow0j45ny</guid>
+      <pubDate>Wed, 11 Nov 2026 01:00:59 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
     <item>
       <title>🐟 Flet — Flet 1.1: shadcn/ui controls, notifications and a fresh neutral look</title>
       <link>https://flet.dev/blog/flet-v-1-1-release-announcement</link>
@@ -336,27 +357,6 @@
       <guid isPermaLink="true">https://reactnative.dev/blog/2026/08/11/react-native-0.87</guid>
       <pubDate>Tue, 11 Aug 2026 09:00:00 +0900</pubDate>
       <description>React Native 0.87ではStrict TypeScript APIがデフォルト化され、Metro 0.87への更新、Swift Package Managerの実験的サポートが追加されました。Node.js 22、Android Gradle Plugin 9、Kotlin 2.0以上が最小要件として引き上げられたため、プロジェクトの互換性確認が必要です。深いインポート（deep imports）の廃止により、公開APIの使用が強制されるようになります。</description>
-    </item>
-    <item>
-      <title>🦞 Crux — crux_time-v0.18.0: Merge pull request #571 from redbadger/readme-single-source / crux_macros-v0.10.1: Merge pull request #571 from redbadger/readme-single-source / crux_kv-v0.14.0: Merge pull request #571 from redbadger/readme-single-source / crux_http-v0.20.0 / crux_core-v0.20.0</title>
-      <link>https://github.com/redbadger/crux/releases/tag/crux_time-v0.18.0</link>
-      <guid isPermaLink="true">https://github.com/redbadger/crux/releases/tag/crux_time-v0.18.0</guid>
-      <pubDate>Fri, 07 Aug 2026 23:18:21 +0900</pubDate>
-      <description>Crux フレームワークの複数パッケージが更新され、crux_http v0.20.0では HttpError のボディ内容を簡単に取得できる `body()` と `body_json()` メソッドが追加されました。crux_core v0.20.0では破壊的変更として `EffectId` が `ParkedEffectId` に名前変更され、カスタムFFIレーンを使用する場合は対応が必要です。その他のパッケージ(crux_time、crux_macros、crux_kv)ではREADMEを統一する改善が行われました。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Get ready for new creative assets on the App Store</title>
-      <link>https://developer.apple.com/news/?id=kug6m2ea</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=kug6m2ea</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:58 +0900</pubDate>
-      <description>App Storeで新しいクリエイティブアセット機能が秋に導入され、アプリの商品ページ、検索結果、アプリ内イベントなど複数の場所でブランド、季節限定オファー、新コンテンツなどをアピールできるようになります。開発者は公開されているベストプラクティスガイドとFigma、Photoshop、Pixelmatorのテンプレートを活用して、事前に画像と動画アセットを準備する必要があります。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Hello Developer: August 2026</title>
-      <link>https://developer.apple.com/news/?id=vrvvlonn</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=vrvvlonn</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:51 +0900</pubDate>
-      <description>WWDC26の最新情報を解説した新動画が公開され、iOS 27用のApp Storeアセットテンプレートがダウンロード可能になりました。Visual Intelligenceの統合ベストプラクティスとXcode Cloudワークフローによるビルド高速化の方法が紹介されています。</description>
     </item>
   </channel>
 </rss>

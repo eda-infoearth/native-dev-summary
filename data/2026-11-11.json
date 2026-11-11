@@ -1,0 +1,44 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/supabase-integration-with-expo",
+    "title": "One command to connect Supabase with Expo",
+    "link": "https://expo.dev/changelog/supabase-integration-with-expo",
+    "pub_date": "2026-11-10T16:15:37.364Z",
+    "description": "Create a Supabase project, install the SDK, and get your keys into every Expo environment without leaving the terminal. You can now set up Supabase with one command: It opens your browser once to authorize Supabase, asks which organization and region to use, and creates the project. Then it installs @supabase/supabase-js and expo-sqlite , adds the expo-sqlite config plugin, and writes EXPO_PUBLIC_SUPABASE_URL and EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY to .env.local and to your Expo environment variables for Production, Preview, and Development. Local dev, builds, and updates all read the same values. Already have a project? --link points at it instead. Rerunning is safe: it reuses what it made and asks before replacing anything. The project is yours A Postgres database, auth, storage, and re",
+    "summary_ja": "Expoで一度のコマンド実行によってSupabaseプロジェクトを自動作成し、必要なSDK(@supabase/supabase-js、expo-sqlite)をインストール、環境変数をDevelopment/Preview/Production環境に自動設定できるようになりました。既存プロジェクトとの連携は--linkオプションで指定でき、再実行時も安全に既存設定を再利用します。ローカル開発からビルド、OTA更新まで統一された認証情報を使用できます。",
+    "fetched_at": "2026-11-11T02:20:02.081553+00:00",
+    "fw_total_in_window": 1
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=jkykd58d",
+    "title": "Announcing the Swift Student Challenge 2027",
+    "link": "https://developer.apple.com/news/?id=jkykd58d",
+    "pub_date": "Tue, 10 Nov 2026 09:00:12 PST",
+    "description": "Apple is proud to support the next generation of developers, creators, and entrepreneurs with the Swift Student Challenge. The Challenge gives students from around the world the opportunity to showcase their creativity and app development skills. The Challenge is open February 8–28, 2027. And new this year, students can submit an app for any Apple platform. Learn more",
+    "summary_ja": "Appleが次世代開発者向けに「Swift Student Challenge 2027」を開催し、2月8日～28日に応募を受け付けます。今年の新機能として、iOSやmacOS、iPadOS等のAppleプラットフォーム全般でのアプリ開発が対象となり、従来よりも応募範囲が拡大されました。世界中の学生が創造性とアプリ開発スキルを競う機会が提供されます。",
+    "fetched_at": "2026-11-11T02:20:09.356814+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=ow0j45ny",
+    "title": "Hello Developer: November 2026",
+    "link": "https://developer.apple.com/news/?id=ow0j45ny",
+    "pub_date": "Tue, 10 Nov 2026 08:00:59 PST",
+    "description": "In this supersized edition: Join us at Europe’s first Apple Developer Center. Say hello to Touch on Mac. Learn about the Swift Student Challenge 2027. Browse new App Review help articles. Explore new subscription features. Read now",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-11-11T02:20:09.356851+00:00",
+    "fw_total_in_window": 2
+  }
+]
