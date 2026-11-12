@@ -1,0 +1,16 @@
+[
+  {
+    "fw_id": "flet",
+    "fw_name": "Flet",
+    "fw_icon": "🐟",
+    "fw_color": "#00D4AA",
+    "id": "https://flet.dev/blog/flet-studio-2-0",
+    "title": "Flet Studio 2.0: from the browser to the app stores",
+    "link": "https://flet.dev/blog/flet-studio-2-0",
+    "pub_date": "Wed, 11 Nov 2026 00:00:00 GMT",
+    "description": "When we launched Flet Studio back in May, it was a place to write a Flet app in the browser, run it and share it as a link. In July it got an AI agent , and in September the agent got eyes and ears to see the app it builds. That first post ended with a promise: \"Further down the road we'd love to take you the rest of the way: packaging and publishing your app straight from the browser. That part's still cooking.\" It's cooked! Today we are releasing Flet Studio 2.0 . It takes your app from the browser to your users: build it for Android, iOS, Windows, macOS, Linux and the web, sign it, and publish it to Google Play, the App Store and the Microsoft Store. No Xcode, no Android Studio, no Flutter SDK, and no Mac required to ship an iPhone app. One app, every platform ​ If you've ever packaged ",
+    "summary_ja": "Flet Studio 2.0では、ブラウザ内でアプリ開発から公開まで完全に実行でき、Android/iOS/Windows/macOS/Linux/Web向けにビルド、署名、公開できるようになりました。Xcode、Android Studio、Flutter SDKやMacが不要になり、iPhone用アプリもWindows環境から配布できます。Google Play、App Store、Microsoft Storeへの直接公開が可能になりました。",
+    "fetched_at": "2026-11-12T03:27:43.232166+00:00",
+    "fw_total_in_window": 1
+  }
+]
