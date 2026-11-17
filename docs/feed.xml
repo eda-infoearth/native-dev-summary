@@ -5,9 +5,16 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 16 Nov 2026 11:26:36 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 13:50:31 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🍎 App Store — Updates to Device Control and Data Access, and Full Disk Access in macOS</title>
+      <link>https://developer.apple.com/news/?id=oqng0zjk</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=oqng0zjk</guid>
+      <pubDate>Tue, 17 Nov 2026 01:00:11 +0900</pubDate>
+      <description>macOS 27.3 beta 2では、Device Control and Data AccessおよびFull Disk Accessについて、ユーザーがデータ保護をより細かく管理できるよう透明性を強化しました。Device Control and Data Accessが2つの設定に分割され、ユーザーが個別に許可を制御できるようになります。開発者は、アプリがこれらの権限をリクエストする際に、ユーザーへの説明をより明確にする必要があります。</description>
+    </item>
     <item>
       <title>🐟 Flet — Flet Studio 2.0: from the browser to the app stores</title>
       <link>https://flet.dev/blog/flet-studio-2-0</link>
@@ -350,13 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/connect-expo-in-claude</guid>
       <pubDate>Thu, 13 Aug 2026 21:45:43 +0900</pubDate>
       <description>ExpoのMCPサーバーがClaudeのコネクタディレクトリに登録され、claude.ai/directory/connectors/expoから簡単に接続できるようになりました。Expo アカウントで一度認証すれば継続的に接続された状態が保たれ、CLIコマンドやconfig ファイルでの手動設定は不要になります。Claude Team プランではリクエストボタンが表示される場合がありますが、これは組織全体での有効化を管理者に申請する正常な動作です。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Updates to age ratings for the Republic of Korea</title>
-      <link>https://developer.apple.com/news/?id=oj3r9pvw</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=oj3r9pvw</guid>
-      <pubDate>Thu, 13 Aug 2026 00:00:03 +0900</pubDate>
-      <description>App StoreのKorea地域における年齢レーティングが更新されます。Games と Entertainment カテゴリのアプリは、GRAC（ゲーム等級委員会）から公式レーティングを取得した場合、RCN（レーティング分類番号）を提供することで、既存のレーティングを All、12+、15+、19+ のいずれかにオーバーライドできるようになりました。本変更は本日から適用され、次のバージョン申請時に対応可能です。</description>
     </item>
   </channel>
 </rss>
