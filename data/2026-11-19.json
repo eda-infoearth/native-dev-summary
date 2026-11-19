@@ -1,0 +1,44 @@
+[
+  {
+    "fw_id": "expo",
+    "fw_name": "Expo",
+    "fw_icon": "🚀",
+    "fw_color": "#aaaaff",
+    "id": "https://expo.dev/changelog/expo-services-app",
+    "title": "The Expo Services App is out: Workflows, Observe and Expo Simulators on your phone",
+    "link": "https://expo.dev/changelog/expo-services-app",
+    "pub_date": "2026-11-18T16:00:00.000Z",
+    "description": "These days, most of our app changes start as a prompt. Agents write the code, Expo Simulators verifies the code, Expo Workflows builds and ships it, Expo Observe monitors the mobile vitals and lets you know if there are any performance issues. We wanted all of that power and context in our pocket all the time, not only on expo.dev . Today we’re releasing the “Expo Services App”. It puts Expo Workflows , Expo Observe data, and Expo Simulators on your phone, and the iOS version of the app is written entirely in Expo Exact . Having Simulators on my phone has been super useful. On an iPhone Duo, I keep the app in split view next to Codex Remote or T3 Code . I ask the agent for a fix and check it on the simulator without switching apps. It's been awesome. Here are a few details about what you c",
+    "summary_ja": "Expoが新しいモバイルアプリ「Expo Services App」をリリースしました。このアプリにはWorkflows、Observe、Expo Simulatorsの機能が搭載されており、開発者はスマートフォン上で直接アプリの構築、デプロイ、パフォーマンス監視ができます。iOSバージョンはExpo Exactで完全に構築されており、コード生成から検証、デプロイまでの全プロセスをポケットに入れて持ち運べるようになります。",
+    "fetched_at": "2026-11-19T03:53:47.275097+00:00",
+    "fw_total_in_window": 1
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=vb753j92",
+    "title": "App Store Award finalists announced",
+    "link": "https://developer.apple.com/news/?id=vb753j92",
+    "pub_date": "Wed, 18 Nov 2026 06:00:18 PST",
+    "description": "Every year, the App Store Awards celebrate the very best and most impactful apps and games on the App Store, and the developers behind them. Meet the finalists",
+    "summary_ja": "要約失敗",
+    "fetched_at": "2026-11-19T03:53:54.130673+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "app-store",
+    "fw_name": "App Store",
+    "fw_icon": "🍎",
+    "fw_color": "#0D96F6",
+    "id": "https://developer.apple.com/news/?id=4o5ie73a",
+    "title": "Tax and price updates for apps, In-App Purchases, and subscriptions",
+    "link": "https://developer.apple.com/news/?id=4o5ie73a",
+    "pub_date": "Tue, 17 Nov 2026 16:00:25 PST",
+    "description": "The App Store is designed to make it easy to sell your digital goods and services globally, with support for 43 currencies across 175 storefronts. From time to time, we may need to adjust prices or your proceeds due to changes in tax regulations or foreign exchange rates. These adjustments are made using publicly available exchange rate information from reputable financial media (e.g., The Wall Street Journal) or financial companies (e.g., Bloomberg) to help make sure prices for apps and In-App Purchases stay consistent across all storefronts. Tax updates Your proceeds from the sale of eligible apps and In‑App Purchases have been modified in: Botswana: Value‑added tax (VAT) introduction of 14% Cameroon: Significant Economic Presence (SEP) tax introduction of 3% Côte d'Ivoire: SEP tax intro",
+    "summary_ja": "App Storeは税制変更と為替変動に応じて、アプリと課金アイテムの価格および開発者の収益を調整します。ボツワナのVAT14%導入、カメロンのSEP税3%導入、コートジボワールのSEP税導入など、複数国で新たな税制が適用されるため、各地域での売上と収益見積もりの確認が必要です。価格調整は大手金融メディアの為替レート情報に基づいて行われます。",
+    "fetched_at": "2026-11-19T03:53:54.130841+00:00",
+    "fw_total_in_window": 2
+  }
+]

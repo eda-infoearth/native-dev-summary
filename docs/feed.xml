@@ -5,9 +5,30 @@
     <link>https://eda-infoearth.github.io/native-dev-summary</link>
     <description>React Native / Expo / Flutter / Flet / Electron / Tauri / Dioxus の最新リリース（AI日本語要約付き）</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 18 Nov 2026 12:55:48 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 12:53:57 +0900</lastBuildDate>
     <atom:link href="https://eda-infoearth.github.io/native-dev-summary/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>🚀 Expo — The Expo Services App is out: Workflows, Observe and Expo Simulators on your phone</title>
+      <link>https://expo.dev/changelog/expo-services-app</link>
+      <guid isPermaLink="true">https://expo.dev/changelog/expo-services-app</guid>
+      <pubDate>Thu, 19 Nov 2026 01:00:00 +0900</pubDate>
+      <description>Expoが新しいモバイルアプリ「Expo Services App」をリリースしました。このアプリにはWorkflows、Observe、Expo Simulatorsの機能が搭載されており、開発者はスマートフォン上で直接アプリの構築、デプロイ、パフォーマンス監視ができます。iOSバージョンはExpo Exactで完全に構築されており、コード生成から検証、デプロイまでの全プロセスをポケットに入れて持ち運べるようになります。</description>
+    </item>
+    <item>
+      <title>🍎 App Store — App Store Award finalists announced</title>
+      <link>https://developer.apple.com/news/?id=vb753j92</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=vb753j92</guid>
+      <pubDate>Wed, 18 Nov 2026 23:00:18 +0900</pubDate>
+      <description>要約失敗</description>
+    </item>
+    <item>
+      <title>🍎 App Store — Tax and price updates for apps, In-App Purchases, and subscriptions</title>
+      <link>https://developer.apple.com/news/?id=4o5ie73a</link>
+      <guid isPermaLink="true">https://developer.apple.com/news/?id=4o5ie73a</guid>
+      <pubDate>Wed, 18 Nov 2026 09:00:25 +0900</pubDate>
+      <description>App Storeは税制変更と為替変動に応じて、アプリと課金アイテムの価格および開発者の収益を調整します。ボツワナのVAT14%導入、カメロンのSEP税3%導入、コートジボワールのSEP税導入など、複数国で新たな税制が適用されるため、各地域での売上と収益見積もりの確認が必要です。価格調整は大手金融メディアの為替レート情報に基づいて行われます。</description>
+    </item>
     <item>
       <title>🍎 App Store — Updates to Device Control and Data Access, and Full Disk Access in macOS</title>
       <link>https://developer.apple.com/news/?id=oqng0zjk</link>
@@ -336,27 +357,6 @@
       <guid isPermaLink="true">https://expo.dev/changelog/eas-observe-is-now-generally-available</guid>
       <pubDate>Thu, 20 Aug 2026 21:00:00 +0900</pubDate>
       <description>EAS Observeが本日一般提供開始され、アプリのスタートアップやナビゲーションなどのパフォーマンスをダッシュボードで監視できます。無料プランは月100,000イベント、Starter以上は月500,000イベントまで無料で90日間のデータ保持が可能です。超過分は月100万イベントあたり5ドルの課金対象となり、サンプルレート調整で利用量を管理できます。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Changes for apps in the European Union</title>
-      <link>https://developer.apple.com/news/?id=gmws0jgp</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=gmws0jgp</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:38 +0900</pubDate>
-      <description>Appleは欧州委員会との協議に基づき、EU内でのアプリ配信に関する新しいビジネス条件を導入します。従来のCore Technology Feeに代わって、App Store外で配信されるアプリのデジタル取引に対して5%の手数料（Core Technology Commission）を課す仕組みに変更されます。また、Initial Acquisition FeeとStore Services Feeが廃止され、条件がシンプル化されます。</description>
-    </item>
-    <item>
-      <title>🍎 App Store — Updated Apple Developer Program License Agreement now available</title>
-      <link>https://developer.apple.com/news/?id=0cgo95n6</link>
-      <guid isPermaLink="true">https://developer.apple.com/news/?id=0cgo95n6</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:32 +0900</pubDate>
-      <description>Apple Developer Program License Agreement の Attachment 14 が更新され、EU 向けアプリの代替流通、代替決済、ビジネス条件に関する新たな規定が追加されました。これらの新規定は 2026 年 10 月 1 日から施行されるため、開発者アカウントにサインインして更新された利用規約に同意する必要があります。翻訳版は Apple Developer ウェブサイトで 1 ヶ月以内に公開予定です。</description>
-    </item>
-    <item>
-      <title>🚀 Expo — Connect Expo in the Claude desktop app</title>
-      <link>https://expo.dev/changelog/connect-expo-in-claude</link>
-      <guid isPermaLink="true">https://expo.dev/changelog/connect-expo-in-claude</guid>
-      <pubDate>Thu, 13 Aug 2026 21:45:43 +0900</pubDate>
-      <description>ExpoのMCPサーバーがClaudeのコネクタディレクトリに登録され、claude.ai/directory/connectors/expoから簡単に接続できるようになりました。Expo アカウントで一度認証すれば継続的に接続された状態が保たれ、CLIコマンドやconfig ファイルでの手動設定は不要になります。Claude Team プランではリクエストボタンが表示される場合がありますが、これは組織全体での有効化を管理者に申請する正常な動作です。</description>
     </item>
   </channel>
 </rss>
