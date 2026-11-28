@@ -1,0 +1,30 @@
+[
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.4",
+    "title": "v0.8.0-alpha.4",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.8.0-alpha.4",
+    "pub_date": "2026-11-27T18:15:01Z",
+    "description": "Highlights New dioxus-core facade. Libraries can now depend on the renderer-agnostic UI layer (VirtualDOM, rsx! , signals, hooks, stores, HTML, document) without the dioxus umbrella. Its default features cover everything except ssr and wasm-split . The VirtualDOM crate that was published as dioxus-core through 0.7 is now dioxus-vdom ( #6021 , #6024 ). Pointer capture. MountedData::set_pointer_capture / release_pointer_capture let sliders, color pickers and drag-and-drop keep receiving pointer events while the pointer leaves the element. Supported on web, desktop and Dioxus Native ( #6121 , #6135 , #6154 ). onresize in Dioxus Native ( #6152 ). Native is now on Blitz 0.3.0-beta.6 ( #6153 ). dx fixes for newer cargo: fingerprint busting works with cargo's new build-dir layout and build.build-",
+    "summary_ja": "Dioxus v0.8.0-alpha.4では、新しいdioxus-coreファサードが導入され、ライブラリがレンダラーに依存しないUI層(VirtualDOM、rsx!、signals等)に直接依存できるようになりました。ポインターキャプチャ機能が追加され、スライダーやドラッグ&ドロップ時にポインターがэлементを離れてもイベント受信が継続します。また、Dioxus NativeがBlitz 0.3.0-beta.6に更新され、onresizeイベントがサポートされました。",
+    "fetched_at": "2026-11-28T04:22:41.301655+00:00",
+    "fw_total_in_window": 2
+  },
+  {
+    "fw_id": "dioxus",
+    "fw_name": "Dioxus",
+    "fw_icon": "🧩",
+    "fw_color": "#EB4E3D",
+    "id": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.11",
+    "title": "v0.7.11",
+    "link": "https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.11",
+    "pub_date": "2026-11-27T17:26:54Z",
+    "description": "What's Changed A CLI-only patch release: only dioxus-cli is published, and the rest of Dioxus stays at 0.7.10 . dx components now defaults the built-in components registry to its v0.7 branch, so Dioxus 0.7 users keep getting 0.7-compatible components now that main has moved to 0.8 ( #6160 ). Fixed dx components remote branch checkout, dx components update refspec fetching, and cache cleanup after a failed clone ( #6160 ). Install with cargo binstall dioxus-cli@0.7.11 or cargo install dioxus-cli@0.7.11 --locked . Full Changelog : v0.7.10...v0.7.11",
+    "summary_ja": "dioxus-cliのみのパッチリリースで、`dx components`がv0.7ブランチをデフォルトに設定し、Dioxus 0.7ユーザーが0.7互換コンポーネントを引き続き取得できるようになりました。リモートブランチチェックアウト、refspec取得、失敗時のキャッシュクリーンアップの不具合が修正されています。`cargo binstall dioxus-cli@0.7.11`または`cargo install dioxus-cli@0.7.11 --locked`でインストール可能です。",
+    "fetched_at": "2026-11-28T04:22:41.301666+00:00",
+    "fw_total_in_window": 2
+  }
+]
